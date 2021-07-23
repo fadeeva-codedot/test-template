@@ -37,8 +37,6 @@ audio {
 }
 
 label,
-button,
-input,
 select {
   cursor: pointer;
 }
@@ -82,8 +80,8 @@ img {
 body {
   min-height: 100vh;
   transition: 0s;
-  color: $color-black;
-  background-color: #f9f8f7;
+  color: $color-grey-900;
+  background-color: $color-common-white;
   overscroll-behavior: none;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
@@ -94,8 +92,8 @@ body {
 }
 
 ::selection {
-  color: white;
-  background: $color-red;
+  color: $color-common-white;
+  background: $color-secondary-dark;
 }
 
 input[type="text"],
@@ -111,10 +109,10 @@ textarea {
     outline: none;
   }
 
-  @include placeholder-color(rgba($color-black, 0.5));
+  @include placeholder-color(rgba($color-grey-900, 30%));
 
   &.not-valid {
-    border-color: #f00;
+    border-color: $color-secondary-dark;
   }
 }
 
@@ -122,8 +120,8 @@ select {
   -webkit-appearance: none;
 
   &:focus::-ms-value {
-    color: #12161e;
-    background: #fff;
+    color: $color-grey-900;
+    background: $color-common-white;
   }
 }
 
@@ -134,6 +132,7 @@ textarea {
 a {
   cursor: pointer;
   text-decoration: none;
+  margin: 0px;
 
   &:not([href]) {
     cursor: pointer;
@@ -146,12 +145,24 @@ p {
   }
 }
 
-button,
 input,
 label,
 select {
   cursor: pointer;
   margin: 0px;
+}
+
+button {
+  margin: 0px;
+  color: $color-primary-main;
+  background-color: transparent;
+  border-color: $color-primary-main;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-common-white;
+    background-color: $color-primary-main;
+  }
 }
 
 strong {
