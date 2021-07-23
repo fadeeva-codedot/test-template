@@ -136,7 +136,7 @@ a {
   text-decoration: none;
 
   &:not([href]) {
-    cursor: initial;
+    cursor: pointer;
   }
 }
 
