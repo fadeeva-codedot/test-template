@@ -8,9 +8,19 @@ $color-grey-200: #e4e4e4;
 $color-info-light: #f2fcff;
 
 // Media queries
-$desktop-extra: 1200px;
-$desktop: 992px;
-$tablet: 768px;
-$mobile: 576px;
+$desktop-extra: pxToRem(1200);
+$desktop: pxToRem(992);
+$tablet: pxToRem(768);
+$mobile: pxToRem(576);
 
-//
+// Font sizes
+$typography-font-size: pxToRem(15);
+
+$typography-h4-font-size: pxToRem(15);
+$typography-h3-font-size: pxToRem(20);
+$typography-h2-font-size: pxToRem(30);
+
+$typography-subtitle1-font-size: pxToRem(10);
+$typography-subtitle2-font-size: pxToRem(13);
+
+$typography-caption-font-size: pxToRem(12);

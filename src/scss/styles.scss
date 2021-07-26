@@ -1,9 +1,10 @@
 // General
-@import "includes/base/vars";
-@import "includes/base/mixins";
-@import "includes/base/fonts";
-@import "includes/base/utils";
-@import "includes/base/global";
+@import "includes/base/vars.scss";
+@import "includes/base/mixins.scss";
+@import "includes/base/fonts.scss";
+@import "includes/base/utils.scss";
+@import "includes/base/global.scss";
+@import "includes/base/functions.scss";
 
 // Blocks
 //@import "includes/blocks/*";

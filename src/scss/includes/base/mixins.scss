@@ -73,3 +73,12 @@
     @content;
   }
 }
+
+// Font-sizes
+@mixin mobile-font-size() {
+  @media screen and (min-width: $mobile) {
+    html {
+      font-size: calc($typography-font-size - 2px) + rem;
+    }
+  }
+}
