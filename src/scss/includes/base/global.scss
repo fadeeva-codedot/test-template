@@ -7,7 +7,7 @@
   }
 
   &:not(iframe) {
-    transition: 0.25s ease;
+    transition: cubic-bezier(0.24, 0.64, 0.69, 1.04);
     transition-property: background, border, color, left, margin, padding, right, opacity;
   }
 }
@@ -80,7 +80,6 @@ img {
 
 body {
   min-height: 100vh;
-  transition: 0s;
   color: $color-grey-900;
   background-color: $color-common-white;
   overscroll-behavior: none;
@@ -88,6 +87,10 @@ body {
   text-rendering: optimizeSpeed;
 
   &.fixed {
+    overflow: hidden;
+  }
+
+  &.page-wrapper {
     overflow: hidden;
   }
 }
