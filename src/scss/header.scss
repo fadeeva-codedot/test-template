@@ -31,20 +31,6 @@
       display: flex;
       width: min-content;
 
-      .menu-check {
-        position: absolute;
-        height: pxToRem(49);
-        width: pxToRem(49);
-        right: pxToRem(2);
-        top: pxToRem(7);
-        z-index: 1;
-        opacity: 0;
-
-        &:checked ~ .submenu {
-          visibility: visible;
-        }
-      }
-
       .menu-icon {
         position: absolute;
         height: pxToRem(15);
@@ -81,6 +67,10 @@
         position: absolute;
         right: 0;
         top: 0;
+
+        &:target {
+          visibility: visible;
+        }
 
         &-sections {
           list-style-type: none;
