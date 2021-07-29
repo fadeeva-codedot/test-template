@@ -18,6 +18,13 @@
       width: pxToRem(48);
       height: pxToRem(48);
 
+      @include tablet {
+        padding-top: pxToRem(30);
+        padding-left: pxToRem(10);
+        width: pxToRem(80);
+        height: pxToRem(80);
+      }
+
       .site-logo {
         width: pxToRem(48);
         height: pxToRem(48);
@@ -29,15 +36,16 @@
 
     // menu
     &__menu {
-      display: flex;
-      width: min-content;
-
       .menu-icon {
         position: absolute;
         height: pxToRem(15);
         width: pxToRem(30);
         top: pxToRem(12);
         right: pxToRem(10);
+
+        @include tablet {
+          display: none;
+        }
 
         &__element {
           display: block;
@@ -69,6 +77,14 @@
         right: 0;
         top: 0;
 
+        @include tablet {
+          visibility: visible;
+          height: pxToRem(114);
+          padding-top: pxToRem(14);
+          padding-right: pxToRem(22);
+          padding-left: pxToRem(117);
+        }
+
         &:target {
           visibility: visible;
         }
@@ -80,12 +96,25 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          padding-top: pxToRem(100);
+          justify-content: space-between;
+          padding-top: pxToRem(68);
           width: 100%;
+
+          @include tablet {
+            flex-direction: row;
+            align-items: flex-start;
+            padding-top: 0;
+            background-color: transparent;
+            color: $color-grey-900;
+          }
 
           &__logo {
             width: pxToRem(64);
             height: pxToRem(64);
+
+            @include tablet {
+              display: none;
+            }
 
             .submenu-logo {
               width: pxToRem(64);
@@ -94,10 +123,10 @@
               padding-bottom: pxToRem(7);
               position: absolute;
               top: pxToRem(0);
-              left: pxToRem(0);
+              left: pxToRem(3);
             }
           }
-
+          // cross icon
           &__close {
             position: absolute;
             width: pxToRem(15);
@@ -106,6 +135,10 @@
             right: pxToRem(2);
             padding-left: pxToRem(15);
             padding-right: pxToRem(15);
+
+            @include tablet {
+              display: none;
+            }
 
             &::before,
             &::after {
@@ -130,6 +163,10 @@
             width: 100%;
             position: relative;
             height: 60%;
+
+            @include tablet {
+              display: none;
+            }
           }
 
           &__section {
@@ -140,9 +177,29 @@
             width: 100%;
             text-align: center;
 
+            @include tablet {
+              width: max-content;
+            }
+
             .section-name {
               padding-top: pxToRem(20);
               padding-bottom: pxToRem(20);
+              font-size: $typography-h4-font-size;
+              font-weight: $typography-h3-font-weight;
+
+              @include tablet {
+                font-size: $typography-h5-font-size;
+              }
+            }
+          }
+
+          &__phone {
+            display: none;
+
+            @include tablet {
+              display: block;
+              font-size: $typography-h5-font-size;
+              font-weight: $typography-h3-font-weight;
             }
           }
 
@@ -151,6 +208,14 @@
             width: 100%;
             text-align: center;
             background-color: $color-secondary-main;
+            color: $color-common-white;
+            font-weight: $typography-h3-font-weight;
+
+            @include tablet {
+              background-color: $color-primary-main;
+              font-size: $typography-h5-font-size;
+              width: fit-content;
+            }
 
             .section-name {
               display: block;

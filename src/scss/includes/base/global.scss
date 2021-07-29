@@ -6,10 +6,10 @@
     box-sizing: border-box;
   }
 
-  &:not(iframe) {
+  /*&:not(iframe) {
     transition: cubic-bezier(0.24, 0.64, 0.69, 1.04);
     transition-property: background, border, color, left, margin, padding, right, opacity;
-  }
+  }*/
 }
 
 html,
@@ -171,8 +171,4 @@ button {
     color: $color-common-white;
     background-color: $color-primary-main;
   }
-}
-
-strong {
-  font-weight: 600;
 }
