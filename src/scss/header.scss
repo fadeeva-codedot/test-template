@@ -29,7 +29,6 @@
         top: pxToRem(5);
       }
     }
-
     // menu
     &__menu {
       .menu-icon {
@@ -70,11 +69,11 @@
       .submenu {
         visibility: hidden;
         display: flex;
-        overflow-y: hidden;
         width: 100%;
+        overflow-y: scroll;
         height: 100vh;
         position: absolute;
-        right: 0;
+        left: 0;
         top: 0;
 
         @include tablet {
@@ -87,6 +86,7 @@
 
         &:target {
           visibility: visible;
+          left: 100%;
         }
 
         &-sections {
@@ -102,7 +102,7 @@
 
           @include tablet {
             flex-direction: row;
-            align-items: flex-start;
+            align-items: space-between;
             padding-top: 0;
             background-color: transparent;
             color: $color-grey-900;
@@ -186,6 +186,7 @@
             font-weight: $typography-h3-font-weight;
 
             @include tablet {
+              position: relative;
               background-color: $color-primary-main;
               font-size: $typography-h5-font-size;
               width: fit-content;
