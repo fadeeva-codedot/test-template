@@ -1,22 +1,20 @@
 .header {
   display: flex;
   height: pxToRem(62);
-  padding-top: pxToRem(7);
-  padding-bottom: pxToRem(7);
 
   &-navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: pxToRem(48);
-    padding-left: pxToRem(12);
-    padding-right: pxToRem(12);
+    height: fit-content;
 
     // logo
     &__logo {
-      width: pxToRem(48);
-      height: pxToRem(48);
+      width: pxToRem(78);
+      height: pxToRem(62);
+      padding: pxToRem(10);
+      position: relative;
 
       @include tablet {
         padding-top: pxToRem(30);
@@ -26,11 +24,9 @@
       }
 
       .site-logo {
-        width: pxToRem(48);
-        height: pxToRem(48);
-        padding-top: pxToRem(7);
-        padding-bottom: pxToRem(7);
-        position: absolute;
+        height: pxToRem(32);
+        position: relative;
+        top: pxToRem(5);
       }
     }
 
@@ -38,10 +34,14 @@
     &__menu {
       .menu-icon {
         position: absolute;
-        height: pxToRem(15);
-        width: pxToRem(30);
-        top: pxToRem(12);
-        right: pxToRem(10);
+        height: pxToRem(62);
+        width: pxToRem(60);
+        right: pxToRem(0);
+        top: pxToRem(0);
+        padding-top: pxToRem(24);
+        padding-bottom: pxToRem(20);
+        padding-right: pxToRem(12);
+        padding-left: pxToRem(20);
 
         @include tablet {
           display: none;
@@ -107,25 +107,6 @@
             background-color: transparent;
             color: $color-grey-900;
           }
-
-          &__logo {
-            width: pxToRem(64);
-            height: pxToRem(64);
-
-            @include tablet {
-              display: none;
-            }
-
-            .submenu-logo {
-              width: pxToRem(64);
-              height: pxToRem(64);
-              padding-top: pxToRem(7);
-              padding-bottom: pxToRem(7);
-              position: absolute;
-              top: pxToRem(0);
-              left: pxToRem(3);
-            }
-          }
           // cross icon
           &__close {
             position: absolute;
@@ -155,17 +136,6 @@
 
             &::after {
               transform: rotate(-45deg);
-            }
-          }
-
-          &__interlayer {
-            display: flex;
-            width: 100%;
-            position: relative;
-            height: 60%;
-
-            @include tablet {
-              display: none;
             }
           }
 
