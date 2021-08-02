@@ -1,10 +1,32 @@
 .header {
   display: flex;
   height: pxToRem(62);
-  background-color: $color-primary-main;
+  background-color: $color-common-white;
 
-  @include tablet {
-    background-color: $color-common-white;
+  // all actions connected with target
+  &:target {
+    background-color: $color-primary-main;
+
+    & .submenu {
+      visibility: visible;
+    }
+
+    & .menu-icon {
+      &__element {
+        background-color: $color-common-white;
+        &:first-child {
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          transform: rotate(-45deg);
+        }
+
+        &:last-child {
+          display: none;
+        }
+      }
+    }
   }
 
   &-navbar {
@@ -38,6 +60,8 @@
     &__menu {
       width: 100%;
       height: pxToRem(60);
+      position: absolute;
+
       .menu-icon {
         position: absolute;
         height: pxToRem(62);
@@ -74,10 +98,9 @@
       }
       // submenu (dropmenu and sections)
       .submenu {
-        visibility: hidden;
         display: flex;
+        visibility: hidden;
         width: 100%;
-        overflow-y: hidden;
         height: calc(100vh - 60px);
         position: absolute;
         left: 0;
@@ -91,10 +114,6 @@
           top: 0;
         }
 
-        &:target {
-          visibility: visible;
-        }
-
         &-sections {
           list-style-type: none;
           background-color: $color-primary-main;
@@ -105,8 +124,10 @@
           justify-content: flex-start;
           padding-top: pxToRem(100);
           width: 100%;
+          height: calc(100%-59px);
           padding-top: pxToRem(60);
           overflow-y: scroll;
+          position: relative;
 
           @include tablet {
             flex-direction: row;
@@ -131,6 +152,7 @@
               padding-bottom: pxToRem(20);
               font-size: $typography-h4-font-size;
               font-weight: $typography-h3-font-weight;
+              color: $color-common-white;
 
               @include tablet {
                 font-size: $typography-h5-font-size;
@@ -147,30 +169,29 @@
               font-weight: $typography-h3-font-weight;
             }
           }
+        }
 
-          &__button {
+        &-button {
+          display: block;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          text-align: center;
+          background-color: $color-secondary-main;
+          color: $color-common-white;
+          font-weight: $typography-h3-font-weight;
+
+          @include tablet {
+            position: relative;
+            background-color: $color-primary-main;
+            font-size: $typography-h5-font-size;
+            width: fit-content;
+          }
+
+          &-name {
             display: block;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            left: 0;
-            background-color: $color-secondary-main;
-            color: $color-common-white;
-            font-weight: $typography-h3-font-weight;
-
-            @include tablet {
-              position: relative;
-              background-color: $color-primary-main;
-              font-size: $typography-h5-font-size;
-              width: fit-content;
-            }
-
-            .section-name {
-              display: block;
-              padding-top: pxToRem(20);
-              padding-bottom: pxToRem(20);
-            }
+            padding-top: pxToRem(20);
+            padding-bottom: pxToRem(20);
           }
         }
       }
