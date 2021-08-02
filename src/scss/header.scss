@@ -7,6 +7,12 @@
   &:target {
     background-color: $color-primary-main;
 
+    .header-navbar {
+      &__logo {
+        filter: invert(100%);
+      }
+    }
+
     & .submenu {
       visibility: visible;
     }
@@ -14,17 +20,6 @@
     & .menu-icon {
       &__element {
         background-color: $color-common-white;
-        &:first-child {
-          transform: rotate(45deg);
-        }
-
-        &:nth-child(2) {
-          transform: rotate(-45deg);
-        }
-
-        &:last-child {
-          display: none;
-        }
       }
     }
   }
