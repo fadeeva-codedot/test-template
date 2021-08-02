@@ -1,6 +1,11 @@
 .header {
   display: flex;
   height: pxToRem(62);
+  background-color: $color-primary-main;
+
+  @include tablet {
+    background-color: $color-common-white;
+  }
 
   &-navbar {
     display: flex;
@@ -31,6 +36,8 @@
     }
     // menu
     &__menu {
+      width: 100%;
+      height: pxToRem(60);
       .menu-icon {
         position: absolute;
         height: pxToRem(62);
@@ -70,23 +77,22 @@
         visibility: hidden;
         display: flex;
         width: 100%;
-        overflow-y: scroll;
-        height: 100vh;
+        overflow-y: hidden;
+        height: calc(100vh - 60px);
         position: absolute;
         left: 0;
-        top: 0;
+        top: pxToRem(60);
 
         @include tablet {
           visibility: visible;
           height: pxToRem(114);
-          padding-top: pxToRem(14);
           padding-right: pxToRem(22);
           padding-left: pxToRem(117);
+          top: 0;
         }
 
         &:target {
           visibility: visible;
-          left: 100%;
         }
 
         &-sections {
@@ -97,8 +103,10 @@
           flex-direction: column;
           align-items: center;
           justify-content: flex-start;
-          padding-top: pxToRem(68);
+          padding-top: pxToRem(100);
           width: 100%;
+          padding-top: pxToRem(60);
+          overflow-y: scroll;
 
           @include tablet {
             flex-direction: row;
@@ -107,45 +115,10 @@
             background-color: transparent;
             color: $color-grey-900;
           }
-          // cross icon
-          &__close {
-            height: 2.875rem;
-            padding-left: 0.9375rem;
-            padding-right: 0.9375rem;
-            padding-top: 0.9375rem;
-            padding-bottom: 0.9375rem;
-            position: absolute;
-            right: 0.125rem;
-            top: 0.375rem;
-            width: 0.9375rem;
-
-            @include tablet {
-              display: none;
-            }
-
-            &::before,
-            &::after {
-              position: absolute;
-              content: "";
-              height: pxToRem(19);
-              width: pxToRem(1);
-              background-color: $color-common-white;
-            }
-
-            &::before {
-              transform: rotate(45deg);
-            }
-
-            &::after {
-              transform: rotate(-45deg);
-            }
-          }
 
           &__section {
             display: block;
             position: relative;
-            padding-top: pxToRem(20);
-            padding-bottom: pxToRem(20);
             width: 100%;
             text-align: center;
 
@@ -181,6 +154,7 @@
             bottom: 0;
             width: 100%;
             text-align: center;
+            left: 0;
             background-color: $color-secondary-main;
             color: $color-common-white;
             font-weight: $typography-h3-font-weight;
