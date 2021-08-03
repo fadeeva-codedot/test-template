@@ -33,6 +33,7 @@
 
     // logo
     &__logo {
+      z-index: 1;
       width: pxToRem(78);
       height: pxToRem(62);
       padding: pxToRem(10);
@@ -53,6 +54,7 @@
     }
 
     .menu-icon {
+      z-index: 1;
       position: absolute;
       height: pxToRem(62);
       width: pxToRem(60);
