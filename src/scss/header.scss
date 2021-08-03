@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  height: pxToRem(62);
+  height: 0; //pxToRem(62);
   background-color: $color-common-white;
 
   // all actions connected with target
@@ -15,6 +15,8 @@
 
     & .submenu {
       visibility: visible;
+      left: 0;
+      transition: 1.5s;
     }
 
     & .menu-icon {
@@ -29,7 +31,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: fit-content;
+    height: 0;
 
     // logo
     &__logo {
@@ -38,6 +40,7 @@
       height: pxToRem(62);
       padding: pxToRem(10);
       position: relative;
+      top: pxToRem(32);
 
       @include tablet {
         padding-top: pxToRem(30);
@@ -91,7 +94,7 @@
     // menu
     &__menu {
       width: 100%;
-      height: pxToRem(60);
+      height: 0;
       position: absolute;
 
       // submenu (dropmenu and sections)
@@ -99,10 +102,10 @@
         display: flex;
         visibility: hidden;
         width: 100%;
-        height: calc(100vh - 60px);
+        height: calc(100vh);
         position: absolute;
-        left: 0;
-        top: pxToRem(60);
+        left: 100%;
+        top: 0;
 
         @include tablet {
           visibility: visible;
@@ -120,12 +123,12 @@
           flex-direction: column;
           align-items: center;
           justify-content: flex-start;
-          padding-top: pxToRem(100);
+          padding-top: pxToRem(108);
           width: 100%;
-          height: calc(100%-59px);
-          padding-top: pxToRem(60);
+          height: calc(100vh + 60px);
           overflow-y: scroll;
           position: relative;
+          top: pxToRem(-6);
 
           @include tablet {
             flex-direction: row;
