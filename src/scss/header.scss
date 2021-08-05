@@ -8,9 +8,15 @@
   }
   // all actions connected with target
   &:not(:target) {
-    .nav-menu {
+    .mobile-menu {
       left: 100%;
       transition: 0.6s linear;
+
+      @include tablet {
+        display: flex;
+        left: 0;
+        flex-direction: row;
+      }
     }
 
     .menu-icon {
@@ -50,7 +56,7 @@
       }
     }
 
-    & .nav-menu {
+    & .mobile-menu {
       visibility: visible;
       left: 0;
       transition: 0.6s linear;
@@ -104,7 +110,13 @@
       .site-logo {
         height: pxToRem(32);
         position: relative;
-        top: pxToRem(5);
+        top: pxToRem(6);
+        left: 0;
+
+        @include tablet {
+          top: pxToRem(6);
+          left: pxToRem(12);
+        }
       }
     }
 
@@ -161,8 +173,8 @@
       width: 100%;
       height: 0;
       position: absolute;
-      // nav-menu (dropmenu and items)
-      .nav-menu {
+      // mobile-menu (dropmenu and items)
+      .mobile-menu {
         display: flex;
         visibility: hidden;
         width: 100%;
@@ -172,6 +184,7 @@
         top: 0;
 
         @include tablet {
+          display: block;
           visibility: visible;
           height: pxToRem(114);
           padding-right: pxToRem(22);
@@ -219,9 +232,9 @@
               padding-bottom: pxToRem(20);
               font-size: $typography-h4-font-size;
               font-weight: $typography-h3-font-weight;
-              color: $color-common-white;
 
               @include tablet {
+                color: $color-grey-900;
                 font-size: $typography-h5-font-size;
               }
             }
