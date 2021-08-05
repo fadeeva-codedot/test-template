@@ -8,7 +8,7 @@
   }
   // all actions connected with target
   &:not(:target) {
-    // keyframes
+    // keyframes reverse
     @keyframes logo-reverse {
       0% {
         filter: invert(0%);
@@ -33,6 +33,50 @@
       }
     }
 
+    @keyframes cross1-reverse {
+      0% {
+        margin-bottom: 0;
+        transform: rotate(-45deg);
+      }
+
+      50% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        margin-top: pxToRem(0);
+      }
+    }
+
+    @keyframes cross2-reverse {
+      0% {
+        transform: scale(0);
+      }
+
+      50% {
+        transform: scale(1);
+      }
+
+      100% {
+        margin-top: pxToRem(6);
+      }
+    }
+
+    @keyframes cross3-reverse {
+      0% {
+        margin-top: 0;
+        transform: rotate(45deg);
+      }
+
+      50% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        margin-bottom: pxToRem(12);
+      }
+    }
+
     .submenu {
       left: 100%;
       transition: 0.6s linear;
@@ -42,15 +86,15 @@
       animation: menu-icon-reverse linear 0.55s forwards;
       &__element {
         &:nth-child(1) {
-          transform: scale(1);
+          animation: cross2-reverse linear 0.55s forwards;
         }
 
         &:nth-child(2) {
-          transform: rotate(0deg);
+          animation: cross1-reverse linear 0.55s forwards;
         }
 
         &:nth-child(3) {
-          transform: rotate(0deg);
+          animation: cross3-reverse linear 0.55s forwards;
         }
       }
     }
@@ -86,6 +130,50 @@
       }
     }
 
+    @keyframes cross1 {
+      0% {
+      }
+
+      50% {
+        transform: rotate(0deg);
+        margin-top: pxToRem(6);
+      }
+
+      100% {
+        transform: rotate(45deg);
+        margin-bottom: pxToRem(0);
+      }
+    }
+
+    @keyframes cross2 {
+      0% {
+      }
+
+      50% {
+        transform: scale(0);
+        margin-top: 0;
+      }
+
+      100% {
+        transform: scale(0);
+      }
+    }
+
+    @keyframes cross3 {
+      0% {
+      }
+
+      50% {
+        transform: rotate(0deg);
+        margin-bottom: pxToRem(-6);
+      }
+
+      100% {
+        transform: rotate(-45deg);
+        margin-top: pxToRem(0);
+      }
+    }
+
     .header-navbar {
       &__logo {
         animation: logo linear 0.6s forwards;
@@ -106,15 +194,15 @@
       animation: menu-icon linear 0.5s forwards;
       &__element {
         &:nth-child(1) {
-          transform: scale(0);
+          animation: cross2 linear 0.5s forwards;
         }
 
         &:nth-child(2) {
-          transform: translateY(pxToRem(6)) rotate(45deg);
+          animation: cross1 linear 0.5s forwards;
         }
 
         &:nth-child(3) {
-          transform: translateY(pxToRem(-6)) rotate(-45deg);
+          animation: cross3 linear 0.5s forwards;
         }
       }
     }
