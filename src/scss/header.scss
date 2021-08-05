@@ -207,6 +207,8 @@
             position: relative;
             width: 100%;
             text-align: center;
+            padding-top: pxToRem(20);
+            padding-bottom: pxToRem(20);
 
             @include tablet {
               width: max-content;
