@@ -20,9 +20,6 @@
 }
 
 @keyframes cross1 {
-  0% {
-  }
-
   50% {
     transform: rotate(0deg);
     margin-top: pxToRem(6);
@@ -56,7 +53,6 @@
     margin-top: pxToRem(0);
   }
 }
-
 // keyframes reverse
 @keyframes logo-reverse {
   0% {
@@ -83,25 +79,21 @@
 }
 
 @keyframes cross1-reverse {
-  0% {
-    transform: rotate(45deg);
-  }
-
   50% {
     transform: rotate(0deg);
+    margin-top: pxToRem(6);
   }
 
   100% {
+    transform: rotate(45deg);
+    margin-bottom: 0;
   }
 }
 
 @keyframes cross2-reverse {
-  0% {
-    transform: scale(0);
-  }
-
   50% {
     transform: scale(0);
+    margin-top: 0;
   }
 
   100% {
@@ -110,14 +102,13 @@
 }
 
 @keyframes cross3-reverse {
-  0% {
-    transform: rotate(-45deg);
-  }
-
   50% {
     transform: rotate(0deg);
+    margin-bottom: pxToRem(-6);
   }
 
   100% {
+    transform: rotate(-45deg);
+    margin-top: pxToRem(0);
   }
 }

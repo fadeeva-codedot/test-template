@@ -14,19 +14,22 @@
     }
 
     .menu-icon {
-      animation: menu-icon-reverse linear 0.55s forwards;
+      animation: menu-icon-reverse linear 0.5s forwards;
 
       &__element {
         &:nth-child(1) {
-          animation: cross2-reverse linear 0.55s forwards;
+          animation: cross2-reverse linear 0.5s;
+          animation-direction: reverse;
         }
 
         &:nth-child(2) {
-          animation: cross1-reverse linear 0.55s forwards;
+          animation: cross1-reverse linear 0.5s;
+          animation-direction: reverse;
         }
 
         &:nth-child(3) {
-          animation: cross3-reverse linear 0.55s forwards;
+          animation: cross3-reverse linear 0.5s;
+          animation-direction: reverse;
         }
       }
     }
@@ -59,6 +62,7 @@
 
     & .menu-icon {
       animation: menu-icon linear 0.5s forwards;
+
       &__element {
         &:nth-child(1) {
           animation: cross2 linear 0.5s forwards;
