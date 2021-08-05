@@ -1,0 +1,123 @@
+// keyframes
+@keyframes logo {
+  91% {
+    filter: invert(0%);
+  }
+
+  100% {
+    filter: invert(100%);
+  }
+}
+
+@keyframes menu-icon {
+  3% {
+    filter: invert(100%);
+  }
+
+  100% {
+    filter: invert(100%);
+  }
+}
+
+@keyframes cross1 {
+  0% {
+  }
+
+  50% {
+    transform: rotate(0deg);
+    margin-top: pxToRem(6);
+  }
+
+  100% {
+    transform: rotate(45deg);
+    margin-bottom: 0;
+  }
+}
+
+@keyframes cross2 {
+  50% {
+    transform: scale(0);
+    margin-top: 0;
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes cross3 {
+  50% {
+    transform: rotate(0deg);
+    margin-bottom: pxToRem(-6);
+  }
+
+  100% {
+    transform: rotate(-45deg);
+    margin-top: pxToRem(0);
+  }
+}
+
+// keyframes reverse
+@keyframes logo-reverse {
+  0% {
+    filter: invert(0%);
+  }
+
+  4% {
+    filter: invert(100%);
+  }
+}
+
+@keyframes menu-icon-reverse {
+  0% {
+    filter: invert(100%);
+  }
+
+  82% {
+    filter: invert(100%);
+  }
+
+  100% {
+    filter: invert(0%);
+  }
+}
+
+@keyframes cross1-reverse {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+  }
+}
+
+@keyframes cross2-reverse {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes cross3-reverse {
+  0% {
+    transform: rotate(-45deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+  }
+}
