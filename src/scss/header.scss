@@ -47,7 +47,15 @@
     }
 
     .logo-wrapper {
+      width: pxToRem(89);
+      height: pxToRem(89);
+      padding-top: pxToRem(32);
+      padding-left: pxToRem(22);
+
       .logo {
+        width: pxToRem(49);
+        height: pxToRem(49);
+        padding: 0;
         animation: logo-reverse linear 0.5s forwards;
       }
     }
@@ -203,7 +211,7 @@
 
           @include tablet {
             flex-direction: row;
-            align-items: space-between;
+            justify-content: space-between;
             padding-top: 0;
             background-color: transparent;
             color: $color-grey-900;
@@ -227,13 +235,12 @@
             .link-name {
               padding-top: pxToRem(20);
               padding-bottom: pxToRem(20);
-              font-size: $typography-h4-font-size;
-              font-weight: $typography-h3-font-weight;
               display: flex;
               justify-content: space-around;
 
               @include tablet {
                 color: $color-grey-900;
+                font-weight: $typography-h5-font-weight;
                 font-size: $typography-h5-font-size;
               }
             }
@@ -245,7 +252,7 @@
             @include tablet {
               display: block;
               font-size: $typography-h5-font-size;
-              font-weight: $typography-h3-font-weight;
+              font-weight: 800;
             }
           }
         }
@@ -263,7 +270,9 @@
             position: relative;
             background-color: $color-primary-main;
             font-size: $typography-h5-font-size;
-            width: fit-content;
+
+            width: max-content;
+            margin-top: 0;
           }
 
           &-name {
@@ -271,6 +280,14 @@
             padding-top: pxToRem(20);
             padding-bottom: pxToRem(20);
             color: $color-common-white;
+
+            @include tablet {
+              padding-top: pxToRem(10);
+              padding-bottom: pxToRem(10);
+              padding-left: pxToRem(21);
+              padding-right: pxToRem(20);
+              font-weight: $typography-h5-font-weight;
+            }
           }
         }
       }
