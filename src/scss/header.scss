@@ -25,6 +25,7 @@
 
     .menu-icon {
       animation: menu-icon-reverse linear 0.5s forwards;
+      padding-top: pxToRem(15);
 
       &__element {
         &:nth-child(1) {
@@ -60,12 +61,13 @@
       transition: 0.6s linear;
     }
 
-    .icon-close {
+    .close-link {
       z-index: 2;
     }
 
     & .menu-icon {
       animation: menu-icon linear 0.5s forwards;
+      padding-top: pxToRem(15);
 
       &__element {
         &:nth-child(1) {
@@ -114,25 +116,23 @@
       }
     }
 
-    .icon-close {
+    .close-link {
       z-index: 0;
-      height: pxToRem(60);
-      width: pxToRem(60);
-      position: relative;
+      height: pxToRem(45);
+      width: pxToRem(45);
+      position: absolute;
       right: 0;
     }
 
     .menu-icon {
       z-index: 1;
-      position: absolute;
-      height: pxToRem(62);
-      width: pxToRem(60);
-      right: pxToRem(0);
+      position: relative;
+      height: pxToRem(45);
+      width: pxToRem(45);
+      right: pxToRem(-5);
       top: pxToRem(0);
-      padding-top: pxToRem(24);
-      padding-bottom: pxToRem(20);
-      padding-right: pxToRem(12);
-      padding-left: pxToRem(20);
+      padding-right: pxToRem(45);
+      padding-top: pxToRem(15);
 
       @include tablet {
         display: none;
