@@ -45,25 +45,14 @@
         }
       }
     }
-
-    .logo-wrapper {
-      width: pxToRem(89);
-      height: pxToRem(89);
-      padding-top: pxToRem(32);
-      padding-left: pxToRem(22);
-
-      .logo {
-        width: pxToRem(49);
-        height: pxToRem(49);
-        padding: 0;
-        animation: logo-reverse linear 0.5s forwards;
-      }
-    }
   }
 
   &:target {
     background-color: $color-common-white;
 
+    .logo {
+      animation: logo linear 0.5s forwards;
+    }
     & .mobile-menu {
       visibility: visible;
       left: 0;
@@ -102,26 +91,26 @@
     height: pxToRem(63);
     // logo
     .logo-wrapper {
-      width: pxToRem(69);
+      width: pxToRem(70);
       height: pxToRem(63);
       position: relative;
-      top: pxToRem(0);
+      padding-top: pxToRem(7);
+      padding-bottom: pxToRem(7);
+      padding-left: pxToRem(12);
+      padding-right: pxToRem(12);
+
+      @include tablet {
+        width: pxToRem(89);
+        height: pxToRem(89);
+        padding-top: pxToRem(32);
+        padding-left: pxToRem(22);
+      }
 
       .logo {
         z-index: 2;
-        padding-top: pxToRem(7);
-        padding-bottom: pxToRem(7);
-        padding-left: pxToRem(10);
-        padding-right: pxToRem(10);
+        width: pxToRem(49);
+        height: pxToRem(49);
         position: relative;
-        animation: logo linear 0.5s forwards;
-
-        @include tablet {
-          padding-top: pxToRem(30);
-          padding-left: pxToRem(10);
-          width: pxToRem(80);
-          height: pxToRem(80);
-        }
       }
     }
 
@@ -188,10 +177,10 @@
         @include tablet {
           display: block;
           visibility: visible;
-          height: pxToRem(114);
+          height: pxToRem(89);
           padding-right: pxToRem(22);
           padding-left: pxToRem(117);
-          top: 0;
+          top: pxToRem(0);
         }
 
         &-items {
