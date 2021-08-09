@@ -1,6 +1,7 @@
 .header {
   display: flex;
   height: pxToRem(63);
+  overflow: hidden;
   background-color: $color-common-white;
 
   @include tablet {
@@ -196,10 +197,9 @@
           padding-top: pxToRem(108);
 
           width: 100%;
-          height: calc(100vh + 60px);
+          height: 100vh;
           overflow-y: scroll;
           position: relative;
-          top: pxToRem(-6);
 
           @include tablet {
             flex-direction: row;
@@ -251,13 +251,12 @@
         }
 
         &-button {
-          display: block;
-          position: absolute;
+          position: relative;
+          margin-top: auto;
           bottom: 0;
           width: 100%;
           text-align: center;
           background-color: $color-secondary-main;
-          color: $color-common-white;
           font-weight: $typography-h3-font-weight;
 
           @include tablet {
@@ -271,6 +270,7 @@
             display: block;
             padding-top: pxToRem(20);
             padding-bottom: pxToRem(20);
+            color: $color-common-white;
           }
         }
       }
