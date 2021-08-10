@@ -106,11 +106,23 @@
         padding-left: pxToRem(22);
       }
 
+      @include desktop {
+        width: pxToRem(235);
+        height: pxToRem(125);
+        padding-top: pxToRem(60);
+        padding-left: pxToRem(85);
+      }
+
       .logo {
         z-index: 2;
         width: pxToRem(49);
         height: pxToRem(49);
         position: relative;
+
+        @include desktop {
+          width: pxToRem(65);
+          height: pxToRem(65);
+        }
       }
     }
 
@@ -120,6 +132,10 @@
       width: pxToRem(45);
       position: absolute;
       right: 0;
+
+      @include tablet {
+        display: none;
+      }
     }
 
     .menu-icon {
@@ -192,13 +208,13 @@
           align-items: center;
           justify-content: flex-start;
           padding-top: pxToRem(108);
-
           width: 100%;
           height: 100vh;
           overflow-y: scroll;
           position: relative;
 
           @include tablet {
+            overflow: hidden;
             flex-direction: row;
             justify-content: space-between;
             padding-top: 0;
@@ -246,8 +262,7 @@
               justify-content: space-around;
 
               @include tablet {
-                padding-top: pxToRem(36);
-                padding-bottom: pxToRem(36);
+                padding: pxToRem(10);
                 color: $color-grey-900;
                 font-weight: $typography-h5-font-weight;
                 font-size: $typography-h5-font-size;
@@ -258,6 +273,13 @@
           &__phone {
             display: none;
             position: relative;
+            padding: pxToRem(10);
+
+            .link-name {
+              @include tablet {
+                padding: pxToRem(10);
+              }
+            }
 
             @include tablet {
               display: block;
@@ -281,7 +303,6 @@
             position: relative;
             background-color: $color-primary-main;
             font-size: $typography-h5-font-size;
-
             width: max-content;
             margin-top: 0;
           }
