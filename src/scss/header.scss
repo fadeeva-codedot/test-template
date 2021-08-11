@@ -1,16 +1,7 @@
 .header {
   display: flex;
-  height: pxToRem(63);
   overflow: hidden;
   background-color: $color-common-white;
-
-  @include tablet {
-    height: pxToRem(89);
-  }
-
-  @include desktop {
-    height: pxToRem(125);
-  }
   // all actions connected with target
   &:not(:target) {
     .mobile-menu {
@@ -93,17 +84,10 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: pxToRem(63);
 
     @include tablet {
       position: relative;
-      height: pxToRem(89);
     }
-
-    @include desktop-extra {
-      height: pxToRem(125);
-    }
-
     // logo
     .logo-wrapper {
       position: relative;
@@ -183,17 +167,14 @@
       top: 0;
 
       @include tablet {
+        height: 0;
+        position: relative;
         background-color: transparent;
         visibility: visible;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        height: pxToRem(89);
         top: pxToRem(0);
-      }
-
-      @include desktop-extra {
-        height: pxToRem(125);
       }
 
       &-wrapper {
@@ -204,16 +185,13 @@
         overflow-y: scroll;
 
         @include tablet {
+          position: relative;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          height: pxToRem(83);
           top: 0;
           overflow: hidden;
-        }
-
-        @include desktop-extra {
-          height: pxToRem(125);
+          height: fit-content;
         }
       }
 
@@ -235,15 +213,8 @@
           overflow: hidden;
           flex-direction: row;
           padding-top: 0;
-          padding-left: pxToRem(78);
           background-color: transparent;
           color: $color-grey-900;
-          height: pxToRem(89);
-        }
-
-        @include desktop-extra {
-          height: pxToRem(125);
-          padding-left: pxToRem(132);
         }
 
         &__link {
@@ -254,12 +225,7 @@
 
           @include tablet {
             width: fit-content;
-            padding: pxToRem(4);
             left: pxToRem(3);
-          }
-
-          @include desktop-extra {
-            padding: pxToRem(15);
           }
 
           .link-name {
