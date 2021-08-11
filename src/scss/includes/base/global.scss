@@ -18,15 +18,32 @@ body {
   margin: 0;
   padding: 0;
   font-family: montserrat;
+  overflow: hidden;
 }
 
-.container {
+.body-container {
   padding-left: pxToRem(10);
   padding-right: pxToRem(10);
 
   @include tablet {
     padding-left: pxToRem(19);
     padding-right: pxToRem(19);
+  }
+
+  @include desktop-extra {
+    padding-left: pxToRem(85);
+    padding-right: pxToRem(85);
+  }
+}
+
+.header-container {
+  padding-left: pxToRem(10);
+  padding-right: pxToRem(10);
+  position: relative;
+
+  @include tablet {
+    padding-left: pxToRem(22);
+    padding-right: pxToRem(22);
   }
 
   @include desktop-extra {
