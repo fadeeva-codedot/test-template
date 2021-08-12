@@ -2,9 +2,13 @@
   margin-bottom: pxToRem(17);
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 
   &-info {
-    max-width: max-content;
+    @include tablet {
+      width: 50%;
+      padding-top: pxToRem(30);
+    }
 
     &-name {
       font-size: $typography-h4-font-size;
@@ -42,7 +46,6 @@
         font-weight: $typography-h3-font-weight;
         line-height: pxToRem(28);
         margin-top: pxToRem(33);
-        margin-right: pxToRem(57);
       }
 
       @include desktop-extra {
@@ -79,7 +82,7 @@
         padding-left: pxToRem(20);
         padding-right: pxToRem(20);
         vertical-align: middle;
-        margin-right: pxToRem(20);
+        margin-right: pxToRem(12);
         margin-bottom: pxToRem(10);
 
         @include desktop-extra {
@@ -114,6 +117,7 @@
 
     @include tablet {
       display: block;
+      width: 50%;
     }
 
     @include desktop-extra {
