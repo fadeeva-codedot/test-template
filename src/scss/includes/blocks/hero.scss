@@ -1,20 +1,14 @@
 .hero {
   margin-bottom: pxToRem(17);
   display: flex;
-  max-width: fit-content;
+  justify-content: space-between;
 
   &-info {
     padding-top: pxToRem(17);
-    padding-right: pxToRem(10);
     max-width: max-content;
 
     @include tablet {
       padding-top: pxToRem(30);
-      padding-right: pxToRem(77);
-    }
-
-    @include desktop-extra {
-      padding-top: pxToRem(55);
     }
 
     &-name {
@@ -66,7 +60,6 @@
       margin-top: pxToRem(25);
       flex-direction: row;
       justify-content: flex-start;
-      max-width: max-content;
 
       @include tablet {
         margin-top: pxToRem(35);
@@ -125,24 +118,25 @@
 
     @include tablet {
       display: block;
-      width: pxToRem(299);
-      height: pxToRem(299);
       position: relative;
       right: pxToRem(21);
     }
 
-    @include desktop-extra {
-      right: pxToRem(48);
+    @include desktop {
       bottom: pxToRem(19);
-      width: pxToRem(477);
-      height: pxToRem(477);
+      right: pxToRem(119);
     }
 
     .hero-image {
       object-fit: fill;
       max-width: max-content;
 
-      @include desktop-extra {
+      @include tablet {
+        width: pxToRem(299);
+        height: pxToRem(299);
+      }
+
+      @include desktop {
         width: pxToRem(477);
         height: pxToRem(477);
       }
