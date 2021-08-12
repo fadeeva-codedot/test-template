@@ -24,6 +24,8 @@ body {
 .body-container {
   padding-left: pxToRem(10);
   padding-right: pxToRem(10);
+  padding-top: pxToRem(18);
+  padding-bottom: pxToRem(18);
 
   @include tablet {
     padding-left: pxToRem(19);
@@ -39,16 +41,22 @@ body {
 .header-container {
   padding-left: pxToRem(10);
   padding-right: pxToRem(10);
+  padding-top: pxToRem(7);
+  padding-bottom: pxToRem(7);
   position: relative;
 
   @include tablet {
     padding-left: pxToRem(22);
     padding-right: pxToRem(22);
+    padding-top: pxToRem(20);
+    padding-bottom: pxToRem(20);
   }
 
   @include desktop-extra {
     padding-left: pxToRem(85);
     padding-right: pxToRem(85);
+    padding-top: pxToRem(30);
+    padding-bottom: pxToRem(30);
   }
 }
 
@@ -176,6 +184,8 @@ a {
 }
 
 p {
+  margin: 0;
+
   &:last-child {
     margin-bottom: 0;
   }

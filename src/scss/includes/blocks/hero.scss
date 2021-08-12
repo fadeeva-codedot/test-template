@@ -1,4 +1,58 @@
 .hero {
-  width: 100%;
-  height: pxToRem(100);
+  margin-top: pxToRem(17);
+  margin-bottom: pxToRem(17);
+  &-info {
+    padding-right: pxToRem(10);
+
+    &-name {
+      font-size: $typography-h4-font-size;
+      font-weight: $typography-h2-font-weight;
+      line-height: pxToRem(22);
+    }
+
+    &-description {
+      font-size: $typography-subtitle2-font-size;
+      font-weight: $typography-h3-font-weight;
+      margin-top: pxToRem(25);
+      line-height: pxToRem(24);
+    }
+
+    &-buttons {
+      display: flex;
+      margin-top: pxToRem(25);
+      margin-right: pxToRem(12);
+      flex-direction: row;
+      justify-content: space-between;
+
+      .button-name {
+        border-color: $color-primary-main;
+        border-width: pxToRem(1);
+        border-style: solid;
+        text-align: center;
+        background-color: $color-common-white;
+        color: $color-primary-main;
+        font-size: $typography-button-font-size;
+        font-weight: $typography-button-font-weight;
+        padding-top: pxToRem(10);
+        padding-bottom: pxToRem(10);
+        padding-left: pxToRem(20);
+        padding-right: pxToRem(20);
+        vertical-align: middle;
+
+        &:nth-child(2) {
+          padding-left: pxToRem(50);
+          padding-right: pxToRem(50);
+        }
+
+        &:hover {
+          background-color: $color-primary-main;
+          color: $color-common-white;
+        }
+      }
+    }
+  }
+
+  &-picture {
+    display: none;
+  }
 }

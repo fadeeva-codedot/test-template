@@ -270,13 +270,13 @@
         @include tablet {
           display: block;
           font-size: $typography-h5-font-size;
-          font-weight: 800;
+          font-weight: $typography-h2-font-weight;
           right: pxToRem(16);
         }
 
         @include desktop-extra {
           font-size: $typography-subtitle2-font-size;
-          font-weight: 800;
+          font-weight: $typography-h2-font-weight;
           right: pxToRem(30);
         }
 
