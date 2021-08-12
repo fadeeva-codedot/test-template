@@ -4,16 +4,7 @@
   justify-content: space-between;
 
   &-info {
-    padding-top: pxToRem(17);
     max-width: max-content;
-
-    @include tablet {
-      padding-top: pxToRem(30);
-    }
-
-    @include desktop-extra {
-      padding-top: pxToRem(55);
-    }
 
     &-name {
       font-size: $typography-h4-font-size;
@@ -123,7 +114,6 @@
 
     @include tablet {
       display: block;
-      position: relative;
     }
 
     @include desktop-extra {
@@ -131,20 +121,7 @@
     }
 
     .hero-image {
-      object-fit: fill;
-      max-width: max-content;
-
-      @include tablet {
-        width: pxToRem(299);
-        height: pxToRem(299);
-        margin-right: pxToRem(20);
-      }
-
-      @include desktop-extra {
-        width: pxToRem(477);
-        height: pxToRem(477);
-        margin-right: pxToRem(119);
-      }
+      max-width: 100%;
     }
   }
 }

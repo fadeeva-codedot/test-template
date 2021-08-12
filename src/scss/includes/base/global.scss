@@ -177,6 +177,7 @@ a {
   cursor: pointer;
   text-decoration: none;
   margin: 0px;
+  letter-spacing: $typography-letter-spacing;
 
   &:not([href]) {
     cursor: pointer;
@@ -185,6 +186,7 @@ a {
 
 p {
   margin: 0;
+  letter-spacing: $typography-letter-spacing;
 
   &:last-child {
     margin-bottom: 0;
