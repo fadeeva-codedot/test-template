@@ -13,6 +13,10 @@
       padding-right: pxToRem(77);
     }
 
+    @include desktop-extra {
+      padding-top: pxToRem(55);
+    }
+
     &-name {
       font-size: $typography-h4-font-size;
       font-weight: $typography-h2-font-weight;
@@ -21,6 +25,11 @@
       @include tablet {
         font-size: $typography-h3-font-size;
         line-height: pxToRem(29);
+      }
+
+      @include desktop-extra {
+        font-size: $typography-h2-font-size;
+        line-height: pxToRem(44);
       }
     }
 
@@ -45,6 +54,10 @@
         line-height: pxToRem(28);
         margin-top: pxToRem(33);
       }
+
+      @include desktop-extra {
+        padding-right: pxToRem(83);
+      }
     }
 
     &-buttons {
@@ -57,6 +70,10 @@
 
       @include tablet {
         margin-top: pxToRem(35);
+      }
+
+      @include desktop-extra {
+        margin-top: pxToRem(51);
       }
 
       .button-name {
@@ -76,10 +93,23 @@
         margin-right: pxToRem(20);
         margin-bottom: pxToRem(10);
 
+        @include desktop-extra {
+          font-size: $typography-subtitle2-font-size;
+          padding-top: pxToRem(12);
+          padding-bottom: pxToRem(12);
+          padding-left: pxToRem(30);
+          padding-right: pxToRem(30);
+        }
+
         &:nth-child(2) {
           padding-left: pxToRem(49);
           padding-right: pxToRem(49);
           margin-right: pxToRem(0);
+
+          @include desktop-extra {
+            padding-left: pxToRem(65);
+            padding-right: pxToRem(65);
+          }
         }
 
         &:hover {
@@ -101,9 +131,21 @@
       right: pxToRem(21);
     }
 
+    @include desktop-extra {
+      right: pxToRem(48);
+      bottom: pxToRem(19);
+      width: pxToRem(477);
+      height: pxToRem(477);
+    }
+
     .hero-image {
       object-fit: fill;
-      max-width: min-content;
+      max-width: max-content;
+
+      @include desktop-extra {
+        width: pxToRem(477);
+        height: pxToRem(477);
+      }
     }
   }
 }
