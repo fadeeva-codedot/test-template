@@ -11,6 +11,10 @@
       padding-top: pxToRem(30);
     }
 
+    @include desktop-extra {
+      padding-top: pxToRem(55);
+    }
+
     &-name {
       font-size: $typography-h4-font-size;
       font-weight: $typography-h2-font-weight;
@@ -47,10 +51,11 @@
         font-weight: $typography-h3-font-weight;
         line-height: pxToRem(28);
         margin-top: pxToRem(33);
+        margin-right: pxToRem(57);
       }
 
       @include desktop-extra {
-        padding-right: pxToRem(83);
+        margin-right: pxToRem(112);
       }
     }
 
@@ -119,12 +124,10 @@
     @include tablet {
       display: block;
       position: relative;
-      right: pxToRem(21);
     }
 
-    @include desktop {
+    @include desktop-extra {
       bottom: pxToRem(19);
-      right: pxToRem(119);
     }
 
     .hero-image {
@@ -134,11 +137,13 @@
       @include tablet {
         width: pxToRem(299);
         height: pxToRem(299);
+        margin-right: pxToRem(20);
       }
 
-      @include desktop {
+      @include desktop-extra {
         width: pxToRem(477);
         height: pxToRem(477);
+        margin-right: pxToRem(119);
       }
     }
   }
