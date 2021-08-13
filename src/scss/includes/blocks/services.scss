@@ -29,6 +29,7 @@
     @include tablet {
       font-size: $typography-h3-font-size;
       line-height: pxToRem(29);
+      padding-top: pxToRem(64);
     }
 
     @include desktop-extra {
@@ -45,7 +46,8 @@
 
     @include tablet {
       font-size: $typography-h4-font-size;
-      line-height: pxToRem(28);
+      line-height: pxToRem(29);
+      margin-bottom: pxToRem(74);
     }
   }
 
@@ -54,15 +56,21 @@
     flex-direction: column;
     flex-wrap: wrap;
     gap: pxToRem(1);
+    column-count: 1;
+    padding-bottom: pxToRem(45);
 
     @include tablet {
       gap: pxToRem(15);
+      column-count: 2;
     }
 
     &-item {
       display: block;
       width: fit-content;
       padding-bottom: pxToRem(9);
+      font-weight: $typography-h3-font-weight;
+      font-size: $typography-subtitle2-font-size;
+      line-height: pxToRem(24);
 
       &::before {
         display: block;
@@ -73,13 +81,10 @@
         margin-top: pxToRem(10);
         margin-right: pxToRem(22);
       }
-      font-weight: $typography-h3-font-weight;
-      font-size: $typography-subtitle2-font-size;
-      line-height: pxToRem(24);
 
       @include tablet {
         font-size: $typography-h4-font-size;
-        line-height: pxToRem(28);
+        line-height: pxToRem(29);
       }
     }
   }
