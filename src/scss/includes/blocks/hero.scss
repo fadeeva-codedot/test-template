@@ -1,13 +1,24 @@
 .hero {
-  margin-bottom: pxToRem(17);
+  margin-bottom: pxToRem(67);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 
+  @include tablet {
+    margin-bottom: pxToRem(18);
+  }
+
+  @include desktop-extra {
+    margin-bottom: pxToRem(24);
+  }
+
   &-info {
+    padding-top: pxToRem(17);
+
     @include tablet {
       width: 50%;
       margin: auto;
+      padding-top: 0;
       padding-bottom: pxToRem(50);
     }
 

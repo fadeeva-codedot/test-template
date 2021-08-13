@@ -2,10 +2,42 @@
   &-title {
     display: block;
     max-width: 100%;
+    font-size: $typography-h4-font-size;
+    font-weight: $typography-h5-font-weight;
+    line-height: pxToRem(22);
+    padding-right: pxToRem(53);
+
+    @include tablet {
+      font-size: $typography-h3-font-size;
+      font-weight: $typography-h3-font-weight;
+      line-height: pxToRem(29);
+    }
+
+    @include desktop-extra {
+      font-size: $typography-h2-font-size;
+      font-weight: $typography-h3-font-weight;
+      line-height: pxToRem(44);
+    }
   }
 
   &-text {
     display: block;
     max-width: 100%;
+    font-size: $typography-subtitle2-font-size;
+    font-weight: $typography-h4-font-weight;
+    line-height: pxToRem(24);
+    padding-top: pxToRem(30);
+
+    @include tablet {
+      font-size: $typography-h4-font-size;
+      font-weight: $typography-h4-font-weight;
+      line-height: pxToRem(28);
+      letter-spacing: $typography-letter-spacing;
+      padding-top: pxToRem(40);
+    }
+
+    @include desktop-extra {
+      padding-right: pxToRem(129);
+    }
   }
 }

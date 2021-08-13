@@ -188,6 +188,10 @@ p {
   margin: 0;
   letter-spacing: $typography-letter-spacing;
 
+  @include tablet {
+    letter-spacing: 0.04em;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
