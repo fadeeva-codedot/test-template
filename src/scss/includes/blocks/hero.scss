@@ -7,7 +7,12 @@
   &-info {
     @include tablet {
       width: 50%;
-      padding-top: pxToRem(30);
+      margin: auto;
+      padding-bottom: pxToRem(50);
+    }
+
+    @include desktop-extra {
+      padding-bottom: pxToRem(60);
     }
 
     &-name {
