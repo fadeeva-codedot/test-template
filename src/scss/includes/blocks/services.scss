@@ -1,0 +1,86 @@
+.services {
+  margin-top: pxToRem(45);
+  padding-left: pxToRem(10);
+  padding-right: pxToRem(10);
+  background-color: $color-primary-main;
+  color: $color-common-white;
+
+  @include tablet {
+    padding-left: pxToRem(19);
+    padding-right: pxToRem(19);
+  }
+
+  @include desktop-extra {
+    padding-left: pxToRem(85);
+    padding-right: pxToRem(85);
+  }
+
+  @include tablet {
+    margin-top: pxToRem(77);
+  }
+
+  &-title {
+    font-weight: $typography-h3-font-weight;
+    font-size: $typography-h4-font-size;
+    line-height: pxToRem(22);
+    padding-top: pxToRem(45);
+    margin-bottom: pxToRem(30);
+
+    @include tablet {
+      font-size: $typography-h3-font-size;
+      line-height: pxToRem(29);
+    }
+
+    @include desktop-extra {
+      font-size: $typography-h2-font-size;
+      line-height: pxToRem(43);
+    }
+  }
+
+  &-description {
+    font-weight: $typography-h4-font-weight;
+    font-size: $typography-subtitle2-font-size;
+    line-height: pxToRem(24);
+    margin-bottom: pxToRem(29);
+
+    @include tablet {
+      font-size: $typography-h4-font-size;
+      line-height: pxToRem(28);
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: pxToRem(1);
+
+    @include tablet {
+      gap: pxToRem(15);
+    }
+
+    &-item {
+      display: block;
+      width: fit-content;
+      padding-bottom: pxToRem(9);
+
+      &::before {
+        display: block;
+        content: "";
+        border: pxToRem(1) solid $color-common-white;
+        width: pxToRem(24);
+        float: left;
+        margin-top: pxToRem(10);
+        margin-right: pxToRem(22);
+      }
+      font-weight: $typography-h3-font-weight;
+      font-size: $typography-subtitle2-font-size;
+      line-height: pxToRem(24);
+
+      @include tablet {
+        font-size: $typography-h4-font-size;
+        line-height: pxToRem(28);
+      }
+    }
+  }
+}

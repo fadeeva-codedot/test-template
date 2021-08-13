@@ -1,29 +1,29 @@
 .hero {
-  margin-bottom: pxToRem(67);
+  margin-bottom: pxToRem(68);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 
   @include tablet {
-    margin-bottom: pxToRem(18);
+    margin-bottom: pxToRem(37);
   }
 
   @include desktop-extra {
-    margin-bottom: pxToRem(24);
+    margin-bottom: pxToRem(42);
   }
 
   &-info {
-    padding-top: pxToRem(17);
+    padding-top: pxToRem(34);
 
     @include tablet {
       width: 50%;
       margin: auto;
       padding-top: 0;
-      padding-bottom: pxToRem(50);
+      padding-bottom: pxToRem(12);
     }
 
     @include desktop-extra {
-      padding-bottom: pxToRem(60);
+      padding-bottom: pxToRem(20);
     }
 
     &-name {

@@ -24,8 +24,6 @@ body {
 .body-container {
   padding-left: pxToRem(10);
   padding-right: pxToRem(10);
-  padding-top: pxToRem(18);
-  padding-bottom: pxToRem(18);
 
   @include tablet {
     padding-left: pxToRem(19);
@@ -131,7 +129,7 @@ body {
   }
 
   &.page-wrapper {
-    overflow: hidden;
+    overflow-y: scroll;
   }
 }
 
