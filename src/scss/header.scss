@@ -213,8 +213,13 @@
           overflow: hidden;
           flex-direction: row;
           padding-top: 0;
+          left: pxToRem(42);
           background-color: transparent;
           color: $color-grey-900;
+        }
+
+        @include desktop-extra {
+          left: pxToRem(75);
         }
 
         &__link {
@@ -242,6 +247,10 @@
             }
 
             @include desktop-extra {
+              padding-top: pxToRem(10);
+              padding-bottom: pxToRem(10);
+              padding-left: pxToRem(20);
+              padding-right: pxToRem(20);
               font-size: $typography-subtitle2-font-size;
               font-weight: $typography-h5-font-weight;
             }
@@ -260,10 +269,10 @@
           top: 0;
           flex-direction: row;
           align-items: center;
-
           position: relative;
         }
       }
+
       &-phone {
         display: none;
         position: relative;
@@ -318,8 +327,8 @@
           @include tablet {
             padding-top: pxToRem(10);
             padding-bottom: pxToRem(10);
-            padding-left: pxToRem(21);
-            padding-right: pxToRem(20);
+            padding-left: pxToRem(18);
+            padding-right: pxToRem(18);
             font-weight: $typography-h5-font-weight;
           }
 
@@ -328,8 +337,8 @@
             font-weight: $typography-button-font-weight;
             padding-top: pxToRem(12);
             padding-bottom: pxToRem(12);
-            padding-left: pxToRem(30);
-            padding-right: pxToRem(30);
+            padding-left: pxToRem(24);
+            padding-right: pxToRem(24);
           }
         }
       }
