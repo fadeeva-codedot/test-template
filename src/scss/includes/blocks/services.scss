@@ -62,6 +62,7 @@
     display: grid;
     grid-template-columns: max-content;
     padding-bottom: pxToRem(45);
+    grid-gap: pxToRem(15);
 
     @include tablet {
       grid-template-columns: 50% 50%;

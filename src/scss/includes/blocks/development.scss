@@ -1,0 +1,52 @@
+.development {
+  margin-top: pxToRem(71);
+  margin-bottom: pxToRem(300); //delete after finishing
+
+  &-process {
+    font-size: $typography-subtitle2-font-size;
+    font-weight: $typography-h5-font-weight;
+    letter-spacing: $typography-letter-spacing;
+    line-height: pxToRem(19);
+    max-width: 54%;
+  }
+
+  &-phases {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: fit-content;
+
+    &-background {
+      content: "";
+      position: relative;
+      left: pxToRem(80);
+      bottom: pxToRem(16);
+      width: pxToRem(85);
+      height: pxToRem(85);
+      background-color: $color-info-light;
+      border-radius: 100%;
+    }
+
+    &-number {
+      z-index: 1;
+      position: relative;
+      left: pxToRem(46);
+      top: pxToRem(31);
+      font-size: pxToRem(50);
+      font-weight: 900;
+      line-height: 145%;
+      letter-spacing: $typography-letter-spacing;
+      color: transparent;
+      -webkit-text-stroke: pxToRem(1) $color-grey-900;
+    }
+
+    &-description {
+      font-size: $typography-subtitle2-font-size;
+      font-weight: $typography-subtitle1-font-weight;
+      letter-spacing: $typography-letter-spacing;
+      line-height: pxToRem(24);
+    }
+  }
+
+  &-slider {
+  }
+}
