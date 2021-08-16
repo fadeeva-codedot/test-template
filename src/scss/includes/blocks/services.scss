@@ -8,15 +8,13 @@
   @include tablet {
     padding-left: pxToRem(19);
     padding-right: pxToRem(19);
+    margin-top: pxToRem(77);
   }
 
   @include desktop {
     padding-left: pxToRem(85);
     padding-right: pxToRem(85);
-  }
-
-  @include tablet {
-    margin-top: pxToRem(77);
+    margin-top: pxToRem(93);
   }
 
   &-title {
@@ -35,6 +33,8 @@
     @include desktop {
       font-size: $typography-h2-font-size;
       line-height: pxToRem(43);
+      padding-top: pxToRem(80);
+      margin-bottom: 0;
     }
   }
 
@@ -49,25 +49,34 @@
       line-height: pxToRem(29);
       margin-bottom: pxToRem(74);
     }
+
+    @include desktop {
+      margin-top: pxToRem(35);
+      margin-bottom: pxToRem(50);
+      max-width: fit-content;
+      padding-right: pxToRem(134);
+    }
   }
 
   &-list {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: pxToRem(1);
-    column-count: 1;
+    display: grid;
+    grid-template-columns: max-content;
     padding-bottom: pxToRem(45);
 
     @include tablet {
-      gap: pxToRem(15);
-      column-count: 2;
+      grid-template-columns: 50% 50%;
+      grid-gap: pxToRem(23);
+    }
+
+    @include desktop {
+      grid-column-gap: pxToRem(103);
+      grid-row-gap: pxToRem(23);
+      grid-template-columns: pxToRem(250) pxToRem(250);
     }
 
     &-item {
       display: block;
       width: fit-content;
-      padding-bottom: pxToRem(9);
       font-weight: $typography-h3-font-weight;
       font-size: $typography-subtitle2-font-size;
       line-height: pxToRem(24);
