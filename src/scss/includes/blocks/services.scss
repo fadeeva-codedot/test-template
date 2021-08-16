@@ -10,7 +10,7 @@
     padding-right: pxToRem(19);
   }
 
-  @include desktop-extra {
+  @include desktop {
     padding-left: pxToRem(85);
     padding-right: pxToRem(85);
   }
@@ -32,7 +32,7 @@
       padding-top: pxToRem(64);
     }
 
-    @include desktop-extra {
+    @include desktop {
       font-size: $typography-h2-font-size;
       line-height: pxToRem(43);
     }

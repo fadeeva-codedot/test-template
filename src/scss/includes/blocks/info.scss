@@ -13,7 +13,7 @@
       line-height: pxToRem(29);
     }
 
-    @include desktop-extra {
+    @include desktop {
       font-size: $typography-h2-font-size;
       font-weight: $typography-h3-font-weight;
       line-height: pxToRem(44);
@@ -36,7 +36,7 @@
       padding-top: pxToRem(40);
     }
 
-    @include desktop-extra {
+    @include desktop {
       padding-right: pxToRem(129);
     }
   }

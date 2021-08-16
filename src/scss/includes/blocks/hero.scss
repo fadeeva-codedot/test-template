@@ -8,7 +8,7 @@
     margin-bottom: pxToRem(37);
   }
 
-  @include desktop-extra {
+  @include desktop {
     margin-bottom: pxToRem(42);
   }
 
@@ -22,7 +22,7 @@
       padding-bottom: pxToRem(12);
     }
 
-    @include desktop-extra {
+    @include desktop {
       padding-bottom: pxToRem(20);
     }
 
@@ -36,7 +36,7 @@
         line-height: pxToRem(29);
       }
 
-      @include desktop-extra {
+      @include desktop {
         font-size: $typography-h2-font-size;
         line-height: pxToRem(44);
       }
@@ -64,7 +64,7 @@
         margin-top: pxToRem(33);
       }
 
-      @include desktop-extra {
+      @include desktop {
         margin-right: pxToRem(112);
       }
     }
@@ -80,7 +80,7 @@
         margin-top: pxToRem(35);
       }
 
-      @include desktop-extra {
+      @include desktop {
         margin-top: pxToRem(51);
       }
 
@@ -101,7 +101,7 @@
         margin-right: pxToRem(12);
         margin-bottom: pxToRem(10);
 
-        @include desktop-extra {
+        @include desktop {
           font-size: $typography-subtitle2-font-size;
           padding-top: pxToRem(12);
           padding-bottom: pxToRem(12);
@@ -114,7 +114,7 @@
           padding-right: pxToRem(49);
           margin-right: pxToRem(0);
 
-          @include desktop-extra {
+          @include desktop {
             padding-left: pxToRem(65);
             padding-right: pxToRem(65);
           }
@@ -136,7 +136,7 @@
       width: 50%;
     }
 
-    @include desktop-extra {
+    @include desktop {
       bottom: pxToRem(19);
     }
 
