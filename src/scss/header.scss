@@ -265,6 +265,7 @@
 
         @include tablet {
           display: flex;
+          gap: pxToRem(20);
           position: relative;
           top: 0;
           flex-direction: row;
@@ -281,13 +282,13 @@
           display: block;
           font-size: $typography-h5-font-size;
           font-weight: $typography-h2-font-weight;
-          right: pxToRem(16);
+          padding-top: pxToRem(20);
+          padding-bottom: pxToRem(20);
         }
 
         @include desktop {
           font-size: $typography-subtitle2-font-size;
           font-weight: $typography-h2-font-weight;
-          right: pxToRem(30);
         }
 
         .link-name {
