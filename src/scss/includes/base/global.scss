@@ -18,7 +18,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: montserrat;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .body-container {
@@ -30,7 +30,7 @@ body {
     padding-right: pxToRem(19);
   }
 
-  @include desktop-extra {
+  @include desktop {
     padding-left: pxToRem(85);
     padding-right: pxToRem(85);
   }
@@ -58,6 +58,14 @@ body {
   }
 }
 
+.header {
+  &:target {
+    body {
+      overflow-y: hidden;
+    }
+  }
+}
+
 input[type="submit"]:focus {
   outline: none;
 }
@@ -65,7 +73,7 @@ input[type="submit"]:focus {
 ul {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: marker;
 }
 
 img,
