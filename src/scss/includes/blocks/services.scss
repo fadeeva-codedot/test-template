@@ -1,20 +1,28 @@
 .services {
+  position: relative;
   margin-top: pxToRem(45);
   padding-left: pxToRem(10);
   padding-right: pxToRem(10);
   background-color: $color-primary-main;
   color: $color-common-white;
+  width: calc(100% + 20px);
+  right: pxToRem(10);
+  z-index: -1;
 
   @include tablet {
     padding-left: pxToRem(19);
     padding-right: pxToRem(19);
     margin-top: pxToRem(77);
+    width: calc(100% + 38px);
+    right: pxToRem(19);
   }
 
   @include desktop {
     padding-left: pxToRem(85);
     padding-right: pxToRem(85);
     margin-top: pxToRem(93);
+    width: calc(100% + 170px);
+    right: pxToRem(85);
   }
 
   &-title {
@@ -60,6 +68,7 @@
 
   &-list {
     display: grid;
+    list-style: marker;
     grid-template-columns: max-content;
     padding-bottom: pxToRem(45);
     grid-gap: pxToRem(15);
@@ -67,30 +76,23 @@
     @include tablet {
       grid-template-columns: 50% 50%;
       grid-gap: pxToRem(23);
+      padding-bottom: pxToRem(62);
     }
 
     @include desktop {
       grid-column-gap: pxToRem(103);
       grid-row-gap: pxToRem(23);
-      grid-template-columns: pxToRem(250) pxToRem(250);
+      grid-template-columns: pxToRem(282) pxToRem(282);
+      padding-bottom: pxToRem(127);
     }
 
     &-item {
-      display: block;
+      display: list-item;
+      list-style-type: none;
       width: fit-content;
       font-weight: $typography-h3-font-weight;
       font-size: $typography-subtitle2-font-size;
       line-height: pxToRem(24);
-
-      &::before {
-        display: block;
-        content: "";
-        border: pxToRem(1) solid $color-common-white;
-        width: pxToRem(24);
-        float: left;
-        margin-top: pxToRem(10);
-        margin-right: pxToRem(22);
-      }
 
       @include tablet {
         font-size: $typography-h4-font-size;
