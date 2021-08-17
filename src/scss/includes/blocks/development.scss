@@ -1,52 +1,104 @@
 .development {
   margin-top: pxToRem(71);
-  margin-bottom: pxToRem(300); //delete after finishing
+  margin-bottom: pxToRem(300);
 
-  &-process {
+  &-title {
     font-size: $typography-subtitle2-font-size;
     font-weight: $typography-h5-font-weight;
     letter-spacing: $typography-letter-spacing;
     line-height: pxToRem(19);
-    max-width: 54%;
+
+    @include tablet {
+      font-size: $typography-h3-font-size;
+      line-height: pxToRem(29);
+      max-width: fit-content;
+      padding-top: pxToRem(12);
+    }
+
+    @include desktop {
+      font-size: $typography-h2-font-size;
+      line-height: pxToRem(44);
+      padding-top: pxToRem(25);
+    }
   }
 
   &-phases {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: fit-content;
+    display: grid;
+    grid-gap: 10%;
+    grid-auto-columns: 90%;
+    grid-auto-flow: column;
+    overflow: scroll;
 
-    &-background {
-      content: "";
-      position: relative;
-      left: pxToRem(80);
-      bottom: pxToRem(16);
-      width: pxToRem(85);
-      height: pxToRem(85);
-      background-color: $color-info-light;
+    @include tablet {
+      grid-gap: 10%;
+      grid-auto-columns: 26%;
+    }
+
+    @include desktop-extra {
+      grid-gap: 6%;
+      grid-auto-columns: 20%;
+    }
+    /*scroll with ability add another elements*/
+    .development-phase {
+      &-background {
+        position: relative;
+        content: "";
+        width: pxToRem(85);
+        height: pxToRem(85);
+        background-color: $color-info-light;
+        border-radius: 100%;
+
+        @include desktop {
+          width: pxToRem(113);
+          height: pxToRem(113);
+        }
+      }
+
+      &-number {
+        position: relative;
+        z-index: 1;
+        font-size: pxToRem(50);
+        font-weight: 900;
+        line-height: 145%;
+        letter-spacing: $typography-letter-spacing;
+        color: transparent;
+        -webkit-text-stroke: pxToRem(1) $color-primary-main;
+
+        @include desktop {
+          font-size: pxToRem(70);
+          line-height: 145%;
+        }
+      }
+
+      &-description {
+        position: relative;
+        font-size: $typography-subtitle2-font-size;
+        font-weight: $typography-subtitle1-font-weight;
+        letter-spacing: $typography-letter-spacing;
+        line-height: pxToRem(24);
+
+        @include tablet {
+          font-size: $typography-h4-font-size;
+          font-weight: $typography-h4-font-weight;
+          letter-spacing: $typography-letter-spacing;
+          line-height: pxToRem(28);
+        }
+
+        @include desktop {
+        }
+      }
+    }
+  }
+
+  /*&-slider {
+    &-arrow {
+      border: 1px solid $color-grey-200;
       border-radius: 100%;
+      width: pxToRem(38);
+      height: pxToRem(38);
     }
 
-    &-number {
-      z-index: 1;
-      position: relative;
-      left: pxToRem(46);
-      top: pxToRem(31);
-      font-size: pxToRem(50);
-      font-weight: 900;
-      line-height: 145%;
-      letter-spacing: $typography-letter-spacing;
-      color: transparent;
-      -webkit-text-stroke: pxToRem(1) $color-grey-900;
+    &-indicator {
     }
-
-    &-description {
-      font-size: $typography-subtitle2-font-size;
-      font-weight: $typography-subtitle1-font-weight;
-      letter-spacing: $typography-letter-spacing;
-      line-height: pxToRem(24);
-    }
-  }
-
-  &-slider {
-  }
+  }*/
 }
