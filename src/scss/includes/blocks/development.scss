@@ -68,22 +68,11 @@
         }
       }
 
-      &-description {
+      .section-description {
         position: relative;
         left: pxToRem(45);
         bottom: pxToRem(27);
         max-width: pxToRem(220);
-        font-size: $typography-subtitle2-font-size;
-        font-weight: $typography-subtitle1-font-weight;
-        letter-spacing: $typography-letter-spacing;
-        line-height: pxToRem(24);
-
-        @include tablet {
-          font-size: $typography-h4-font-size;
-          font-weight: $typography-h4-font-weight;
-          letter-spacing: $typography-letter-spacing;
-          line-height: pxToRem(28);
-        }
       }
     }
   }

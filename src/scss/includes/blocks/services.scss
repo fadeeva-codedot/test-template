@@ -19,15 +19,10 @@
     }
   }
 
-  &-description {
-    font-weight: $typography-h4-font-weight;
-    font-size: $typography-subtitle2-font-size;
-    line-height: pxToRem(24);
+  .section-description {
     margin-bottom: pxToRem(29);
 
     @include tablet {
-      font-size: $typography-h4-font-size;
-      line-height: pxToRem(29);
       margin-bottom: pxToRem(74);
     }
 
