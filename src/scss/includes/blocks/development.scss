@@ -40,6 +40,10 @@
     }
     /*scroll with ability add another elements*/
     .development-phase {
+      &:nth-child(even) {
+        padding-top: pxToRem(80);
+      }
+
       &-background {
         position: relative;
         left: pxToRem(79);
@@ -93,7 +97,17 @@
     }
   }
 
-  /*&-slider {
+  &-slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: pxToRem(15);
+
+    @include tablet {
+      gap: pxToRem(26);
+    }
+
     &-arrow {
       border: 1px solid $color-grey-200;
       border-radius: 100%;
@@ -101,7 +115,35 @@
       height: pxToRem(38);
     }
 
-    &-indicator {
+    .switch-arrow {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: solid transparent 5px;
+      border-right: solid transparent 5px;
+      border-bottom: solid $color-grey-900 9px;
+      position: relative;
+      top: pxToRem(13);
+      left: pxToRem(13);
     }
-  }*/
+
+    .left-arrow {
+      transform: rotate(-90deg);
+    }
+
+    .right-arrow {
+      transform: rotate(90deg);
+    }
+
+    &-indicator {
+      background-image: linear-gradient(to right, $color-grey-200 50%, $color-grey-900 50%);
+      width: 65%;
+      height: pxToRem(1);
+      display: block;
+
+      @include tablet {
+        width: 85%;
+      }
+    }
+  }
 }
