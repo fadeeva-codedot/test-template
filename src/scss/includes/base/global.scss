@@ -40,6 +40,10 @@ html {
   }
 }
 
+.body-container_primary-color {
+  background-color: $color-primary-main;
+}
+
 .header-container {
   padding-left: pxToRem(10);
   padding-right: pxToRem(10);

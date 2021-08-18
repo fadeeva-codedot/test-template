@@ -1,18 +1,9 @@
 .services {
-  margin-top: pxToRem(45);
   padding-left: pxToRem(10);
   padding-right: pxToRem(10);
   background-color: $color-primary-main;
   color: $color-common-white;
   width: 100%;
-
-  @include tablet {
-    margin-top: pxToRem(77);
-  }
-
-  @include desktop {
-    margin-top: pxToRem(93);
-  }
 
   &-title {
     font-weight: $typography-h3-font-weight;
