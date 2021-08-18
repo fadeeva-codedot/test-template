@@ -9,25 +9,10 @@
     margin-bottom: pxToRem(94);
   }
 
-  &-title {
+  .section-title {
     display: block;
     max-width: 100%;
-    font-size: $typography-h4-font-size;
-    font-weight: $typography-h5-font-weight;
-    line-height: pxToRem(22);
     padding-right: pxToRem(53);
-
-    @include tablet {
-      font-size: $typography-h3-font-size;
-      font-weight: $typography-h3-font-weight;
-      line-height: pxToRem(29);
-    }
-
-    @include desktop {
-      font-size: $typography-h2-font-size;
-      font-weight: $typography-h3-font-weight;
-      line-height: pxToRem(44);
-    }
   }
 
   &-text {

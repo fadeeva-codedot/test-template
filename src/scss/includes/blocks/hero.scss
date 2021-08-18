@@ -26,20 +26,8 @@
       padding-bottom: pxToRem(20);
     }
 
-    &-name {
-      font-size: $typography-h4-font-size;
-      font-weight: $typography-h2-font-weight;
-      line-height: pxToRem(22);
-
-      @include tablet {
-        font-size: $typography-h3-font-size;
-        line-height: pxToRem(29);
-      }
-
-      @include desktop {
-        font-size: $typography-h2-font-size;
-        line-height: pxToRem(44);
-      }
+    .section-title {
+      font-weight: $typography-h5-font-weight;
     }
 
     &-description__mobile {

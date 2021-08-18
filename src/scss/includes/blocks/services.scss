@@ -5,22 +5,15 @@
   color: $color-common-white;
   width: 100%;
 
-  &-title {
-    font-weight: $typography-h3-font-weight;
-    font-size: $typography-h4-font-size;
-    line-height: pxToRem(22);
+  .section-title {
     padding-top: pxToRem(45);
     margin-bottom: pxToRem(30);
 
     @include tablet {
-      font-size: $typography-h3-font-size;
-      line-height: pxToRem(29);
       padding-top: pxToRem(64);
     }
 
     @include desktop {
-      font-size: $typography-h2-font-size;
-      line-height: pxToRem(43);
       padding-top: pxToRem(80);
       margin-bottom: 0;
     }
