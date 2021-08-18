@@ -73,14 +73,6 @@
       }
 
       .button-name {
-        border-color: $color-primary-main;
-        border-width: pxToRem(1);
-        border-style: solid;
-        text-align: center;
-        background-color: $color-common-white;
-        color: $color-primary-main;
-        font-size: $typography-button-font-size;
-        font-weight: $typography-button-font-weight;
         padding-top: pxToRem(10);
         padding-bottom: pxToRem(10);
         padding-left: pxToRem(20);
@@ -90,7 +82,6 @@
         margin-bottom: pxToRem(10);
 
         @include desktop {
-          font-size: $typography-subtitle2-font-size;
           padding-top: pxToRem(12);
           padding-bottom: pxToRem(12);
           padding-left: pxToRem(30);
@@ -106,11 +97,6 @@
             padding-left: pxToRem(65);
             padding-right: pxToRem(65);
           }
-        }
-
-        &:hover {
-          background-color: $color-primary-main;
-          color: $color-common-white;
         }
       }
     }
