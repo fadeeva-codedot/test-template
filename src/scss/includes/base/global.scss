@@ -28,20 +28,28 @@ html {
 .body-container {
   padding-left: pxToRem(10);
   padding-right: pxToRem(10);
+  //padding-bottom: pxToRem(44);
 
   @include tablet {
     padding-left: pxToRem(19);
     padding-right: pxToRem(19);
+    //padding-bottom: pxToRem(82);
   }
 
   @include desktop {
     padding-left: pxToRem(85);
     padding-right: pxToRem(85);
+    //padding-bottom: pxToRem(95);
   }
 }
 
 .body-container_primary-color {
   background-color: $color-primary-main;
+}
+
+.body-container_max-width {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .section-title {
