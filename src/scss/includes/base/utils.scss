@@ -16,9 +16,8 @@
 .page-wrapper {
   position: relative;
   display: flex;
-  overflow: hidden;
   flex-direction: column;
-  min-height: 100vh;
+  max-height: 100vh;
 }
 
 .container {

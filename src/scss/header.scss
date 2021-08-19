@@ -1,7 +1,6 @@
 .header {
-  display: flex;
-  overflow: hidden;
   background-color: $color-common-white;
+  width: 100%;
   // all actions connected with target
   &:not(:target) {
     .mobile-menu {

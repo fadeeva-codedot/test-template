@@ -1,7 +1,7 @@
 $base-size: 16;
 
-@function pxToRem($size) {
-  @return $size / $base-size * 1rem;
+@function pxToRem($size, $postfix: rem) {
+  @return $size / $base-size * 1 + $postfix;
 }
 
 // Colors
@@ -14,11 +14,11 @@ $color-grey-200: #e4e4e4;
 $color-info-light: #f2fcff;
 
 // Media queries
-$desktop-extra-large: pxToRem(1536);
-$desktop-extra: pxToRem(1200);
-$desktop: pxToRem(992);
-$tablet: pxToRem(768);
-$mobile: pxToRem(576);
+$desktop-extra-large: pxToRem(1536, em);
+$desktop-extra: pxToRem(1200, em);
+$desktop: pxToRem(992, em);
+$tablet: pxToRem(768, em);
+$mobile: pxToRem(576, em);
 
 // Font sizes, weights, etc.
 $typography-font-size: pxToRem(15);

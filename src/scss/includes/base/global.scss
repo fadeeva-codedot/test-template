@@ -18,7 +18,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: montserrat;
-  overflow-y: auto;
+  overflow: hidden;
+
+  @include tablet {
+    overflow: scroll;
+  }
 }
 
 html {
@@ -28,18 +32,18 @@ html {
 .body-container {
   padding-left: pxToRem(10);
   padding-right: pxToRem(10);
-  //padding-bottom: pxToRem(44);
+  padding-bottom: pxToRem(44);
 
   @include tablet {
     padding-left: pxToRem(19);
     padding-right: pxToRem(19);
-    //padding-bottom: pxToRem(82);
+    padding-bottom: pxToRem(82);
   }
 
   @include desktop {
     padding-left: pxToRem(85);
     padding-right: pxToRem(85);
-    //padding-bottom: pxToRem(95);
+    padding-bottom: pxToRem(95);
   }
 }
 
@@ -184,10 +188,6 @@ body {
 
   &.fixed {
     overflow: hidden;
-  }
-
-  &.page-wrapper {
-    overflow-y: scroll;
   }
 }
 
