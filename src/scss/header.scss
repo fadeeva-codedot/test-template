@@ -164,14 +164,9 @@
       top: 0;
 
       @include tablet {
-        height: 0;
-        position: relative;
         background-color: transparent;
         visibility: visible;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        top: pxToRem(0);
+        height: auto;
       }
 
       &-wrapper {
