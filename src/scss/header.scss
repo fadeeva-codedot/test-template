@@ -47,7 +47,6 @@
       visibility: visible;
       left: 0;
       transition: 0.6s linear;
-      overflow-y: scroll;
 
       @include tablet {
         transition: none;
@@ -82,7 +81,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
 
     @include tablet {
       position: relative;
@@ -181,7 +179,6 @@
         height: calc(100vh - 63px);
         top: pxToRem(63);
         width: 100%;
-        overflow-y: scroll;
 
         @include tablet {
           position: relative;
@@ -189,7 +186,6 @@
           align-items: center;
           justify-content: space-between;
           top: 0;
-          overflow: hidden;
           height: fit-content;
         }
       }
