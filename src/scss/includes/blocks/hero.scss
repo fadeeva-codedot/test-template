@@ -1,25 +1,13 @@
 .hero {
-  margin-bottom: pxToRem(68);
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  @include tablet {
-    margin-bottom: pxToRem(37);
-  }
-
-  @include desktop {
-    margin-bottom: pxToRem(42);
+  &-items {
+    display: flex;
+    align-items: flex-start;
   }
 
   &-info {
-    padding-top: pxToRem(34);
-
     @include tablet {
       width: 50%;
-      margin: auto;
-      padding-top: 0;
-      padding-bottom: pxToRem(12);
+      margin-top: pxToRem(48);
     }
 
     @include desktop {
@@ -28,12 +16,21 @@
 
     .section-title {
       font-weight: $typography-h2-font-weight;
+      max-width: pxToRem(162);
+
+      @include tablet {
+        max-width: pxToRem(217);
+      }
+
+      @include desktop {
+        max-width: pxToRem(326);
+      }
     }
 
     &-description__mobile {
       font-size: $typography-subtitle2-font-size;
       font-weight: $typography-h3-font-weight;
-      margin-top: pxToRem(25);
+      margin-top: pxToRem(27);
       line-height: pxToRem(24);
 
       @include tablet {
@@ -50,6 +47,7 @@
         font-weight: $typography-h3-font-weight;
         line-height: pxToRem(28);
         margin-top: pxToRem(33);
+        letter-spacing: 0.03em;
       }
 
       @include desktop {
@@ -59,10 +57,8 @@
 
     &-buttons {
       display: flex;
-      flex-wrap: wrap;
+      gap: pxToRem(20);
       margin-top: pxToRem(25);
-      flex-direction: row;
-      justify-content: flex-start;
 
       @include tablet {
         margin-top: pxToRem(35);
@@ -73,29 +69,18 @@
       }
 
       .button-name {
-        padding-top: pxToRem(10);
-        padding-bottom: pxToRem(10);
-        padding-left: pxToRem(20);
-        padding-right: pxToRem(20);
+        padding: pxToRem(10) pxToRem(18) pxToRem(10) pxToRem(19);
         vertical-align: middle;
-        margin-right: pxToRem(12);
-        margin-bottom: pxToRem(10);
 
         @include desktop {
-          padding-top: pxToRem(12);
-          padding-bottom: pxToRem(12);
-          padding-left: pxToRem(30);
-          padding-right: pxToRem(30);
+          padding: pxToRem(12) pxToRem(30) pxToRem(12) pxToRem(30);
         }
 
         &:nth-child(2) {
-          padding-left: pxToRem(49);
-          padding-right: pxToRem(49);
-          margin-right: pxToRem(0);
+          padding: 0 pxToRem(49) 0 pxToRem(49);
 
           @include desktop {
-            padding-left: pxToRem(65);
-            padding-right: pxToRem(65);
+            padding: 0 pxToRem(65) 0 pxToRem(65);
           }
         }
       }
