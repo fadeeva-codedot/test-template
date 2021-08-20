@@ -89,14 +89,14 @@ html {
 
 .header-container {
   max-width: pxToRem(1175);
-  padding: pxToRem(7) pxToRem(5) pxToRem(42) pxToRem(10);
+  padding: pxToRem(7) pxToRem(5) pxToRem(7) pxToRem(10);
 
   @include tablet {
-    padding: pxToRem(18) pxToRem(22) pxToRem(18) pxToRem(22);
+    padding: pxToRem(20) pxToRem(22) pxToRem(20) pxToRem(22);
   }
 
   @include desktop-extra {
-    padding: pxToRem(34) pxToRem(33) pxToRem(30) pxToRem(35);
+    padding: pxToRem(30) pxToRem(33) pxToRem(30) pxToRem(35);
     margin: 0 auto 0 auto;
   }
 }
