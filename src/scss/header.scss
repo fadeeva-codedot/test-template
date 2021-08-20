@@ -86,7 +86,7 @@
     }
 
     @include desktop-extra {
-      gap: pxToRem(78);
+      gap: pxToRem(83);
     }
     // logo
     .logo-wrapper {
@@ -193,6 +193,7 @@
         }
 
         @include desktop {
+          gap: pxToRem(22);
         }
 
         &__link {
@@ -221,10 +222,7 @@
             }
 
             @include desktop {
-              padding-top: pxToRem(10);
-              padding-bottom: pxToRem(10);
-              padding-left: pxToRem(20);
-              padding-right: pxToRem(20);
+              padding: pxToRem(12);
               font-size: $typography-subtitle2-font-size;
               font-weight: $typography-h5-font-weight;
             }
