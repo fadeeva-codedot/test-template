@@ -61,7 +61,7 @@ html {
   font-size: $typography-h4-font-size;
   font-weight: $typography-h5-font-weight;
   letter-spacing: $typography-letter-spacing;
-  line-height: pxToRem(19);
+  line-height: pxToRem(21);
 
   @include tablet {
     font-size: $typography-h3-font-size;
@@ -89,7 +89,7 @@ html {
 
 .header-container {
   max-width: pxToRem(1175);
-  padding: pxToRem(9) pxToRem(5) pxToRem(10) pxToRem(10);
+  padding: pxToRem(7) pxToRem(5) pxToRem(42) pxToRem(10);
 
   @include tablet {
     padding: pxToRem(18) pxToRem(22) pxToRem(18) pxToRem(22);
