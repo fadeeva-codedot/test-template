@@ -1,21 +1,37 @@
 .info {
+  .body-container {
+    padding-bottom: pxToRem(45);
+
+    @include tablet {
+      padding-bottom: pxToRem(81);
+    }
+
+    @include desktop {
+      padding-bottom: pxToRem(94);
+    }
+  }
+
   .section-title {
     display: block;
-    max-width: 100%;
-    padding-right: pxToRem(53);
+    max-width: pxToRem(247);
+
+    @include tablet {
+      max-width: 100%;
+    }
   }
 
   .section-description {
     display: block;
     max-width: 100%;
-    padding-top: pxToRem(30);
+    margin-top: pxToRem(30);
 
     @include tablet {
-      padding-top: pxToRem(40);
+      margin-top: pxToRem(39);
     }
 
     @include desktop {
-      padding-right: pxToRem(129);
+      margin-top: pxToRem(40);
+      max-width: pxToRem(920);
     }
   }
 }
