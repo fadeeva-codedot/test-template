@@ -37,6 +37,10 @@
   &:target {
     overflow: hidden;
 
+    @include tablet {
+      overflow: scroll;
+    }
+
     .logo {
       animation: logo linear 0.5s forwards;
 
