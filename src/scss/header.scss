@@ -1,6 +1,4 @@
-.header {
-  background-color: $color-common-white;
-  width: 100%;
+.page-wrapper {
   // all actions connected with target
   &:not(:target) {
     .mobile-menu {
@@ -36,7 +34,11 @@
   }
 
   &:target {
-    background-color: $color-common-white;
+    overflow: hidden;
+
+    body {
+      background-color: $color-common-white;
+    }
 
     .logo {
       animation: logo linear 0.5s forwards;
@@ -78,6 +80,12 @@
       }
     }
   }
+}
+
+.header {
+  background-color: $color-common-white;
+  width: 100%;
+
   // /target/ //
   &-navbar {
     display: flex;
