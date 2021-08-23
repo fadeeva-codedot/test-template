@@ -170,18 +170,21 @@
       @include tablet {
         background-color: transparent;
         visibility: visible;
-        height: fit-content;
+        height: 100%;
         position: relative;
       }
 
       &-wrapper {
-        height: 100vh;
+        position: relative;
+        height: calc(100vh - 63px);
+        top: pxToRem(63);
         width: 100%;
+        overflow: scroll;
 
         @include tablet {
           display: flex;
+          height: 100%;
           align-items: center;
-          height: fit-content;
           justify-content: space-between;
         }
       }
@@ -189,11 +192,9 @@
       &-items {
         position: static;
         padding-top: pxToRem(108);
-        width: 100%;
 
         @include tablet {
           display: flex;
-          width: fit-content;
           padding-top: 0;
           background-color: transparent;
           color: $color-grey-900;
@@ -207,12 +208,7 @@
         &__link {
           display: block;
           position: relative;
-          width: 100%;
           text-align: center;
-
-          @include tablet {
-            width: fit-content;
-          }
 
           .link-name {
             padding-top: pxToRem(20);
