@@ -1,12 +1,13 @@
 .services {
-  padding-left: pxToRem(10);
-  padding-right: pxToRem(10);
   background-color: $color-primary-main;
   color: $color-common-white;
   width: 100%;
 
-  .section-title {
+  .body-container {
     padding-top: pxToRem(45);
+  }
+
+  .section-title {
     margin-bottom: pxToRem(30);
 
     @include tablet {
