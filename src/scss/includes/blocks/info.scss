@@ -1,14 +1,4 @@
 .info {
-  margin-bottom: pxToRem(44);
-
-  @include tablet {
-    margin-bottom: pxToRem(80);
-  }
-
-  @include desktop {
-    margin-bottom: pxToRem(94);
-  }
-
   .section-title {
     display: block;
     max-width: 100%;

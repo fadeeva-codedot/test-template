@@ -1,4 +1,19 @@
 .hero {
+  .body-container {
+    padding-top: pxToRem(35);
+    padding-bottom: pxToRem(79);
+
+    @include tablet {
+      padding-top: pxToRem(0);
+      padding-bottom: pxToRem(36);
+    }
+
+    @include desktop {
+      padding-top: pxToRem(25);
+      padding-bottom: pxToRem(17);
+    }
+  }
+
   &-items {
     display: flex;
     align-items: flex-start;
@@ -43,15 +58,12 @@
 
       @include tablet {
         display: block;
+        max-width: pxToRem(380);
         font-size: $typography-h4-font-size;
         font-weight: $typography-h3-font-weight;
         line-height: pxToRem(28);
         margin-top: pxToRem(33);
         letter-spacing: 0.03em;
-      }
-
-      @include desktop {
-        margin-right: pxToRem(112);
       }
     }
 
@@ -73,7 +85,7 @@
         vertical-align: middle;
 
         @include desktop {
-          padding: pxToRem(12) pxToRem(30) pxToRem(12) pxToRem(30);
+          padding: pxToRem(12) pxToRem(26) pxToRem(12) pxToRem(26);
         }
 
         &:nth-child(2) {
