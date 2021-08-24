@@ -5,66 +5,73 @@
 
   .body-container {
     padding-top: pxToRem(45);
-  }
-
-  .section-title {
-    margin-bottom: pxToRem(30);
+    padding-bottom: pxToRem(42);
 
     @include tablet {
-      padding-top: pxToRem(64);
+      padding-top: pxToRem(63);
+      padding-bottom: pxToRem(61);
     }
 
     @include desktop {
-      padding-top: pxToRem(80);
-      margin-bottom: 0;
+      padding-top: pxToRem(77);
+      padding-bottom: pxToRem(74);
+    }
+  }
+
+  .section-title {
+    margin-bottom: pxToRem(32);
+
+    @include desktop {
+      margin-bottom: pxToRem(39);
     }
   }
 
   .section-description {
-    margin-bottom: pxToRem(29);
+    margin-bottom: pxToRem(28);
 
     @include tablet {
-      margin-bottom: pxToRem(74);
+      max-width: pxToRem(709);
+      margin-bottom: pxToRem(40);
     }
 
     @include desktop {
-      margin-top: pxToRem(35);
-      margin-bottom: pxToRem(50);
-      max-width: fit-content;
-      padding-right: pxToRem(134);
+      max-width: pxToRem(950);
+      margin-bottom: pxToRem(46);
     }
   }
 
   &-list {
     display: grid;
-    grid-gap: pxToRem(15);
-    grid-template-columns: max-content;
-    padding-bottom: pxToRem(45);
+    grid-gap: pxToRem(6);
 
     @include tablet {
-      grid-template-columns: 50% 50%;
-      grid-gap: pxToRem(23);
-      padding-bottom: pxToRem(62);
+      grid-auto-flow: column;
+      grid-template-rows: repeat(6, 1fr);
+      grid-row-gap: pxToRem(20);
+      grid-column-gap: pxToRem(10);
     }
 
     @include desktop {
-      grid-column-gap: pxToRem(103);
-      grid-row-gap: pxToRem(23);
+      grid-column-gap: pxToRem(68);
+      grid-row-gap: pxToRem(20);
       grid-template-columns: pxToRem(282) pxToRem(282);
-      padding-bottom: pxToRem(127);
     }
 
     &-item {
       display: list-item;
-      list-style-type: none;
-      width: fit-content;
+      list-style-position: inside;
       font-weight: $typography-h3-font-weight;
       font-size: $typography-subtitle2-font-size;
       line-height: pxToRem(24);
-      padding-left: pxToRem(20);
 
       &::marker {
+        content: "—";
         color: $color-common-white;
+        font-size: pxToRem(25);
+      }
+
+      .item-name {
+        margin-left: pxToRem(20);
       }
 
       @include tablet {
