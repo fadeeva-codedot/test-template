@@ -1,10 +1,15 @@
 .development {
-  margin-top: pxToRem(71);
+  .body-container {
+    padding-top: pxToRem(69);
+  }
 
   .section-title {
+    max-width: pxToRem(192);
+
     @include tablet {
-      max-width: fit-content;
+      max-width: 100%;
       padding-top: pxToRem(12);
+      font-size: $typography-subtitle2-font-size;
     }
 
     @include desktop {
@@ -32,12 +37,12 @@
     /*scroll with ability add another elements*/
     .development-phase {
       &:nth-child(even) {
-        padding-top: pxToRem(80);
+        @include tablet {
+          padding-top: pxToRem(80);
+        }
       }
 
       &-background {
-        position: relative;
-        left: pxToRem(79);
         content: "";
         width: pxToRem(85);
         height: pxToRem(85);
@@ -51,9 +56,6 @@
       }
 
       &-number {
-        position: relative;
-        top: pxToRem(50);
-        left: pxToRem(45);
         z-index: 1;
         font-size: pxToRem(50);
         font-weight: 900;
@@ -69,9 +71,6 @@
       }
 
       .section-description {
-        position: relative;
-        left: pxToRem(45);
-        bottom: pxToRem(27);
         max-width: pxToRem(220);
       }
     }
@@ -102,9 +101,6 @@
       border-left: solid transparent 5px;
       border-right: solid transparent 5px;
       border-bottom: solid $color-grey-900 9px;
-      position: relative;
-      top: pxToRem(13);
-      left: pxToRem(13);
     }
 
     .left-arrow {

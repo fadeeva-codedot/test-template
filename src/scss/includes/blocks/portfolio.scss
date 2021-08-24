@@ -1,17 +1,4 @@
 .portfolio {
-  margin-top: pxToRem(73);
-
-  @include tablet {
-    margin-top: pxToRem(95);
-  }
-
-  @include desktop {
-    margin-top: pxToRem(102);
-  }
-
-  /*.section-title {
-  }*/
-
   &-examples {
     display: grid;
     grid-template-columns: 1fr;
