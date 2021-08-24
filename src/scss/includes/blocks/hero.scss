@@ -30,8 +30,7 @@
     }
 
     .section-title {
-      font-weight: $typography-h2-font-weight;
-      max-width: pxToRem(162);
+      max-width: pxToRem(163);
 
       @include tablet {
         max-width: pxToRem(217);
@@ -39,6 +38,10 @@
 
       @include desktop {
         max-width: pxToRem(326);
+      }
+
+      &-name {
+        font-weight: $typography-h2-font-weight;
       }
     }
 

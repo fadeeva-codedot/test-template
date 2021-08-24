@@ -12,10 +12,9 @@
   }
 
   .section-title {
-    display: block;
-    max-width: pxToRem(247);
+    max-width: 77%;
 
-    @include tablet {
+    @include desktop {
       max-width: 100%;
     }
   }
