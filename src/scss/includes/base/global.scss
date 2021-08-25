@@ -77,9 +77,8 @@ html {
   line-height: pxToRem(24);
 
   @include tablet {
-    font-size: $typography-h4-font-size;
-    font-weight: $typography-h4-font-weight;
     line-height: pxToRem(28);
+    font-size: $typography-h4-font-size;
   }
 }
 

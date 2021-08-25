@@ -5,12 +5,11 @@
   }
 
   .section-title {
-    max-width: pxToRem(192);
+    max-width: 70%;
 
     @include tablet {
       max-width: 100%;
       padding-top: pxToRem(12);
-      font-size: $typography-subtitle2-font-size;
     }
 
     @include desktop {
@@ -28,19 +27,28 @@
     overflow-y: hidden;
 
     @include tablet {
-      grid-gap: 10%;
-      grid-auto-columns: 26%;
+      grid-auto-columns: pxToRem(171);
+      grid-auto-rows: pxToRem(297);
+      margin-left: pxToRem(63);
+      margin-right: pxToRem(63);
+      gap: pxToRem(45);
     }
 
     @include desktop-extra {
-      grid-gap: 6%;
-      grid-auto-columns: 20%;
+      grid-auto-columns: pxToRem(210);
+      grid-auto-rows: pxToRem(380);
     }
     /*scroll with ability add another elements*/
     .development-phase {
       &:nth-child(even) {
         @include tablet {
           margin-top: pxToRem(80);
+        }
+      }
+
+      &:nth-child(odd) {
+        @include tablet {
+          margin-top: pxToRem(30);
         }
       }
 
