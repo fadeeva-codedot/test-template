@@ -1,6 +1,6 @@
 .development {
   .body-container {
-    padding-top: pxToRem(69);
+    padding-top: pxToRem(83);
     padding-bottom: pxToRem(74);
   }
 
@@ -10,16 +10,7 @@
 
     @include tablet {
       max-width: 100%;
-      padding-top: pxToRem(12);
     }
-
-    @include desktop {
-      padding-top: pxToRem(25);
-    }
-  }
-
-  .section-name {
-    font-size: $typography-subtitle2-font-size;
   }
 
   &-phases {
@@ -36,19 +27,44 @@
 
     @include tablet {
       grid-auto-columns: pxToRem(211);
-      grid-auto-rows: pxToRem(167);
-      margin-left: pxToRem(23);
-      margin-right: pxToRem(23);
+      grid-auto-rows: pxToRem(223);
+      margin-left: pxToRem(3);
+      margin-right: pxToRem(3);
+      margin-bottom: pxToRem(42);
     }
 
     @include desktop-extra {
-      grid-auto-rows: pxToRem(242);
+      grid-auto-rows: pxToRem(279);
       margin-left: pxToRem(151);
       margin-right: pxToRem(151);
     }
     /*scroll with ability add another elements*/
     .development-phase {
       position: relative;
+
+      &:nth-child(4n - 3) {
+        @include tablet {
+          margin-top: pxToRem(30);
+        }
+      }
+
+      &:nth-child(4n - 2) {
+        @include tablet {
+          margin-top: pxToRem(78);
+        }
+      }
+
+      &:nth-child(4n + 3) {
+        @include tablet {
+          margin-top: pxToRem(20);
+        }
+      }
+
+      &:nth-child(3n + n) {
+        @include tablet {
+          margin-top: pxToRem(68);
+        }
+      }
 
       &-background {
         content: "";
@@ -85,6 +101,10 @@
 
       .section-description {
         max-width: pxToRem(220);
+
+        @include tablet {
+          max-width: pxToRem(211);
+        }
       }
     }
   }
