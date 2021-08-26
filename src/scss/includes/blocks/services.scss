@@ -9,7 +9,7 @@
 
     @include tablet {
       padding-top: pxToRem(63);
-      padding-bottom: pxToRem(61);
+      padding-bottom: pxToRem(65);
     }
 
     @include desktop {
@@ -47,7 +47,7 @@
     @include tablet {
       grid-auto-flow: column;
       grid-template-rows: repeat(6, 1fr);
-      grid-row-gap: pxToRem(20);
+      grid-row-gap: pxToRem(24);
       grid-column-gap: pxToRem(10);
     }
 
