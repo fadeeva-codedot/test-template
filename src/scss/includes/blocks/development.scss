@@ -1,11 +1,12 @@
 .development {
   .body-container {
     padding-top: pxToRem(69);
-    padding-bottom: pxToRem(70);
+    padding-bottom: pxToRem(74);
   }
 
   .section-title {
     max-width: 70%;
+    margin-bottom: pxToRem(30);
 
     @include tablet {
       max-width: 100%;
@@ -17,49 +18,48 @@
     }
   }
 
+  .section-name {
+    font-size: $typography-subtitle2-font-size;
+  }
+
   &-phases {
     display: grid;
-    grid-auto-columns: pxToRem(300);
-    grid-auto-rows: pxToRem(190);
+    gap: pxToRem(45);
+    grid-auto-columns: pxToRem(210);
+    grid-auto-rows: pxToRem(131);
     grid-auto-flow: column;
-    justify-items: center;
     overflow-x: scroll;
     overflow-y: hidden;
+    margin-left: pxToRem(45);
+    margin-right: pxToRem(45);
+    margin-bottom: pxToRem(28);
 
     @include tablet {
-      grid-auto-columns: pxToRem(171);
-      grid-auto-rows: pxToRem(297);
-      margin-left: pxToRem(63);
-      margin-right: pxToRem(63);
-      gap: pxToRem(45);
+      grid-auto-columns: pxToRem(211);
+      grid-auto-rows: pxToRem(167);
+      margin-left: pxToRem(23);
+      margin-right: pxToRem(23);
     }
 
     @include desktop-extra {
-      grid-auto-columns: pxToRem(210);
-      grid-auto-rows: pxToRem(380);
+      grid-auto-rows: pxToRem(242);
+      margin-left: pxToRem(151);
+      margin-right: pxToRem(151);
     }
     /*scroll with ability add another elements*/
     .development-phase {
-      &:nth-child(even) {
-        @include tablet {
-          margin-top: pxToRem(80);
-        }
-      }
-
-      &:nth-child(odd) {
-        @include tablet {
-          margin-top: pxToRem(30);
-        }
-      }
+      position: relative;
 
       &-background {
         content: "";
-        left: pxToRem(40);
-        bottom: pxToRem(17);
-        position: relative;
+        z-index: -1;
+        position: absolute;
+        top: pxToRem(25);
+        left: pxToRem(35);
         width: pxToRem(85);
         height: pxToRem(85);
-        background-color: $color-info-light;
+        /*background-color: $color-info-light;*/
+        background-color: beige;
         border-radius: 100%;
 
         @include desktop {
@@ -69,13 +69,10 @@
       }
 
       &-number {
-        z-index: 1;
-        top: pxToRem(28);
-        left: pxToRem(6);
-        position: relative;
         font-size: pxToRem(50);
         font-weight: 900;
         line-height: 145%;
+        margin-bottom: pxToRem(8);
         letter-spacing: $typography-letter-spacing;
         color: transparent;
         -webkit-text-stroke: pxToRem(1) $color-primary-main;
@@ -88,8 +85,6 @@
 
       .section-description {
         max-width: pxToRem(220);
-        position: relative;
-        bottom: pxToRem(47);
       }
     }
   }
