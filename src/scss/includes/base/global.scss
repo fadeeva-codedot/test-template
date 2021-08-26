@@ -20,10 +20,6 @@ body {
   font-family: montserrat;
 }
 
-html {
-  font-size: #{$base-size}px;
-}
-
 .body-container {
   padding-left: pxToRem(10);
   padding-right: pxToRem(10);
@@ -53,7 +49,7 @@ html {
   }
 }
 
-.section-title {
+.section-name {
   font-size: $typography-h4-font-size;
   font-weight: $typography-h5-font-weight;
   letter-spacing: $typography-letter-spacing;
@@ -78,6 +74,10 @@ html {
 
   @include tablet {
     line-height: pxToRem(28);
+    font-size: $typography-h4-font-size;
+  }
+
+  @include desktop {
     font-size: $typography-h4-font-size;
   }
 }

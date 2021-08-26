@@ -39,10 +39,10 @@
       @include desktop {
         max-width: pxToRem(326);
       }
+    }
 
-      &-name {
-        font-weight: $typography-h2-font-weight;
-      }
+    .section-name {
+      font-weight: $typography-h2-font-weight;
     }
 
     &-description__mobile {
