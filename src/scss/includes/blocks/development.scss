@@ -1,23 +1,38 @@
 .development {
   .body-container {
-    padding-top: pxToRem(83);
-    padding-bottom: pxToRem(74);
+    padding-top: pxToRem(67);
+    padding-bottom: pxToRem(67);
+
+    @include tablet {
+      padding-top: pxToRem(83);
+      padding-bottom: pxToRem(83);
+    }
+
+    @include desktop {
+      padding-top: pxToRem(95);
+      padding-bottom: pxToRem(95);
+    }
   }
 
   .section-title {
     max-width: 70%;
-    margin-bottom: pxToRem(30);
 
     @include tablet {
       max-width: 100%;
+      margin-bottom: pxToRem(30);
+    }
+
+    @include desktop {
+      margin-bottom: pxToRem(20);
     }
   }
 
   &-phases {
     display: grid;
+    align-items: end;
     gap: pxToRem(45);
     grid-auto-columns: pxToRem(210);
-    grid-auto-rows: pxToRem(131);
+    grid-auto-rows: pxToRem(163);
     grid-auto-flow: column;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -31,36 +46,58 @@
       margin-left: pxToRem(3);
       margin-right: pxToRem(3);
       margin-bottom: pxToRem(42);
+      align-items: unset;
     }
 
-    @include desktop-extra {
-      grid-auto-rows: pxToRem(279);
-      margin-left: pxToRem(151);
-      margin-right: pxToRem(151);
+    @include desktop {
+      grid-auto-rows: pxToRem(310);
+      margin-left: pxToRem(66);
+      margin-right: pxToRem(66);
+      margin-bottom: pxToRem(50);
     }
     /*scroll with ability add another elements*/
     .development-phase {
       position: relative;
 
       &:nth-child(4n - 3) {
+        margin-top: 0;
+
         @include tablet {
           margin-top: pxToRem(30);
+        }
+
+        @include desktop {
+          margin-top: pxToRem(50);
         }
       }
 
       &:nth-child(4n - 2) {
+        margin-top: 0;
+
         @include tablet {
           margin-top: pxToRem(78);
+        }
+
+        @include desktop {
+          margin-top: pxToRem(108);
         }
       }
 
       &:nth-child(4n + 3) {
+        margin-top: 0;
+
         @include tablet {
           margin-top: pxToRem(20);
         }
+
+        @include desktop {
+          margin-top: pxToRem(33);
+        }
       }
 
-      &:nth-child(3n + n) {
+      &:nth-child(4n + 4) {
+        margin-top: 0;
+
         @include tablet {
           margin-top: pxToRem(68);
         }
@@ -74,13 +111,13 @@
         left: pxToRem(35);
         width: pxToRem(85);
         height: pxToRem(85);
-        /*background-color: $color-info-light;*/
-        background-color: beige;
+        background-color: $color-info-light;
         border-radius: 100%;
 
         @include desktop {
           width: pxToRem(113);
           height: pxToRem(113);
+          left: pxToRem(47);
         }
       }
 
@@ -96,6 +133,7 @@
         @include desktop {
           font-size: pxToRem(70);
           line-height: 145%;
+          margin-bottom: 0;
         }
       }
 
@@ -103,7 +141,11 @@
         max-width: pxToRem(220);
 
         @include tablet {
-          max-width: pxToRem(211);
+          max-width: pxToRem(144);
+        }
+
+        @include desktop {
+          max-width: pxToRem(155);
         }
       }
     }
