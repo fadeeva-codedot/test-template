@@ -29,7 +29,7 @@
 
   &-phases {
     display: grid;
-    align-items: end;
+    align-items: flex-start;
     gap: pxToRem(45);
     grid-auto-columns: pxToRem(210);
     grid-auto-rows: pxToRem(163);
@@ -38,12 +38,14 @@
     overflow-y: hidden;
     margin-left: pxToRem(45);
     margin-right: pxToRem(45);
+    margin-bottom: pxToRem(30);
 
     @include tablet {
       grid-auto-columns: pxToRem(211);
       grid-auto-rows: pxToRem(265);
       margin-left: pxToRem(3);
       margin-right: pxToRem(3);
+      margin-bottom: pxToRem(0);
       align-items: unset;
     }
 
@@ -51,6 +53,7 @@
       grid-auto-rows: pxToRem(358);
       margin-left: pxToRem(66);
       margin-right: pxToRem(66);
+      margin-bottom: pxToRem(0);
     }
     /*scroll with ability add another elements*/
     .development-phase {
