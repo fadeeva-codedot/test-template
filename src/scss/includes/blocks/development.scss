@@ -38,22 +38,19 @@
     overflow-y: hidden;
     margin-left: pxToRem(45);
     margin-right: pxToRem(45);
-    margin-bottom: pxToRem(28);
 
     @include tablet {
       grid-auto-columns: pxToRem(211);
-      grid-auto-rows: pxToRem(223);
+      grid-auto-rows: pxToRem(265);
       margin-left: pxToRem(3);
       margin-right: pxToRem(3);
-      margin-bottom: pxToRem(42);
       align-items: unset;
     }
 
     @include desktop {
-      grid-auto-rows: pxToRem(310);
+      grid-auto-rows: pxToRem(358);
       margin-left: pxToRem(66);
       margin-right: pxToRem(66);
-      margin-bottom: pxToRem(50);
     }
     /*scroll with ability add another elements*/
     .development-phase {
@@ -141,11 +138,11 @@
         max-width: pxToRem(220);
 
         @include tablet {
-          max-width: pxToRem(144);
+          max-width: pxToRem(211);
         }
 
         @include desktop {
-          max-width: pxToRem(155);
+          max-width: pxToRem(193);
         }
       }
     }
