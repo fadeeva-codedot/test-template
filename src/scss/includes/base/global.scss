@@ -23,6 +23,8 @@ body {
 .body-container {
   padding-left: pxToRem(10);
   padding-right: pxToRem(10);
+  max-width: pxToRem(1280);
+  margin: auto;
 
   @include tablet {
     padding-left: pxToRem(19);
@@ -74,11 +76,7 @@ body {
 
   @include tablet {
     line-height: pxToRem(28);
-    font-size: $typography-h4-font-size;
-  }
-
-  @include desktop {
-    font-size: $typography-h4-font-size;
+    font-size: $typography-font-size;
   }
 }
 
