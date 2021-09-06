@@ -18,11 +18,12 @@
     }
   }
 
-  .section-title {
-    margin-bottom: pxToRem(32);
+  .section-name {
+    max-width: pxToRem(200);
+    margin-bottom: pxToRem(30);
 
-    @include desktop {
-      margin-bottom: pxToRem(39);
+    @include tablet {
+      max-width: 100%;
     }
   }
 

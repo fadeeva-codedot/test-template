@@ -23,17 +23,23 @@ body {
 .body-container {
   padding-left: pxToRem(10);
   padding-right: pxToRem(10);
+  padding-top: pxToRem(36);
+  padding-bottom: pxToRem(36);
   max-width: pxToRem(1280);
   margin: auto;
 
   @include tablet {
     padding-left: pxToRem(19);
     padding-right: pxToRem(19);
+    padding-top: pxToRem(48);
+    padding-bottom: pxToRem(48);
   }
 
   @include desktop {
     padding-left: pxToRem(85);
     padding-right: pxToRem(85);
+    padding-top: pxToRem(51);
+    padding-bottom: pxToRem(51);
   }
 }
 
@@ -52,10 +58,11 @@ body {
 }
 
 .section-name {
-  font-size: $typography-subtitle2-font-size;
+  font-size: $typography-h4-font-size;
   font-weight: $typography-h5-font-weight;
   letter-spacing: $typography-letter-spacing;
   line-height: pxToRem(21);
+  margin: 0;
 
   @include tablet {
     font-size: $typography-h3-font-size;
@@ -80,7 +87,7 @@ body {
   }
 }
 
-.header-container {
+/*.header-container {
   max-width: pxToRem(1175);
   padding: pxToRem(7) pxToRem(5) pxToRem(7) pxToRem(10);
 
@@ -92,7 +99,7 @@ body {
     padding: pxToRem(30) pxToRem(33) pxToRem(30) pxToRem(35);
     margin: 0 auto 0 auto;
   }
-}
+}*/
 
 input[type="submit"]:focus {
   outline: none;
@@ -229,19 +236,25 @@ select {
   margin: 0px;
 }
 
-button {
+.button-name {
   font-family: montserrat;
   margin: 0px;
   color: $color-primary-main;
+  border: 1px solid $color-primary-main;
   background-color: transparent;
-  border-color: $color-primary-main;
-  border-width: pxToRem(1);
   font-size: $typography-button-font-size;
-  font-weight: $typography-h3-font-weight;
+  font-weight: $typography-h5-font-weight;
   line-height: pxToRem(12);
   letter-spacing: $typography-letter-spacing;
+  width: pxToRem(129);
+  padding-top: pxToRem(10);
+  padding-bottom: pxToRem(10);
+  text-align: center;
 
   @include desktop {
+    width: pxToRem(171);
+    padding-top: pxToRem(12);
+    padding-bottom: pxToRem(12);
     font-size: $typography-subtitle2-font-size;
     line-height: pxToRem(16);
   }

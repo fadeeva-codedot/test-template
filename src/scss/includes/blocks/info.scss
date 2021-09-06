@@ -11,25 +11,26 @@
     }
   }
 
-  .section-title {
-    max-width: 77%;
+  .section-name {
+    max-width: pxToRem(247);
+    margin-bottom: pxToRem(30);
+
+    @include tablet {
+      margin-bottom: pxToRem(39);
+      max-width: 100%;
+    }
 
     @include desktop {
-      max-width: 100%;
+      margin-bottom: pxToRem(40);
     }
   }
 
   .section-description {
     display: block;
     max-width: 100%;
-    margin-top: pxToRem(30);
-
-    @include tablet {
-      margin-top: pxToRem(39);
-    }
 
     @include desktop {
-      margin-top: pxToRem(40);
+      margin-bottom: pxToRem(40);
       max-width: pxToRem(920);
     }
   }

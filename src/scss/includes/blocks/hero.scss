@@ -1,19 +1,4 @@
 .hero {
-  .body-container {
-    padding-top: pxToRem(35);
-    padding-bottom: pxToRem(79);
-
-    @include tablet {
-      padding-top: pxToRem(0);
-      padding-bottom: pxToRem(36);
-    }
-
-    @include desktop {
-      padding-top: pxToRem(25);
-      padding-bottom: pxToRem(17);
-    }
-  }
-
   &-items {
     display: flex;
     align-items: flex-start;
@@ -29,11 +14,14 @@
       padding-bottom: pxToRem(20);
     }
 
-    .section-title {
+    .section-name {
+      font-weight: $typography-h2-font-weight;
       max-width: pxToRem(163);
+      margin-bottom: pxToRem(27);
 
       @include tablet {
         max-width: pxToRem(217);
+        margin-bottom: pxToRem(33);
       }
 
       @include desktop {
@@ -41,15 +29,11 @@
       }
     }
 
-    .section-name {
-      font-weight: $typography-h2-font-weight;
-    }
-
     &-description__mobile {
       font-size: $typography-subtitle2-font-size;
       font-weight: $typography-h3-font-weight;
-      margin-top: pxToRem(27);
       line-height: pxToRem(24);
+      margin-bottom: pxToRem(25);
 
       @include tablet {
         display: none;
@@ -65,40 +49,18 @@
         font-size: $typography-h4-font-size;
         font-weight: $typography-h3-font-weight;
         line-height: pxToRem(28);
-        margin-top: pxToRem(33);
         letter-spacing: 0.03em;
+        margin-bottom: pxToRem(35);
+      }
+
+      @include desktop {
+        margin-top: pxToRem(51);
       }
     }
 
     &-buttons {
       display: flex;
       gap: pxToRem(20);
-      margin-top: pxToRem(25);
-
-      @include tablet {
-        margin-top: pxToRem(35);
-      }
-
-      @include desktop {
-        margin-top: pxToRem(51);
-      }
-
-      .button-name {
-        padding: pxToRem(10) pxToRem(18) pxToRem(10) pxToRem(19);
-        vertical-align: middle;
-
-        @include desktop {
-          padding: pxToRem(12) pxToRem(26) pxToRem(12) pxToRem(26);
-        }
-
-        &:nth-child(2) {
-          padding: 0 pxToRem(49) 0 pxToRem(49);
-
-          @include desktop {
-            padding: 0 pxToRem(65) 0 pxToRem(65);
-          }
-        }
-      }
     }
   }
 
