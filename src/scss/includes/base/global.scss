@@ -25,7 +25,6 @@ body {
   padding-right: pxToRem(10);
   padding-top: pxToRem(36);
   padding-bottom: pxToRem(36);
-  max-width: pxToRem(1280);
   margin: auto;
 
   @include tablet {
@@ -40,6 +39,7 @@ body {
     padding-right: pxToRem(85);
     padding-top: pxToRem(51);
     padding-bottom: pxToRem(51);
+    max-width: pxToRem(1280);
   }
 }
 
@@ -88,7 +88,6 @@ body {
 }
 
 .header-container {
-  max-width: pxToRem(1175);
   padding: pxToRem(7) pxToRem(5) pxToRem(7) pxToRem(10);
 
   @include tablet {
@@ -98,6 +97,7 @@ body {
   @include desktop-extra {
     padding: pxToRem(30) pxToRem(33) pxToRem(30) pxToRem(35);
     margin: 0 auto 0 auto;
+    max-width: pxToRem(1175);
   }
 }
 
