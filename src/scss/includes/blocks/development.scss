@@ -1,29 +1,11 @@
 .development {
-  .body-container {
-    padding-top: pxToRem(67);
-    padding-bottom: pxToRem(67);
-
-    @include tablet {
-      padding-top: pxToRem(83);
-      padding-bottom: pxToRem(83);
-    }
-
-    @include desktop {
-      padding-top: pxToRem(95);
-      padding-bottom: pxToRem(95);
-    }
-  }
-
   .section-name {
     max-width: 70%;
+    margin-bottom: pxToRem(30);
 
     @include tablet {
       max-width: 100%;
-      margin-bottom: pxToRem(30);
-    }
-
-    @include desktop {
-      margin-bottom: pxToRem(20);
+      margin-bottom: pxToRem(50);
     }
   }
 
@@ -32,7 +14,7 @@
     align-items: flex-start;
     gap: pxToRem(45);
     grid-auto-columns: pxToRem(210);
-    grid-auto-rows: pxToRem(163);
+    align-items: flex-start;
     grid-auto-flow: column;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -54,58 +36,51 @@
     }
     /*scroll with ability add another elements*/
     .development-phase {
-      position: relative;
-
+      display: flex;
+      flex-wrap: wrap;
+      word-wrap: break-word;
+      //1st
       &:nth-child(4n - 3) {
-        margin-top: 0;
-
         @include tablet {
-          margin-top: pxToRem(30);
+          margin-top: pxToRem(9);
         }
 
         @include desktop {
-          margin-top: pxToRem(50);
+          margin-top: pxToRem(14);
         }
       }
-
+      //2nd
       &:nth-child(4n - 2) {
-        margin-top: 0;
-
         @include tablet {
-          margin-top: pxToRem(78);
+          margin-top: pxToRem(47);
         }
 
         @include desktop {
-          margin-top: pxToRem(108);
+          margin-top: pxToRem(73);
         }
       }
-
+      //3rd
       &:nth-child(4n + 3) {
-        margin-top: 0;
-
         @include tablet {
-          margin-top: pxToRem(20);
+          margin-top: pxToRem(0);
+        }
+      }
+      //4th
+      &:nth-child(4n + 4) {
+        @include tablet {
+          margin-top: pxToRem(47);
         }
 
         @include desktop {
-          margin-top: pxToRem(33);
-        }
-      }
-
-      &:nth-child(4n + 4) {
-        margin-top: 0;
-
-        @include tablet {
-          margin-top: pxToRem(68);
+          margin-top: pxToRem(37);
         }
       }
 
       &-background {
-        content: "";
         z-index: -1;
         position: relative;
-        bottom: pxToRem(55);
-        left: pxToRem(35);
+        top: pxToRem(25);
+        right: pxToRem(25);
         width: pxToRem(85);
         height: pxToRem(85);
         background-color: $color-info-light;
@@ -121,7 +96,6 @@
         font-size: pxToRem(50);
         font-weight: 900;
         line-height: 145%;
-        margin-bottom: pxToRem(8);
         letter-spacing: $typography-letter-spacing;
         color: transparent;
         -webkit-text-stroke: pxToRem(1) $color-primary-main;
@@ -129,7 +103,6 @@
         @include desktop {
           font-size: pxToRem(70);
           line-height: 145%;
-          margin-bottom: 0;
         }
       }
 
@@ -159,29 +132,35 @@
     }
 
     &-arrow {
-      border: 1px solid $color-grey-200;
-      border-radius: 100%;
       width: pxToRem(38);
       height: pxToRem(38);
-    }
+      border-radius: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      background-color: transparent;
+      border: 1px solid $color-grey-200;
 
-    .switch-arrow {
-      content: "";
-      width: 0;
-      position: relative;
-      top: pxToRem(13);
-      left: pxToRem(13);
-      border-left: solid transparent 5px;
-      border-right: solid transparent 5px;
-      border-bottom: solid $color-grey-900 9px;
-    }
+      &-left {
+        width: 0;
+        top: pxToRem(13);
+        left: pxToRem(13);
+        border-left: solid transparent 5px;
+        border-right: solid transparent 5px;
+        border-bottom: solid $color-grey-900 9px;
+        transform: rotate(-90deg);
+      }
 
-    .left-arrow {
-      transform: rotate(-90deg);
-    }
-
-    .right-arrow {
-      transform: rotate(90deg);
+      &-right {
+        width: 0;
+        top: pxToRem(13);
+        left: pxToRem(13);
+        border-left: solid transparent 5px;
+        border-right: solid transparent 5px;
+        border-bottom: solid $color-grey-900 9px;
+        transform: rotate(90deg);
+      }
     }
 
     &-indicator {
