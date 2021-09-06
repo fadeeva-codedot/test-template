@@ -1,0 +1,14 @@
+.price {
+  .section-name {
+    text-align: center;
+    padding-bottom: pxToRem(52);
+
+    @include tablet {
+      padding-bottom: pxToRem(53);
+    }
+
+    @include desktop {
+      padding-bottom: pxToRem(66);
+    }
+  }
+}
