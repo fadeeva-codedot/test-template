@@ -11,4 +11,30 @@
       padding-bottom: pxToRem(66);
     }
   }
+
+  &-list {
+    padding-left: pxToRem(28);
+    padding-right: pxToRem(28);
+
+    @include tablet {
+      padding-left: pxToRem(9);
+      padding-right: pxToRem(9);
+    }
+
+    @include desktop {
+      padding-left: pxToRem(75);
+      padding-right: pxToRem(75);
+    }
+
+    .package {
+      border: 1px solid $color-grey-200;
+      border-bottom-color: transparent;
+
+      height: 100px;
+    }
+
+    .unique-project {
+      border-bottom-color: $color-grey-200;
+    }
+  }
 }
