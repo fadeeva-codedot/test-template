@@ -10,10 +10,6 @@
       margin-top: pxToRem(48);
     }
 
-    @include desktop {
-      padding-bottom: pxToRem(20);
-    }
-
     .section-name {
       font-weight: $typography-h2-font-weight;
       max-width: pxToRem(163);
@@ -54,7 +50,7 @@
       }
 
       @include desktop {
-        margin-top: pxToRem(51);
+        margin-bottom: pxToRem(56);
       }
     }
 
