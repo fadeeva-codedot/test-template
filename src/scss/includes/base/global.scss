@@ -62,7 +62,6 @@ body {
 
 .section-name {
   font-size: $typography-h4-font-size;
-  font-weight: $typography-h5-font-weight;
   letter-spacing: $typography-letter-spacing;
   line-height: pxToRem(21);
   margin: 0;
@@ -80,8 +79,6 @@ body {
 
 .section-description {
   font-size: $typography-subtitle2-font-size;
-  font-weight: $typography-h4-font-weight;
-  letter-spacing: $typography-letter-spacing;
   line-height: pxToRem(24);
 
   @include tablet {
