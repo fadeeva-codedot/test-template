@@ -39,6 +39,7 @@ body {
     padding-top: pxToRem(51);
     padding-bottom: pxToRem(51);
     max-width: pxToRem(1280);
+    margin: 0 auto 0 auto;
   }
 }
 
@@ -47,6 +48,7 @@ body {
 
   @include desktop {
     max-width: pxToRem(1280);
+    margin: 0 auto 0 auto;
   }
 }
 
@@ -57,6 +59,7 @@ body {
   @include desktop {
     padding-left: pxToRem(85);
     padding-right: pxToRem(85);
+    margin: 0 auto 0 auto;
   }
 }
 
