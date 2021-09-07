@@ -25,7 +25,6 @@ body {
   padding-right: pxToRem(10);
   padding-top: pxToRem(36);
   padding-bottom: pxToRem(36);
-  margin: auto;
 
   @include tablet {
     padding-left: pxToRem(19);
@@ -241,15 +240,10 @@ select {
 }
 
 .button-name {
-  font-family: montserrat;
-  margin: 0px;
   color: $color-primary-main;
   border: 1px solid $color-primary-main;
-  background-color: transparent;
   font-size: $typography-button-font-size;
   font-weight: $typography-h5-font-weight;
-  line-height: pxToRem(12);
-  letter-spacing: $typography-letter-spacing;
   width: pxToRem(129);
   padding-top: pxToRem(10);
   padding-bottom: pxToRem(10);

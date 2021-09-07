@@ -181,7 +181,7 @@
         position: relative;
         height: calc(100vh - 63px);
         top: pxToRem(63);
-        overflow: scroll;
+        overflow: auto;
 
         @include tablet {
           top: 0;
@@ -193,6 +193,7 @@
 
       &-items {
         padding-top: pxToRem(108);
+        overflow: hidden;
 
         @include tablet {
           display: flex;
