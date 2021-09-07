@@ -78,6 +78,11 @@
       }
     }
   }
+}
+
+.header {
+  background-color: $color-common-white;
+
   // /target/ //
   &-navbar {
     display: flex;
@@ -90,8 +95,6 @@
     }
     // logo
     .logo-wrapper {
-      position: relative;
-
       .logo {
         z-index: 2;
         width: pxToRem(49);
@@ -156,8 +159,6 @@
     }
     // mobile-menu (dropmenu and items)
     .mobile-menu {
-      display: flex;
-      flex-direction: column;
       background-color: $color-primary-main;
       visibility: hidden;
       width: 100%;
@@ -181,13 +182,12 @@
         position: absolute;
         height: calc(100vh - 63px);
         top: pxToRem(63);
-        width: 100%;
-        overflow-y: scroll;
+        overflow: scroll;
 
         @include tablet {
           position: relative;
           display: flex;
-          align-items: center;
+          height: 100%;
           justify-content: space-between;
           top: 0;
           overflow: hidden;
@@ -196,11 +196,6 @@
       }
 
       &-items {
-        display: block;
-        position: static;
-        list-style-type: none;
-        background-color: $color-primary-main;
-        color: $color-common-white;
         padding-top: pxToRem(108);
         width: 100%;
 
@@ -213,9 +208,7 @@
           overflow: hidden;
           flex-direction: row;
           padding-top: 0;
-          left: pxToRem(42);
-          background-color: transparent;
-          color: $color-grey-900;
+          gap: pxToRem(5);
         }
 
         @include desktop-extra {
@@ -224,9 +217,6 @@
 
         &__link {
           display: block;
-          position: relative;
-          width: 100%;
-          text-align: center;
 
           @include tablet {
             width: fit-content;
@@ -259,23 +249,21 @@
       }
 
       .contacts {
-        display: block;
         position: sticky;
         top: calc(100vh - 122px);
 
         @include tablet {
           display: flex;
-          position: relative;
-          top: 0;
-          flex-direction: row;
-          align-items: center;
-          position: relative;
+          gap: pxToRem(15);
+        }
+
+        @include desktop {
+          gap: pxToRem(30);
         }
       }
 
       &-phone {
         display: none;
-        position: relative;
 
         @include tablet {
           display: block;
@@ -302,13 +290,8 @@
       }
 
       &-button {
-        position: relative;
-        margin-top: auto;
-        bottom: 0;
-        width: 100%;
         text-align: center;
         background-color: $color-secondary-main;
-        font-weight: $typography-h3-font-weight;
 
         @include tablet {
           position: relative;
@@ -335,10 +318,7 @@
           @include desktop-extra {
             font-size: $typography-subtitle2-font-size;
             font-weight: $typography-button-font-weight;
-            padding-top: pxToRem(12);
-            padding-bottom: pxToRem(12);
-            padding-left: pxToRem(24);
-            padding-right: pxToRem(24);
+            padding: pxToRem(12) pxToRem(24) pxToRem(12) pxToRem(24);
           }
         }
       }
