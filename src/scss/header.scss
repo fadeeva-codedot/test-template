@@ -90,19 +90,21 @@
 
 .header {
   background-color: $color-common-white;
+  width: 100%;
 
   // /target/ //
   &-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 100%;
 
     @include tablet {
-      gap: pxToRem(33);
+      gap: pxToRem(25);
     }
 
     @include desktop {
-      gap: pxToRem(83);
+      gap: pxToRem(45);
     }
     // logo
     .logo-wrapper {
@@ -130,8 +132,11 @@
 
     .menu-icon {
       z-index: 1;
-      width: pxToRem(35);
-      height: pxToRem(15);
+      width: pxToRem(45);
+      height: pxToRem(45);
+      position: absolute;
+      top: pxToRem(9);
+      right: 0;
 
       @include tablet {
         display: none;
@@ -140,6 +145,8 @@
       &__element {
         display: block;
         position: absolute;
+        top: pxToRem(15);
+        left: pxToRem(5);
         height: pxToRem(2);
         background-color: $color-grey-900;
         width: pxToRem(21);
@@ -193,11 +200,13 @@
 
       &-items {
         padding-top: pxToRem(108);
+        padding-bottom: pxToRem(108);
         overflow: hidden;
 
         @include tablet {
           display: flex;
           padding-top: 0;
+          padding-bottom: 0;
           gap: pxToRem(5);
         }
 
@@ -232,16 +241,19 @@
       }
 
       .contacts {
-        position: sticky;
+        position: fixed;
+        width: 100%;
         top: calc(100vh - 59px);
 
         @include tablet {
+          position: static;
+          width: auto;
           display: flex;
           gap: pxToRem(15);
         }
 
         @include desktop {
-          gap: pxToRem(30);
+          gap: pxToRem(35);
         }
       }
 

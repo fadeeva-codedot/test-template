@@ -99,8 +99,7 @@ body {
 
   @include desktop-extra {
     padding: pxToRem(30) pxToRem(33) pxToRem(30) pxToRem(35);
-    margin: 0 auto 0 auto;
-    max-width: pxToRem(1175);
+    //max-width: pxToRem(1175);
   }
 }
 

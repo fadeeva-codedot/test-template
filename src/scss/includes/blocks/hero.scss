@@ -11,16 +11,10 @@
 
     .section-name {
       font-weight: $typography-h2-font-weight;
-      max-width: pxToRem(163);
       margin-bottom: pxToRem(27);
 
       @include tablet {
-        max-width: pxToRem(217);
         margin-bottom: pxToRem(33);
-      }
-
-      @include desktop {
-        max-width: pxToRem(326);
       }
     }
 
@@ -53,6 +47,8 @@
     &-buttons {
       display: flex;
       gap: pxToRem(20);
+      max-width: pxToRem(352);
+      flex-wrap: wrap;
     }
   }
 

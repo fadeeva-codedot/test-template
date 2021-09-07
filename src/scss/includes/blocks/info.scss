@@ -1,11 +1,9 @@
 .info {
   .section-name {
-    max-width: pxToRem(247);
     margin-bottom: pxToRem(30);
 
     @include tablet {
       margin-bottom: pxToRem(39);
-      max-width: 100%;
     }
 
     @include desktop {

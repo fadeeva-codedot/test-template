@@ -19,12 +19,7 @@
   }
 
   .section-name {
-    max-width: pxToRem(200);
     margin-bottom: pxToRem(30);
-
-    @include tablet {
-      max-width: 100%;
-    }
   }
 
   .section-description {
@@ -60,6 +55,7 @@
 
     &-item {
       list-style-position: inside;
+      list-style-type: none;
       font-weight: $typography-h3-font-weight;
       font-size: $typography-subtitle2-font-size;
       line-height: pxToRem(24);
@@ -68,14 +64,11 @@
         font-size: $typography-h4-font-size;
       }
 
-      &::marker {
+      &::before {
         content: "—";
         color: $color-common-white;
         font-size: pxToRem(25);
-      }
-
-      .item-name {
-        margin-left: pxToRem(20);
+        padding-right: pxToRem(10);
       }
     }
   }
