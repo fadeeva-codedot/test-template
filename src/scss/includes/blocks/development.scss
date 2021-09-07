@@ -95,7 +95,6 @@
         font-size: pxToRem(50);
         font-weight: 900;
         line-height: 145%;
-        letter-spacing: $typography-letter-spacing;
         color: transparent;
         -webkit-text-stroke: pxToRem(1) $color-primary-main;
 
@@ -121,8 +120,6 @@
 
   &-slider {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     gap: pxToRem(15);
 
