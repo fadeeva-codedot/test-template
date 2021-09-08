@@ -18,19 +18,11 @@
       }
     }
 
-    &-description__mobile {
+    &-description {
       font-size: $typography-subtitle2-font-size;
       font-weight: $typography-h3-font-weight;
       line-height: pxToRem(24);
       margin-bottom: pxToRem(25);
-
-      @include tablet {
-        display: none;
-      }
-    }
-
-    &-description__tablet {
-      display: none;
 
       @include tablet {
         display: block;
