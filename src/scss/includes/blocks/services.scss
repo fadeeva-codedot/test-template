@@ -1,7 +1,11 @@
 .services {
   background-color: $color-primary-main;
   color: $color-common-white;
-  width: 100%;
+  //width: 100%;
+  @include desktop-extra {
+    max-width: pxToRem(1280);
+    margin: 0 auto 0 auto;
+  }
 
   .body-container {
     padding-top: pxToRem(45);

@@ -6,7 +6,7 @@
   &-info {
     @include tablet {
       width: 50%;
-      padding-top: pxToRem(48);
+      margin-top: pxToRem(48);
     }
 
     .section-name {
@@ -26,9 +26,10 @@
       font-size: $typography-subtitle2-font-size;
       font-weight: $typography-h3-font-weight;
       line-height: pxToRem(24);
-      margin-bottom: pxToRem(25);
+      margin-bottom: pxToRem(24);
 
       @include tablet {
+        font-size: $typography-font-size;
         display: block;
         max-width: pxToRem(326);
         font-weight: $typography-h3-font-weight;

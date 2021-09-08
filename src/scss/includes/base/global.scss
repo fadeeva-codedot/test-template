@@ -19,12 +19,20 @@ body {
   padding: 0;
   font-family: montserrat;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
 
 .body-container {
   padding-left: pxToRem(10);
   padding-right: pxToRem(10);
-  padding-top: pxToRem(36);
-  padding-bottom: pxToRem(36);
+  padding-top: pxToRem(42);
+  padding-bottom: pxToRem(42);
 
   @include tablet {
     padding-left: pxToRem(19);
@@ -48,7 +56,6 @@ body {
 
   @include desktop {
     max-width: pxToRem(1280);
-    margin: 0 auto 0 auto;
   }
 }
 
@@ -59,6 +66,7 @@ body {
   @include desktop {
     padding-left: pxToRem(85);
     padding-right: pxToRem(85);
+    max-width: pxToRem(1280);
     margin: 0 auto 0 auto;
   }
 }
@@ -66,7 +74,7 @@ body {
 .section-name {
   font-size: $typography-h4-font-size;
   letter-spacing: $typography-letter-spacing;
-  line-height: pxToRem(21);
+  line-height: pxToRem(20);
   margin: 0;
 
   @include tablet {
@@ -91,7 +99,7 @@ body {
 }
 
 .header-container {
-  padding: pxToRem(7) pxToRem(5) pxToRem(7) pxToRem(10);
+  padding: pxToRem(5) pxToRem(5) pxToRem(5) pxToRem(10);
 
   @include tablet {
     padding: pxToRem(20) pxToRem(22) pxToRem(20) pxToRem(22);
@@ -99,7 +107,8 @@ body {
 
   @include desktop-extra {
     padding: pxToRem(30) pxToRem(33) pxToRem(30) pxToRem(35);
-    //max-width: pxToRem(1175);
+    max-width: pxToRem(1280);
+    margin: 0 auto 0 auto;
   }
 }
 
