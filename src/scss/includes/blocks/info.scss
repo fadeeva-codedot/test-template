@@ -1,8 +1,10 @@
 .info {
   .section-name {
     margin-bottom: pxToRem(30);
+    max-width: pxToRem(247);
 
     @include tablet {
+      max-width: 100%;
       margin-bottom: pxToRem(39);
     }
 

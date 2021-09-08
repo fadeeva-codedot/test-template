@@ -1,9 +1,11 @@
 .development {
   .section-name {
     margin-bottom: pxToRem(30);
+    max-width: pxToRem(284);
 
     @include tablet {
       margin-bottom: pxToRem(50);
+      max-width: 100%;
     }
   }
 
