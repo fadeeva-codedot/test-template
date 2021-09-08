@@ -6,15 +6,19 @@
   &-info {
     @include tablet {
       width: 50%;
-      margin-top: pxToRem(48);
+      padding-top: pxToRem(48);
     }
 
     .section-name {
       font-weight: $typography-h2-font-weight;
       margin-bottom: pxToRem(27);
+      max-width: pxToRem(163);
 
       @include tablet {
+        max-width: pxToRem(326);
         margin-bottom: pxToRem(33);
+        font-size: $typography-h2-font-size;
+        line-height: pxToRem(44);
       }
     }
 
@@ -26,12 +30,8 @@
 
       @include tablet {
         display: block;
-        max-width: pxToRem(380);
+        max-width: pxToRem(326);
         font-weight: $typography-h3-font-weight;
-        margin-bottom: pxToRem(35);
-      }
-
-      @include desktop {
         margin-bottom: pxToRem(56);
       }
     }
@@ -39,8 +39,17 @@
     &-buttons {
       display: flex;
       gap: pxToRem(20);
-      max-width: pxToRem(352);
       flex-wrap: wrap;
+
+      .button-name {
+        @include tablet {
+          width: pxToRem(171);
+          padding-top: pxToRem(12);
+          padding-bottom: pxToRem(12);
+          font-size: $typography-subtitle2-font-size;
+          line-height: pxToRem(16);
+        }
+      }
     }
   }
 
@@ -50,6 +59,7 @@
     @include tablet {
       display: block;
       width: 50%;
+      max-height: pxToRem(477);
     }
 
     .hero-image {
