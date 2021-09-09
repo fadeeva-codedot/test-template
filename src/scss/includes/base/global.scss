@@ -226,6 +226,7 @@ a {
   text-decoration: none;
   margin: 0px;
   letter-spacing: $typography-letter-spacing;
+  color: $color-grey-900;
 
   &:not([href]) {
     cursor: pointer;

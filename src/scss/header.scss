@@ -145,21 +145,32 @@
       &__element {
         display: block;
         position: absolute;
+        width: pxToRem(30);
+        height: pxToRem(2);
         top: pxToRem(15);
         left: pxToRem(5);
-        height: pxToRem(2);
         background-color: $color-grey-900;
-        width: pxToRem(21);
-        margin-left: pxToRem(9);
 
-        &:first-child {
-          margin-top: pxToRem(6);
-          width: pxToRem(30);
-          margin-left: pxToRem(0);
+        &::before {
+          content: "";
+          display: block;
+          position: relative;
+          top: pxToRem(6);
+          left: pxToRem(9);
+          width: pxToRem(21);
+          height: pxToRem(2);
+          background-color: $color-grey-900;
         }
 
-        &:last-child {
-          margin-top: pxToRem(12);
+        &::after {
+          content: "";
+          display: block;
+          position: relative;
+          bottom: pxToRem(8);
+          left: pxToRem(9);
+          width: pxToRem(21);
+          height: pxToRem(2);
+          background-color: $color-grey-900;
         }
       }
     }
