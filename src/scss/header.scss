@@ -21,17 +21,15 @@
       }
 
       &__element {
-        &:nth-child(1) {
-          animation: cross2-reverse linear 0.5s;
-          animation-direction: reverse;
-        }
+        animation: cross2-reverse linear 0.5s;
+        animation-direction: reverse;
 
-        &:nth-child(2) {
+        &::after {
           animation: cross1-reverse linear 0.5s;
           animation-direction: reverse;
         }
 
-        &:nth-child(3) {
+        &::before {
           animation: cross3-reverse linear 0.5s;
           animation-direction: reverse;
         }
@@ -72,15 +70,13 @@
       animation: menu-icon linear 0.5s forwards;
 
       &__element {
-        &:nth-child(1) {
-          animation: cross2 linear 0.5s forwards;
-        }
+        animation: cross2 linear 0.5s forwards;
 
-        &:nth-child(2) {
+        &::after {
           animation: cross1 linear 0.5s forwards;
         }
 
-        &:nth-child(3) {
+        &:before {
           animation: cross3 linear 0.5s forwards;
         }
       }
@@ -159,7 +155,7 @@
           left: pxToRem(9);
           width: pxToRem(21);
           height: pxToRem(2);
-          background-color: $color-grey-900;
+          background-color: green; //$color-grey-900;
         }
 
         &::after {
@@ -170,7 +166,7 @@
           left: pxToRem(9);
           width: pxToRem(21);
           height: pxToRem(2);
-          background-color: $color-grey-900;
+          background-color: red; //$color-grey-900;
         }
       }
     }
