@@ -258,6 +258,7 @@ select {
 
 .button-name {
   color: $color-primary-main;
+  background-color: transparent;
   border: 1px solid $color-primary-main;
   font-size: $typography-button-font-size;
   font-weight: $typography-h5-font-weight;
@@ -284,4 +285,14 @@ select {
 .button-blue {
   background-color: $color-primary-main;
   color: $color-common-white;
+}
+
+.button-red {
+  background-color: $color-secondary-main;
+  border-color: $color-secondary-main;
+
+  &:hover {
+    background-color: $color-secondary-dark;
+    border-color: $color-secondary-dark;
+  }
 }

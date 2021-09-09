@@ -16,7 +16,6 @@
       @include tablet {
         max-width: pxToRem(326);
         margin-bottom: pxToRem(33);
-        /**/
       }
     }
 
@@ -39,16 +38,6 @@
       display: flex;
       gap: pxToRem(20);
       flex-wrap: wrap;
-
-      .button-name {
-        @include tablet {
-          width: pxToRem(171);
-          padding-top: pxToRem(12);
-          padding-bottom: pxToRem(12);
-          font-size: $typography-subtitle2-font-size;
-          line-height: pxToRem(16);
-        }
-      }
     }
   }
 
