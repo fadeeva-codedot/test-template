@@ -243,11 +243,12 @@
       .contacts {
         position: fixed;
         width: 100%;
-        top: calc(100vh - 59px);
+        height: fit-content;
+        top: calc(100vh - 62px);
 
         @include tablet {
+          width: fit-content;
           position: static;
-          width: auto;
           display: flex;
           gap: pxToRem(15);
         }
@@ -278,34 +279,6 @@
 
           @include desktop {
             padding: pxToRem(12);
-          }
-        }
-      }
-
-      &-button {
-        text-align: center;
-        background-color: $color-secondary-main;
-
-        @include tablet {
-          background-color: $color-primary-main;
-          font-size: $typography-h5-font-size;
-        }
-
-        &-name {
-          display: block;
-          padding-top: pxToRem(20);
-          padding-bottom: pxToRem(20);
-          color: $color-common-white;
-
-          @include tablet {
-            padding: pxToRem(10) pxToRem(18) pxToRem(11) pxToRem(17);
-            font-weight: $typography-h5-font-weight;
-          }
-
-          @include desktop {
-            font-size: $typography-subtitle2-font-size;
-            font-weight: $typography-button-font-weight;
-            padding: pxToRem(12) pxToRem(24) pxToRem(12) pxToRem(24);
           }
         }
       }

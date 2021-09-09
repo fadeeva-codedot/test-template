@@ -296,3 +296,20 @@ select {
     border-color: $color-secondary-dark;
   }
 }
+
+.button-menu {
+  @media only screen and (max-device-width: 767px) {
+    font-size: $typography-font-size;
+    padding-top: pxToRem(21);
+    padding-bottom: pxToRem(20);
+    width: 100%;
+    position: absolute;
+    background-color: $color-secondary-main;
+    border-color: $color-secondary-main;
+
+    &:hover {
+      background-color: $color-secondary-dark;
+      border-color: $color-secondary-dark;
+    }
+  }
+}
