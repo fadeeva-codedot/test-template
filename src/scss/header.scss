@@ -155,7 +155,7 @@
           left: pxToRem(9);
           width: pxToRem(21);
           height: pxToRem(2);
-          background-color: green; //$color-grey-900;
+          background-color: $color-grey-900;
         }
 
         &::after {
@@ -166,7 +166,7 @@
           left: pxToRem(9);
           width: pxToRem(21);
           height: pxToRem(2);
-          background-color: red; //$color-grey-900;
+          background-color: $color-grey-900;
         }
       }
     }

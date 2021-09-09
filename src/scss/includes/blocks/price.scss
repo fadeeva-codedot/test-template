@@ -44,6 +44,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
         border-bottom: 1px solid $color-grey-200;
         margin-bottom: pxToRem(29);
 
@@ -100,8 +101,25 @@
       }
     }
 
-    .unique-project {
-      border-bottom-color: $color-grey-200;
+    .unique {
+      &-package {
+        @include tablet {
+          grid-column-start: 2;
+          grid-column-end: 4;
+        }
+      }
+
+      &-info {
+        display: flex;
+        text-align: center;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+          content: none;
+        }
+      }
     }
   }
 }
