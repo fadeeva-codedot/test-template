@@ -14,6 +14,7 @@
 
 html {
   min-height: -webkit-fill-available;
+  min-height: 100vh;
 }
 
 html,
@@ -309,6 +310,7 @@ select {
     padding-bottom: pxToRem(20);
     width: 100%;
     position: absolute;
+    bottom: 0;
     background-color: $color-secondary-main;
     border-color: $color-secondary-main;
 

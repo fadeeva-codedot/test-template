@@ -252,7 +252,7 @@
         position: fixed;
         width: 100%;
         height: fit-content;
-        top: calc(100vh - 62px);
+        bottom: 0;
 
         @include tablet {
           width: fit-content;
