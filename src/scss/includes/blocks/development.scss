@@ -125,7 +125,8 @@
     }
 
     &-arrow {
-      width: pxToRem(38);
+      width: 100%;
+      max-width: pxToRem(38);
       height: pxToRem(38);
       border-radius: 50%;
       display: flex;
