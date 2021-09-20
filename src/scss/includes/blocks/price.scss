@@ -23,12 +23,13 @@
       grid-template-columns: repeat(3, 1fr);
       border-bottom: none;
       border-left: none;
+      max-width: 100%;
     }
 
     .package {
       position: relative;
       border-bottom: 1px solid $color-grey-200;
-      padding: pxToRem(19) pxToRem(47) pxToRem(28) pxToRem(47);
+      padding: pxToRem(19) pxToRem(17) pxToRem(28) pxToRem(17);
 
       @include tablet {
         border-left: 1px solid $color-grey-200;
@@ -59,18 +60,19 @@
         align-items: center;
         text-align: center;
         border-bottom: 1px solid $color-grey-200;
-        margin-bottom: pxToRem(29);
+        margin-bottom: pxToRem(33);
 
         &-title {
           font-size: $typography-h5-font-size;
           font-weight: $typography-h2-font-weight;
-          margin-bottom: pxToRem(25);
+          margin-bottom: pxToRem(30);
         }
 
         &-cost {
           font-size: $typography-h3-font-size;
           font-weight: $typography-h2-font-weight;
           margin-bottom: pxToRem(25);
+          margin-right: pxToRem(15);
 
           &::before {
             content: "от";
@@ -82,7 +84,7 @@
         }
 
         .button-name {
-          margin-bottom: pxToRem(30);
+          margin-bottom: pxToRem(28);
         }
       }
 
@@ -90,7 +92,7 @@
         list-style-type: none;
         display: flex;
         flex-direction: column;
-        gap: pxToRem(10);
+        gap: pxToRem(16);
 
         &-item {
           font-size: $typography-h5-font-size;

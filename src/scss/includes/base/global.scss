@@ -23,6 +23,7 @@ body {
   padding: 0;
   font-family: montserrat;
 }
+
 h1,
 h2,
 h3,
@@ -73,6 +74,11 @@ h6 {
     max-width: pxToRem(1280);
     margin: 0 auto 0 auto;
   }
+}
+
+.body-container_min-width {
+  padding-left: pxToRem(38);
+  padding-right: pxToRem(38);
 }
 
 .section-title {
