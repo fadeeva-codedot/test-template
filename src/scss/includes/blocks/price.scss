@@ -16,18 +16,31 @@
     display: grid;
     grid-auto-columns: 1fr;
     grid-auto-rows: 1fr;
+    border: 1px solid $color-grey-200;
     justify-content: center;
-    padding-left: pxToRem(28);
-    padding-right: pxToRem(28);
 
     @include tablet {
       grid-template-columns: repeat(3, 1fr);
+      border-bottom: none;
+      border-left: none;
     }
 
     .package {
       position: relative;
-      border: 1px solid $color-grey-200;
-      padding: pxToRem(19) pxToRem(19) pxToRem(28) pxToRem(19);
+      border-bottom: 1px solid $color-grey-200;
+      padding: pxToRem(19) pxToRem(47) pxToRem(28) pxToRem(47);
+
+      @include tablet {
+        border-left: 1px solid $color-grey-200;
+      }
+
+      &:last-child {
+        border-bottom: none;
+
+        @include tablet {
+          border-bottom: 1px solid $color-grey-200;
+        }
+      }
 
       &:hover {
         border: 2px solid $color-primary-main;
