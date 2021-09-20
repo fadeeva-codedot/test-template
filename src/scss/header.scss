@@ -22,17 +22,14 @@
       }
 
       &__element {
-        animation: cross2-reverse linear 0.5s;
-        animation-direction: reverse;
+        animation: cross2-reverse linear 0.5s forwards;
 
         &::after {
-          animation: cross1-reverse linear 0.5s;
-          animation-direction: reverse;
+          animation: cross1-reverse linear 0.5s forwards;
         }
 
         &::before {
-          animation: cross3-reverse linear 0.5s;
-          animation-direction: reverse;
+          animation: cross3-reverse linear 0.5s forwards;
         }
       }
     }
@@ -141,33 +138,30 @@
 
       &__element {
         display: block;
-        position: absolute;
+        position: relative;
         width: pxToRem(30);
         height: pxToRem(2);
         top: pxToRem(15);
         left: pxToRem(5);
         background-color: $color-grey-900;
 
-        &::before {
-          content: "";
-          display: block;
-          position: relative;
-          top: pxToRem(6);
-          left: pxToRem(9);
-          width: pxToRem(21);
-          height: pxToRem(2);
-          background-color: $color-grey-900;
-        }
-
+        &::before,
         &::after {
           content: "";
           display: block;
-          position: relative;
-          bottom: pxToRem(8);
-          left: pxToRem(9);
+          position: absolute;
           width: pxToRem(21);
           height: pxToRem(2);
           background-color: $color-grey-900;
+          margin-left: pxToRem(9);
+        }
+
+        &::before {
+          top: pxToRem(6);
+        }
+
+        &::after {
+          bottom: pxToRem(6);
         }
       }
     }
