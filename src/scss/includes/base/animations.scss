@@ -35,6 +35,13 @@
 }
 
 @keyframes cross2 {
+  0% {
+    width: pxToRem(30);
+  }
+
+  100% {
+    width: 0;
+  }
 }
 
 @keyframes cross3 {
@@ -92,6 +99,13 @@
 }
 
 @keyframes cross2-reverse {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: pxToRem(30);
+  }
 }
 
 @keyframes cross3-reverse {
