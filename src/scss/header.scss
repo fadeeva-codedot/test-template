@@ -5,31 +5,32 @@
     overflow-x: hidden;
 
     .mobile-menu {
-      left: 100%;
-      transition: 0.6s linear;
+      transform: translateX(100%);
+      transition: 0.4s linear;
 
       @include tablet {
         left: 0;
         transition: none;
+        transform: none;
       }
     }
 
     .menu-icon {
-      animation: menu-icon-reverse linear 0.5s forwards;
+      animation: menu-icon-reverse linear 0.4s forwards;
 
       @include tablet {
         display: none;
       }
 
       &__element {
-        animation: cross2-reverse linear 0.5s forwards;
+        animation: cross2-reverse linear 0.4s forwards;
 
         &::after {
-          animation: cross1-reverse linear 0.5s forwards;
+          animation: cross1-reverse linear 0.4s forwards;
         }
 
         &::before {
-          animation: cross3-reverse linear 0.5s forwards;
+          animation: cross3-reverse linear 0.4s forwards;
         }
       }
     }
@@ -43,7 +44,7 @@
     }
 
     .logo {
-      animation: logo linear 0.5s forwards;
+      animation: logo linear 0.4s forwards;
 
       @include tablet {
         animation: none;
@@ -53,7 +54,7 @@
     & .mobile-menu {
       visibility: visible;
       left: 0;
-      transition: 0.6s linear;
+      transition: 0.4s linear;
 
       @include tablet {
         transition: none;
@@ -65,17 +66,17 @@
     }
 
     & .menu-icon {
-      animation: menu-icon linear 0.5s forwards;
+      animation: menu-icon linear 0.4s forwards;
 
       &__element {
-        animation: cross2 linear 0.5s forwards;
+        animation: cross2 linear 0.4s forwards;
 
         &::after {
-          animation: cross1 linear 0.5s forwards;
+          animation: cross1 linear 0.4s forwards;
         }
 
         &:before {
-          animation: cross3 linear 0.5s forwards;
+          animation: cross3 linear 0.4s forwards;
         }
       }
     }
@@ -175,12 +176,13 @@
       visibility: hidden;
       width: 100%;
       height: -webkit-fill-available;
-      left: 100%;
+      transform: translateX(0);
       top: 0;
       position: fixed;
 
       @include tablet {
         background-color: transparent;
+        transform: none;
         visibility: visible;
         height: 100%;
         position: relative;
