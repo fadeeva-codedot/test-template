@@ -21,41 +21,43 @@
 
 @keyframes cross1 {
   0% {
-    transform: rotate(0deg);
+    bottom: pxToRem(6);
   }
 
   50% {
     bottom: 0;
+    transform: rotate(0deg);
   }
 
   100% {
+    top: 0;
     transform: rotate(45deg);
-    bottom: 0;
   }
 }
 
 @keyframes cross2 {
-  0% {
-    width: pxToRem(30);
+  50% {
+    background-color: transparent;
   }
 
   100% {
-    width: 0;
+    background-color: transparent;
   }
 }
 
 @keyframes cross3 {
   0% {
-    transform: rotate(0deg);
+    top: pxToRem(6);
   }
 
   50% {
     top: 0;
+    transform: rotate(0deg);
   }
 
   100% {
-    transform: rotate(-45deg);
     top: 0;
+    transform: rotate(-45deg);
   }
 }
 // keyframes reverse
@@ -85,12 +87,13 @@
 
 @keyframes cross1-reverse {
   0% {
-    transform: rotate(45deg);
     bottom: 0;
+    transform: rotate(45deg);
   }
 
   50% {
     bottom: 0;
+    transform: rotate(0deg);
   }
 
   100% {
@@ -100,22 +103,27 @@
 
 @keyframes cross2-reverse {
   0% {
-    width: 0;
+    background-color: transparent;
+  }
+
+  50% {
+    background-color: transparent;
   }
 
   100% {
-    width: pxToRem(30);
+    background-color: $color-grey-900;
   }
 }
 
 @keyframes cross3-reverse {
   0% {
-    transform: rotate(-45deg);
     top: 0;
+    transform: rotate(-45deg);
   }
 
   50% {
     top: 0;
+    transform: rotate(0deg);
   }
 
   100% {
