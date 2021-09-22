@@ -1,6 +1,10 @@
 .benefits {
   .section-title {
     margin-bottom: pxToRem(39);
+
+    @include tablet {
+      margin-bottom: pxToRem(80);
+    }
   }
 
   .benefits-list {
@@ -9,13 +13,31 @@
     justify-content: space-between;
     gap: pxToRem(50);
 
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      align-self: center;
+      margin: auto;
+      column-gap: pxToRem(10);
+      row-gap: pxToRem(10);
+    }
+
     .benefit {
+      @include tablet {
+        flex: 0 0 pxToRem(260);
+      }
+
       &-picture {
         margin-bottom: pxToRem(20);
       }
 
       .section-description {
         max-width: pxToRem(205);
+
+        @include tablet {
+          max-width: pxToRem(223);
+        }
       }
     }
   }
