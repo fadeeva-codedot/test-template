@@ -33,6 +33,10 @@
         border-left: 1px solid $color-grey-200;
       }
 
+      @include desktop {
+        padding: pxToRem(34) pxToRem(17) pxToRem(28) pxToRem(17);
+      }
+
       &:last-child {
         border-bottom: none;
 
@@ -47,12 +51,17 @@
         .package-info {
           border-bottom: none;
           margin-bottom: 0;
+          gap: 0;
+
+          @include tablet {
+            gap: pxToRem(83);
+          }
 
           &-title {
             margin-bottom: pxToRem(68);
           }
 
-          &-cost {
+          .cost {
             font-size: $typography-h4-font-size;
             margin-right: 0;
 
@@ -62,6 +71,28 @@
 
             @include tablet {
               font-size: $typography-h3-font-size;
+            }
+
+            @include desktop {
+              font-size: $typography-h2-font-size;
+            }
+          }
+
+          .discussion {
+            font-size: $typography-h5-font-size;
+            margin-bottom: pxToRem(23);
+            max-width: 88%;
+            line-height: pxToRem(17);
+
+            @include tablet {
+              max-width: 70%;
+              font-size: $typography-subtitle2-font-size;
+              line-height: pxToRem(24);
+              margin-bottom: pxToRem(17);
+            }
+
+            @include desktop {
+              font-size: $typography-h4-font-size;
             }
           }
 
@@ -90,41 +121,59 @@
         border-bottom: 1px solid $color-grey-200;
         margin-bottom: pxToRem(33);
 
+        @include desktop {
+          margin-bottom: pxToRem(45);
+        }
+
         &-title {
           font-size: $typography-h5-font-size;
           font-weight: $typography-h2-font-weight;
           margin-bottom: pxToRem(30);
+
+          @include desktop {
+            font-size: $typography-h4-font-size;
+            margin-bottom: pxToRem(48);
+          }
         }
 
-        &-cost {
-          font-size: $typography-h3-font-size;
-          font-weight: $typography-h2-font-weight;
-          margin-bottom: pxToRem(25);
-          margin-right: pxToRem(15);
+        &-purchase {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
 
-          &::before {
-            content: "от";
-            font-size: $typography-h5-font-size;
+          .cost {
+            font-size: $typography-h3-font-size;
             font-weight: $typography-h2-font-weight;
-            color: $color-grey-200;
-            padding-right: pxToRem(5);
+            margin-bottom: pxToRem(25);
+            margin-right: pxToRem(15);
+
+            &::before {
+              content: "от";
+              font-size: $typography-h5-font-size;
+              font-weight: $typography-h2-font-weight;
+              color: $color-grey-200;
+              padding-right: pxToRem(5);
+
+              @include desktop {
+                font-size: $typography-h4-font-size;
+              }
+            }
+
+            @include desktop {
+              font-size: $typography-h2-font-size;
+              margin-right: pxToRem(35);
+              margin-bottom: pxToRem(44);
+            }
           }
-        }
 
-        &-discussion {
-          font-size: $typography-h5-font-size;
-          margin-bottom: pxToRem(23);
-          max-width: 88%;
-          line-height: pxToRem(17);
+          .button-name {
+            margin-bottom: pxToRem(28);
+            display: block;
 
-          @include tablet {
-            max-width: 70%;
-            font-size: $typography-subtitle2-font-size;
+            @include desktop {
+              margin-bottom: pxToRem(41);
+            }
           }
-        }
-
-        .button-name {
-          margin-bottom: pxToRem(28);
         }
       }
 
@@ -138,19 +187,41 @@
           font-size: $typography-h5-font-size;
           font-weight: $typography-h4-font-weight;
 
+          @include desktop {
+            font-size: $typography-h4-font-size;
+          }
+
           &-bold {
             font-size: $typography-h5-font-size;
             font-weight: $typography-h2-font-weight;
 
+            @include desktop {
+              font-size: $typography-h4-font-size;
+            }
+
             &::before {
               content: url("/src/uploads/checkmark.svg");
               padding-right: pxToRem(12);
+              width: pxToRem(10);
+              height: pxToRem(6);
+
+              @include desktop {
+                width: pxToRem(14);
+                height: pxToRem(8);
+              }
             }
           }
 
           &::before {
             content: url("/src/uploads/checkmark.svg");
             padding-right: pxToRem(12);
+            width: pxToRem(10);
+            height: pxToRem(6);
+
+            @include desktop {
+              width: pxToRem(14);
+              height: pxToRem(8);
+            }
           }
         }
       }

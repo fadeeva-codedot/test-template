@@ -87,6 +87,11 @@ h6 {
     padding-left: pxToRem(19);
     padding-right: pxToRem(19);
   }
+
+  @include desktop {
+    padding-left: pxToRem(83);
+    padding-right: pxToRem(83);
+  }
 }
 
 .section-title {
