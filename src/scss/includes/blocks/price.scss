@@ -14,16 +14,14 @@
 
   &-list {
     display: grid;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr;
     border: 1px solid $color-grey-200;
-    justify-content: center;
+    max-width: 100%;
 
     @include tablet {
       grid-template-columns: repeat(3, 1fr);
       border-bottom: none;
       border-left: none;
-      max-width: 100%;
+      width: 100%;
     }
 
     .package {
@@ -40,6 +38,36 @@
 
         @include tablet {
           border-bottom: 1px solid $color-grey-200;
+          grid-column-start: 2;
+          grid-column-end: 4;
+        }
+      }
+
+      &:last-of-type {
+        .package-info {
+          border-bottom: none;
+          margin-bottom: 0;
+
+          &-title {
+            margin-bottom: pxToRem(68);
+          }
+
+          &-cost {
+            font-size: $typography-h4-font-size;
+            margin-right: 0;
+
+            &::before {
+              display: none;
+            }
+
+            @include tablet {
+              font-size: $typography-h3-font-size;
+            }
+          }
+
+          .button-name {
+            margin-bottom: pxToRem(43);
+          }
         }
       }
 
@@ -83,6 +111,18 @@
           }
         }
 
+        &-discussion {
+          font-size: $typography-h5-font-size;
+          margin-bottom: pxToRem(23);
+          max-width: 88%;
+          line-height: pxToRem(17);
+
+          @include tablet {
+            max-width: 70%;
+            font-size: $typography-subtitle2-font-size;
+          }
+        }
+
         .button-name {
           margin-bottom: pxToRem(28);
         }
@@ -112,27 +152,6 @@
             content: url("/src/uploads/checkmark.svg");
             padding-right: pxToRem(12);
           }
-        }
-      }
-    }
-
-    .unique {
-      &-package {
-        @include tablet {
-          grid-column-start: 2;
-          grid-column-end: 4;
-        }
-      }
-
-      &-info {
-        display: flex;
-        text-align: center;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-
-        &::before {
-          content: none;
         }
       }
     }
