@@ -1,0 +1,22 @@
+.benefits {
+  .section-title {
+    margin-bottom: pxToRem(39);
+  }
+
+  .benefits-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: pxToRem(50);
+
+    .benefit {
+      &-picture {
+        margin-bottom: pxToRem(20);
+      }
+
+      .section-description {
+        max-width: pxToRem(205);
+      }
+    }
+  }
+}
