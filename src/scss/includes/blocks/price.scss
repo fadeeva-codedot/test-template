@@ -34,7 +34,7 @@
       }
 
       @include desktop {
-        padding: pxToRem(34) pxToRem(17) pxToRem(28) pxToRem(17);
+        padding: pxToRem(34) pxToRem(33) pxToRem(44) pxToRem(33);
       }
 
       &:last-child {
@@ -57,6 +57,10 @@
             gap: pxToRem(83);
           }
 
+          @include desktop {
+            gap: pxToRem(145);
+          }
+
           &-title {
             margin-bottom: pxToRem(68);
           }
@@ -75,6 +79,8 @@
 
             @include desktop {
               font-size: $typography-h2-font-size;
+              margin-bottom: pxToRem(34);
+              line-height: pxToRem(19);
             }
           }
 
@@ -93,6 +99,7 @@
 
             @include desktop {
               font-size: $typography-h4-font-size;
+              margin-bottom: pxToRem(55);
             }
           }
 
@@ -181,7 +188,7 @@
         list-style-type: none;
         display: flex;
         flex-direction: column;
-        gap: pxToRem(16);
+        gap: pxToRem(18);
 
         &-item {
           font-size: $typography-h5-font-size;
@@ -202,12 +209,10 @@
             &::before {
               content: url("/src/uploads/checkmark.svg");
               padding-right: pxToRem(12);
-              width: pxToRem(10);
-              height: pxToRem(6);
 
               @include desktop {
-                width: pxToRem(14);
-                height: pxToRem(8);
+                content: url("/src/uploads/checkmark2.svg");
+                padding-right: pxToRem(18);
               }
             }
           }
@@ -215,12 +220,10 @@
           &::before {
             content: url("/src/uploads/checkmark.svg");
             padding-right: pxToRem(12);
-            width: pxToRem(10);
-            height: pxToRem(6);
 
             @include desktop {
-              width: pxToRem(14);
-              height: pxToRem(8);
+              content: url("/src/uploads/checkmark2.svg");
+              padding-right: pxToRem(18);
             }
           }
         }
