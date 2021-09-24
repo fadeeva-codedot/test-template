@@ -73,3 +73,15 @@
     @content;
   }
 }
+
+@mixin medium-mobile() {
+  @media (min-width: 450px) {
+    @content;
+  }
+}
+
+@mixin large-mobile() {
+  @media (min-width: 700px) {
+    @content;
+  }
+}

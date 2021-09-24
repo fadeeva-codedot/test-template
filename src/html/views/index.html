@@ -1,10 +1,14 @@
-<% var data = {
-  title: "Заголовок | Проект",
-}; %>
-<%= _.template(require('./../includes/header.html').default)(data) %>
+<% var data = { title: "Whales design", }; %>
+<%=_.template(require('./../includes/header.html').default)(data) %>
 
-<div class="container">
-  Первая страница.
+<div class="body-container">
+  <%= _.template(require('./../includes/hero.html').default)(data) %> <%=
+  _.template(require('./../includes/info.html').default)(data) %> <%=
+  _.template(require('./../includes/services.html').default)(data) %> <%=
+  _.template(require('./../includes/development.html').default)(data) %> <%=
+  _.template(require('./../includes/portfolio.html').default)(data) %> <%=
+  _.template(require('./../includes/price.html').default)(data) %> <%=
+  _.template(require('./../includes/benefits.html').default)(data) %>
 </div>
 
 <%= _.template(require('./../includes/footer.html').default)(data) %>

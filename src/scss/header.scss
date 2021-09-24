@@ -1,2 +1,289 @@
+.page-wrapper {
+  height: 100%;
+  // all actions connected with target
+  &:not(:target) {
+    overflow-x: hidden;
+
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: 0.4s linear;
+
+      @include tablet {
+        left: 0;
+        transition: none;
+        transform: none;
+      }
+    }
+
+    .menu-icon {
+      animation: menu-icon-reverse linear 0.4s forwards;
+
+      @include tablet {
+        display: none;
+      }
+
+      &__element {
+        animation: cross2-reverse linear 0.4s forwards;
+
+        &::after {
+          animation: cross1-reverse linear 0.4s forwards;
+        }
+
+        &::before {
+          animation: cross3-reverse linear 0.4s forwards;
+        }
+      }
+    }
+  }
+
+  &:target {
+    overflow: hidden;
+
+    @include tablet {
+      overflow: scroll;
+    }
+
+    .logo {
+      animation: logo linear 0.4s forwards;
+
+      @include tablet {
+        animation: none;
+      }
+    }
+
+    & .mobile-menu {
+      visibility: visible;
+      left: 0;
+      transition: 0.4s linear;
+
+      @include tablet {
+        transition: none;
+      }
+    }
+
+    .close-link {
+      z-index: 2;
+    }
+
+    & .menu-icon {
+      animation: menu-icon linear 0.4s forwards;
+
+      &__element {
+        animation: cross2 linear 0.4s forwards;
+
+        &::after {
+          animation: cross1 linear 0.4s forwards;
+        }
+
+        &:before {
+          animation: cross3 linear 0.4s forwards;
+        }
+      }
+    }
+  }
+}
+
 .header {
+  background-color: $color-common-white;
+  width: 100%;
+
+  // /target/ //
+  &-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+
+    @include tablet {
+      gap: pxToRem(25);
+    }
+
+    @include desktop {
+      gap: pxToRem(45);
+    }
+    // logo
+    .logo-wrapper {
+      .logo {
+        z-index: 2;
+        position: relative;
+
+        @include desktop {
+          width: pxToRem(65);
+        }
+      }
+    }
+
+    .close-link {
+      z-index: 0;
+      height: pxToRem(45);
+      width: pxToRem(45);
+      position: absolute;
+      right: 0;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    .menu-icon {
+      z-index: 1;
+      width: pxToRem(45);
+      height: pxToRem(45);
+      position: absolute;
+      top: pxToRem(7);
+      right: 0;
+
+      @include tablet {
+        display: none;
+      }
+
+      &__element {
+        display: block;
+        position: relative;
+        width: pxToRem(30);
+        height: pxToRem(2);
+        top: pxToRem(15);
+        left: pxToRem(5);
+        background-color: $color-grey-900;
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: pxToRem(21);
+          height: pxToRem(2);
+          background-color: $color-grey-900;
+          margin-left: pxToRem(9);
+        }
+
+        &::before {
+          top: pxToRem(6);
+        }
+
+        &::after {
+          bottom: pxToRem(6);
+        }
+      }
+    }
+
+    .icon-cross {
+      display: none;
+    }
+    // mobile-menu (dropmenu and items)
+    .mobile-menu {
+      background-color: $color-primary-main;
+      visibility: hidden;
+      width: 100%;
+      height: -webkit-fill-available;
+      transform: translateX(0);
+      top: 0;
+      position: fixed;
+
+      @include tablet {
+        background-color: transparent;
+        transform: none;
+        visibility: visible;
+        height: 100%;
+        position: relative;
+      }
+
+      &-wrapper {
+        position: relative;
+        height: calc(100vh - 63px);
+        top: pxToRem(63);
+        overflow: auto;
+
+        @include tablet {
+          top: 0;
+          display: flex;
+          height: 100%;
+          justify-content: space-between;
+        }
+      }
+
+      &-items {
+        padding-top: pxToRem(108);
+        padding-bottom: pxToRem(108);
+        overflow: hidden;
+
+        @include tablet {
+          display: flex;
+          padding-top: 0;
+          padding-bottom: 0;
+          gap: pxToRem(5);
+          flex: 1 1 60%;
+        }
+
+        @include desktop {
+          gap: pxToRem(22);
+        }
+
+        &__link {
+          display: block;
+
+          .link-name {
+            padding-top: pxToRem(20);
+            padding-bottom: pxToRem(20);
+            display: flex;
+            justify-content: space-around;
+            color: $color-common-white;
+
+            @include tablet {
+              padding: pxToRem(10);
+              color: $color-grey-900;
+              font-weight: $typography-h5-font-weight;
+              font-size: $typography-h5-font-size;
+            }
+
+            @include desktop {
+              padding: pxToRem(12);
+              font-size: $typography-subtitle2-font-size;
+              font-weight: $typography-h5-font-weight;
+            }
+          }
+        }
+      }
+
+      .contacts {
+        position: fixed;
+        width: 100%;
+        height: fit-content;
+        bottom: 0;
+
+        @include tablet {
+          width: 100%;
+          position: static;
+          display: flex;
+          flex: 1 1 40%;
+          justify-content: space-between;
+        }
+      }
+
+      &-phone {
+        display: none;
+
+        @include tablet {
+          display: inline-flex;
+          font-size: $typography-h5-font-size;
+          font-weight: $typography-h2-font-weight;
+        }
+
+        @include desktop {
+          font-size: $typography-subtitle2-font-size;
+          font-weight: $typography-h2-font-weight;
+        }
+
+        .link-name {
+          @include tablet {
+            padding: pxToRem(10);
+          }
+
+          @include desktop {
+            padding: pxToRem(12);
+          }
+        }
+      }
+    }
+  }
 }

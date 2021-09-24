@@ -1,0 +1,132 @@
+// keyframes
+@keyframes logo {
+  91% {
+    filter: invert(0%);
+  }
+
+  100% {
+    filter: invert(100%);
+  }
+}
+
+@keyframes menu-icon {
+  3% {
+    filter: invert(100%);
+  }
+
+  100% {
+    filter: invert(100%);
+  }
+}
+
+@keyframes cross1 {
+  0% {
+    bottom: pxToRem(6);
+  }
+
+  50% {
+    bottom: 0;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    top: 0;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes cross2 {
+  50% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes cross3 {
+  0% {
+    top: pxToRem(6);
+  }
+
+  50% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
+// keyframes reverse
+@keyframes logo-reverse {
+  0% {
+    filter: invert(0%);
+  }
+
+  4% {
+    filter: invert(100%);
+  }
+}
+
+@keyframes menu-icon-reverse {
+  0% {
+    filter: invert(100%);
+  }
+
+  82% {
+    filter: invert(100%);
+  }
+
+  100% {
+    filter: invert(0%);
+  }
+}
+
+@keyframes cross1-reverse {
+  0% {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  50% {
+    bottom: 0;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    bottom: pxToRem(6);
+  }
+}
+
+@keyframes cross2-reverse {
+  0% {
+    background-color: transparent;
+  }
+
+  50% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: $color-grey-900;
+  }
+}
+
+@keyframes cross3-reverse {
+  0% {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  50% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    top: pxToRem(6);
+  }
+}

@@ -1,0 +1,3 @@
+@function mobileFontSize($size) {
+  @return $typography-font-size - 2px;
+}

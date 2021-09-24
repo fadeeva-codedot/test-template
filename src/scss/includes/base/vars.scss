@@ -1,9 +1,50 @@
+$base-size: 16;
+
+@function pxToRem($size, $postfix: rem) {
+  @return $size / $base-size * 1 + $postfix;
+}
+
 // Colors
-$color-black: #1a1a1a;
-$color-red: #f2571f;
+$color-primary-main: #5551f7;
+$color-secondary-main: #ff5f68;
+$color-secondary-dark: #ff5c66;
+$color-common-white: #ffffff;
+$color-grey-900: #1c1d28;
+$color-grey-200: #e4e4e4;
+$color-info-light: #f2fcff;
 
 // Media queries
-$desktop-extra: 1200px;
-$desktop: 992px;
-$tablet: 768px;
-$mobile: 576px;
+$desktop-extra-large: pxToRem(1536, em);
+$desktop-extra: pxToRem(1200, em);
+$desktop: pxToRem(992, em);
+$tablet: pxToRem(768, em);
+$mobile: pxToRem(576, em);
+$small-mobile: pxToRem(320, em);
+
+// Font sizes, weights, etc.
+$typography-font-size: pxToRem(15);
+$typography-font-weight: 400;
+
+$typography-letter-spacing: 0.03em;
+
+// Line-height
+
+$typography-h5-font-size: pxToRem(10);
+$typography-h5-font-weight: 700;
+$typography-h4-font-size: pxToRem(15);
+$typography-h4-font-weight: 400;
+$typography-h3-font-size: pxToRem(20);
+$typography-h3-font-weight: 500;
+$typography-h2-font-size: pxToRem(30);
+$typography-h2-font-weight: 800;
+
+$typography-subtitle1-font-size: pxToRem(10);
+$typography-subtitle1-font-weight: 400;
+$typography-subtitle2-font-size: pxToRem(13);
+$typography-subtitle2-font-weight: 700;
+
+$typography-button-font-size: pxToRem(10);
+$typography-button-font-weight: 700;
+
+$typography-caption-font-size: pxToRem(12);
+$typography-caption-font-weight: 400;

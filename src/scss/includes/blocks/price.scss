@@ -1,0 +1,233 @@
+.price {
+  .section-title {
+    text-align: center;
+    margin-bottom: pxToRem(52);
+
+    @include tablet {
+      margin-bottom: pxToRem(53);
+    }
+
+    @include desktop {
+      margin-bottom: pxToRem(66);
+    }
+  }
+
+  &-list {
+    display: grid;
+    border: 1px solid $color-grey-200;
+    max-width: 100%;
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: none;
+      border-left: none;
+      width: 100%;
+    }
+
+    .package {
+      position: relative;
+      border-bottom: 1px solid $color-grey-200;
+      padding: pxToRem(19) pxToRem(17) pxToRem(28) pxToRem(17);
+
+      @include tablet {
+        border-left: 1px solid $color-grey-200;
+      }
+
+      @include desktop {
+        padding: pxToRem(34) pxToRem(33) pxToRem(44) pxToRem(33);
+      }
+
+      &:last-child {
+        border-bottom: none;
+
+        @include tablet {
+          border-bottom: 1px solid $color-grey-200;
+          grid-column-start: 2;
+          grid-column-end: 4;
+        }
+      }
+
+      &:last-of-type {
+        .package-info {
+          border-bottom: none;
+          margin-bottom: 0;
+          gap: 0;
+
+          @include tablet {
+            gap: pxToRem(83);
+          }
+
+          @include desktop {
+            gap: pxToRem(145);
+          }
+
+          &-title {
+            margin-bottom: pxToRem(68);
+          }
+
+          .cost {
+            font-size: $typography-h4-font-size;
+            margin-right: 0;
+
+            &::before {
+              display: none;
+            }
+
+            @include tablet {
+              font-size: $typography-h3-font-size;
+            }
+
+            @include desktop {
+              font-size: $typography-h2-font-size;
+              margin-bottom: pxToRem(34);
+              line-height: pxToRem(19);
+            }
+          }
+
+          .discussion {
+            font-size: $typography-h5-font-size;
+            margin-bottom: pxToRem(23);
+            max-width: 88%;
+            line-height: pxToRem(17);
+
+            @include tablet {
+              max-width: 70%;
+              font-size: $typography-subtitle2-font-size;
+              line-height: pxToRem(24);
+              margin-bottom: pxToRem(17);
+            }
+
+            @include desktop {
+              font-size: $typography-h4-font-size;
+              margin-bottom: pxToRem(55);
+            }
+          }
+
+          .button-name {
+            margin-bottom: pxToRem(43);
+          }
+        }
+      }
+
+      &:hover {
+        border: 2px solid $color-primary-main;
+
+        &::after {
+          content: url(/src/uploads/flag.svg);
+          position: absolute;
+          top: 0;
+          right: pxToRem(19);
+        }
+      }
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-bottom: 1px solid $color-grey-200;
+        margin-bottom: pxToRem(33);
+
+        @include desktop {
+          margin-bottom: pxToRem(45);
+        }
+
+        &-title {
+          font-size: $typography-h5-font-size;
+          font-weight: $typography-h2-font-weight;
+          margin-bottom: pxToRem(30);
+
+          @include desktop {
+            font-size: $typography-h4-font-size;
+            margin-bottom: pxToRem(48);
+          }
+        }
+
+        &-purchase {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .cost {
+            font-size: $typography-h3-font-size;
+            font-weight: $typography-h2-font-weight;
+            margin-bottom: pxToRem(25);
+            margin-right: pxToRem(15);
+
+            &::before {
+              content: "от";
+              font-size: $typography-h5-font-size;
+              font-weight: $typography-h2-font-weight;
+              color: $color-grey-200;
+              padding-right: pxToRem(5);
+
+              @include desktop {
+                font-size: $typography-h4-font-size;
+              }
+            }
+
+            @include desktop {
+              font-size: $typography-h2-font-size;
+              margin-right: pxToRem(35);
+              margin-bottom: pxToRem(44);
+            }
+          }
+
+          .button-name {
+            margin-bottom: pxToRem(28);
+            display: block;
+
+            @include desktop {
+              margin-bottom: pxToRem(41);
+            }
+          }
+        }
+      }
+
+      &-list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(18);
+
+        &-item {
+          font-size: $typography-h5-font-size;
+          font-weight: $typography-h4-font-weight;
+
+          @include desktop {
+            font-size: $typography-h4-font-size;
+          }
+
+          &-bold {
+            font-size: $typography-h5-font-size;
+            font-weight: $typography-h2-font-weight;
+
+            @include desktop {
+              font-size: $typography-h4-font-size;
+            }
+
+            &::before {
+              content: url("/src/uploads/checkmark.svg");
+              padding-right: pxToRem(12);
+
+              @include desktop {
+                content: url("/src/uploads/checkmark2.svg");
+                padding-right: pxToRem(18);
+              }
+            }
+          }
+
+          &::before {
+            content: url("/src/uploads/checkmark.svg");
+            padding-right: pxToRem(12);
+
+            @include desktop {
+              content: url("/src/uploads/checkmark2.svg");
+              padding-right: pxToRem(18);
+            }
+          }
+        }
+      }
+    }
+  }
+}

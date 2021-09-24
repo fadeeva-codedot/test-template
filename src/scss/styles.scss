@@ -1,12 +1,20 @@
 // General
-@import "includes/base/vars";
-@import "includes/base/mixins";
-@import "includes/base/fonts";
-@import "includes/base/utils";
-@import "includes/base/global";
+@import "includes/base/functions.scss";
+@import "includes/base/vars.scss";
+@import "includes/base/mixins.scss";
+@import "includes/base/fonts.scss";
+@import "includes/base/utils.scss";
+@import "includes/base/global.scss";
+@import "includes/base/animations.scss";
 
 // Blocks
-//@import "includes/blocks/*";
+@import "includes/blocks/hero.scss";
+@import "includes/blocks/info.scss";
+@import "includes/blocks/services.scss";
+@import "includes/blocks/development.scss";
+@import "includes/blocks/portfolio.scss";
+@import "includes/blocks/price.scss";
+@import "includes/blocks/benefits.scss";
 
 // Vendor
 //@import "includes/vendor/**/*";
