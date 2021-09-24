@@ -225,7 +225,11 @@ textarea {
     outline: none;
   }
 
-  @include placeholder-color(rgba($color-grey-200, 30%));
+  &::placeholder {
+    color: $color-common-white;
+    opacity: 30%;
+    font-size: $typography-h5-font-size;
+  }
 
   &.not-valid {
     border-color: $color-secondary-dark;

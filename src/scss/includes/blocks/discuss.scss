@@ -1,0 +1,47 @@
+.discuss {
+  color: $color-common-white;
+
+  .body-container {
+    padding-top: pxToRem(66);
+  }
+
+  .section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .section-title {
+      margin-bottom: pxToRem(20);
+    }
+
+    .section-description {
+      margin-bottom: pxToRem(50);
+      max-width: pxToRem(225);
+      text-align: center;
+    }
+  }
+
+  .form {
+    &-field {
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: pxToRem(35);
+
+      &-name {
+        display: block;
+        font-size: $typography-subtitle2-font-size;
+      }
+
+      &-input {
+        border-color: transparent transparent $color-common-white transparent;
+        border-bottom: 1px solid;
+        width: 100%;
+        height: pxToRem(33);
+
+        &::placeholder {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
