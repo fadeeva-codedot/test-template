@@ -13,13 +13,21 @@
     justify-content: space-between;
     row-gap: pxToRem(50);
 
-    @include tablet {
+    @include medium-mobile {
       flex-direction: row;
       justify-content: space-evenly;
       flex-wrap: wrap;
       align-self: center;
       column-gap: pxToRem(10);
       row-gap: pxToRem(62);
+    }
+
+    @include large-mobile {
+      flex-wrap: nowrap;
+    }
+
+    @include tablet {
+      flex-wrap: wrap;
     }
 
     .benefit {
@@ -29,6 +37,10 @@
 
       &-picture {
         margin-bottom: pxToRem(20);
+
+        @include tablet {
+          margin-bottom: pxToRem(25);
+        }
       }
 
       .section-description {
