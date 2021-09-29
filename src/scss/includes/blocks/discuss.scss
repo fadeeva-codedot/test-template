@@ -18,6 +18,10 @@
       margin-bottom: pxToRem(50);
       max-width: pxToRem(225);
       text-align: center;
+
+      @include tablet {
+        max-width: 100%;
+      }
     }
   }
 
@@ -26,6 +30,10 @@
       align-items: flex-start;
       justify-content: space-between;
       margin-bottom: pxToRem(35);
+
+      &:last-child {
+        margin-bottom: pxToRem(0);
+      }
 
       &-name {
         display: block;
@@ -40,6 +48,32 @@
 
         &::placeholder {
           vertical-align: middle;
+        }
+      }
+
+      &-button {
+        width: 100%;
+        color: $color-common-white;
+        font-size: $typography-h5-font-size;
+        font-weight: $typography-h3-font-weight;
+      }
+
+      &-agreement {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .checkbox {
+          background-color: transparent;
+          border: 1px solid $color-common-white;
+          width: 17px;
+          height: 17px;
+        }
+
+        .notice {
+          font-size: $typography-h5-font-size;
+          font-weight: $typography-h4-font-weight;
+          padding-left: pxToRem(14);
         }
       }
     }
