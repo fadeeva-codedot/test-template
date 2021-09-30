@@ -27,12 +27,12 @@
 
   .form {
     &-field .checkmark:after {
-      left: 6px;
-      top: 2px;
-      width: 5px;
-      height: 10px;
+      left: pxToRem(6);
+      top: pxToRem(2);
+      width: pxToRem(5);
+      height: pxToRem(10);
       border: 1px solid white;
-      border-width: 0 1px 1px 0;
+      border-width: 0 pxToRem(1) pxToRem(1) 0;
       transform: rotate(45deg);
     }
 
@@ -40,10 +40,6 @@
       align-items: flex-start;
       justify-content: space-between;
       margin-bottom: pxToRem(35);
-
-      &:last-child {
-        margin-bottom: pxToRem(0);
-      }
 
       &-name {
         display: block;
@@ -53,7 +49,6 @@
       &-input {
         border-color: transparent transparent $color-common-white transparent;
         border-bottom: 1px solid;
-        width: 100%;
         height: pxToRem(33);
 
         &::placeholder {
@@ -64,9 +59,7 @@
       &-checkbox {
         display: block;
         position: relative;
-        padding-left: 35px;
-        margin-bottom: 12px;
-        font-size: 22px;
+        padding-left: 31px;
 
         .checkmark {
           position: absolute;
@@ -81,14 +74,18 @@
             content: "";
             position: absolute;
             display: none;
+            width: pxToRem(6);
+            height: pxToRem(8);
           }
         }
 
         .check {
-          position: absolute;
+          height: pxToRem(17);
           opacity: 0;
-          height: 0;
-          width: 0;
+          position: absolute;
+          width: pxToRem(17);
+          left: 0;
+          top: 0;
 
           &:checked ~ .checkmark:after {
             display: block;
@@ -101,6 +98,10 @@
         color: $color-common-white;
         font-size: $typography-h5-font-size;
         font-weight: $typography-h3-font-weight;
+      }
+
+      .field-wrapper {
+        display: flex;
       }
     }
   }
