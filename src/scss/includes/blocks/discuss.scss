@@ -26,6 +26,16 @@
   }
 
   .form {
+    &-field .checkmark:after {
+      left: 6px;
+      top: 2px;
+      width: 5px;
+      height: 10px;
+      border: 1px solid white;
+      border-width: 0 1px 1px 0;
+      transform: rotate(45deg);
+    }
+
     &-field {
       align-items: flex-start;
       justify-content: space-between;
@@ -48,6 +58,41 @@
 
         &::placeholder {
           vertical-align: middle;
+        }
+      }
+
+      &-checkbox {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        font-size: 22px;
+
+        .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 17px;
+          width: 17px;
+          background-color: transparent;
+          border: 1px solid white;
+
+          &:after {
+            content: "";
+            position: absolute;
+            display: none;
+          }
+        }
+
+        .check {
+          position: absolute;
+          opacity: 0;
+          height: 0;
+          width: 0;
+
+          &:checked ~ .checkmark:after {
+            display: block;
+          }
         }
       }
 
