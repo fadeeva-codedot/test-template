@@ -58,23 +58,7 @@
         font-weight: $typography-h3-font-weight;
       }
 
-      &-agreement {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        .checkbox {
-          background-color: transparent;
-          border: 1px solid $color-common-white;
-          width: 17px;
-          height: 17px;
-        }
-
-        .notice {
-          font-size: $typography-h5-font-size;
-          font-weight: $typography-h4-font-weight;
-          padding-left: pxToRem(14);
-        }
+      &-checkbox {
       }
     }
   }
