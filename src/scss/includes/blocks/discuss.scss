@@ -19,9 +19,9 @@
       max-width: pxToRem(225);
       text-align: center;
 
-      @include tablet {
+      /*@include tablet {
         max-width: 100%;
-      }
+      }*/
     }
   }
 
@@ -37,9 +37,16 @@
     }
 
     &-field {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
       align-items: flex-start;
       justify-content: space-between;
       margin-bottom: pxToRem(35);
+
+      @include tablet {
+        flex-wrap: nowrap;
+      }
 
       &-name {
         display: block;
@@ -48,8 +55,13 @@
 
       &-input {
         border-color: transparent transparent $color-common-white transparent;
-        border-bottom: 1px solid;
+        border-bottom: pxToRem(1) solid;
         height: pxToRem(33);
+        width: 100%;
+
+        @include tablet {
+          width: 50%;
+        }
 
         &::placeholder {
           vertical-align: middle;
@@ -59,22 +71,22 @@
       &-checkbox {
         display: block;
         position: relative;
-        padding-left: 31px;
+        padding-left: pxToRem(31);
 
         .checkmark {
           position: absolute;
           top: 0;
           left: 0;
-          height: 17px;
-          width: 17px;
+          height: pxToRem(17);
+          width: pxToRem(17);
           background-color: transparent;
-          border: 1px solid white;
+          border: pxToRem(1) solid white;
 
           &:after {
             content: "";
             position: absolute;
             display: none;
-            width: pxToRem(6);
+            width: pxToRem(4);
             height: pxToRem(8);
           }
         }

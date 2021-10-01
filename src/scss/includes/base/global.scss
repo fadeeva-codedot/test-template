@@ -64,6 +64,14 @@ h6 {
   }
 }
 
+.body-container_footer {
+  background-color: $color-grey-900;
+
+  @include desktop {
+    max-width: pxToRem(1280);
+  }
+}
+
 .body-container_max-width {
   padding-left: 0;
   padding-right: 0;
@@ -264,10 +272,6 @@ a {
 p {
   margin: 0;
   letter-spacing: $typography-letter-spacing;
-
-  @include tablet {
-    letter-spacing: 0.04em;
-  }
 
   &:last-child {
     margin-bottom: 0;

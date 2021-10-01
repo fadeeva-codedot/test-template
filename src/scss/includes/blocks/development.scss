@@ -134,15 +134,15 @@
       align-content: center;
       justify-content: center;
       background-color: transparent;
-      border: 1px solid $color-grey-200;
+      border: pxToRem(1) solid $color-grey-200;
 
       &-left {
         width: 0;
         top: pxToRem(13);
         left: pxToRem(13);
-        border-left: solid transparent 5px;
-        border-right: solid transparent 5px;
-        border-bottom: solid $color-grey-900 9px;
+        border-left: pxToRem(5) solid transparent;
+        border-right: pxToRem(5) solid transparent;
+        border-bottom: pxToRem(9) solid $color-grey-900;
         transform: rotate(-90deg);
       }
 
@@ -150,9 +150,9 @@
         width: 0;
         top: pxToRem(13);
         left: pxToRem(13);
-        border-left: solid transparent 5px;
-        border-right: solid transparent 5px;
-        border-bottom: solid $color-grey-900 9px;
+        border-left: pxToRem(5) solid transparent;
+        border-right: pxToRem(5) solid transparent;
+        border-bottom: pxToRem(9) solid $color-grey-900;
         transform: rotate(90deg);
       }
     }

@@ -14,7 +14,7 @@
 
   &-list {
     display: grid;
-    border: 1px solid $color-grey-200;
+    border: pxToRem(1) solid $color-grey-200;
     max-width: 100%;
 
     @include tablet {
@@ -26,11 +26,11 @@
 
     .package {
       position: relative;
-      border-bottom: 1px solid $color-grey-200;
+      border-bottom: pxToRem(1) solid $color-grey-200;
       padding: pxToRem(19) pxToRem(17) pxToRem(28) pxToRem(17);
 
       @include tablet {
-        border-left: 1px solid $color-grey-200;
+        border-left: pxToRem(1) solid $color-grey-200;
       }
 
       @include desktop {
@@ -41,7 +41,7 @@
         border-bottom: none;
 
         @include tablet {
-          border-bottom: 1px solid $color-grey-200;
+          border-bottom: pxToRem(1) solid $color-grey-200;
           grid-column-start: 2;
           grid-column-end: 4;
         }
@@ -110,7 +110,7 @@
       }
 
       &:hover {
-        border: 2px solid $color-primary-main;
+        border: pxToRem(2) solid $color-primary-main;
 
         &::after {
           content: url(/src/uploads/flag.svg);
@@ -125,7 +125,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        border-bottom: 1px solid $color-grey-200;
+        border-bottom: pxToRem(1) solid $color-grey-200;
         margin-bottom: pxToRem(33);
 
         @include desktop {
