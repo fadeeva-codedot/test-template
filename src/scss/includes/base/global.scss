@@ -56,6 +56,24 @@ h6 {
   }
 }
 
+.body-container_contact-form {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    padding-left: pxToRem(103);
+    padding-right: pxToRem(103);
+  }
+
+  @include desktop {
+    padding-left: pxToRem(27);
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 0;
+    gap: pxToRem(47);
+  }
+}
+
 .body-container_primary-color {
   background-color: $color-primary-main;
 
