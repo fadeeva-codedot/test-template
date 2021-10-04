@@ -115,7 +115,7 @@
 
         @include tablet {
           width: pxToRem(171);
-          font-size: $typography-h5-font-size;
+          font-size: $typography-subtitle2-font-size;
           font-weight: $typography-h3-font-weight;
         }
       }
