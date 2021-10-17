@@ -14,14 +14,14 @@
 
   &-list {
     display: grid;
-    border: pxToRem(1) solid $color-grey-200;
-    max-width: 100%;
+    border: 1px solid $color-grey-200;
+    max-width: pxToRem(300);
 
     @include tablet {
       grid-template-columns: repeat(3, 1fr);
       border-bottom: none;
       border-left: none;
-      width: 100%;
+      max-width: 100%;
     }
 
     .package {
@@ -113,10 +113,22 @@
         border: pxToRem(2) solid $color-primary-main;
 
         &::after {
-          content: url(/src/uploads/flag.svg);
+          content: "";
+          width: pxToRem(18);
+          height: pxToRem(26);
           position: absolute;
           top: 0;
-          right: pxToRem(19);
+          right: pxToRem(15);
+          border-left: 9px solid $color-primary-main;
+          border-right: 9px solid $color-primary-main;
+          border-bottom: 9px solid $color-common-white;
+
+          @include desktop {
+            width: pxToRem(28);
+            height: pxToRem(44);
+            border-width: pxToRem(14);
+            right: pxToRem(32);
+          }
         }
       }
 
@@ -193,6 +205,27 @@
         &-item {
           font-size: $typography-h5-font-size;
           font-weight: $typography-h4-font-weight;
+          text-indent: pxToRem(20);
+
+          @include desktop {
+            text-indent: pxToRem(28);
+          }
+
+          &::before {
+            content: "";
+            display: block;
+            width: pxToRem(10);
+            height: pxToRem(6);
+            position: absolute;
+            border-left: 2px solid $color-secondary-main;
+            border-bottom: 2px solid $color-secondary-main;
+            transform: rotate(-45deg);
+
+            @include desktop {
+              width: pxToRem(14);
+              height: pxToRem(9);
+            }
+          }
 
           @include desktop {
             font-size: $typography-h4-font-size;
@@ -204,26 +237,6 @@
 
             @include desktop {
               font-size: $typography-h4-font-size;
-            }
-
-            &::before {
-              content: url("/src/uploads/checkmark.svg");
-              padding-right: pxToRem(12);
-
-              @include desktop {
-                content: url("/src/uploads/checkmark2.svg");
-                padding-right: pxToRem(18);
-              }
-            }
-          }
-
-          &::before {
-            content: url("/src/uploads/checkmark.svg");
-            padding-right: pxToRem(12);
-
-            @include desktop {
-              content: url("/src/uploads/checkmark2.svg");
-              padding-right: pxToRem(18);
             }
           }
         }
