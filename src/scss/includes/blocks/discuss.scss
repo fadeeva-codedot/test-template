@@ -1,0 +1,155 @@
+.mail-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.discuss {
+  color: $color-common-white;
+
+  .body-container {
+    padding-top: pxToRem(66);
+  }
+
+  .section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .section-title {
+      margin-bottom: pxToRem(20);
+    }
+
+    .section-description {
+      margin-bottom: pxToRem(50);
+      max-width: pxToRem(225);
+      text-align: center;
+
+      @include tablet {
+        max-width: 100%;
+      }
+
+      @include desktop {
+        max-width: pxToRem(255);
+      }
+    }
+  }
+
+  .form {
+    &-field .checkmark:after {
+      left: pxToRem(6);
+      top: pxToRem(2);
+      width: pxToRem(5);
+      height: pxToRem(10);
+      border: 1px solid white;
+      border-width: 0 pxToRem(1) pxToRem(1) 0;
+      transform: rotate(45deg);
+    }
+
+    &-field {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: pxToRem(35);
+      width: 100%;
+
+      &-name {
+        display: block;
+        font-size: $typography-subtitle2-font-size;
+      }
+
+      &-input {
+        border-color: transparent transparent $color-common-white transparent;
+        border-bottom: pxToRem(1) solid;
+        height: pxToRem(33);
+        width: 100%;
+
+        &::placeholder {
+          vertical-align: middle;
+        }
+      }
+
+      &-checkbox {
+        display: block;
+        position: relative;
+        padding-left: pxToRem(31);
+        font-size: $typography-h5-font-size;
+
+        .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: pxToRem(17);
+          width: pxToRem(17);
+          background-color: transparent;
+          border: pxToRem(1) solid white;
+
+          &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            width: pxToRem(4);
+            height: pxToRem(8);
+          }
+        }
+
+        .check {
+          height: pxToRem(17);
+          opacity: 0;
+          position: absolute;
+          width: pxToRem(17);
+          left: 0;
+          top: 0;
+
+          &:checked ~ .checkmark:after {
+            display: block;
+          }
+        }
+      }
+
+      &-button {
+        width: 100%;
+        color: $color-common-white;
+        font-size: $typography-h5-font-size;
+        font-weight: $typography-h3-font-weight;
+
+        @include tablet {
+          width: pxToRem(171);
+          font-size: $typography-subtitle2-font-size;
+          font-weight: $typography-h3-font-weight;
+        }
+      }
+    }
+
+    .field-wrapper {
+      display: block;
+
+      @include tablet {
+        display: flex;
+        gap: pxToRem(49);
+
+        &:last-child {
+          gap: pxToRem(37);
+
+          .form-field {
+            width: auto;
+            margin-bottom: 0;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-picture {
+    display: none;
+
+    @include desktop {
+      display: block;
+    }
+
+    .contact-image {
+      object-fit: contain;
+    }
+  }
+}
