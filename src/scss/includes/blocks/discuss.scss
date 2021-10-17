@@ -67,7 +67,8 @@
 
         &::placeholder {
           vertical-align: middle;
-          color: $color-common-white 30%;
+          color: $color-common-white;
+          opacity: 30%;
         }
       }
 
