@@ -70,6 +70,10 @@
           color: $color-common-white;
           opacity: 30%;
         }
+
+        &:focus-visible {
+          outline: none;
+        }
       }
 
       &-checkbox {
