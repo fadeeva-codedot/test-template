@@ -1,11 +1,25 @@
 .info {
-  &-title {
-    display: block;
-    max-width: 100%;
+  .section-title {
+    margin-bottom: pxToRem(30);
+    max-width: pxToRem(247);
+
+    @include tablet {
+      max-width: 100%;
+      margin-bottom: pxToRem(39);
+    }
+
+    @include desktop {
+      margin-bottom: pxToRem(40);
+    }
   }
 
-  &-text {
+  .section-description {
     display: block;
     max-width: 100%;
+
+    @include desktop {
+      margin-bottom: pxToRem(40);
+      max-width: pxToRem(920);
+    }
   }
 }

@@ -1,9 +1,3 @@
-// pxToRem
-@function pxToRem($value) {
-  $remValue: ($value / 16) + rem;
-  @return $remValue;
-}
-
 @function mobileFontSize($size) {
   @return $typography-font-size - 2px;
 }

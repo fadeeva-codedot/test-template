@@ -1,3 +1,9 @@
+$base-size: 16;
+
+@function pxToRem($size, $postfix: rem) {
+  @return $size / $base-size * 1 + $postfix;
+}
+
 // Colors
 $color-primary-main: #5551f7;
 $color-secondary-main: #ff5f68;
@@ -8,18 +14,20 @@ $color-grey-200: #e4e4e4;
 $color-info-light: #f2fcff;
 
 // Media queries
-$desktop-extra-large: pxToRem(1536);
-$desktop-extra: pxToRem(1200);
-$desktop: pxToRem(992);
-$tablet: pxToRem(768);
-$mobile: pxToRem(576);
+$desktop-extra-large: pxToRem(1536, em);
+$desktop-extra: pxToRem(1200, em);
+$desktop: pxToRem(992, em);
+$tablet: pxToRem(768, em);
+$mobile: pxToRem(576, em);
+$small-mobile: pxToRem(320, em);
 
-// Font sizes and weights
+// Font sizes, weights, etc.
 $typography-font-size: pxToRem(15);
 $typography-font-weight: 400;
 
 $typography-letter-spacing: 0.03em;
 
+// Line-height
 $typography-h5-font-size: pxToRem(10);
 $typography-h5-font-weight: 700;
 $typography-h4-font-size: pxToRem(15);

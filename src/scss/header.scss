@@ -1,54 +1,60 @@
-.header {
-  display: flex;
-  overflow: hidden;
-  background-color: $color-common-white;
+.page-wrapper {
+  height: 100%;
   // all actions connected with target
   &:not(:target) {
+    overflow-x: hidden;
+
     .mobile-menu {
-      left: 100%;
-      transition: 0.6s linear;
+      transform: translateX(100%);
+      transition: 0.4s linear;
 
       @include tablet {
         left: 0;
         transition: none;
+        transform: none;
       }
     }
 
     .menu-icon {
-      animation: menu-icon-reverse linear 0.5s forwards;
-      padding-top: pxToRem(15);
+      animation: menu-icon-reverse linear 0.4s forwards;
+
+      @include tablet {
+        display: none;
+      }
 
       &__element {
-        &:nth-child(1) {
-          animation: cross2-reverse linear 0.5s;
-          animation-direction: reverse;
+        animation: cross2-reverse linear 0.4s forwards;
+
+        &::after {
+          animation: cross1-reverse linear 0.4s forwards;
         }
 
-        &:nth-child(2) {
-          animation: cross1-reverse linear 0.5s;
-          animation-direction: reverse;
-        }
-
-        &:nth-child(3) {
-          animation: cross3-reverse linear 0.5s;
-          animation-direction: reverse;
+        &::before {
+          animation: cross3-reverse linear 0.4s forwards;
         }
       }
     }
   }
 
   &:target {
-    background-color: $color-common-white;
+    overflow: hidden;
+
+    @include tablet {
+      overflow: scroll;
+    }
 
     .logo {
-      animation: logo linear 0.5s forwards;
+      animation: logo linear 0.4s forwards;
+
+      @include tablet {
+        animation: none;
+      }
     }
 
     & .mobile-menu {
       visibility: visible;
       left: 0;
-      transition: 0.6s linear;
-      overflow-y: scroll;
+      transition: 0.4s linear;
 
       @include tablet {
         transition: none;
@@ -60,20 +66,17 @@
     }
 
     & .menu-icon {
-      animation: menu-icon linear 0.5s forwards;
-      padding-top: pxToRem(15);
+      animation: menu-icon linear 0.4s forwards;
 
       &__element {
-        &:nth-child(1) {
-          animation: cross2 linear 0.5s forwards;
+        animation: cross2 linear 0.4s forwards;
+
+        &::after {
+          animation: cross1 linear 0.4s forwards;
         }
 
-        &:nth-child(2) {
-          animation: cross1 linear 0.5s forwards;
-        }
-
-        &:nth-child(3) {
-          animation: cross3 linear 0.5s forwards;
+        &:before {
+          animation: cross3 linear 0.4s forwards;
         }
       }
     }
@@ -82,28 +85,30 @@
 
 .header {
   background-color: $color-common-white;
+  width: 100%;
 
   // /target/ //
   &-navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
+    max-width: 100%;
 
     @include tablet {
-      position: relative;
+      gap: pxToRem(25);
+    }
+
+    @include desktop {
+      gap: pxToRem(45);
     }
     // logo
     .logo-wrapper {
       .logo {
         z-index: 2;
-        width: pxToRem(49);
-        height: pxToRem(49);
         position: relative;
 
-        @include desktop-extra {
+        @include desktop {
           width: pxToRem(65);
-          height: pxToRem(65);
         }
       }
     }
@@ -122,13 +127,11 @@
 
     .menu-icon {
       z-index: 1;
-      position: relative;
+      width: pxToRem(45);
       height: pxToRem(45);
-      width: pxToRem(35);
-      right: pxToRem(-5);
-      top: pxToRem(0);
-      padding-right: pxToRem(0);
-      padding-top: pxToRem(15);
+      position: absolute;
+      top: pxToRem(7);
+      right: 0;
 
       @include tablet {
         display: none;
@@ -136,20 +139,30 @@
 
       &__element {
         display: block;
-        position: absolute;
+        position: relative;
+        width: pxToRem(30);
         height: pxToRem(2);
+        top: pxToRem(15);
+        left: pxToRem(5);
         background-color: $color-grey-900;
-        width: pxToRem(21);
-        margin-left: pxToRem(9);
 
-        &:first-child {
-          margin-top: pxToRem(6);
-          width: pxToRem(30);
-          margin-left: pxToRem(0);
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: pxToRem(21);
+          height: pxToRem(2);
+          background-color: $color-grey-900;
+          margin-left: pxToRem(9);
         }
 
-        &:last-child {
-          margin-top: pxToRem(12);
+        &::before {
+          top: pxToRem(6);
+        }
+
+        &::after {
+          bottom: pxToRem(6);
         }
       }
     }
@@ -162,72 +175,59 @@
       background-color: $color-primary-main;
       visibility: hidden;
       width: 100%;
-      height: 100vh;
-      position: absolute;
-      left: 100%;
+      height: -webkit-fill-available;
+      transform: translateX(0);
       top: 0;
+      position: fixed;
 
       @include tablet {
-        height: 0;
-        position: relative;
         background-color: transparent;
+        transform: none;
         visibility: visible;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        top: pxToRem(0);
+        height: 100%;
+        position: relative;
       }
 
       &-wrapper {
-        position: absolute;
+        position: relative;
         height: calc(100vh - 63px);
         top: pxToRem(63);
-        overflow: scroll;
+        overflow: auto;
 
         @include tablet {
-          position: relative;
+          top: 0;
           display: flex;
           height: 100%;
           justify-content: space-between;
-          top: 0;
-          overflow: hidden;
-          height: fit-content;
         }
       }
 
       &-items {
         padding-top: pxToRem(108);
-        width: 100%;
+        padding-bottom: pxToRem(108);
+        overflow: hidden;
 
         @include tablet {
-          position: relative;
           display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          width: fit-content;
-          overflow: hidden;
-          flex-direction: row;
           padding-top: 0;
+          padding-bottom: 0;
           gap: pxToRem(5);
+          flex: 1 1 60%;
         }
 
-        @include desktop-extra {
-          left: pxToRem(75);
+        @include desktop {
+          gap: pxToRem(22);
         }
 
         &__link {
           display: block;
-
-          @include tablet {
-            width: fit-content;
-            left: pxToRem(3);
-          }
 
           .link-name {
             padding-top: pxToRem(20);
             padding-bottom: pxToRem(20);
             display: flex;
             justify-content: space-around;
+            color: $color-common-white;
 
             @include tablet {
               padding: pxToRem(10);
@@ -236,11 +236,8 @@
               font-size: $typography-h5-font-size;
             }
 
-            @include desktop-extra {
-              padding-top: pxToRem(10);
-              padding-bottom: pxToRem(10);
-              padding-left: pxToRem(20);
-              padding-right: pxToRem(20);
+            @include desktop {
+              padding: pxToRem(12);
               font-size: $typography-subtitle2-font-size;
               font-weight: $typography-h5-font-weight;
             }
@@ -249,16 +246,17 @@
       }
 
       .contacts {
-        position: sticky;
-        top: calc(100vh - 122px);
+        position: fixed;
+        width: 100%;
+        height: fit-content;
+        bottom: 0;
 
         @include tablet {
+          width: 100%;
+          position: static;
           display: flex;
-          gap: pxToRem(15);
-        }
-
-        @include desktop {
-          gap: pxToRem(30);
+          flex: 1 1 40%;
+          justify-content: space-between;
         }
       }
 
@@ -266,16 +264,14 @@
         display: none;
 
         @include tablet {
-          display: block;
+          display: inline-flex;
           font-size: $typography-h5-font-size;
           font-weight: $typography-h2-font-weight;
-          right: pxToRem(16);
         }
 
-        @include desktop-extra {
+        @include desktop {
           font-size: $typography-subtitle2-font-size;
           font-weight: $typography-h2-font-weight;
-          right: pxToRem(30);
         }
 
         .link-name {
@@ -283,42 +279,8 @@
             padding: pxToRem(10);
           }
 
-          @include desktop-extra {
-            padding: pxToRem(15);
-          }
-        }
-      }
-
-      &-button {
-        text-align: center;
-        background-color: $color-secondary-main;
-
-        @include tablet {
-          position: relative;
-          background-color: $color-primary-main;
-          font-size: $typography-h5-font-size;
-          width: max-content;
-          margin-top: 0;
-        }
-
-        &-name {
-          display: block;
-          padding-top: pxToRem(20);
-          padding-bottom: pxToRem(20);
-          color: $color-common-white;
-
-          @include tablet {
-            padding-top: pxToRem(10);
-            padding-bottom: pxToRem(10);
-            padding-left: pxToRem(18);
-            padding-right: pxToRem(18);
-            font-weight: $typography-h5-font-weight;
-          }
-
-          @include desktop-extra {
-            font-size: $typography-subtitle2-font-size;
-            font-weight: $typography-button-font-weight;
-            padding: pxToRem(12) pxToRem(24) pxToRem(12) pxToRem(24);
+          @include desktop {
+            padding: pxToRem(12);
           }
         }
       }

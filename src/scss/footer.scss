@@ -1,2 +1,137 @@
 .footer {
+  color: $color-common-white;
+
+  &-logo {
+    margin-bottom: pxToRem(31);
+
+    .footer-image {
+      filter: invert(100%);
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: pxToRem(43);
+    column-gap: pxToRem(48);
+    margin-bottom: pxToRem(57);
+
+    @include tablet {
+      gap: pxToRem(80);
+    }
+
+    @include desktop {
+      flex-wrap: nowrap;
+    }
+
+    .briefs {
+      @include desktop {
+        order: 2;
+      }
+    }
+
+    .contacts {
+      @include desktop {
+        order: 3;
+      }
+    }
+
+    .about {
+      @include desktop {
+        order: 4;
+      }
+    }
+
+    .info-list {
+      font-size: $typography-caption-font-size;
+      font-weight: $typography-caption-font-weight;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      row-gap: pxToRem(10);
+      margin-bottom: pxToRem(21);
+
+      &-phones {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        row-gap: pxToRem(10);
+      }
+    }
+  }
+
+  .info-subtitle {
+    font-size: $typography-h4-font-size;
+    font-weight: $typography-h2-font-weight;
+    margin-bottom: pxToRem(20);
+  }
+
+  .info-icons {
+    display: flex;
+    gap: pxToRem(21);
+
+    &__icon {
+      &:hover {
+        cursor: pointer;
+        filter: invert(47%) sepia(34%) saturate(2773%) hue-rotate(322deg) brightness(103%)
+          contrast(103%);
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    gap: pxToRem(11);
+    width: 100%;
+
+    @include desktop {
+      width: auto;
+      order: 1;
+    }
+
+    &-item {
+      display: flex;
+      justify-content: center;
+      width: pxToRem(39);
+      height: pxToRem(39);
+      border-radius: 50%;
+      border: 1px solid $color-common-white;
+
+      &:hover {
+        filter: invert(47%) sepia(34%) saturate(2773%) hue-rotate(322deg) brightness(103%)
+          contrast(103%);
+      }
+
+      &__icon {
+        width: pxToRem(13);
+        height: auto;
+      }
+    }
+  }
+
+  .politics {
+    margin-top: pxToRem(39);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: pxToRem(29);
+    row-gap: pxToRem(19);
+
+    @include tablet {
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+
+    &-item {
+      color: $color-common-white;
+      opacity: 30%;
+      font-size: $typography-h5-font-size;
+    }
+
+    &-item-wrapper {
+      display: flex;
+      gap: pxToRem(29);
+    }
+  }
 }

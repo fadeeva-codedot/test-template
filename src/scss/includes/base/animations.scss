@@ -20,37 +20,44 @@
 }
 
 @keyframes cross1 {
+  0% {
+    bottom: pxToRem(6);
+  }
+
   50% {
+    bottom: 0;
     transform: rotate(0deg);
-    margin-top: pxToRem(6);
   }
 
   100% {
+    top: 0;
     transform: rotate(45deg);
-    margin-bottom: 0;
   }
 }
 
 @keyframes cross2 {
   50% {
-    transform: scale(0);
-    margin-top: 0;
+    background-color: transparent;
   }
 
   100% {
-    transform: scale(0);
+    background-color: transparent;
   }
 }
 
 @keyframes cross3 {
+  0% {
+    top: pxToRem(6);
+  }
+
   50% {
+    top: 0;
     transform: rotate(0deg);
-    margin-bottom: pxToRem(-6);
   }
 
   100% {
+    top: 0;
     transform: rotate(-45deg);
-    margin-top: pxToRem(0);
   }
 }
 // keyframes reverse
@@ -79,36 +86,47 @@
 }
 
 @keyframes cross1-reverse {
+  0% {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
   50% {
+    bottom: 0;
     transform: rotate(0deg);
-    margin-top: pxToRem(6);
   }
 
   100% {
-    transform: rotate(45deg);
-    margin-bottom: 0;
+    bottom: pxToRem(6);
   }
 }
 
 @keyframes cross2-reverse {
+  0% {
+    background-color: transparent;
+  }
+
   50% {
-    transform: scale(0);
-    margin-top: 0;
+    background-color: transparent;
   }
 
   100% {
-    transform: scale(0);
+    background-color: $color-grey-900;
   }
 }
 
 @keyframes cross3-reverse {
+  0% {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
   50% {
+    top: 0;
     transform: rotate(0deg);
-    margin-bottom: pxToRem(-6);
   }
 
   100% {
-    transform: rotate(-45deg);
-    margin-top: pxToRem(0);
+    top: pxToRem(6);
   }
 }
