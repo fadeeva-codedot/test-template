@@ -63,9 +63,11 @@
         border-bottom: pxToRem(1) solid;
         height: pxToRem(33);
         width: 100%;
+        background-color: transparent;
 
         &::placeholder {
           vertical-align: middle;
+          color: $color-common-white;
         }
       }
 
