@@ -113,7 +113,7 @@
       }
 
       &:hover {
-        border: pxToRem(2) solid $color-primary-main;
+        border: pxToRem(2) solid var(--color-primary-main);
 
         &::after {
           content: "";
@@ -122,9 +122,9 @@
           position: absolute;
           top: 0;
           right: pxToRem(15);
-          border-left: 9px solid $color-primary-main;
-          border-right: 9px solid $color-primary-main;
-          border-bottom: 9px solid var(--color-common-white);
+          border-left: pxToRem(9) solid var(--color-primary-main);
+          border-right: pxToRem(9) solid var(--color-primary-main);
+          border-bottom: pxToRem(9) solid var(--color-common-white);
 
           @include desktop {
             width: pxToRem(28);

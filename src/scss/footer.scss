@@ -6,6 +6,10 @@
 
     .footer-image {
       filter: invert(100%);
+
+      @include dark-theme {
+        filter: invert(0);
+      }
     }
   }
 
@@ -71,10 +75,19 @@
     gap: pxToRem(21);
 
     &__icon {
+      @include dark-theme {
+        filter: invert(100%);
+      }
+
       &:hover {
         cursor: pointer;
         filter: invert(47%) sepia(34%) saturate(2773%) hue-rotate(322deg) brightness(103%)
           contrast(103%);
+
+        @include dark-theme {
+          filter: invert(81%) sepia(61%) saturate(5724%) hue-rotate(314deg) brightness(88%)
+            contrast(89%);
+        }
       }
     }
   }
@@ -100,11 +113,20 @@
       &:hover {
         filter: invert(47%) sepia(34%) saturate(2773%) hue-rotate(322deg) brightness(103%)
           contrast(103%);
+
+        @include dark-theme {
+          filter: invert(81%) sepia(61%) saturate(5724%) hue-rotate(314deg) brightness(88%)
+            contrast(89%);
+        }
       }
 
       &__icon {
         width: pxToRem(13);
         height: auto;
+
+        @include dark-theme {
+          filter: invert(100%);
+        }
       }
     }
   }
@@ -127,6 +149,10 @@
       color: var(--color-common-white);
       opacity: 30%;
       font-size: $typography-h5-font-size;
+
+      @include dark-theme {
+        opacity: 100%;
+      }
     }
 
     &-item-wrapper {

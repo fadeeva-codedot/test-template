@@ -40,7 +40,8 @@
       top: pxToRem(2);
       width: pxToRem(5);
       height: pxToRem(10);
-      border: 1px solid white;
+      border-bottom: 1px solid var(--color-common-white);
+      border-right: 1px solid var(--color-common-white);
       border-width: 0 pxToRem(1) pxToRem(1) 0;
       transform: rotate(45deg);
     }
@@ -59,8 +60,10 @@
       }
 
       &-input {
-        border-color: transparent transparent var(--color-common-white) transparent;
-        border-bottom: pxToRem(1) solid;
+        border-bottom: pxToRem(1) solid var(--color-common-white);
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
         height: pxToRem(33);
         width: 100%;
         background-color: transparent;
@@ -89,7 +92,7 @@
           height: pxToRem(17);
           width: pxToRem(17);
           background-color: transparent;
-          border: pxToRem(1) solid white;
+          border: pxToRem(1) solid var(--color-common-white);
 
           &:after {
             content: "";

@@ -95,7 +95,7 @@
         font-weight: 900;
         line-height: 145%;
         color: transparent;
-        -webkit-text-stroke: pxToRem(1) $color-primary-main;
+        -webkit-text-stroke: pxToRem(1) var(--color-primary-main);
 
         @include desktop {
           font-size: pxToRem(70);
