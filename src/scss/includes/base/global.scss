@@ -36,21 +36,15 @@ h6 {
 .body-container {
   padding-left: pxToRem(10);
   padding-right: pxToRem(10);
-  padding-top: pxToRem(42);
-  padding-bottom: pxToRem(42);
 
   @include tablet {
     padding-left: pxToRem(19);
     padding-right: pxToRem(19);
-    padding-top: pxToRem(48);
-    padding-bottom: pxToRem(48);
   }
 
   @include desktop {
     padding-left: pxToRem(85);
     padding-right: pxToRem(85);
-    padding-top: pxToRem(51);
-    padding-bottom: pxToRem(51);
     max-width: pxToRem(1280);
     margin: 0 auto 0 auto;
   }
@@ -69,13 +63,12 @@ h6 {
     padding-left: pxToRem(27);
     flex-direction: row;
     align-items: center;
-    padding-bottom: 0;
     gap: pxToRem(47);
   }
 }
 
 .body-container_primary-color {
-  background-color: $color-primary-main;
+  background-color: var(--color-primary-main);
 
   @include desktop {
     max-width: pxToRem(1280);
@@ -308,9 +301,9 @@ select {
 }
 
 .button-name {
-  color: $color-primary-main;
+  color: var(--color-primary-main);
   background-color: transparent;
-  border: 1px solid $color-primary-main;
+  border: 1px solid var(--color-primary-main);
   font-size: $typography-button-font-size;
   font-weight: $typography-h5-font-weight;
   width: pxToRem(129);
@@ -329,12 +322,12 @@ select {
   &:hover {
     cursor: pointer;
     color: var(--color-common-white);
-    background-color: $color-primary-main;
+    background-color: var(--color-primary-main);
   }
 }
 
 .button-blue {
-  background-color: $color-primary-main;
+  background-color: var(--color-primary-main);
   color: var(--color-common-white);
 }
 
