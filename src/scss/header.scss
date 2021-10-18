@@ -84,7 +84,7 @@
 }
 
 .header {
-  background-color: $color-common-white;
+  background-color: var(--color-common-white);
   width: 100%;
 
   // /target/ //
@@ -144,7 +144,7 @@
         height: pxToRem(2);
         top: pxToRem(15);
         left: pxToRem(5);
-        background-color: $color-grey-900;
+        background-color: var(--color-grey-900);
 
         &::before,
         &::after {
@@ -153,7 +153,7 @@
           position: absolute;
           width: pxToRem(21);
           height: pxToRem(2);
-          background-color: $color-grey-900;
+          background-color: var(--color-grey-900);
           margin-left: pxToRem(9);
         }
 
@@ -227,11 +227,11 @@
             padding-bottom: pxToRem(20);
             display: flex;
             justify-content: space-around;
-            color: $color-common-white;
+            color: var(--color-common-white);
 
             @include tablet {
               padding: pxToRem(10);
-              color: $color-grey-900;
+              color: var(--color-grey-900);
               font-weight: $typography-h5-font-weight;
               font-size: $typography-h5-font-size;
             }

@@ -83,7 +83,7 @@ h6 {
 }
 
 .body-container_footer {
-  background-color: $color-grey-900;
+  background-color: var(--color-grey-900);
 
   @include desktop {
     max-width: pxToRem(1280);
@@ -227,15 +227,15 @@ img {
 }
 
 body {
-  color: $color-grey-900;
-  background-color: $color-common-white;
+  color: var(--color-grey-900);
+  background-color: var(--color-common-white);
   overscroll-behavior: none;
   min-height: -webkit-fill-available;
 }
 
 ::selection {
-  color: $color-common-white;
-  background: $color-secondary-dark;
+  color: var(--color-common-white);
+  background: var(--color-secondary-dark);
 }
 
 input[type="text"],
@@ -252,13 +252,13 @@ textarea {
   }
 
   &::placeholder {
-    color: $color-common-white;
+    color: var(--color-common-white);
     opacity: 30%;
     font-size: $typography-h5-font-size;
   }
 
   &.not-valid {
-    border-color: $color-secondary-dark;
+    border-color: var(--color-secondary-dark);
   }
 }
 
@@ -266,8 +266,8 @@ select {
   -webkit-appearance: none;
 
   &:focus::-ms-value {
-    color: $color-grey-900;
-    background: $color-common-white;
+    color: var(--color-grey-900);
+    background: var(--color-common-white);
   }
 }
 
@@ -280,7 +280,7 @@ a {
   text-decoration: none;
   margin: 0px;
   letter-spacing: $typography-letter-spacing;
-  color: $color-grey-900;
+  color: var(--color-grey-900);
 
   &:not([href]) {
     cursor: pointer;
@@ -328,23 +328,23 @@ select {
 
   &:hover {
     cursor: pointer;
-    color: $color-common-white;
+    color: var(--color-common-white);
     background-color: $color-primary-main;
   }
 }
 
 .button-blue {
   background-color: $color-primary-main;
-  color: $color-common-white;
+  color: var(--color-common-white);
 }
 
 .button-red {
-  background-color: $color-secondary-main;
-  border-color: $color-secondary-main;
+  background-color: var(--color-secondary-main);
+  border-color: var(--color-secondary-main);
 
   &:hover {
-    background-color: $color-secondary-dark;
-    border-color: $color-secondary-dark;
+    background-color: var(--color-secondary-dark);
+    border-color: var(--color-secondary-dark);
   }
 }
 
@@ -356,12 +356,12 @@ select {
     width: 100%;
     position: absolute;
     bottom: 0;
-    background-color: $color-secondary-main;
-    border-color: $color-secondary-main;
+    background-color: var(--color-secondary-main);
+    border-color: var(--color-secondary-main);
 
     &:hover {
-      background-color: $color-secondary-dark;
-      border-color: $color-secondary-dark;
+      background-color: var(--color-secondary-dark);
+      border-color: var(--color-secondary-dark);
     }
   }
 }

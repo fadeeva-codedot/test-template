@@ -4,7 +4,7 @@
 }
 
 .discuss {
-  color: $color-common-white;
+  color: var(--color-common-white);
 
   .body-container {
     padding-top: pxToRem(66);
@@ -59,7 +59,7 @@
       }
 
       &-input {
-        border-color: transparent transparent $color-common-white transparent;
+        border-color: transparent transparent var(--color-common-white) transparent;
         border-bottom: pxToRem(1) solid;
         height: pxToRem(33);
         width: 100%;
@@ -67,7 +67,7 @@
 
         &::placeholder {
           vertical-align: middle;
-          color: $color-common-white;
+          color: var(--color-common-white);
           opacity: 30%;
         }
 
@@ -116,7 +116,7 @@
 
       &-button {
         width: 100%;
-        color: $color-common-white;
+        color: var(--color-common-white);
         font-size: $typography-h5-font-size;
         font-weight: $typography-h3-font-weight;
 

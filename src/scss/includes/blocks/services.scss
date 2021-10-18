@@ -1,5 +1,5 @@
 .services {
-  color: $color-common-white;
+  color: var(--color-common-white);
   width: 100%;
 
   .body-container {
@@ -70,7 +70,7 @@
 
       &::before {
         content: "—";
-        color: $color-common-white;
+        color: var(--color-common-white);
         font-size: pxToRem(25);
         padding-right: pxToRem(10);
       }

@@ -2,9 +2,10 @@
   .section-title {
     text-align: center;
     margin-bottom: pxToRem(52);
+    line-height: 2;
 
     @include tablet {
-      margin-bottom: pxToRem(53);
+      margin-bottom: pxToRem(48);
     }
 
     @include desktop {
@@ -14,7 +15,7 @@
 
   &-list {
     display: grid;
-    border: 1px solid $color-grey-200;
+    border: 1px solid var(--color-grey-200);
     max-width: pxToRem(300);
 
     @include tablet {
@@ -26,11 +27,12 @@
 
     .package {
       position: relative;
-      border-bottom: pxToRem(1) solid $color-grey-200;
+      border-bottom: pxToRem(1) solid var(--color-grey-200);
       padding: pxToRem(19) pxToRem(17) pxToRem(28) pxToRem(17);
+      min-height: pxToRem(424);
 
       @include tablet {
-        border-left: pxToRem(1) solid $color-grey-200;
+        border-left: pxToRem(1) solid var(--color-grey-200);
       }
 
       @include desktop {
@@ -39,9 +41,10 @@
 
       &:last-child {
         border-bottom: none;
+        min-height: auto;
 
         @include tablet {
-          border-bottom: pxToRem(1) solid $color-grey-200;
+          border-bottom: pxToRem(1) solid var(--color-grey-200);
           grid-column-start: 2;
           grid-column-end: 4;
         }
@@ -121,7 +124,7 @@
           right: pxToRem(15);
           border-left: 9px solid $color-primary-main;
           border-right: 9px solid $color-primary-main;
-          border-bottom: 9px solid $color-common-white;
+          border-bottom: 9px solid var(--color-common-white);
 
           @include desktop {
             width: pxToRem(28);
@@ -137,7 +140,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        border-bottom: pxToRem(1) solid $color-grey-200;
+        border-bottom: pxToRem(1) solid var(--color-grey-200);
         margin-bottom: pxToRem(33);
 
         @include desktop {
@@ -170,7 +173,7 @@
               content: "от";
               font-size: $typography-h5-font-size;
               font-weight: $typography-h2-font-weight;
-              color: $color-grey-200;
+              color: var(--color-grey-200);
               padding-right: pxToRem(5);
 
               @include desktop {
@@ -200,7 +203,7 @@
         list-style-type: none;
         display: flex;
         flex-direction: column;
-        gap: pxToRem(18);
+        gap: pxToRem(16);
 
         &-item {
           font-size: $typography-h5-font-size;
@@ -217,8 +220,8 @@
             width: pxToRem(10);
             height: pxToRem(6);
             position: absolute;
-            border-left: 2px solid $color-secondary-main;
-            border-bottom: 2px solid $color-secondary-main;
+            border-left: 2px solid var(--color-secondary-main);
+            border-bottom: 2px solid var(--color-secondary-main);
             transform: rotate(-45deg);
 
             @include desktop {

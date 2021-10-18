@@ -13,6 +13,36 @@ $color-grey-900: #1c1d28;
 $color-grey-200: #e4e4e4;
 $color-info-light: #f2fcff;
 
+$color-dark-primary-main: #3e3cb9;
+$color-dark-secondary-main: #ff5f68;
+$color-dark-secondary-dark: #ff5c66;
+$color-dark-common-white: #1f1f1f;
+$color-dark-grey-900: #b9b9b9;
+$color-dark-grey-200: #aaaaaa;
+$color-dark-info-light: #b1e9fa;
+
+:root {
+  --color-primary-main: #{$color-primary-main};
+  --color-secondary-main: #{$color-secondary-main};
+  --color-secondary-dark: #{$color-secondary-dark};
+  --color-common-white: #{$color-common-white};
+  --color-grey-900: #{$color-grey-900};
+  --color-grey-200: #{$color-grey-200};
+  --color-info-light: #{$color-info-light};
+}
+
+@include dark-theme {
+  :root {
+    --color-primary-main: #{$color-dark-primary-main};
+    --color-secondary-main: #{$color-dark-secondary-main};
+    --color-secondary-dark: #{$color-dark-secondary-dark};
+    --color-common-white: #{$color-dark-common-white};
+    --color-grey-900: #{$color-dark-grey-900};
+    --color-grey-200: #{$color-dark-grey-200};
+    --color-info-light: #{$color-dark-info-light};
+  }
+}
+
 // Media queries
 $desktop-extra-large: pxToRem(1536, em);
 $desktop-extra: pxToRem(1200, em);
