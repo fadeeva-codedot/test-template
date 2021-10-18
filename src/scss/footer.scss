@@ -1,15 +1,15 @@
 .footer {
   color: var(--color-common-white);
 
+  @include dark-theme {
+    color: var(--color-grey-900);
+  }
+
   &-logo {
     margin-bottom: pxToRem(31);
 
     .footer-image {
       filter: invert(100%);
-
-      @include dark-theme {
-        filter: invert(0);
-      }
     }
   }
 
@@ -75,19 +75,10 @@
     gap: pxToRem(21);
 
     &__icon {
-      @include dark-theme {
-        filter: invert(100%);
-      }
-
       &:hover {
         cursor: pointer;
         filter: invert(47%) sepia(34%) saturate(2773%) hue-rotate(322deg) brightness(103%)
           contrast(103%);
-
-        @include dark-theme {
-          filter: invert(81%) sepia(61%) saturate(5724%) hue-rotate(314deg) brightness(88%)
-            contrast(89%);
-        }
       }
     }
   }
@@ -113,11 +104,10 @@
       &:hover {
         filter: invert(47%) sepia(34%) saturate(2773%) hue-rotate(322deg) brightness(103%)
           contrast(103%);
+      }
 
-        @include dark-theme {
-          filter: invert(81%) sepia(61%) saturate(5724%) hue-rotate(314deg) brightness(88%)
-            contrast(89%);
-        }
+      @include dark-theme {
+        filter: invert(100%);
       }
 
       &__icon {
@@ -151,6 +141,7 @@
       font-size: $typography-h5-font-size;
 
       @include dark-theme {
+        filter: invert(100%);
         opacity: 100%;
       }
     }
