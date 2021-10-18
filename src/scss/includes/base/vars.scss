@@ -13,13 +13,14 @@ $color-grey-900: #1c1d28;
 $color-grey-200: #e4e4e4;
 $color-info-light: #f2fcff;
 
-$color-dark-primary-main: #7d7bff;
-$color-dark-secondary-main: #e9686e;
-$color-dark-secondary-dark: #d6686e;
+$color-dark-primary-main: #97a1ff;
+$color-dark-secondary-main: #e45f66;
+$color-dark-secondary-dark: #9c373d;
 $color-dark-common-white: #1f1f1f;
 $color-dark-grey-900: #ffffff;
 $color-dark-grey-200: #6a6a6a;
 $color-dark-info-light: #3b5158;
+$color-dark-primary-blue: #2a287b;
 
 :root {
   --color-primary-main: #{$color-primary-main};
@@ -40,6 +41,7 @@ $color-dark-info-light: #3b5158;
     --color-grey-900: #{$color-dark-grey-900};
     --color-grey-200: #{$color-dark-grey-200};
     --color-info-light: #{$color-dark-info-light};
+    --color-primary-blue: #{$color-dark-primary-blue};
   }
 }
 

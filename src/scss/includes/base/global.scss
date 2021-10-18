@@ -53,14 +53,24 @@ h6 {
 .body-container_contact-form {
   display: flex;
   flex-direction: column;
+  padding-top: pxToRem(66);
+  padding-bottom: pxToRem(65);
+  padding-left: pxToRem(15);
+  padding-right: pxToRem(15);
 
   @include tablet {
     padding-left: pxToRem(103);
     padding-right: pxToRem(103);
+    padding-top: pxToRem(96);
+    padding-bottom: pxToRem(96);
   }
 
   @include desktop {
     padding-left: pxToRem(27);
+    padding-right: pxToRem(27);
+    padding-top: pxToRem(133);
+    padding-bottom: pxToRem(0);
+    margin: 0 auto;
     flex-direction: row;
     align-items: center;
     gap: pxToRem(47);
@@ -70,6 +80,10 @@ h6 {
 .body-container_primary-color {
   background-color: var(--color-primary-main);
 
+  @include dark-theme {
+    background-color: var(--color-primary-blue);
+  }
+
   @include desktop {
     max-width: pxToRem(1280);
   }
@@ -77,9 +91,22 @@ h6 {
 
 .body-container_footer {
   background-color: var(--color-grey-900);
+  padding-top: pxToRem(33);
+  padding-bottom: pxToRem(34);
+
+  @include tablet {
+    padding-top: pxToRem(45);
+    padding-bottom: pxToRem(36);
+  }
 
   @include desktop {
     max-width: pxToRem(1280);
+    padding-top: pxToRem(90);
+    padding-bottom: pxToRem(40);
+  }
+
+  @include dark-theme {
+    background-color: var(--color-common-white);
   }
 }
 
@@ -150,14 +177,17 @@ h6 {
 }
 
 .header-container {
-  padding: pxToRem(5) pxToRem(5) pxToRem(5) pxToRem(10);
+  padding-right: pxToRem(5);
+  padding-left: pxToRem(10);
 
   @include tablet {
-    padding: pxToRem(20) pxToRem(22) pxToRem(20) pxToRem(22);
+    padding-right: pxToRem(22);
+    padding-left: pxToRem(22);
   }
 
   @include desktop-extra {
-    padding: pxToRem(30) pxToRem(33) pxToRem(30) pxToRem(35);
+    padding-right: pxToRem(33);
+    padding-left: pxToRem(35);
     max-width: pxToRem(1280);
     margin: 0 auto 0 auto;
   }

@@ -1,4 +1,14 @@
 .development {
+  padding-bottom: pxToRem(72);
+
+  @include tablet {
+    padding-bottom: pxToRem(95);
+  }
+
+  @include desktop {
+    padding-bottom: pxToRem(101);
+  }
+
   .section-title {
     margin-bottom: pxToRem(30);
     max-width: pxToRem(284);

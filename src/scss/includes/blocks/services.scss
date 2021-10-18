@@ -1,6 +1,19 @@
 .services {
   color: var(--color-common-white);
   width: 100%;
+  padding-bottom: pxToRem(71);
+
+  @include tablet {
+    padding-bottom: pxToRem(82);
+  }
+
+  @include desktop {
+    padding-bottom: pxToRem(95);
+  }
+
+  @include dark-theme {
+    color: var(--color-grey-900);
+  }
 
   .body-container {
     padding-top: pxToRem(45);
@@ -73,6 +86,10 @@
         color: var(--color-common-white);
         font-size: pxToRem(25);
         padding-right: pxToRem(10);
+
+        @include dark-theme {
+          filter: invert(100%);
+        }
       }
     }
   }

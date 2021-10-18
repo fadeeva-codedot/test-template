@@ -1,4 +1,14 @@
 .benefits {
+  padding-bottom: pxToRem(74);
+
+  @include tablet {
+    padding-bottom: pxToRem(89);
+  }
+
+  @include desktop {
+    padding-bottom: pxToRem(141);
+  }
+
   .section-title {
     margin-bottom: pxToRem(39);
 

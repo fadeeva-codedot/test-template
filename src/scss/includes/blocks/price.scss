@@ -1,4 +1,14 @@
 .price {
+  padding-bottom: pxToRem(105);
+
+  @include tablet {
+    padding-bottom: pxToRem(84);
+  }
+
+  @include desktop {
+    padding-bottom: pxToRem(136);
+  }
+
   .section-title {
     text-align: center;
     margin-bottom: pxToRem(52);

@@ -1,4 +1,14 @@
 .info {
+  padding-bottom: pxToRem(44);
+
+  @include tablet {
+    padding-bottom: pxToRem(81);
+  }
+
+  @include desktop {
+    padding-bottom: pxToRem(95);
+  }
+
   .section-title {
     margin-bottom: pxToRem(30);
     max-width: pxToRem(247);

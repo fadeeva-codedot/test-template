@@ -6,6 +6,10 @@
 .discuss {
   color: var(--color-common-white);
 
+  @include dark-theme {
+    color: var(--color-grey-900);
+  }
+
   .body-container {
     padding-top: pxToRem(66);
   }
@@ -68,6 +72,10 @@
         width: 100%;
         background-color: transparent;
 
+        @include dark-theme {
+          filter: invert(100%);
+        }
+
         &::placeholder {
           vertical-align: middle;
           color: var(--color-common-white);
@@ -93,6 +101,10 @@
           width: pxToRem(17);
           background-color: transparent;
           border: pxToRem(1) solid var(--color-common-white);
+
+          @include dark-theme {
+            filter: invert(100%);
+          }
 
           &:after {
             content: "";
@@ -122,6 +134,10 @@
         color: var(--color-common-white);
         font-size: $typography-h5-font-size;
         font-weight: $typography-h3-font-weight;
+
+        @include dark-theme {
+          color: var(--color-grey-900);
+        }
 
         @include tablet {
           width: pxToRem(171);

@@ -1,4 +1,14 @@
 .hero {
+  padding-bottom: pxToRem(79);
+
+  @include tablet {
+    padding-bottom: pxToRem(83);
+  }
+
+  @include desktop {
+    padding-bottom: pxToRem(42);
+  }
+
   &-items {
     display: flex;
   }

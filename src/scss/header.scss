@@ -90,6 +90,18 @@
 .header {
   background-color: var(--color-common-white);
   width: 100%;
+  padding-top: pxToRem(5);
+  padding-bottom: pxToRem(61);
+
+  @include tablet {
+    padding-top: pxToRem(20);
+    padding-bottom: pxToRem(46);
+  }
+
+  @include desktop {
+    padding-top: pxToRem(30);
+    padding-bottom: pxToRem(41);
+  }
 
   // /target/ //
   &-navbar {
@@ -188,6 +200,10 @@
       top: 0;
       position: fixed;
 
+      @include dark-theme {
+        background-color: var(--color-primary-blue);
+      }
+
       @include tablet {
         background-color: transparent;
         transform: none;
@@ -236,6 +252,10 @@
             display: flex;
             justify-content: space-around;
             color: var(--color-common-white);
+
+            @include dark-theme {
+              color: var(--color-grey-900);
+            }
 
             @include tablet {
               padding: pxToRem(10);

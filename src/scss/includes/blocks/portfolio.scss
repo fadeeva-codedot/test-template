@@ -1,4 +1,14 @@
 .portfolio {
+  padding-bottom: pxToRem(71);
+
+  @include tablet {
+    padding-bottom: pxToRem(102);
+  }
+
+  @include desktop {
+    padding-bottom: pxToRem(108);
+  }
+
   .section-title {
     margin-bottom: pxToRem(32);
     text-indent: pxToRem(10);
