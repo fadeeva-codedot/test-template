@@ -123,6 +123,10 @@
         @include desktop {
           width: pxToRem(65);
         }
+
+        @include dark-theme {
+          filter: invert(100%);
+        }
       }
     }
 

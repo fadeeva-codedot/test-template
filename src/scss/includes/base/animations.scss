@@ -130,3 +130,23 @@
     top: pxToRem(6);
   }
 }
+// keyframes dark-theme
+@include dark-theme {
+  @keyframes logo {
+    100% {
+      filter: invert(100%);
+    }
+  }
+
+  @keyframes menu-icon {
+    100% {
+      filter: invert(0);
+    }
+  }
+
+  @keyframes menu-icon-reverse {
+    100% {
+      filter: invert(0);
+    }
+  }
+}
