@@ -383,6 +383,10 @@ select {
     background-color: var(--color-secondary-main);
     border-color: var(--color-secondary-main);
 
+    @include dark-theme {
+      color: var(--color-grey-900);
+    }
+
     &:hover {
       background-color: var(--color-secondary-dark);
       border-color: var(--color-secondary-dark);

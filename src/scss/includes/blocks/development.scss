@@ -31,7 +31,7 @@
       margin-left: pxToRem(66);
       margin-right: pxToRem(66);
     }
-    /*scroll with ability add another elements*/
+    /*scroll with ability to add another elements*/
     .development-phase {
       display: flex;
       position: relative;
@@ -177,5 +177,11 @@
       height: pxToRem(1);
       display: block;
     }
+  }
+}
+
+html[dir="rtl"] {
+  .development-slider-arrow {
+    transform: scaleX(-1);
   }
 }

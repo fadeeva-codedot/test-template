@@ -257,3 +257,14 @@
     }
   }
 }
+
+html[dir="rtl"] {
+  .package {
+    &:hover {
+      &::after {
+        left: pxToRem(15);
+        right: unset;
+      }
+    }
+  }
+}
