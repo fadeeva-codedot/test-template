@@ -16,9 +16,8 @@
   &-info {
     display: flex;
     flex-wrap: wrap;
-    row-gap: pxToRem(43);
-    column-gap: pxToRem(48);
-    margin-bottom: pxToRem(57);
+    row-gap: pxToRem(60);
+    column-gap: pxToRem(56);
 
     @include tablet {
       gap: pxToRem(80);
@@ -26,6 +25,17 @@
 
     @include desktop {
       flex-wrap: nowrap;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: pxToRem(45);
+
+      @include tablet {
+        order: 2;
+      }
     }
 
     .briefs {
@@ -52,8 +62,7 @@
       list-style-type: none;
       display: flex;
       flex-direction: column;
-      row-gap: pxToRem(10);
-      margin-bottom: pxToRem(21);
+      row-gap: pxToRem(18);
 
       &-phones {
         list-style-type: none;
@@ -67,7 +76,7 @@
   .info-subtitle {
     font-size: $typography-h4-font-size;
     font-weight: $typography-h2-font-weight;
-    margin-bottom: pxToRem(20);
+    margin-bottom: pxToRem(25);
   }
 
   .info-icons {
@@ -86,7 +95,6 @@
   .social {
     display: flex;
     gap: pxToRem(11);
-    width: 100%;
 
     @include desktop {
       width: auto;
