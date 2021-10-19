@@ -247,6 +247,10 @@ sup {
 
 img {
   vertical-align: middle;
+
+  @include dark-theme {
+    filter: grayscale(30%) brightness(90%) contrast(110%);
+  }
 }
 
 body {
