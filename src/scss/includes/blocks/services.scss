@@ -85,7 +85,7 @@
         content: "—";
         color: var(--color-common-white);
         font-size: pxToRem(25);
-        padding-right: pxToRem(10);
+        padding-right: pxToRem(21);
 
         @include dark-theme {
           filter: invert(100%);

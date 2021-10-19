@@ -10,7 +10,7 @@
   }
 
   .section-title {
-    margin-bottom: pxToRem(30);
+    margin-bottom: pxToRem(5);
     max-width: pxToRem(284);
 
     @include tablet {
@@ -26,6 +26,7 @@
     justify-content: space-between;
     overflow-x: scroll;
     overflow-y: hidden;
+    margin-bottom: pxToRem(5);
 
     @include desktop {
       margin-left: pxToRem(66);
@@ -36,7 +37,7 @@
       display: flex;
       position: relative;
       flex-wrap: wrap;
-      padding-left: pxToRem(55);
+      padding-left: pxToRem(45);
 
       &:last-child {
         padding-right: pxToRem(55);
@@ -105,6 +106,7 @@
         font-weight: 900;
         line-height: 145%;
         color: transparent;
+        margin-bottom: pxToRem(10);
         -webkit-text-stroke: pxToRem(1) var(--color-primary-main);
 
         @include desktop {

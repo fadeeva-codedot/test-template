@@ -1,5 +1,5 @@
 .portfolio {
-  padding-bottom: pxToRem(71);
+  padding-bottom: pxToRem(66);
 
   @include tablet {
     padding-bottom: pxToRem(102);
@@ -30,6 +30,7 @@
 
     .project {
       width: 100%;
+      min-height: pxToRem(235);
 
       &:nth-child(3n + 1) {
         @include desktop {
