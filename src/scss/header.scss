@@ -1,5 +1,6 @@
 .page-wrapper {
   height: 100%;
+
   // all actions connected with target
   &:not(:target) {
     overflow-x: hidden;
@@ -46,10 +47,6 @@
     .logo {
       animation: logo linear 0.4s forwards;
 
-      @include dark-theme {
-        filter: invert(100%);
-      }
-
       @include tablet {
         animation: none;
       }
@@ -90,8 +87,8 @@
 .header {
   background-color: var(--color-common-white);
   width: 100%;
-  padding-top: pxToRem(5);
-  padding-bottom: pxToRem(61);
+  padding-top: pxToRem(7);
+  padding-bottom: pxToRem(44);
 
   @include tablet {
     padding-top: pxToRem(20);
@@ -123,10 +120,6 @@
         z-index: 2;
         position: relative;
 
-        @include dark-theme {
-          filter: invert(100%);
-        }
-
         @include desktop {
           width: pxToRem(65);
         }
@@ -145,12 +138,22 @@
       }
     }
 
+    .icon-wrapper {
+      width: pxToRem(47);
+      height: pxToRem(47);
+      position: relative;
+      top: pxToRem(7);
+
+      @include tablet {
+        display: none;
+      }
+    }
+
     .menu-icon {
       z-index: 1;
       width: pxToRem(45);
       height: pxToRem(45);
       position: absolute;
-      top: pxToRem(7);
       right: 0;
 
       @include tablet {
@@ -175,14 +178,6 @@
           height: pxToRem(2);
           background-color: var(--color-grey-900);
           margin-left: pxToRem(9);
-        }
-
-        &::before {
-          top: pxToRem(6);
-        }
-
-        &::after {
-          bottom: pxToRem(6);
         }
       }
     }
@@ -312,6 +307,25 @@
           }
         }
       }
+    }
+  }
+}
+
+html[dir="rtl"] {
+  .page-wrapper {
+    &:not(:target) {
+      .mobile-menu {
+        transform: translateX(-100%);
+      }
+    }
+  }
+
+  .menu-icon__element {
+    right: pxToRem(9);
+
+    &::before,
+    &::after {
+      margin-right: pxToRem(9);
     }
   }
 }
