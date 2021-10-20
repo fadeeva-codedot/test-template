@@ -8,13 +8,19 @@
   &-logo {
     margin-bottom: pxToRem(31);
 
-    .footer-image {
+    &-image {
       filter: invert(100%);
+
+      @include tablet {
+        width: pxToRem(65);
+        height: auto;
+      }
     }
   }
 
   &-info {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     row-gap: pxToRem(60);
     column-gap: pxToRem(56);
@@ -34,25 +40,26 @@
       row-gap: pxToRem(45);
 
       @include tablet {
-        order: 2;
+        gap: pxToRem(80);
+        order: 1;
       }
     }
 
     .briefs {
-      @include desktop {
+      @include tablet {
         order: 2;
       }
     }
 
     .contacts {
-      @include desktop {
-        order: 3;
+      @include tablet {
+        order: 4;
       }
     }
 
     .about {
-      @include desktop {
-        order: 4;
+      @include tablet {
+        order: 3;
       }
     }
 
@@ -95,6 +102,10 @@
   .social {
     display: flex;
     gap: pxToRem(11);
+
+    @include tablet {
+      order: 2;
+    }
 
     @include desktop {
       width: auto;

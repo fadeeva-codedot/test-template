@@ -74,6 +74,7 @@
   }
 }
 
+// Custom mobile mixins
 @mixin medium-mobile() {
   @media (min-width: 450px) {
     @content;
@@ -87,7 +88,6 @@
 }
 
 //Dark theme
-
 @mixin light-theme() {
   @media (prefers-color-scheme: light) {
     @content;

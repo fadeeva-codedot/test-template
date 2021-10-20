@@ -22,13 +22,14 @@
   &-phases {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     overflow-x: scroll;
     overflow-y: hidden;
     margin-bottom: pxToRem(5);
 
     @include desktop {
+      margin-bottom: 0;
       margin-left: pxToRem(66);
       margin-right: pxToRem(66);
     }
@@ -65,7 +66,7 @@
       //2nd dev phase
       &:nth-child(4n - 2) {
         @include tablet {
-          margin-top: pxToRem(47);
+          margin-top: pxToRem(53);
         }
 
         @include desktop {
@@ -94,6 +95,10 @@
         height: pxToRem(85);
         background-color: var(--color-info-light);
         border-radius: 100%;
+
+        @include tablet {
+          left: pxToRem(33);
+        }
 
         @include desktop {
           width: pxToRem(113);
@@ -172,8 +177,8 @@
     &-indicator {
       background-image: linear-gradient(
         to right,
-        var(--color-grey-200) 50%,
-        var(--color-grey-900) 50%
+        var(--color-grey-200) 60%,
+        var(--color-grey-900) 40%
       );
       width: 100%;
       height: pxToRem(1);

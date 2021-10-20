@@ -108,7 +108,7 @@
     max-width: 100%;
 
     @include tablet {
-      gap: pxToRem(25);
+      gap: pxToRem(35);
     }
 
     @include desktop {
