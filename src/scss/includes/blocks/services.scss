@@ -38,6 +38,10 @@
       max-width: 100%;
       margin-bottom: pxToRem(34);
     }
+
+    @include desktop {
+      margin-bottom: pxToRem(40);
+    }
   }
 
   .section-description {
@@ -50,7 +54,7 @@
 
     @include desktop {
       max-width: pxToRem(950);
-      margin-bottom: pxToRem(46);
+      margin-bottom: pxToRem(50);
     }
   }
 
@@ -67,7 +71,6 @@
 
     @include desktop {
       grid-column-gap: pxToRem(68);
-      grid-row-gap: pxToRem(20);
       grid-template-columns: pxToRem(282) pxToRem(282);
     }
 
