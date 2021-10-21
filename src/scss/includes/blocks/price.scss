@@ -19,7 +19,7 @@
     }
 
     @include desktop {
-      margin-bottom: pxToRem(66);
+      margin-bottom: pxToRem(56);
     }
   }
 
@@ -33,6 +33,10 @@
       border-bottom: none;
       border-left: none;
       max-width: 100%;
+    }
+
+    @include desktop {
+      width: 100%;
     }
 
     .package {
@@ -72,6 +76,7 @@
 
           @include desktop {
             gap: pxToRem(145);
+            margin-bottom: pxToRem(50);
           }
 
           &-title {
@@ -118,6 +123,10 @@
 
           .button-name {
             margin-bottom: pxToRem(43);
+
+            @include tablet {
+              margin-bottom: 0;
+            }
           }
         }
       }
@@ -215,13 +224,17 @@
         flex-direction: column;
         gap: pxToRem(16);
 
+        @include desktop {
+          gap: pxToRem(18);
+        }
+
         &-item {
           font-size: $typography-h5-font-size;
           font-weight: $typography-h4-font-weight;
           text-indent: pxToRem(20);
 
           @include desktop {
-            text-indent: pxToRem(28);
+            text-indent: pxToRem(35);
           }
 
           &::before {
