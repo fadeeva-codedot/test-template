@@ -2,7 +2,7 @@
   padding-bottom: pxToRem(66);
 
   @include tablet {
-    padding-bottom: pxToRem(102);
+    padding-bottom: pxToRem(96);
   }
 
   @include desktop {
@@ -12,6 +12,11 @@
   .section-title {
     margin-bottom: pxToRem(32);
     text-indent: pxToRem(10);
+
+    @include tablet {
+      margin-bottom: pxToRem(57);
+      text-indent: pxToRem(18);
+    }
   }
 
   &-examples {
