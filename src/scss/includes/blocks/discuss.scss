@@ -4,7 +4,7 @@
   gap: pxToRem(50);
 
   @include tablet {
-    gap: pxToRem(97);
+    gap: pxToRem(95);
   }
 }
 
@@ -29,9 +29,6 @@
       gap: pxToRem(24);
     }
 
-    .section-title {
-    }
-
     .section-description {
       max-width: pxToRem(225);
       text-align: center;
@@ -47,6 +44,10 @@
   }
 
   .form {
+    gap: 2.1875rem;
+    display: flex;
+    flex-direction: column;
+
     &-field .checkmark:after {
       left: pxToRem(6);
       top: pxToRem(2);
@@ -60,7 +61,7 @@
 
     & > :nth-last-child(2) {
       @include tablet {
-        margin-bottom: pxToRem(63);
+        margin-bottom: pxToRem(30);
       }
     }
 
@@ -69,8 +70,8 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: space-between;
-      margin-bottom: pxToRem(35);
       width: 100%;
+      //margin-bottom: pxToRem(35);
 
       @include tablet {
         gap: pxToRem(7);
@@ -175,11 +176,16 @@
     }
 
     .field-wrapper {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      gap: pxToRem(35);
+      justify-content: space-between;
 
       @include tablet {
         display: flex;
+        flex-direction: row;
         gap: pxToRem(49);
+        justify-content: start;
 
         &:last-child {
           gap: pxToRem(37);
