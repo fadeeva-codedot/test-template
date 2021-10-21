@@ -97,7 +97,7 @@
 
   @include desktop {
     padding-top: pxToRem(30);
-    padding-bottom: pxToRem(41);
+    padding-bottom: pxToRem(30);
   }
 
   // /target/ //
@@ -112,7 +112,7 @@
     }
 
     @include desktop {
-      gap: pxToRem(45);
+      gap: pxToRem(82);
     }
     // logo
     .logo-wrapper {
@@ -283,8 +283,13 @@
           position: static;
           display: flex;
           flex: 1 1 40%;
-          justify-content: space-between;
+          //justify-content: space-between;
+          justify-content: space-around;
         }
+
+        /*@include desktop {
+          justify-content: space-around;
+        }*/
       }
 
       &-phone {
