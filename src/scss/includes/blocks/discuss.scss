@@ -6,6 +6,11 @@
   @include tablet {
     gap: pxToRem(95);
   }
+
+  @include desktop-extra {
+    flex-direction: row;
+    gap: pxToRem(47);
+  }
 }
 
 .discuss {
@@ -203,7 +208,7 @@
   .contact-picture {
     display: none;
 
-    @include desktop {
+    @include desktop-extra {
       display: block;
     }
 
