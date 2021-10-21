@@ -114,7 +114,7 @@ h6 {
   padding-left: 0;
   padding-right: 0;
 
-  @include desktop {
+  @include desktop-extra {
     padding-left: pxToRem(85);
     padding-right: pxToRem(85);
     max-width: pxToRem(1280);

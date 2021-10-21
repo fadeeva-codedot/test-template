@@ -35,12 +35,12 @@
       margin-bottom: pxToRem(53);
     }
 
-    @include desktop {
+    @include desktop-extra {
       grid-column-gap: pxToRem(24);
       grid-row-gap: pxToRem(26);
       margin-bottom: pxToRem(80);
-      grid-template-columns: pxToRem(613) pxToRem(473);
       grid-template-rows: pxToRem(560) pxToRem(497);
+      grid-template-columns: pxToRem(613) pxToRem(473);
     }
 
     .project {
@@ -50,20 +50,20 @@
       object-fit: cover;
 
       &:nth-child(3n + 1) {
-        @include desktop {
+        @include desktop-extra {
           grid-column-start: 1;
           grid-column-end: 3;
         }
       }
 
       &:nth-child(3n + 2) {
-        @include desktop {
+        @include desktop-extra {
           grid-column: 1;
         }
       }
 
       &:nth-child(3n + 3) {
-        @include desktop {
+        @include desktop-extra {
           grid-column: 2;
         }
       }

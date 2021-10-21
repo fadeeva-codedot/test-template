@@ -81,6 +81,10 @@
 
           &-title {
             margin-bottom: pxToRem(68);
+
+            @include desktop {
+              margin-bottom: 0;
+            }
           }
 
           .cost {
@@ -173,7 +177,6 @@
 
           @include desktop {
             font-size: $typography-h4-font-size;
-            margin-bottom: pxToRem(48);
           }
         }
 

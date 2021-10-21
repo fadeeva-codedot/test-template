@@ -123,7 +123,7 @@
       &-checkbox {
         display: block;
         position: relative;
-        padding-left: pxToRem(31);
+        text-indent: pxToRem(31);
         font-size: $typography-h5-font-size;
 
         .checkmark {
