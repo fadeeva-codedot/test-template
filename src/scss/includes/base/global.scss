@@ -65,7 +65,7 @@ h6 {
     padding-bottom: pxToRem(96);
   }
 
-  @include desktop {
+  @include desktop-extra {
     padding-left: pxToRem(27);
     padding-right: pxToRem(27);
     padding-top: pxToRem(133);

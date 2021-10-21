@@ -8,6 +8,10 @@
   &-logo {
     margin-bottom: pxToRem(31);
 
+    @include tablet {
+      margin-bottom: pxToRem(80);
+    }
+
     &-image {
       filter: invert(100%);
 
@@ -26,7 +30,8 @@
     column-gap: pxToRem(56);
 
     @include tablet {
-      gap: pxToRem(80);
+      gap: pxToRem(70);
+      margin-bottom: pxToRem(68);
     }
 
     @include desktop {
@@ -40,7 +45,7 @@
       row-gap: pxToRem(45);
 
       @include tablet {
-        gap: pxToRem(80);
+        gap: pxToRem(90);
         order: 1;
       }
     }
@@ -52,6 +57,10 @@
     }
 
     .contacts {
+      & > .info-list {
+        row-gap: pxToRem(22);
+      }
+
       @include tablet {
         order: 4;
       }
@@ -101,7 +110,7 @@
 
   .social {
     display: flex;
-    gap: pxToRem(11);
+    gap: pxToRem(14);
 
     @include tablet {
       order: 2;
@@ -141,7 +150,6 @@
   }
 
   .politics {
-    margin-top: pxToRem(39);
     display: flex;
     align-items: center;
     justify-content: center;
