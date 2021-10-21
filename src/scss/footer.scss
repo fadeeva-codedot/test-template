@@ -118,6 +118,7 @@
 
     @include desktop {
       width: auto;
+      height: fit-content;
       order: 1;
     }
 
