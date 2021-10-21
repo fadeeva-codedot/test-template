@@ -186,8 +186,8 @@ h6 {
   }
 
   @include desktop-extra {
-    padding-right: pxToRem(33);
-    padding-left: pxToRem(35);
+    padding-right: pxToRem(65);
+    padding-left: pxToRem(85);
     max-width: pxToRem(1280);
     margin: 0 auto 0 auto;
   }
