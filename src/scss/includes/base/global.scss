@@ -13,7 +13,7 @@
 }
 
 html {
-  min-height: -webkit-fill-available;
+  //min-height: -webkit-fill-available;
   min-height: 100vh;
 }
 
@@ -255,8 +255,8 @@ img {
 body {
   color: var(--color-grey-900);
   background-color: var(--color-common-white);
-  overscroll-behavior: none;
-  min-height: -webkit-fill-available;
+  //min-height: -webkit-fill-available;
+  min-height: 100vh;
 }
 
 ::selection {
@@ -271,8 +271,6 @@ input[type="password"],
 textarea {
   cursor: pointer;
   background: transparent;
-  -webkit-appearance: none;
-
   &:focus {
     outline: none;
   }
@@ -289,8 +287,6 @@ textarea {
 }
 
 select {
-  -webkit-appearance: none;
-
   &:focus {
     color: var(--color-grey-900);
     background: var(--color-common-white);
