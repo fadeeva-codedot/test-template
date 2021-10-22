@@ -3,6 +3,12 @@
   flex-direction: column;
   gap: pxToRem(50);
 
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: pxToRem(20);
+  }
+
   @include tablet {
     gap: pxToRem(95);
   }
@@ -52,6 +58,10 @@
     gap: 2.1875rem;
     display: flex;
     flex-direction: column;
+
+    @include desktop {
+      min-width: pxToRem(523);
+    }
 
     &-field .checkmark:after {
       left: pxToRem(6);
