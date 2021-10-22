@@ -233,7 +233,6 @@ textarea {
 
 [aria-disabled="true"] {
   cursor: default;
-  pointer-events: none;
 }
 
 .no-js button[type="button"] {
@@ -292,7 +291,7 @@ textarea {
 select {
   -webkit-appearance: none;
 
-  &:focus::-ms-value {
+  &:focus {
     color: var(--color-grey-900);
     background: var(--color-common-white);
   }
@@ -376,7 +375,7 @@ select {
 }
 
 .button-menu {
-  @media only screen and (max-device-width: 767px) {
+  @media only screen and (max-width: 767px) {
     font-size: $typography-font-size;
     padding-top: pxToRem(21);
     padding-bottom: pxToRem(20);
