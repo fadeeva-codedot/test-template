@@ -367,11 +367,11 @@ select {
 
 .button-red {
   background-color: var(--color-secondary-main);
-  border-color: var(--color-secondary-main);
+  border-color: transparent;
 
   &:hover {
     background-color: var(--color-secondary-dark);
-    border-color: var(--color-secondary-dark);
+    border-color: transparent;
   }
 }
 
@@ -385,7 +385,7 @@ select {
     text-align: center;
     bottom: 0;
     background-color: var(--color-secondary-main);
-    border-color: var(--color-secondary-main);
+    border-color: transparent;
 
     @include dark-theme {
       color: var(--color-grey-900);
@@ -393,7 +393,7 @@ select {
 
     &:hover {
       background-color: var(--color-secondary-dark);
-      border-color: var(--color-secondary-dark);
+      border-color: transparent;
     }
   }
 }
