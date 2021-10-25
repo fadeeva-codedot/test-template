@@ -5,11 +5,31 @@
     color: var(--color-grey-900);
   }
 
+  &-wrapper {
+    display: grid;
+    justify-content: space-between;
+    margin-bottom: pxToRem(39);
+
+    @include tablet {
+      margin-bottom: pxToRem(72);
+    }
+
+    @include desktop {
+      grid-template-columns: pxToRem(200) pxToRem(679);
+      grid-template-rows: pxToRem(84) pxToRem(100) 1fr;
+      margin-bottom: pxToRem(73);
+    }
+  }
+
   &-logo {
     margin-bottom: pxToRem(31);
 
     @include tablet {
       margin-bottom: pxToRem(80);
+    }
+
+    @include desktop {
+      margin-bottom: pxToRem(32);
     }
 
     &-image {
@@ -24,18 +44,19 @@
 
   &-info {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    row-gap: pxToRem(60);
+    row-gap: pxToRem(45);
     column-gap: pxToRem(56);
+    margin-bottom: pxToRem(57);
 
     @include tablet {
-      gap: pxToRem(70);
+      gap: pxToRem(88);
       margin-bottom: pxToRem(68);
     }
 
     @include desktop {
       flex-wrap: nowrap;
+      gap: pxToRem(109);
     }
 
     &-wrapper {
@@ -48,11 +69,19 @@
         gap: pxToRem(90);
         order: 1;
       }
+
+      @include desktop {
+        order: 2;
+      }
     }
 
     .briefs {
       @include tablet {
         order: 2;
+      }
+
+      @include desktop {
+        order: 1;
       }
     }
 

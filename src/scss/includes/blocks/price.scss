@@ -56,6 +56,7 @@
       &:last-child {
         border-bottom: none;
         min-height: auto;
+        min-height: pxToRem(324);
 
         @include tablet {
           border-bottom: pxToRem(1) solid var(--color-grey-200);
@@ -68,23 +69,14 @@
         .package-info {
           border-bottom: none;
           margin-bottom: 0;
-          gap: 0;
+          gap: pxToRem(68);
 
           @include tablet {
-            gap: pxToRem(83);
+            gap: pxToRem(148);
           }
 
           @include desktop {
-            gap: pxToRem(145);
-            margin-bottom: pxToRem(50);
-          }
-
-          &-title {
-            margin-bottom: pxToRem(68);
-
-            @include desktop {
-              margin-bottom: 0;
-            }
+            gap: pxToRem(197);
           }
 
           .cost {
@@ -109,11 +101,11 @@
           .discussion {
             font-size: $typography-h5-font-size;
             margin-bottom: pxToRem(23);
-            max-width: 88%;
+            max-width: pxToRem(177);
             line-height: pxToRem(17);
 
             @include tablet {
-              max-width: 70%;
+              max-width: pxToRem(325);
               font-size: $typography-subtitle2-font-size;
               line-height: pxToRem(24);
               margin-bottom: pxToRem(17);
@@ -126,11 +118,7 @@
           }
 
           .button-name {
-            margin-bottom: pxToRem(43);
-
-            @include tablet {
-              margin-bottom: 0;
-            }
+            margin-bottom: 0;
           }
         }
       }
@@ -160,6 +148,7 @@
 
       &-info {
         display: flex;
+        gap: pxToRem(30);
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -173,7 +162,6 @@
         &-title {
           font-size: $typography-h5-font-size;
           font-weight: $typography-h2-font-weight;
-          margin-bottom: pxToRem(30);
 
           @include desktop {
             font-size: $typography-h4-font-size;

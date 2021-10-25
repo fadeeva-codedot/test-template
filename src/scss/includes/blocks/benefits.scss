@@ -17,7 +17,7 @@
     }
   }
 
-  .benefits-list {
+  &-list {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,6 +36,10 @@
     @include tablet {
       flex-wrap: wrap;
       column-gap: pxToRem(35);
+    }
+
+    @include desktop-extra {
+      flex-wrap: nowrap;
     }
 
     .benefit {
