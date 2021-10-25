@@ -1,5 +1,5 @@
 // keyframes
-@keyframes logo {
+@keyframes logo__image {
   91% {
     filter: invert(0%);
   }
@@ -9,7 +9,7 @@
   }
 }
 
-@keyframes menu-icon {
+@keyframes icon__hamburger {
   3% {
     filter: invert(100%);
   }
@@ -61,7 +61,7 @@
   }
 }
 // keyframes reverse
-@keyframes logo-reverse {
+@keyframes logo__image-reverse {
   0% {
     filter: invert(0%);
   }
@@ -71,7 +71,7 @@
   }
 }
 
-@keyframes menu-icon-reverse {
+@keyframes icon__hamburger-reverse {
   0% {
     filter: invert(100%);
   }
@@ -132,19 +132,19 @@
 }
 // keyframes dark-theme
 @include dark-theme {
-  @keyframes logo {
+  @keyframes logo__image {
     100% {
       filter: invert(100%);
     }
   }
 
-  @keyframes menu-icon {
+  @keyframes icon__hamburger {
     100% {
       filter: invert(0);
     }
   }
 
-  @keyframes menu-icon-reverse {
+  @keyframes icon__hamburger-reverse {
     100% {
       filter: invert(0);
     }

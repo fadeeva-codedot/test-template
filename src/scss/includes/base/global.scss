@@ -24,6 +24,94 @@ body {
   font-family: montserrat;
 }
 
+/*---------------------------------------------------*/
+.page-wrapper {
+  height: 100%;
+
+  // all actions connected with target
+  &:not(:target) {
+    overflow-x: hidden;
+
+    .menu {
+      transform: translateX(100%);
+      transition: 0.4s linear;
+
+      @include tablet {
+        left: 0;
+        transition: none;
+        transform: none;
+      }
+    }
+
+    .icon__hamburger {
+      animation: menu-icon-reverse linear 0.4s forwards;
+
+      @include tablet {
+        display: none;
+      }
+
+      &-element {
+        animation: cross2-reverse linear 0.4s forwards;
+
+        &::after {
+          animation: cross1-reverse linear 0.4s forwards;
+        }
+
+        &::before {
+          animation: cross3-reverse linear 0.4s forwards;
+        }
+      }
+    }
+  }
+
+  &:target {
+    overflow: hidden;
+
+    @include tablet {
+      overflow: scroll;
+    }
+
+    .logo {
+      animation: logo linear 0.4s forwards;
+
+      @include tablet {
+        animation: none;
+      }
+    }
+
+    .icon__close-link {
+      z-index: 2;
+    }
+
+    .menu {
+      visibility: visible;
+      left: 0;
+      transition: 0.4s linear;
+
+      @include tablet {
+        transition: none;
+      }
+    }
+
+    .icon__hamburger {
+      animation: menu-icon linear 0.4s forwards;
+
+      &-element {
+        animation: cross2 linear 0.4s forwards;
+
+        &::after {
+          animation: cross1 linear 0.4s forwards;
+        }
+
+        &:before {
+          animation: cross3 linear 0.4s forwards;
+        }
+      }
+    }
+  }
+}
+/*---------------------------------------------------*/
+
 h1,
 h2,
 h3,
@@ -176,7 +264,7 @@ h6 {
   }
 }
 
-.header-container {
+.header__container {
   padding-right: pxToRem(5);
   padding-left: pxToRem(10);
 
@@ -186,7 +274,7 @@ h6 {
   }
 
   @include desktop-extra {
-    padding-right: pxToRem(65);
+    padding-right: pxToRem(85);
     padding-left: pxToRem(85);
     max-width: pxToRem(1280);
     margin: 0 auto 0 auto;
