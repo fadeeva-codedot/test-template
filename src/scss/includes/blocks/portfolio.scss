@@ -21,10 +21,6 @@
     @include desktop {
       margin-bottom: pxToRem(62);
     }
-
-    @include desktop {
-      text-indent: 0;
-    }
   }
 
   &__examples {

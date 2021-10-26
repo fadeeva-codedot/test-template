@@ -74,54 +74,54 @@
         order: 2;
       }
     }
+  }
+}
 
-    .briefs {
-      @include tablet {
-        order: 2;
-      }
+.info-list {
+  font-size: $typography-caption-font-size;
+  font-weight: $typography-caption-font-weight;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: pxToRem(18);
 
-      @include desktop {
-        order: 1;
-      }
-    }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    gap: pxToRem(21);
+  }
 
-    .contacts {
-      & > .info-list {
-        row-gap: pxToRem(22);
-      }
+  &-phones {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: pxToRem(10);
+  }
+}
 
-      @include tablet {
-        order: 4;
-      }
-    }
+.briefs {
+  @include tablet {
+    order: 2;
+  }
 
-    .about {
-      @include tablet {
-        order: 3;
-      }
-    }
+  @include desktop {
+    order: 1;
+  }
+}
 
-    .info-list {
-      font-size: $typography-caption-font-size;
-      font-weight: $typography-caption-font-weight;
-      list-style-type: none;
-      display: flex;
-      flex-direction: column;
-      row-gap: pxToRem(18);
+.contacts {
+  & > .info-list {
+    row-gap: pxToRem(22);
+  }
 
-      &-item {
-        display: flex;
-        flex-direction: column;
-        gap: pxToRem(21);
-      }
+  @include tablet {
+    order: 4;
+  }
+}
 
-      &-phones {
-        list-style-type: none;
-        display: flex;
-        flex-direction: column;
-        row-gap: pxToRem(10);
-      }
-    }
+.about {
+  @include tablet {
+    order: 3;
   }
 }
 
