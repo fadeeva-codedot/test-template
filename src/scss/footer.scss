@@ -5,7 +5,7 @@
     color: var(--color-grey-900);
   }
 
-  &-wrapper {
+  &__wrapper {
     display: grid;
     justify-content: space-between;
     margin-bottom: pxToRem(39);
@@ -21,7 +21,7 @@
     }
   }
 
-  &-logo {
+  &__logo {
     margin-bottom: pxToRem(31);
 
     @include tablet {
@@ -42,7 +42,7 @@
     }
   }
 
-  &-info {
+  &__info {
     display: flex;
     flex-wrap: wrap;
     row-gap: pxToRem(45);
@@ -123,95 +123,95 @@
       }
     }
   }
+}
 
-  .info-subtitle {
-    font-size: $typography-h4-font-size;
-    font-weight: $typography-h2-font-weight;
-    margin-bottom: pxToRem(25);
+.info-subtitle {
+  font-size: $typography-h4-font-size;
+  font-weight: $typography-h2-font-weight;
+  margin-bottom: pxToRem(25);
+}
+
+.info-icons {
+  display: flex;
+  gap: pxToRem(21);
+
+  &__icon {
+    &:hover {
+      cursor: pointer;
+      filter: invert(47%) sepia(34%) saturate(2773%) hue-rotate(322deg) brightness(103%)
+        contrast(103%);
+    }
+  }
+}
+
+.social {
+  display: flex;
+  gap: pxToRem(14);
+
+  @include tablet {
+    order: 2;
   }
 
-  .info-icons {
+  @include desktop {
+    width: auto;
+    height: fit-content;
+    order: 1;
+  }
+
+  &-item {
     display: flex;
-    gap: pxToRem(21);
+    justify-content: center;
+    width: pxToRem(39);
+    height: pxToRem(39);
+    border-radius: 50%;
+    border: 1px solid var(--color-common-white);
+
+    &:hover {
+      filter: invert(47%) sepia(34%) saturate(2773%) hue-rotate(322deg) brightness(103%)
+        contrast(103%);
+    }
+
+    @include dark-theme {
+      filter: invert(100%);
+    }
 
     &__icon {
-      &:hover {
-        cursor: pointer;
-        filter: invert(47%) sepia(34%) saturate(2773%) hue-rotate(322deg) brightness(103%)
-          contrast(103%);
-      }
-    }
-  }
-
-  .social {
-    display: flex;
-    gap: pxToRem(14);
-
-    @include tablet {
-      order: 2;
-    }
-
-    @include desktop {
-      width: auto;
-      height: fit-content;
-      order: 1;
-    }
-
-    &-item {
-      display: flex;
-      justify-content: center;
-      width: pxToRem(39);
-      height: pxToRem(39);
-      border-radius: 50%;
-      border: 1px solid var(--color-common-white);
-
-      &:hover {
-        filter: invert(47%) sepia(34%) saturate(2773%) hue-rotate(322deg) brightness(103%)
-          contrast(103%);
-      }
+      width: pxToRem(13);
+      height: auto;
 
       @include dark-theme {
         filter: invert(100%);
       }
+    }
+  }
+}
 
-      &__icon {
-        width: pxToRem(13);
-        height: auto;
+.politics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: pxToRem(29);
+  row-gap: pxToRem(19);
 
-        @include dark-theme {
-          filter: invert(100%);
-        }
-      }
+  @include tablet {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  &-item {
+    color: var(--color-common-white);
+    opacity: 30%;
+    font-size: $typography-h5-font-size;
+
+    @include dark-theme {
+      filter: invert(100%);
+      opacity: 100%;
     }
   }
 
-  .politics {
+  &-item-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    column-gap: pxToRem(29);
-    row-gap: pxToRem(19);
-
-    @include tablet {
-      justify-content: space-between;
-      flex-direction: row-reverse;
-    }
-
-    &-item {
-      color: var(--color-common-white);
-      opacity: 30%;
-      font-size: $typography-h5-font-size;
-
-      @include dark-theme {
-        filter: invert(100%);
-        opacity: 100%;
-      }
-    }
-
-    &-item-wrapper {
-      display: flex;
-      gap: pxToRem(29);
-    }
+    gap: pxToRem(29);
   }
 }

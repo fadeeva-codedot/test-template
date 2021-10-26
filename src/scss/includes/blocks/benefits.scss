@@ -9,7 +9,7 @@
     padding-bottom: pxToRem(141);
   }
 
-  .section-title {
+  &__title {
     margin-bottom: pxToRem(39);
 
     @include tablet {
@@ -17,7 +17,15 @@
     }
   }
 
-  &-list {
+  &__description {
+    max-width: pxToRem(205);
+
+    @include tablet {
+      max-width: pxToRem(223);
+    }
+  }
+
+  &__list {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -42,7 +50,7 @@
       flex-wrap: nowrap;
     }
 
-    .benefit {
+    &__item {
       @include tablet {
         flex: 0 0 pxToRem(256);
       }
@@ -52,14 +60,6 @@
 
         @include tablet {
           margin-bottom: pxToRem(25);
-        }
-      }
-
-      .section-description {
-        max-width: pxToRem(205);
-
-        @include tablet {
-          max-width: pxToRem(223);
         }
       }
     }

@@ -9,7 +9,7 @@
     padding-bottom: pxToRem(101);
   }
 
-  .section-title {
+  &__title {
     margin-bottom: pxToRem(5);
     max-width: pxToRem(284);
 
@@ -19,7 +19,16 @@
     }
   }
 
-  &-phases {
+  &__description {
+    word-wrap: break-word;
+    width: pxToRem(210);
+
+    @include tablet {
+      max-width: pxToRem(211);
+    }
+  }
+
+  &__phases {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -32,115 +41,107 @@
       margin-right: pxToRem(66);
       margin-bottom: pxToRem(48);
     }
-    /*scroll with ability to add another elements*/
-    .development-phase {
-      display: flex;
-      position: relative;
-      flex-wrap: wrap;
-      padding-left: pxToRem(45);
+  }
+
+  /*scroll with ability to add another elements*/
+  &__phase {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    padding-left: pxToRem(45);
+
+    &:last-child {
+      padding-right: pxToRem(55);
+    }
+
+    @include tablet {
+      align-content: center;
+      padding-right: pxToRem(50);
+      padding-left: 0;
 
       &:last-child {
-        padding-right: pxToRem(55);
+        padding-right: 0;
       }
+
+      @include desktop {
+        padding-right: pxToRem(46);
+      }
+    }
+    //1st dev phase
+    &:nth-child(4n - 3) {
+      @include tablet {
+        margin-top: pxToRem(24);
+      }
+
+      @include desktop {
+        margin-top: pxToRem(30);
+      }
+    }
+    //2nd dev phase
+    &:nth-child(4n - 2) {
+      @include tablet {
+        margin-top: pxToRem(68);
+      }
+
+      @include desktop {
+        margin-top: pxToRem(88);
+      }
+    }
+    //3rd dev phase
+    &:nth-child(4n + 3) {
+      @include tablet {
+        margin-top: pxToRem(15);
+      }
+    }
+    //4th dev phase
+    &:nth-child(4n + 4) {
+      @include tablet {
+        margin-top: pxToRem(37);
+      }
+
+      @include desktop {
+        margin-top: pxToRem(53);
+      }
+    }
+
+    &-background {
+      z-index: -1;
+      position: absolute;
+      top: pxToRem(25);
+      left: pxToRem(80);
+      width: pxToRem(85);
+      height: pxToRem(85);
+      background-color: var(--color-info-light);
+      border-radius: 100%;
 
       @include tablet {
-        align-content: center;
-        padding-right: pxToRem(50);
-        padding-left: 0;
-
-        &:last-child {
-          padding-right: 0;
-        }
-
-        @include desktop {
-          padding-right: pxToRem(46);
-        }
-      }
-      //1st dev phase
-      &:nth-child(4n - 3) {
-        @include tablet {
-          margin-top: pxToRem(24);
-        }
-
-        @include desktop {
-          margin-top: pxToRem(30);
-        }
-      }
-      //2nd dev phase
-      &:nth-child(4n - 2) {
-        @include tablet {
-          margin-top: pxToRem(68);
-        }
-
-        @include desktop {
-          margin-top: pxToRem(88);
-        }
-      }
-      //3rd dev phase
-      &:nth-child(4n + 3) {
-        @include tablet {
-          margin-top: pxToRem(15);
-        }
-      }
-      //4th dev phase
-      &:nth-child(4n + 4) {
-        @include tablet {
-          margin-top: pxToRem(37);
-        }
-
-        @include desktop {
-          margin-top: pxToRem(53);
-        }
+        left: pxToRem(33);
       }
 
-      &-background {
-        z-index: -1;
-        position: absolute;
-        top: pxToRem(25);
-        left: pxToRem(80);
-        width: pxToRem(85);
-        height: pxToRem(85);
-        background-color: var(--color-info-light);
-        border-radius: 100%;
-
-        @include tablet {
-          left: pxToRem(33);
-        }
-
-        @include desktop {
-          width: pxToRem(113);
-          height: pxToRem(113);
-          left: pxToRem(48);
-        }
+      @include desktop {
+        width: pxToRem(113);
+        height: pxToRem(113);
+        left: pxToRem(48);
       }
+    }
 
-      &-number {
-        font-size: pxToRem(50);
-        font-weight: 900;
+    &-number {
+      font-size: pxToRem(50);
+      font-weight: 900;
+      line-height: 145%;
+      color: transparent;
+      margin-bottom: pxToRem(10);
+      -webkit-text-stroke: pxToRem(1) var(--color-primary-main);
+
+      @include desktop {
+        font-size: pxToRem(70);
         line-height: 145%;
-        color: transparent;
-        margin-bottom: pxToRem(10);
-        -webkit-text-stroke: pxToRem(1) var(--color-primary-main);
-
-        @include desktop {
-          font-size: pxToRem(70);
-          line-height: 145%;
-          margin-bottom: 0;
-        }
-      }
-
-      .section-description {
-        word-wrap: break-word;
-        width: pxToRem(210);
-
-        @include tablet {
-          max-width: pxToRem(211);
-        }
+        margin-bottom: 0;
       }
     }
   }
 
-  &-slider {
+  &__slider {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -150,7 +151,7 @@
       gap: pxToRem(26);
     }
 
-    &-arrow {
+    &__arrow {
       width: 100%;
       max-width: pxToRem(38);
       height: pxToRem(38);
@@ -183,7 +184,7 @@
       }
     }
 
-    &-indicator {
+    &__indicator {
       background-image: linear-gradient(
         to right,
         var(--color-grey-200) 50%,

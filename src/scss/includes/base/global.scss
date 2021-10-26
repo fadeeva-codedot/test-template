@@ -13,7 +13,6 @@
 }
 
 html {
-  //min-height: -webkit-fill-available;
   min-height: 100vh;
 }
 
@@ -121,149 +120,6 @@ h6 {
   margin: 0;
 }
 
-.body-container {
-  padding-left: pxToRem(10);
-  padding-right: pxToRem(10);
-
-  @include tablet {
-    padding-left: pxToRem(19);
-    padding-right: pxToRem(19);
-  }
-
-  @include desktop {
-    padding-left: pxToRem(85);
-    padding-right: pxToRem(85);
-    max-width: pxToRem(1280);
-    margin: 0 auto 0 auto;
-  }
-}
-
-.body-container_contact-form {
-  display: flex;
-  flex-direction: column;
-  padding-top: pxToRem(66);
-  padding-bottom: pxToRem(65);
-  padding-left: pxToRem(15);
-  padding-right: pxToRem(15);
-
-  @include tablet {
-    padding-left: pxToRem(123);
-    padding-right: pxToRem(123);
-    padding-top: pxToRem(96);
-    padding-bottom: pxToRem(96);
-  }
-
-  @include desktop-extra {
-    padding-left: pxToRem(27);
-    padding-right: pxToRem(27);
-    padding-top: pxToRem(133);
-    padding-bottom: pxToRem(0);
-    margin: 0 auto;
-    flex-direction: row;
-    align-items: center;
-    gap: pxToRem(47);
-  }
-}
-
-.body-container_primary-color {
-  background-color: var(--color-primary-main);
-
-  @include dark-theme {
-    background-color: var(--color-primary-blue);
-  }
-
-  @include desktop {
-    max-width: pxToRem(1280);
-  }
-}
-
-.body-container_footer {
-  background-color: var(--color-grey-900);
-  padding-top: pxToRem(33);
-  padding-bottom: pxToRem(34);
-
-  @include tablet {
-    padding-top: pxToRem(33);
-    padding-bottom: pxToRem(36);
-  }
-
-  @include desktop {
-    max-width: pxToRem(1280);
-    padding-top: pxToRem(78);
-    padding-bottom: pxToRem(40);
-  }
-
-  @include dark-theme {
-    background-color: var(--color-common-white);
-  }
-}
-
-.body-container_max-width {
-  padding-left: 0;
-  padding-right: 0;
-
-  @include desktop-extra {
-    padding-left: pxToRem(85);
-    padding-right: pxToRem(85);
-    max-width: pxToRem(1280);
-    margin: 0 auto 0 auto;
-  }
-}
-
-.body-container_min-width {
-  padding-left: pxToRem(38);
-  padding-right: pxToRem(38);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @include tablet {
-    padding-left: pxToRem(19);
-    padding-right: pxToRem(19);
-  }
-
-  @include desktop {
-    padding-left: pxToRem(83);
-    padding-right: pxToRem(83);
-  }
-}
-
-.section-title {
-  font-size: $typography-h4-font-size;
-  letter-spacing: $typography-letter-spacing;
-  line-height: pxToRem(20);
-  margin: 0;
-
-  @include tablet {
-    font-size: $typography-h3-font-size;
-    line-height: pxToRem(29);
-  }
-
-  @include desktop {
-    font-size: $typography-h2-font-size;
-    line-height: pxToRem(44);
-  }
-}
-
-.section-title-bold {
-  font-weight: $typography-h2-font-weight;
-
-  @include tablet {
-    font-size: $typography-h2-font-size;
-    line-height: pxToRem(44);
-  }
-}
-
-.section-description {
-  font-size: $typography-subtitle2-font-size;
-  line-height: pxToRem(24);
-
-  @include tablet {
-    line-height: pxToRem(28);
-    font-size: $typography-font-size;
-  }
-}
-
 .header__container {
   padding-right: pxToRem(5);
   padding-left: pxToRem(10);
@@ -278,6 +134,150 @@ h6 {
     padding-left: pxToRem(85);
     max-width: pxToRem(1280);
     margin: 0 auto 0 auto;
+  }
+}
+
+.body__container {
+  padding-left: pxToRem(10);
+  padding-right: pxToRem(10);
+
+  @include tablet {
+    padding-left: pxToRem(19);
+    padding-right: pxToRem(19);
+  }
+
+  @include desktop {
+    padding-left: pxToRem(85);
+    padding-right: pxToRem(85);
+    max-width: pxToRem(1280);
+    margin: 0 auto 0 auto;
+  }
+
+  &__contact-form {
+    background-color: var(--color-primary-blue);
+    display: flex;
+    flex-direction: column;
+    padding-left: pxToRem(15);
+    padding-right: pxToRem(15);
+    padding-top: pxToRem(66);
+    padding-bottom: pxToRem(65);
+
+    @include tablet {
+      padding-left: pxToRem(123);
+      padding-right: pxToRem(123);
+      padding-top: pxToRem(96);
+      padding-bottom: pxToRem(96);
+    }
+
+    @include desktop-extra {
+      padding-left: pxToRem(27);
+      padding-right: pxToRem(27);
+      padding-top: pxToRem(133);
+      padding-bottom: pxToRem(0);
+      margin: 0 auto;
+      flex-direction: row;
+      align-items: center;
+      gap: pxToRem(47);
+    }
+  }
+
+  &__primary-color {
+    background-color: var(--color-primary-main);
+    padding-top: pxToRem(45);
+    padding-bottom: pxToRem(44);
+
+    @include tablet {
+      padding-top: pxToRem(62);
+      padding-bottom: pxToRem(62);
+    }
+
+    @include desktop {
+      padding-top: pxToRem(76);
+      padding-bottom: pxToRem(75);
+    }
+
+    @include dark-theme {
+      background-color: var(--color-primary-blue);
+    }
+  }
+
+  &__footer {
+    background-color: var(--color-grey-900);
+
+    @include desktop {
+      max-width: pxToRem(1280);
+    }
+
+    @include dark-theme {
+      background-color: var(--color-common-white);
+    }
+  }
+
+  &__max-width {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include desktop-extra {
+      padding-left: pxToRem(85);
+      padding-right: pxToRem(85);
+      max-width: pxToRem(1280);
+      margin: 0 auto 0 auto;
+    }
+  }
+
+  &__min-width {
+    padding-left: pxToRem(38);
+    padding-right: pxToRem(38);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+      padding-left: pxToRem(19);
+      padding-right: pxToRem(19);
+    }
+
+    @include desktop {
+      padding-left: pxToRem(83);
+      padding-right: pxToRem(83);
+    }
+  }
+}
+
+.section {
+  &__title {
+    font-size: $typography-h4-font-size;
+    letter-spacing: $typography-letter-spacing;
+    line-height: pxToRem(20);
+
+    @include tablet {
+      font-size: $typography-h3-font-size;
+      line-height: pxToRem(29);
+    }
+
+    @include desktop {
+      font-size: $typography-h2-font-size;
+      line-height: pxToRem(44);
+    }
+
+    &-bold {
+      font-weight: $typography-h2-font-weight;
+
+      @include tablet {
+        font-size: $typography-h2-font-size;
+        line-height: pxToRem(44);
+      }
+    }
+  }
+
+  &__description {
+    font-size: $typography-subtitle2-font-size;
+    line-height: pxToRem(24);
+
+    @include tablet {
+      line-height: pxToRem(28);
+      font-size: $typography-font-size;
+    }
   }
 }
 
@@ -343,7 +343,6 @@ img {
 body {
   color: var(--color-grey-900);
   background-color: var(--color-common-white);
-  //min-height: -webkit-fill-available;
   min-height: 100vh;
 }
 

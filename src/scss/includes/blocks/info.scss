@@ -8,28 +8,28 @@
   @include desktop {
     padding-bottom: pxToRem(55);
   }
-}
 
-.section-title {
-  margin-bottom: pxToRem(30);
-  max-width: pxToRem(247);
+  &__title {
+    margin-bottom: pxToRem(30);
+    max-width: pxToRem(247);
 
-  @include tablet {
+    @include tablet {
+      max-width: 100%;
+      margin-bottom: pxToRem(39);
+    }
+
+    @include desktop {
+      margin-bottom: pxToRem(40);
+    }
+  }
+
+  &__description {
+    display: block;
     max-width: 100%;
-    margin-bottom: pxToRem(39);
-  }
 
-  @include desktop {
-    margin-bottom: pxToRem(40);
-  }
-}
-
-.section-description {
-  display: block;
-  max-width: 100%;
-
-  @include desktop {
-    margin-bottom: pxToRem(40);
-    max-width: pxToRem(920);
+    @include desktop {
+      margin-bottom: pxToRem(40);
+      max-width: pxToRem(920);
+    }
   }
 }

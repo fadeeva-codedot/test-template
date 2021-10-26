@@ -106,7 +106,7 @@
         &:last-child {
           gap: pxToRem(37);
 
-          .form-field {
+          .form__field {
             width: auto;
             margin-bottom: 0;
             justify-content: center;
@@ -168,22 +168,11 @@
         background-color: transparent;
         border: pxToRem(1) solid var(--color-common-white);
 
-        &::after {
-          left: pxToRem(6);
-          top: pxToRem(2);
-          width: pxToRem(5);
-          height: pxToRem(10);
-          border-bottom: 1px solid var(--color-common-white);
-          border-right: 1px solid var(--color-common-white);
-          border-width: 0 pxToRem(1) pxToRem(1) 0;
-          transform: rotate(45deg);
-        }
-
         @include dark-theme {
           filter: invert(100%);
         }
 
-        &:after {
+        &::after {
           content: "";
           position: absolute;
           display: none;
@@ -223,4 +212,15 @@
       }
     }
   }
+}
+
+.checkmark:after {
+  left: pxToRem(6);
+  top: pxToRem(2);
+  width: pxToRem(5);
+  height: pxToRem(10);
+  border-bottom: 1px solid var(--color-common-white);
+  border-right: 1px solid var(--color-common-white);
+  border-width: 0 pxToRem(1) pxToRem(1) 0;
+  transform: rotate(45deg);
 }

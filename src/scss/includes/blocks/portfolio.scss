@@ -9,7 +9,7 @@
     padding-bottom: pxToRem(100);
   }
 
-  .section-title {
+  &__title {
     margin-bottom: pxToRem(32);
     text-indent: pxToRem(10);
 
@@ -27,7 +27,7 @@
     }
   }
 
-  &-examples {
+  &__examples {
     display: grid;
     margin-bottom: pxToRem(40);
 
@@ -43,7 +43,7 @@
       grid-template-columns: pxToRem(613) pxToRem(473);
     }
 
-    .project {
+    &_example {
       width: 100%;
       min-height: pxToRem(235);
       height: 100%;
@@ -70,7 +70,7 @@
     }
   }
 
-  .button-name {
+  &__button {
     display: block;
     margin-left: auto;
     margin-right: auto;
