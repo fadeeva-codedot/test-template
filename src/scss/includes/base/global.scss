@@ -203,8 +203,17 @@ h6 {
 
   &__footer {
     background-color: var(--color-grey-900);
+    padding-top: pxToRem(24);
+    padding-bottom: pxToRem(34);
+
+    @include tablet {
+      padding-top: pxToRem(33);
+      padding-bottom: pxToRem(36);
+    }
 
     @include desktop {
+      padding-top: pxToRem(78);
+      padding-bottom: pxToRem(40);
       max-width: pxToRem(1280);
     }
 
