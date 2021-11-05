@@ -32,14 +32,48 @@
 }
 
 // Media queries
-@mixin media($min, $max) {
-  @media (min-width: $min) and (max-width: $max) {
+
+// Custom intermediate media queries
+@mixin intermediate-mobile() {
+  @media (min-width: $mobile) and (max-width: $mobile-max - 0.02) {
     @content;
   }
 }
 
-@mixin media-min($size) {
-  @media (min-width: $size) {
+@mixin intermediate-tablet() {
+  @media (min-width: $tablet) and (max-width: $tablet-max - 0.02) {
+    @content;
+  }
+}
+
+@mixin desktop-min() {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+// Custom mobile mixins
+@mixin medium-mobile() {
+  @media (min-width: 450px) {
+    @content;
+  }
+}
+
+@mixin large-mobile() {
+  @media (min-width: 700px) {
+    @content;
+  }
+}
+
+//Dark theme
+@mixin light-theme() {
+  @media (prefers-color-scheme: light) {
+    @content;
+  }
+}
+
+@mixin dark-theme() {
+  @media (prefers-color-scheme: dark) {
     @content;
   }
 }
@@ -70,32 +104,6 @@
 
 @mixin mobile() {
   @media (min-width: $mobile) {
-    @content;
-  }
-}
-
-// Custom mobile mixins
-@mixin medium-mobile() {
-  @media (min-width: 450px) {
-    @content;
-  }
-}
-
-@mixin large-mobile() {
-  @media (min-width: 700px) {
-    @content;
-  }
-}
-
-//Dark theme
-@mixin light-theme() {
-  @media (prefers-color-scheme: light) {
-    @content;
-  }
-}
-
-@mixin dark-theme() {
-  @media (prefers-color-scheme: dark) {
     @content;
   }
 }
