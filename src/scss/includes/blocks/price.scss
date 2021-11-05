@@ -67,7 +67,7 @@
     }
   }
 
-  &:hover {
+  &:active {
     border: pxToRem(2) solid var(--color-primary-main);
 
     &::after {
@@ -262,7 +262,7 @@
 
 html[dir="rtl"] {
   .package {
-    &:hover {
+    &:active {
       &::after {
         left: pxToRem(15);
         right: unset;

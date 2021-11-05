@@ -431,7 +431,7 @@ select {
   background-color: transparent;
   border: 1px solid var(--color-primary-main);
   font-size: $typography-button-font-size;
-  font-weight: $typography-h5-font-weight;
+  font-weight: 400;
   width: pxToRem(129);
   padding-top: pxToRem(10);
   padding-bottom: pxToRem(10);
@@ -468,8 +468,6 @@ select {
 }
 
 .button-menu {
-  font-weight: 400;
-
   @media only screen and (max-width: 767px) {
     font-size: $typography-font-size;
     padding-top: pxToRem(21);
