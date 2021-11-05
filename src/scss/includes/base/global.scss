@@ -256,6 +256,7 @@ h6 {
 .section {
   &__title {
     font-size: $typography-h4-font-size;
+    font-weight: $typography-h3-font-weight;
     letter-spacing: $typography-letter-spacing;
     line-height: pxToRem(20);
 

@@ -107,6 +107,7 @@
 }
 
 // mobile-menu (dropmenu and items)
+/*----------------------------------------------*/
 .menu {
   background-color: var(--color-primary-main);
   visibility: hidden;
@@ -152,30 +153,26 @@
       padding-top: 0;
       padding-bottom: 0;
       justify-content: space-between;
-      //gap: pxToRem(5);
     }
 
     &__item {
       display: block;
-
-      &:first-child {
-        display: none;
-
-        @include tablet {
-          display: block;
-        }
-      }
+      font-weight: 400;
 
       &:last-of-type {
-        @include tablet {
-          display: inline-flex;
-          font-size: $typography-h5-font-size;
-          font-weight: $typography-h2-font-weight;
-        }
+        &:first-child {
+          display: none;
 
-        @include desktop {
-          font-size: $typography-subtitle2-font-size;
-          font-weight: $typography-h2-font-weight;
+          @include tablet {
+            display: inline-flex;
+            font-size: $typography-h5-font-size;
+            font-weight: $typography-h2-font-weight;
+          }
+
+          @include desktop {
+            font-size: $typography-subtitle2-font-size;
+            font-weight: $typography-h2-font-weight;
+          }
         }
       }
 
@@ -193,19 +190,18 @@
         @include tablet {
           padding: pxToRem(10);
           color: var(--color-grey-900);
-          font-weight: $typography-h5-font-weight;
           font-size: $typography-h5-font-size;
         }
 
         @include desktop {
           padding: pxToRem(12);
           font-size: $typography-subtitle2-font-size;
-          font-weight: $typography-h5-font-weight;
         }
       }
     }
   }
 }
+/*----------------------------------------------*/
 
 html[dir="rtl"] {
   .page-wrapper {
