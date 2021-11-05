@@ -42,7 +42,6 @@
         font-weight: $typography-h3-font-weight;
         line-height: pxToRem(24);
         margin-bottom: pxToRem(24);
-        max-width: pxToRem(300);
 
         @include tablet {
           font-size: $typography-font-size;
