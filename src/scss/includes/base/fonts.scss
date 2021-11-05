@@ -1,32 +1,163 @@
-// Fonts
+$base-url: "../../../fonts/";
+
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat Black Italic'), local('Montserrat-BlackItalic'),
+//  url('#{$base-url}Montserrat-BlackItalic.woff2') format('woff2');
+//  font-weight: 900;
+//  font-style: italic;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+//  url('#{$base-url}Montserrat-Bold.woff2') format('woff2');
+//  font-weight: bold;
+//  font-style: normal;
+//  font-display: swap;
+//}
+
 @font-face {
-  font-family: "montserrat";
-  src: url("../../../fonts/Montserrat-ExtraLight.woff2");
-  font-weight: 400;
+  font-family: 'Montserrat';
+  src: local('Montserrat Black'), local('Montserrat-Black'),
+  url('#{$base-url}Montserrat-Black.woff2') format('woff2');
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat SemiBold Italic'), local('Montserrat-SemiBoldItalic'),
+//  url('#{$base-url}Montserrat-SemiBoldItalic.woff2') format('woff2');
+//  font-weight: 600;
+//  font-style: italic;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat Medium Italic'), local('Montserrat-MediumItalic'),
+//  url('#{$base-url}Montserrat-MediumItalic.woff2') format('woff2');
+//  font-weight: 500;
+//  font-style: italic;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat Thin'), local('Montserrat-Thin'),
+//  url('#{$base-url}Montserrat-Thin.woff2') format('woff2');
+//  font-weight: 100;
+//  font-style: normal;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+//  url('#{$base-url}Montserrat-SemiBold.woff2') format('woff2');
+//  font-weight: 600;
+//  font-style: normal;
+//  font-display: swap;
+//}
+
 @font-face {
-  font-family: "montserrat";
-  src: url("../../../fonts/Montserrat-Light.woff2");
+  font-family: 'Montserrat';
+  src: local('Montserrat Medium'), local('Montserrat-Medium'),
+  url('#{$base-url}Montserrat-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat Thin Italic'), local('Montserrat-ThinItalic'),
+//  url('#{$base-url}Montserrat-ThinItalic.woff2') format('woff2');
+//  font-weight: 100;
+//  font-style: italic;
+//  font-display: swap;
+//}
+
 @font-face {
-  font-family: "montserrat";
-  src: url("../../../fonts/Montserrat-Regular.woff2");
-  font-weight: 700;
+  font-family: 'Montserrat';
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+  url('#{$base-url}Montserrat-Regular.woff2') format('woff2');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat ExtraLight Italic'), local('Montserrat-ExtraLightItalic'),
+//  url('#{$base-url}Montserrat-ExtraLightItalic.woff2') format('woff2');
+//  font-weight: 200;
+//  font-style: italic;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat Light Italic'), local('Montserrat-LightItalic'),
+//  url('#{$base-url}Montserrat-LightItalic.woff2') format('woff2');
+//  font-weight: 300;
+//  font-style: italic;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat Italic'), local('Montserrat-Italic'),
+//  url('#{$base-url}Montserrat-Italic.woff2') format('woff2');
+//  font-weight: normal;
+//  font-style: italic;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'),
+//  url('#{$base-url}Montserrat-ExtraLight.woff2') format('woff2');
+//  font-weight: 200;
+//  font-style: normal;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat ExtraBold Italic'), local('Montserrat-ExtraBoldItalic'),
+//  url('#{$base-url}Montserrat-ExtraBoldItalic.woff2') format('woff2');
+//  font-weight: bold;
+//  font-style: italic;
+//  font-display: swap;
+//}
+
 @font-face {
-  font-family: "montserrat";
-  src: url("../../../fonts/Montserrat-Bold.woff2");
-  font-weight: 900;
+  font-family: 'Montserrat';
+  src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'),
+  url('#{$base-url}Montserrat-ExtraBold.woff2') format('woff2');
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
+
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat Bold Italic'), local('Montserrat-BoldItalic'),
+//  url('#{$base-url}Montserrat-BoldItalic.woff2') format('woff2');
+//  font-weight: bold;
+//  font-style: italic;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: 'Montserrat';
+//  src: local('Montserrat Light'), local('Montserrat-Light'),
+//  url('#{$base-url}Montserrat-Light.woff2') format('woff2');
+//  font-weight: 300;
+//  font-style: normal;
+//  font-display: swap;
+//}
