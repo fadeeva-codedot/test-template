@@ -151,15 +151,20 @@
       display: flex;
       padding-top: 0;
       padding-bottom: 0;
-      gap: pxToRem(5);
-    }
-
-    @include desktop {
-      gap: pxToRem(22);
+      justify-content: space-between;
+      //gap: pxToRem(5);
     }
 
     &__item {
       display: block;
+
+      &:first-child {
+        display: none;
+
+        @include tablet {
+          display: block;
+        }
+      }
 
       &:last-of-type {
         @include tablet {
