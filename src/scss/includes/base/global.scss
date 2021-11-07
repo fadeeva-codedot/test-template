@@ -225,13 +225,6 @@ h6 {
   &__max-width {
     padding-left: 0;
     padding-right: 0;
-
-    @include desktop-extra {
-      padding-left: pxToRem(85);
-      padding-right: pxToRem(85);
-      max-width: pxToRem(1280);
-      margin: 0 auto 0 auto;
-    }
   }
 
   &__min-width {
@@ -280,7 +273,7 @@ h6 {
     }
   }
 
-  &__description {
+  &-description {
     font-size: $typography-subtitle2-font-size;
     line-height: pxToRem(24);
 
@@ -288,6 +281,23 @@ h6 {
       line-height: pxToRem(28);
       font-size: $typography-font-size;
     }
+  }
+}
+
+.max-width-title {
+  margin-bottom: pxToRem(32);
+  padding-left: pxToRem(10);
+  max-width: pxToRem(197);
+
+  @include tablet {
+    margin-bottom: pxToRem(57);
+    padding-left: pxToRem(19);
+    max-width: 100%;
+  }
+
+  @include desktop {
+    margin-bottom: pxToRem(62);
+    padding-left: pxToRem(85);
   }
 }
 
