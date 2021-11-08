@@ -48,12 +48,24 @@
   min-height: pxToRem(424);
   min-width: pxToRem(244);
 
+  &:active {
+    padding: pxToRem(17) pxToRem(15) pxToRem(26) pxToRem(15);
+  }
+
   @include tablet {
     border-left: pxToRem(1) solid var(--color-grey-200);
+
+    &:active {
+      padding: pxToRem(17) pxToRem(13) pxToRem(24) pxToRem(15);
+    }
   }
 
   @include desktop {
     padding: pxToRem(34) pxToRem(33) pxToRem(44) pxToRem(33);
+
+    &:active {
+      padding: pxToRem(32) pxToRem(31) pxToRem(44) pxToRem(31);
+    }
   }
 
   &:last-child {
