@@ -46,7 +46,7 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: pxToRem(45);
-    column-gap: pxToRem(56);
+    column-gap: pxToRem(52);
     margin-bottom: pxToRem(57);
 
     @include tablet {
@@ -56,7 +56,7 @@
 
     @include desktop {
       flex-wrap: nowrap;
-      gap: pxToRem(109);
+      gap: pxToRem(108);
     }
 
     &-wrapper {
