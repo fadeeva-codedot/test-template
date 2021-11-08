@@ -46,6 +46,7 @@
   border-bottom: pxToRem(1) solid var(--color-grey-200);
   padding: pxToRem(19) pxToRem(17) pxToRem(28) pxToRem(17);
   min-height: pxToRem(424);
+  min-width: pxToRem(244);
 
   @include tablet {
     border-left: pxToRem(1) solid var(--color-grey-200);
@@ -92,7 +93,7 @@
 
   &__info {
     display: flex;
-    gap: pxToRem(30);
+    gap: pxToRem(16);
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -101,6 +102,7 @@
 
     @include desktop {
       margin-bottom: pxToRem(45);
+      gap: pxToRem(50);
     }
 
     &__title {
@@ -128,27 +130,34 @@
     }
 
     .cost {
-      font-size: $typography-h3-font-size;
-      font-weight: $typography-h2-font-weight;
-      margin-bottom: pxToRem(25);
-      margin-right: pxToRem(15);
+      padding-bottom: pxToRem(24);
 
-      &::before {
+      @include desktop {
+        padding-bottom: pxToRem(40);
+      }
+
+      &__prefix {
         content: "от";
         font-size: $typography-h5-font-size;
         font-weight: $typography-h2-font-weight;
         color: var(--color-grey-200);
-        padding-right: pxToRem(5);
 
         @include desktop {
           font-size: $typography-h4-font-size;
         }
       }
 
-      @include desktop {
-        font-size: $typography-h2-font-size;
-        margin-right: pxToRem(35);
-        margin-bottom: pxToRem(44);
+      &__value {
+        font-size: $typography-h3-font-size;
+        font-weight: $typography-h2-font-weight;
+        margin-bottom: pxToRem(25);
+        margin-right: pxToRem(15);
+
+        @include desktop {
+          font-size: $typography-h2-font-size;
+          margin-right: pxToRem(35);
+          margin-bottom: pxToRem(44);
+        }
       }
     }
   }
@@ -202,6 +211,34 @@
       }
     }
   }
+}
+
+.dollars::before {
+  content: "$";
+}
+
+.euros::before {
+  content: "€";
+}
+
+.hryvnyas::before {
+  content: "₴";
+}
+
+.cents::before {
+  content: "¢";
+}
+
+.pounds::before {
+  content: "£";
+}
+
+.yens::before {
+  content: "¥";
+}
+
+.rubles::before {
+  content: "₽";
 }
 
 /*-----------------------------*/
