@@ -154,30 +154,33 @@ h6 {
   }
 
   &__contact-form {
-    background-color: var(--color-primary-blue);
+    background-color: var(--color-primary-main);
     display: flex;
     flex-direction: column;
-    padding-left: pxToRem(15);
-    padding-right: pxToRem(15);
+    /*padding-left: pxToRem(15);
+    padding-right: pxToRem(15);*/
     padding-top: pxToRem(66);
     padding-bottom: pxToRem(65);
 
     @include tablet {
-      padding-left: pxToRem(123);
-      padding-right: pxToRem(123);
+      /*padding-left: pxToRem(123);
+      padding-right: pxToRem(123);*/
       padding-top: pxToRem(96);
       padding-bottom: pxToRem(96);
     }
 
     @include desktop-extra {
-      padding-left: pxToRem(27);
-      padding-right: pxToRem(27);
+      /*padding-left: pxToRem(27);
+      padding-right: pxToRem(27);*/
       padding-top: pxToRem(133);
       padding-bottom: pxToRem(0);
-      margin: 0 auto;
       flex-direction: row;
       align-items: center;
       gap: pxToRem(47);
+    }
+
+    @include dark-theme {
+      background-color: var(--color-primary-blue);
     }
   }
 
@@ -214,7 +217,6 @@ h6 {
     @include desktop {
       padding-top: pxToRem(78);
       padding-bottom: pxToRem(40);
-      max-width: pxToRem(1280);
     }
 
     @include dark-theme {
@@ -292,7 +294,9 @@ h6 {
   @include tablet {
     margin-bottom: pxToRem(57);
     padding-left: pxToRem(19);
-    max-width: 100%;
+    max-width: pxToRem(1280);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @include desktop {
