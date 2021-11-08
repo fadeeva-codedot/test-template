@@ -5,11 +5,6 @@
   *::after {
     box-sizing: border-box;
   }
-
-  /*&:not(iframe) {
-    transition: cubic-bezier(0.24, 0.64, 0.69, 1.04);
-    transition-property: background, border, color, left, margin, padding, right, opacity;
-  }*/
 }
 
 html {
@@ -111,15 +106,6 @@ body {
 }
 /*---------------------------------------------------*/
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
 .header__container {
   padding-right: pxToRem(5);
   padding-left: pxToRem(10);
@@ -157,21 +143,15 @@ h6 {
     background-color: var(--color-primary-main);
     display: flex;
     flex-direction: column;
-    /*padding-left: pxToRem(15);
-    padding-right: pxToRem(15);*/
     padding-top: pxToRem(66);
     padding-bottom: pxToRem(65);
 
     @include tablet {
-      /*padding-left: pxToRem(123);
-      padding-right: pxToRem(123);*/
       padding-top: pxToRem(96);
       padding-bottom: pxToRem(96);
     }
 
     @include desktop-extra {
-      /*padding-left: pxToRem(27);
-      padding-right: pxToRem(27);*/
       padding-top: pxToRem(133);
       padding-bottom: pxToRem(0);
       flex-direction: row;
@@ -305,57 +285,6 @@ h6 {
   }
 }
 
-input[type="submit"]:focus {
-  outline: none;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-img,
-video,
-audio {
-  height: auto;
-}
-
-label,
-select {
-  cursor: pointer;
-}
-
-label[for] {
-  cursor: pointer;
-}
-
-abbr[title],
-acronym[title],
-dfn {
-  cursor: help;
-}
-
-textarea {
-  resize: vertical;
-}
-
-[disabled] {
-  cursor: default;
-}
-
-[aria-disabled="true"] {
-  cursor: default;
-}
-
-.no-js button[type="button"] {
-  display: none;
-}
-
-sub,
-sup {
-  line-height: 0;
-}
-
 img {
   vertical-align: middle;
 
@@ -408,6 +337,17 @@ textarea {
   resize: none;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
 a {
   cursor: pointer;
   text-decoration: none;
@@ -431,13 +371,6 @@ p {
   &:first-child {
     margin-top: 0;
   }
-}
-
-input,
-label,
-select {
-  cursor: pointer;
-  margin: 0px;
 }
 
 .button-name {

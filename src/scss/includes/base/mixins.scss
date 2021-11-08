@@ -35,13 +35,13 @@
 
 // Custom intermediate media queries
 @mixin intermediate-mobile() {
-  @media (min-width: $mobile) and (max-width: $mobile-max - 0.02) {
+  @media (min-width: $mobile) and (max-width: ($mobile-max - 0.02)) {
     @content;
   }
 }
 
 @mixin intermediate-tablet() {
-  @media (min-width: $tablet) and (max-width: $tablet-max - 0.02) {
+  @media (min-width: $tablet) and (max-width: ($tablet-max - 0.02)) {
     @content;
   }
 }
