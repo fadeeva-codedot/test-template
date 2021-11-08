@@ -148,13 +148,23 @@
     padding-bottom: pxToRem(108);
     overflow: hidden;
 
-    &:last-of-type {
+    &:first-of-type {
       @include tablet {
-        min-width: pxToRem(252);
+        min-width: pxToRem(306);
       }
 
       @include desktop {
-        min-width: pxToRem(343);
+        min-width: pxToRem(435);
+      }
+    }
+
+    &:last-of-type {
+      @include tablet {
+        min-width: pxToRem(265);
+      }
+
+      @include desktop {
+        min-width: pxToRem(356);
       }
     }
 
