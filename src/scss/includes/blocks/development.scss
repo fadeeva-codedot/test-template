@@ -1,12 +1,22 @@
 .development {
+  padding-top: pxToRem(71);
   padding-bottom: pxToRem(72);
 
   @include tablet {
+    padding-top: pxToRem(82);
     padding-bottom: pxToRem(95);
   }
 
   @include desktop {
+    padding-top: pxToRem(95);
     padding-bottom: pxToRem(101);
+  }
+
+  &-slider-wrapper {
+    @include desktop-extra {
+      padding-left: pxToRem(85);
+      padding-right: pxToRem(85);
+    }
   }
 
   &__title {
@@ -35,11 +45,19 @@
     justify-content: space-between;
     overflow-x: scroll;
     overflow-y: hidden;
+    padding-left: pxToRem(55);
+    gap: pxToRem(60);
+
+    @include tablet {
+      padding-left: pxToRem(22);
+      gap: 0;
+    }
 
     @include desktop {
-      margin-left: pxToRem(66);
-      margin-right: pxToRem(66);
       margin-bottom: pxToRem(48);
+      max-width: pxToRem(1280);
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -48,7 +66,6 @@
     display: flex;
     position: relative;
     flex-wrap: wrap;
-    padding-left: pxToRem(45);
 
     &:last-child {
       padding-right: pxToRem(55);
@@ -57,7 +74,6 @@
     @include tablet {
       align-content: center;
       padding-right: pxToRem(50);
-      padding-left: 0;
 
       &:last-child {
         padding-right: 0;
@@ -108,7 +124,7 @@
       z-index: -1;
       position: absolute;
       top: pxToRem(25);
-      left: pxToRem(80);
+      left: pxToRem(35);
       width: pxToRem(85);
       height: pxToRem(85);
       background-color: var(--color-info-light);
@@ -146,9 +162,18 @@
     align-items: center;
     justify-content: space-between;
     gap: pxToRem(15);
+    padding-left: pxToRem(10);
+    padding-right: pxToRem(10);
 
     @include tablet {
       gap: pxToRem(26);
+      padding-left: pxToRem(19);
+      padding-right: pxToRem(19);
+    }
+
+    @include desktop {
+      max-width: pxToRem(1110);
+      margin: auto;
     }
 
     &__arrow {
