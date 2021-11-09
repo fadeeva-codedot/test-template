@@ -31,8 +31,24 @@
   }
 }
 
+// Dark/light theme
+@mixin light-theme() {
+  @media (prefers-color-scheme: light) {
+    @content;
+  }
+}
+
+@mixin dark-theme() {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
 // Media queries
-// Default
+
+/* Default
+If breakpoint is the biggest 
+(from breakpoint to infinity) */
 @mixin desktop-extra-large() {
   @media (min-width: $desktop-extra-large) {
     @content;
@@ -69,32 +85,66 @@
   }
 }
 
-//Dark/light theme
-@mixin light-theme() {
-  @media (prefers-color-scheme: light) {
+/* Custom
+If breakpoint is the smallest
+(from 0 to breakpoint) */
+@mixin max-small-mobile {
+  @media (max-width: $max-small-mobile) {
     @content;
   }
 }
 
-@mixin dark-theme() {
-  @media (prefers-color-scheme: dark) {
-    @content;
-  }
-}
-
-// Custom mixins
 @mixin max-mobile {
-  @media (max-width: ($tablet - 1px)) {
+  @media (max-width: $max-mobile) {
     @content;
   }
 }
 
-@mixin min-tablet {
-  @media (min-width: $tablet) {
+@mixin max-tablet {
+  @media (max-width: $max-tablet) {
     @content;
   }
 }
 
+@mixin max-desktop {
+  @media (max-width: $max-desktop) {
+    @content;
+  }
+}
+
+@mixin max-desktop-extra {
+  @media (max-width: $max-desktop-extra) {
+    @content;
+  }
+}
+
+/* If we have 2 breakpoints
+(from point to point) */
+@mixin minmax-mobile {
+  @media (min-width: $mobile) and (max-width: $max-mobile) {
+    @content;
+  }
+}
+
+@mixin minmax-tablet {
+  @media (min-width: $tablet) and (max-width: $max-tablet) {
+    @content;
+  }
+}
+
+@mixin minmax-desktop {
+  @media (min-width: $desktop) and (max-width: $max-desktop) {
+    @content;
+  }
+}
+
+@mixin minmax-desktop-extra {
+  @media (min-width: $desktop-extra) and (max-width: $max-desktop-extra) {
+    @content;
+  }
+}
+
+/************************************/
 @mixin medium-mobile() {
   @media (min-width: 450px) {
     @content;
