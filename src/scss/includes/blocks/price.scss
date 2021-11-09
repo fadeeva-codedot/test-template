@@ -130,6 +130,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: pxToRem(24);
+
+      @include desktop {
+        gap: pxToRem(40);
+      }
     }
 
     .price__button {
@@ -142,12 +147,6 @@
     }
 
     .cost {
-      padding-bottom: pxToRem(24);
-
-      @include desktop {
-        padding-bottom: pxToRem(40);
-      }
-
       &__prefix {
         content: "от";
         font-size: $typography-h5-font-size;
