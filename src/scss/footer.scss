@@ -8,9 +8,12 @@
   &__wrapper {
     display: grid;
     justify-content: space-between;
-    margin-bottom: pxToRem(39);
 
-    @include tablet {
+    @include max-mobile {
+      margin-bottom: pxToRem(39);
+    }
+
+    @include minmax-tablet {
       margin-bottom: pxToRem(72);
     }
 
@@ -22,9 +25,11 @@
   }
 
   &__logo {
-    margin-bottom: pxToRem(31);
+    @include max-mobile {
+      margin-bottom: pxToRem(31);
+    }
 
-    @include tablet {
+    @include minmax-tablet {
       margin-bottom: pxToRem(80);
     }
 
@@ -44,12 +49,15 @@
 
   &__info {
     display: flex;
-    flex-wrap: wrap;
-    row-gap: pxToRem(45);
-    column-gap: pxToRem(52);
-    margin-bottom: pxToRem(57);
 
-    @include tablet {
+    @include max-mobile {
+      flex-wrap: wrap;
+      row-gap: pxToRem(45);
+      column-gap: pxToRem(52);
+      margin-bottom: pxToRem(57);
+    }
+
+    @include minmax-tablet {
       gap: pxToRem(88);
       margin-bottom: pxToRem(68);
     }
@@ -63,9 +71,12 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      row-gap: pxToRem(45);
 
-      @include tablet {
+      @include max-mobile {
+        row-gap: pxToRem(45);
+      }
+
+      @include minmax-tablet {
         gap: pxToRem(90);
         order: 1;
       }
@@ -100,7 +111,7 @@
 }
 
 .briefs {
-  @include tablet {
+  @include minmax-tablet {
     order: 2;
   }
 
@@ -110,12 +121,12 @@
 }
 
 .contacts {
-  & > .info-list {
-    row-gap: pxToRem(22);
-  }
-
   @include tablet {
     order: 4;
+  }
+
+  & > .info-list {
+    row-gap: pxToRem(22);
   }
 }
 
@@ -148,7 +159,7 @@
   display: flex;
   gap: pxToRem(14);
 
-  @include tablet {
+  @include minmax-tablet {
     order: 2;
   }
 
@@ -189,10 +200,13 @@
 .politics {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   column-gap: pxToRem(29);
   row-gap: pxToRem(19);
+
+  @include max-mobile {
+    justify-content: center;
+  }
 
   @include tablet {
     justify-content: space-between;

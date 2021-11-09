@@ -27,18 +27,23 @@ body {
     overflow-x: hidden;
 
     .menu {
-      transform: translateX(100%);
-      transition: 0.4s linear;
+      left: 0;
+
+      @include max-mobile {
+        transform: translateX(100%);
+        transition: 0.4s linear;
+      }
 
       @include tablet {
-        left: 0;
         transition: none;
         transform: none;
       }
     }
 
     .icon__hamburger {
-      animation: menu-icon-reverse linear 0.4s forwards;
+      @include max-mobile {
+        animation: menu-icon-reverse linear 0.4s forwards;
+      }
 
       @include tablet {
         display: none;
@@ -59,14 +64,18 @@ body {
   }
 
   &:target {
-    overflow: hidden;
+    @include max-mobile {
+      overflow: hidden;
+    }
 
     @include tablet {
       overflow: scroll;
     }
 
     .logo {
-      animation: logo linear 0.4s forwards;
+      @include max-mobile {
+        animation: logo linear 0.4s forwards;
+      }
 
       @include tablet {
         animation: none;
@@ -80,7 +89,10 @@ body {
     .menu {
       visibility: visible;
       left: 0;
-      transition: 0.4s linear;
+
+      @include max-mobile {
+        transition: 0.4s linear;
+      }
 
       @include tablet {
         transition: none;
@@ -124,10 +136,12 @@ body {
 }
 
 .body-container {
-  padding-left: pxToRem(10);
-  padding-right: pxToRem(10);
+  @include max-mobile {
+    padding-left: pxToRem(10);
+    padding-right: pxToRem(10);
+  }
 
-  @include tablet {
+  @include minmax-tablet {
     padding-left: pxToRem(19);
     padding-right: pxToRem(19);
   }
@@ -140,13 +154,16 @@ body {
   }
 
   &__contact-form {
-    background-color: var(--color-primary-main);
     display: flex;
-    flex-direction: column;
-    padding-top: pxToRem(66);
-    padding-bottom: pxToRem(65);
+    justify-content: center;
 
-    @include tablet {
+    @include max-mobile {
+      flex-direction: column;
+      padding-top: pxToRem(66);
+      padding-bottom: pxToRem(65);
+    }
+
+    @include tablet-max-desktop {
       padding-top: pxToRem(96);
       padding-bottom: pxToRem(96);
     }
@@ -162,14 +179,21 @@ body {
     @include dark-theme {
       background-color: var(--color-primary-blue);
     }
+
+    @include light-theme {
+      background-color: var(--color-primary-main);
+    }
   }
 
   &__primary-color {
     background-color: var(--color-primary-main);
-    padding-top: pxToRem(45);
-    padding-bottom: pxToRem(44);
 
-    @include tablet {
+    @include max-mobile {
+      padding-top: pxToRem(45);
+      padding-bottom: pxToRem(44);
+    }
+
+    @include minmax-tablet {
       padding-top: pxToRem(62);
       padding-bottom: pxToRem(62);
     }
@@ -186,10 +210,13 @@ body {
 
   &__footer {
     background-color: var(--color-grey-900);
-    padding-top: pxToRem(24);
-    padding-bottom: pxToRem(34);
 
-    @include tablet {
+    @include max-mobile {
+      padding-top: pxToRem(24);
+      padding-bottom: pxToRem(34);
+    }
+
+    @include minmax-tablet {
       padding-top: pxToRem(33);
       padding-bottom: pxToRem(36);
     }
@@ -210,13 +237,16 @@ body {
   }
 
   &__min-width {
-    padding-left: pxToRem(38);
-    padding-right: pxToRem(38);
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    @include tablet {
+    @include max-mobile {
+      padding-left: pxToRem(38);
+      padding-right: pxToRem(38);
+    }
+
+    @include minmax-tablet {
       padding-left: pxToRem(19);
       padding-right: pxToRem(19);
     }
@@ -230,12 +260,15 @@ body {
 
 .section {
   &__title {
-    font-size: $typography-h4-font-size;
     font-weight: $typography-h3-font-weight;
     letter-spacing: $typography-letter-spacing;
-    line-height: pxToRem(20);
 
-    @include tablet {
+    @include max-mobile {
+      font-size: $typography-h4-font-size;
+      line-height: pxToRem(20);
+    }
+
+    @include minmax-tablet {
       font-size: $typography-h3-font-size;
       line-height: pxToRem(29);
     }
@@ -256,8 +289,10 @@ body {
   }
 
   &-description {
-    font-size: $typography-subtitle2-font-size;
-    line-height: pxToRem(24);
+    @include max-mobile {
+      line-height: pxToRem(24);
+      font-size: $typography-subtitle2-font-size;
+    }
 
     @include tablet {
       line-height: pxToRem(28);
@@ -267,14 +302,16 @@ body {
 }
 
 .max-width-title {
-  margin-bottom: pxToRem(32);
-  padding-left: pxToRem(10);
-  max-width: pxToRem(197);
+  @include max-mobile {
+    margin-bottom: pxToRem(32);
+    padding-left: pxToRem(10);
+    max-width: pxToRem(197);
+  }
 
-  @include tablet {
-    margin-bottom: pxToRem(57);
+  @include minmax-tablet {
     padding-left: pxToRem(19);
     max-width: pxToRem(1280);
+    margin-bottom: pxToRem(57);
     margin-left: auto;
     margin-right: auto;
   }
@@ -377,12 +414,15 @@ p {
   color: var(--color-primary-main);
   background-color: transparent;
   border: 1px solid var(--color-primary-main);
-  font-size: $typography-button-font-size;
   font-weight: 400;
-  width: pxToRem(129);
-  padding-top: pxToRem(10);
-  padding-bottom: pxToRem(10);
   text-align: center;
+
+  @include max-tablet {
+    font-size: $typography-button-font-size;
+    width: pxToRem(129);
+    padding-top: pxToRem(10);
+    padding-bottom: pxToRem(10);
+  }
 
   @include desktop {
     width: pxToRem(171);
@@ -415,7 +455,7 @@ p {
 }
 
 .button-menu {
-  @media only screen and (max-width: 767px) {
+  @include max-mobile {
     font-size: $typography-font-size;
     padding-top: pxToRem(21);
     padding-bottom: pxToRem(20);

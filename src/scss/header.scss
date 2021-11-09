@@ -1,10 +1,13 @@
 .header {
   background-color: var(--color-common-white);
   width: 100%;
-  padding-top: pxToRem(7);
-  padding-bottom: pxToRem(44);
 
-  @include tablet {
+  @include max-mobile {
+    padding-top: pxToRem(7);
+    padding-bottom: pxToRem(44);
+  }
+
+  @include minmax-tablet {
     padding-top: pxToRem(20);
     padding-bottom: pxToRem(46);
   }
@@ -20,7 +23,7 @@
     align-items: center;
     max-width: 100%;
 
-    @include tablet {
+    @include minmax-tablet {
       gap: pxToRem(35);
     }
 
@@ -144,28 +147,11 @@
   }
 
   &__list {
-    padding-top: pxToRem(108);
-    padding-bottom: pxToRem(108);
     overflow: hidden;
 
-    &:first-of-type {
-      @include tablet {
-        min-width: pxToRem(306);
-      }
-
-      @include desktop {
-        min-width: pxToRem(435);
-      }
-    }
-
-    &:last-of-type {
-      @include tablet {
-        min-width: pxToRem(265);
-      }
-
-      @include desktop {
-        min-width: pxToRem(356);
-      }
+    @include max-mobile {
+      padding-top: pxToRem(108);
+      padding-bottom: pxToRem(108);
     }
 
     @include tablet {
@@ -175,15 +161,37 @@
       justify-content: space-between;
     }
 
+    &:first-of-type {
+      @include minmax-tablet {
+        min-width: pxToRem(306);
+      }
+
+      @include desktop {
+        min-width: pxToRem(435);
+      }
+    }
+
+    &:last-of-type {
+      @include minmax-tablet {
+        min-width: pxToRem(265);
+      }
+
+      @include desktop {
+        min-width: pxToRem(356);
+      }
+    }
+
     &__item {
       display: block;
       font-weight: 400;
 
       &:last-of-type {
         &:first-child {
-          display: none;
+          @include max-mobile {
+            display: none;
+          }
 
-          @include tablet {
+          @include minmax-tablet {
             display: inline-flex;
             font-size: $typography-h5-font-size;
             font-weight: $typography-h2-font-weight;
@@ -197,17 +205,16 @@
       }
 
       &-link {
-        padding-top: pxToRem(20);
-        padding-bottom: pxToRem(20);
         display: flex;
         justify-content: space-around;
-        color: var(--color-common-white);
 
-        @include dark-theme {
-          color: var(--color-grey-900);
+        @include max-mobile {
+          padding-top: pxToRem(20);
+          padding-bottom: pxToRem(20);
+          color: var(--color-common-white);
         }
 
-        @include tablet {
+        @include minmax-tablet {
           padding: pxToRem(10);
           color: var(--color-grey-900);
           font-size: $typography-h5-font-size;
@@ -217,12 +224,16 @@
           padding: pxToRem(12);
           font-size: $typography-subtitle2-font-size;
         }
+
+        @include dark-theme {
+          color: var(--color-grey-900);
+        }
       }
     }
   }
 }
-/*----------------------------------------------*/
 
+/* RTL */
 html[dir="rtl"] {
   .page-wrapper {
     &:not(:target) {

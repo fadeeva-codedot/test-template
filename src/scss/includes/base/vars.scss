@@ -53,6 +53,8 @@ $desktop-extra: pxToRem(1200, em);
 $desktop: pxToRem(992, em);
 $tablet: pxToRem(768, em);
 $mobile: pxToRem(576, em);
+$medium-mobile: pxToRem(450, em);
+$min-medium-mobile: pxToRem(449, em);
 $small-mobile: pxToRem(320, em);
 
 // Custom media queries

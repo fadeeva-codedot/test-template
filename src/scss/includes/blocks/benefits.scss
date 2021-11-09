@@ -1,7 +1,9 @@
 .benefits {
-  padding-bottom: pxToRem(74);
+  @include max-mobile {
+    padding-bottom: pxToRem(74);
+  }
 
-  @include tablet {
+  @include minmax-tablet {
     padding-bottom: pxToRem(89);
   }
 
@@ -10,7 +12,9 @@
   }
 
   &__title {
-    margin-bottom: pxToRem(39);
+    @include max-mobile {
+      margin-bottom: pxToRem(39);
+    }
 
     @include tablet {
       margin-bottom: pxToRem(75);
@@ -18,7 +22,9 @@
   }
 
   &__description {
-    max-width: pxToRem(205);
+    @include max-mobile {
+      max-width: pxToRem(205);
+    }
 
     @include tablet {
       max-width: pxToRem(223);
@@ -27,21 +33,24 @@
 
   &__list {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    row-gap: pxToRem(50);
+
+    @include min-medium-mobile {
+      flex-direction: column;
+      justify-content: space-between;
+      row-gap: pxToRem(50);
+    }
 
     @include medium-mobile {
       flex-direction: row;
       justify-content: space-evenly;
-      flex-wrap: wrap;
       align-self: center;
       row-gap: pxToRem(62);
+      flex-wrap: wrap;
       column-gap: pxToRem(96);
       padding: 0 pxToRem(52);
     }
 
-    @include tablet {
+    @include tablet-max-desktop {
       flex-wrap: wrap;
       column-gap: pxToRem(35);
     }
@@ -56,7 +65,9 @@
       gap: pxToRem(25);
 
       &-picture {
-        margin-bottom: pxToRem(20);
+        @include max-mobile {
+          margin-bottom: pxToRem(20);
+        }
 
         @include tablet {
           margin-bottom: pxToRem(25);
