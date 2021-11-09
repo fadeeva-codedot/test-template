@@ -55,10 +55,6 @@ $tablet: pxToRem(768, em);
 $mobile: pxToRem(576, em);
 $small-mobile: pxToRem(320, em);
 
-// Intermediate media queries
-$mobile-max: pxToRem(767, em);
-$tablet-max: pxToRem(1279, em);
-
 // Font sizes, weights, etc.
 $typography-font-size: pxToRem(15);
 $typography-font-weight: 400;

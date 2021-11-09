@@ -32,54 +32,9 @@
 }
 
 // Media queries
-
-// Custom intermediate media queries
-@mixin intermediate-mobile() {
-  @media (min-width: $mobile) and (max-width: ($mobile-max - 0.02)) {
-    @content;
-  }
-}
-
-@mixin intermediate-tablet() {
-  @media (min-width: $tablet) and (max-width: ($tablet-max - 0.02)) {
-    @content;
-  }
-}
-
-@mixin desktop-min() {
-  @media (min-width: $desktop) {
-    @content;
-  }
-}
-
-// Custom mobile mixins
-@mixin medium-mobile() {
-  @media (min-width: 450px) {
-    @content;
-  }
-}
-
-@mixin large-mobile() {
-  @media (min-width: 700px) {
-    @content;
-  }
-}
-
-//Dark theme
-@mixin light-theme() {
-  @media (prefers-color-scheme: light) {
-    @content;
-  }
-}
-
-@mixin dark-theme() {
-  @media (prefers-color-scheme: dark) {
-    @content;
-  }
-}
-
-@mixin media-max($size) {
-  @media (max-width: $size) {
+// Default
+@mixin desktop-extra-large() {
+  @media (min-width: $desktop-extra-large) {
     @content;
   }
 }
@@ -104,6 +59,44 @@
 
 @mixin mobile() {
   @media (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin small-mobile() {
+  @media (min-width: $small-mobile) {
+    @content;
+  }
+}
+
+//Dark/light theme
+@mixin light-theme() {
+  @media (prefers-color-scheme: light) {
+    @content;
+  }
+}
+
+@mixin dark-theme() {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
+// Custom mixins
+@mixin max-mobile {
+  @media (max-width: ($tablet - 1px)) {
+    @content;
+  }
+}
+
+@mixin min-tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin medium-mobile() {
+  @media (min-width: 450px) {
     @content;
   }
 }
