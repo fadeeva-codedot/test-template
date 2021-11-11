@@ -1,7 +1,9 @@
 .hero {
-  padding-bottom: pxToRem(79);
+  @include max-mobile {
+    padding-bottom: pxToRem(79);
+  }
 
-  @include tablet {
+  @include minmax-tablet {
     padding-bottom: pxToRem(83);
   }
 
@@ -10,11 +12,16 @@
   }
 
   &__title {
-    margin-bottom: pxToRem(27);
-    max-width: pxToRem(300);
+    @include max-mobile {
+      margin-bottom: pxToRem(27);
+      max-width: pxToRem(300);
+    }
 
     @include tablet {
       margin-bottom: pxToRem(33);
+    }
+
+    @include minmax-tablet {
       max-width: pxToRem(362);
     }
 
@@ -27,7 +34,7 @@
     display: flex;
 
     &__info {
-      @include tablet {
+      @include minmax-tablet {
         width: 50%;
         margin-top: pxToRem(48);
       }
@@ -38,16 +45,21 @@
       }
 
       &-description {
-        font-size: $typography-subtitle2-font-size;
-        font-weight: $typography-h3-font-weight;
         line-height: pxToRem(24);
-        margin-bottom: pxToRem(24);
+
+        @include max-mobile {
+          font-size: $typography-subtitle2-font-size;
+          font-weight: $typography-h3-font-weight;
+          margin-bottom: pxToRem(24);
+        }
 
         @include tablet {
           font-size: $typography-font-size;
           display: block;
-          max-width: pxToRem(326);
           font-weight: $typography-h3-font-weight;
+        }
+
+        @include minmax-tablet {
           margin-bottom: pxToRem(56);
           max-width: pxToRem(362);
         }
@@ -66,9 +78,11 @@
     }
 
     &__picture {
-      display: none;
+      @include max-mobile {
+        display: none;
+      }
 
-      @include tablet {
+      @include minmax-tablet {
         display: block;
         width: 50%;
         max-height: pxToRem(477);
