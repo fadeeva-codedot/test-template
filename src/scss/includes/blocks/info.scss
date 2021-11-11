@@ -1,7 +1,9 @@
 .info {
-  padding-bottom: pxToRem(44);
+  @include max-mobile {
+    padding-bottom: pxToRem(44);
+  }
 
-  @include tablet {
+  @include minmax-tablet {
     padding-bottom: pxToRem(81);
   }
 
@@ -10,11 +12,14 @@
   }
 
   &__title {
-    margin-bottom: pxToRem(30);
     max-width: pxToRem(247);
+    margin-bottom: pxToRem(30);
 
     @include tablet {
       max-width: 100%;
+    }
+
+    @include minmax-tablet {
       margin-bottom: pxToRem(39);
     }
 
@@ -25,7 +30,10 @@
 
   &__description {
     display: block;
-    max-width: 100%;
+
+    @include max-tablet {
+      max-width: 100%;
+    }
 
     @include desktop {
       margin-bottom: pxToRem(40);
