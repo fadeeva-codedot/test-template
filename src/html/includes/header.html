@@ -2,10 +2,7 @@
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title><%=title%></title>
     <link rel="stylesheet" href="css/main.min.css" />
@@ -13,16 +10,16 @@
   </head>
   <body>
     <div id="dropmenu" class="page-wrapper">
-        <header class="header">
-          <div class="header__container">
+      <header class="header">
+        <div class="header__container">
           <div class="header__navbar">
-            <a href="#" class="logo">
+            <a href="#" class="logo" aria-label="Whales design logo">
               <img class="logo__image" src="../../uploads/logo.svg" alt="whales design logo" />
             </a>
 
             <div class="icon">
-              <a href="#" class="icon__close-link"></a>
-              <a href="#dropmenu" class="icon__hamburger">
+              <a href="#" class="icon__close-link" aria-label="cross-icon"></a>
+              <a href="#dropmenu" class="icon__hamburger" aria-label="menu-hamburger icon">
                 <span class="icon__hamburger-element"></span>
               </a>
             </div>
@@ -31,32 +28,41 @@
               <div class="menu__wrapper">
                 <ul class="menu__list">
                   <li class="menu__list__item">
-                    <a href="#" class="menu__list__item-link">Портфолио</a>
+                    <a href="#" class="menu__list__item-link" aria-label="portfolio">Портфолио</a>
                   </li>
 
                   <li class="menu__list__item">
-                    <a href="#" class="menu__list__item-link">Услуги и цены</a>
+                    <a href="#" class="menu__list__item-link" aria-label="price">Услуги и цены</a>
                   </li>
 
                   <li class="menu__list__item">
-                    <a href="#" class="menu__list__item-link">Мы</a>
+                    <a href="#" class="menu__list__item-link" aria-label="about">Мы</a>
                   </li>
 
                   <li class="menu__list__item">
-                    <a href="#" class="menu__list__item-link">Контакты</a>
+                    <a href="#" class="menu__list__item-link" aria-label="contacts">Контакты</a>
                   </li>
                 </ul>
 
                 <ul class="menu__list">
                   <li class="menu__list__item">
-                    <a href="#" class="menu__list__item-link">&plus;38 &lang;097&rang; 757 51 51</a>
+                    <a href="#" class="menu__list__item-link" aria-label="phone number"
+                      >&plus;38 &lang;097&rang; 757 51 51</a
+                    >
                   </li>
 
-                  <a href="#" class="button-name button-blue button-menu">Обсудить проект</a>
+                  <a
+                    href="#"
+                    class="button-name button-blue button-menu"
+                    aria-label="discuss project"
+                    >Обсудить проект</a
+                  >
                 </ul>
               </div>
             </div>
           </div>
-          </div>
-        </header>
-
+        </div>
+      </header>
+    </div>
+  </body>
+</html>
