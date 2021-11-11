@@ -1,7 +1,9 @@
 .price {
-  padding-bottom: pxToRem(105);
+  @include max-mobile {
+    padding-bottom: pxToRem(105);
+  }
 
-  @include tablet {
+  @include minmax-tablet {
     padding-bottom: pxToRem(84);
   }
 
@@ -11,10 +13,13 @@
 
   &__title {
     text-align: center;
-    margin-bottom: pxToRem(49);
     line-height: 2;
 
-    @include tablet {
+    @include max-mobile {
+      margin-bottom: pxToRem(49);
+    }
+
+    @include minmax-tablet {
       margin-bottom: pxToRem(48);
     }
 
@@ -25,11 +30,16 @@
 
   &__list {
     display: grid;
-    border: 1px solid var(--color-grey-200);
     max-width: pxToRem(300);
+
+    @include max-mobile {
+      border: 1px solid var(--color-grey-200);
+    }
 
     @include tablet {
       grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--color-grey-200);
+      border-right: 1px solid var(--color-grey-200);
       border-bottom: none;
       border-left: none;
       min-width: 100%;
@@ -44,20 +54,27 @@
 .package {
   position: relative;
   border-bottom: pxToRem(1) solid var(--color-grey-200);
-  padding: pxToRem(19) pxToRem(17) pxToRem(28) pxToRem(17);
   min-height: pxToRem(424);
   min-width: pxToRem(244);
 
-  &:active {
-    padding: pxToRem(17) pxToRem(15) pxToRem(26) pxToRem(15);
+  @include max-mobile {
+    &:active {
+      padding: pxToRem(17) pxToRem(15) pxToRem(26) pxToRem(15);
+    }
+  }
+
+  @include minmax-tablet {
+    &:active {
+      padding: pxToRem(17) pxToRem(13) pxToRem(24) pxToRem(15);
+    }
   }
 
   @include tablet {
     border-left: pxToRem(1) solid var(--color-grey-200);
+  }
 
-    &:active {
-      padding: pxToRem(17) pxToRem(13) pxToRem(24) pxToRem(15);
-    }
+  @include max-tablet {
+    padding: pxToRem(19) pxToRem(17) pxToRem(28) pxToRem(17);
   }
 
   @include desktop {
@@ -69,9 +86,12 @@
   }
 
   &:last-child {
-    border-bottom: none;
     min-height: auto;
     min-height: pxToRem(324);
+
+    @include max-mobile {
+      border-bottom: none;
+    }
 
     @include tablet {
       border-bottom: pxToRem(1) solid var(--color-grey-200);
@@ -85,14 +105,17 @@
 
     &::after {
       content: "";
-      width: pxToRem(18);
-      height: pxToRem(26);
       position: absolute;
       top: 0;
-      right: pxToRem(15);
-      border-left: pxToRem(9) solid var(--color-primary-main);
-      border-right: pxToRem(9) solid var(--color-primary-main);
-      border-bottom: pxToRem(9) solid var(--color-common-white);
+
+      @include max-tablet {
+        width: pxToRem(18);
+        height: pxToRem(26);
+        right: pxToRem(15);
+        border-left: pxToRem(9) solid var(--color-primary-main);
+        border-right: pxToRem(9) solid var(--color-primary-main);
+        border-bottom: pxToRem(9) solid var(--color-common-white);
+      }
 
       @include desktop {
         width: pxToRem(28);
@@ -105,12 +128,15 @@
 
   &__info {
     display: flex;
-    gap: pxToRem(16);
     flex-direction: column;
     align-items: center;
     text-align: center;
     border-bottom: pxToRem(1) solid var(--color-grey-200);
-    margin-bottom: pxToRem(33);
+
+    @include max-tablet {
+      margin-bottom: pxToRem(33);
+      gap: pxToRem(16);
+    }
 
     @include desktop {
       margin-bottom: pxToRem(45);
@@ -118,8 +144,11 @@
     }
 
     &__title {
-      font-size: $typography-h5-font-size;
       font-weight: $typography-h2-font-weight;
+
+      @include max-tablet {
+        font-size: $typography-h5-font-size;
+      }
 
       @include desktop {
         font-size: $typography-h4-font-size;
@@ -130,7 +159,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: pxToRem(24);
+
+      @include max-tablet {
+        gap: pxToRem(24);
+      }
 
       @include desktop {
         gap: pxToRem(40);
@@ -138,8 +170,11 @@
     }
 
     .price__button {
-      margin-bottom: pxToRem(28);
       display: block;
+
+      @include max-tablet {
+        margin-bottom: pxToRem(28);
+      }
 
       @include desktop {
         margin-bottom: pxToRem(41);
@@ -149,9 +184,12 @@
     .cost {
       &__prefix {
         content: "от";
-        font-size: $typography-h5-font-size;
         font-weight: $typography-h2-font-weight;
         color: var(--color-grey-200);
+
+        @include max-tablet {
+          font-size: $typography-h5-font-size;
+        }
 
         @include desktop {
           font-size: $typography-h4-font-size;
@@ -159,10 +197,13 @@
       }
 
       &__value {
-        font-size: $typography-h3-font-size;
         font-weight: $typography-h2-font-weight;
-        margin-bottom: pxToRem(25);
-        margin-right: pxToRem(15);
+
+        @include max-tablet {
+          font-size: $typography-h3-font-size;
+          margin-bottom: pxToRem(25);
+          margin-right: pxToRem(15);
+        }
 
         @include desktop {
           font-size: $typography-h2-font-size;
@@ -177,30 +218,40 @@
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    gap: pxToRem(16);
+
+    @include max-tablet {
+      gap: pxToRem(16);
+    }
 
     @include desktop {
       gap: pxToRem(18);
     }
 
     &-item {
-      font-size: $typography-h5-font-size;
       font-weight: $typography-h4-font-weight;
-      text-indent: pxToRem(20);
+
+      @include max-tablet {
+        font-size: $typography-h5-font-size;
+        text-indent: pxToRem(20);
+      }
 
       @include desktop {
+        font-size: $typography-h4-font-size;
         text-indent: pxToRem(35);
       }
 
       &::before {
         content: "";
         display: block;
-        width: pxToRem(10);
-        height: pxToRem(6);
         position: absolute;
         border-left: 2px solid var(--color-secondary-main);
         border-bottom: 2px solid var(--color-secondary-main);
         transform: rotate(-45deg);
+
+        @include max-tablet {
+          width: pxToRem(10);
+          height: pxToRem(6);
+        }
 
         @include desktop {
           width: pxToRem(14);
@@ -208,13 +259,12 @@
         }
       }
 
-      @include desktop {
-        font-size: $typography-h4-font-size;
-      }
-
       &-bold {
-        font-size: $typography-h5-font-size;
         font-weight: $typography-h2-font-weight;
+
+        @include max-tablet {
+          font-size: $typography-h5-font-size;
+        }
 
         @include desktop {
           font-size: $typography-h4-font-size;
@@ -257,9 +307,12 @@
   .package__info {
     border-bottom: none;
     margin-bottom: 0;
-    gap: pxToRem(68);
 
-    @include tablet {
+    @include max-mobile {
+      gap: pxToRem(68);
+    }
+
+    @include minmax-tablet {
       gap: pxToRem(148);
     }
 
@@ -269,14 +322,17 @@
   }
 
   .cost {
-    font-size: $typography-h4-font-size;
     margin-right: 0;
 
     &::before {
       display: none;
     }
 
-    @include tablet {
+    @include max-mobile {
+      font-size: $typography-h4-font-size;
+    }
+
+    @include minmax-tablet {
       font-size: $typography-h3-font-size;
     }
 
@@ -288,15 +344,20 @@
   }
 
   .discussion {
-    font-size: $typography-h5-font-size;
-    margin-bottom: pxToRem(23);
-    max-width: pxToRem(177);
-    line-height: pxToRem(17);
+    @include max-mobile {
+      font-size: $typography-h5-font-size;
+      margin-bottom: pxToRem(23);
+      max-width: pxToRem(177);
+      line-height: pxToRem(17);
+    }
 
     @include tablet {
       max-width: pxToRem(325);
-      font-size: $typography-subtitle2-font-size;
       line-height: pxToRem(24);
+    }
+
+    @include minmax-tablet {
+      font-size: $typography-subtitle2-font-size;
       margin-bottom: pxToRem(17);
     }
 
