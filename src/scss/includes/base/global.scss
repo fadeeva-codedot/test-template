@@ -186,8 +186,6 @@ body {
   }
 
   &__primary-color {
-    background-color: var(--color-primary-main);
-
     @include max-mobile {
       padding-top: pxToRem(45);
       padding-bottom: pxToRem(44);
@@ -203,14 +201,16 @@ body {
       padding-bottom: pxToRem(75);
     }
 
+    @include light-theme {
+      background-color: var(--color-primary-main);
+    }
+
     @include dark-theme {
       background-color: var(--color-primary-blue);
     }
   }
 
   &__footer {
-    background-color: var(--color-grey-900);
-
     @include max-mobile {
       padding-top: pxToRem(24);
       padding-bottom: pxToRem(34);
@@ -224,6 +224,10 @@ body {
     @include desktop {
       padding-top: pxToRem(78);
       padding-bottom: pxToRem(40);
+    }
+
+    @include light-theme {
+      background-color: var(--color-grey-900);
     }
 
     @include dark-theme {

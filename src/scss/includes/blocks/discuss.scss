@@ -1,5 +1,7 @@
 .discuss {
-  color: var(--color-common-white);
+  @include light-theme {
+    color: var(--color-common-white);
+  }
 
   @include dark-theme {
     color: var(--color-grey-900);
@@ -234,8 +236,6 @@
     }
 
     &-button {
-      color: var(--color-common-white);
-
       @include max-mobile {
         width: 100%;
         font-size: $typography-h5-font-size;
@@ -246,6 +246,10 @@
         width: pxToRem(171);
         font-size: $typography-subtitle2-font-size;
         font-weight: $typography-h3-font-weight;
+      }
+
+      @include light-theme {
+        color: var(--color-common-white);
       }
 
       @include dark-theme {

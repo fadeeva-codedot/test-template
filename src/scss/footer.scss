@@ -1,5 +1,7 @@
 .footer {
-  color: var(--color-common-white);
+  @include light-theme {
+    color: var(--color-common-white);
+  }
 
   @include dark-theme {
     color: var(--color-grey-900);
@@ -215,8 +217,11 @@
 
   &-item {
     color: var(--color-common-white);
-    opacity: 30%;
     font-size: $typography-h5-font-size;
+
+    @include light-theme {
+      opacity: 30%;
+    }
 
     @include dark-theme {
       filter: invert(100%);

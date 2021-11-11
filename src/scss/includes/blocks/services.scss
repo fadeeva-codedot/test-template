@@ -1,5 +1,4 @@
 .services {
-  color: var(--color-common-white);
   width: 100%;
 
   @include max-mobile {
@@ -12,6 +11,10 @@
 
   @include desktop {
     padding-bottom: pxToRem(95);
+  }
+
+  @include light-theme {
+    color: var(--color-common-white);
   }
 
   @include dark-theme {
