@@ -179,7 +179,6 @@
 
       .checkmark {
         position: absolute;
-        top: pxToRem(13);
         left: pxToRem(2);
         height: pxToRem(17);
         width: pxToRem(17);
@@ -205,7 +204,6 @@
         position: absolute;
         width: pxToRem(17);
         left: 0;
-        top: pxToRem(10);
 
         &:checked ~ .checkmark:after {
           display: block;

@@ -319,6 +319,9 @@ body {
   @include desktop {
     margin-bottom: pxToRem(62);
     padding-left: pxToRem(85);
+    max-width: pxToRem(1280);
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
