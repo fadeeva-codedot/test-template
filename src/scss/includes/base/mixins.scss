@@ -163,4 +163,8 @@ If breakpoint is the smallest
   }
 }
 
-/************************************/
+@mixin max-medium-mobile {
+  @media (min-width: $medium-mobile) {
+    @content;
+  }
+}

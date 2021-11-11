@@ -33,7 +33,7 @@
 
   &__list {
     display: flex;
-
+    /*************************************/
     @include min-medium-mobile {
       flex-direction: column;
       justify-content: space-between;
@@ -43,21 +43,21 @@
     @include medium-mobile {
       flex-direction: row;
       justify-content: space-evenly;
-      align-self: center;
-      row-gap: pxToRem(62);
       flex-wrap: wrap;
       column-gap: pxToRem(96);
       padding: 0 pxToRem(52);
+    }
+
+    @include max-medium-mobile {
+      row-gap: pxToRem(62);
+      justify-content: center;
     }
 
     @include tablet-max-desktop {
       flex-wrap: wrap;
       column-gap: pxToRem(35);
     }
-
-    @include desktop-extra {
-      flex-wrap: nowrap;
-    }
+    /*************************************/
 
     &__item {
       display: flex;
