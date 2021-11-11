@@ -1,8 +1,10 @@
 .development {
-  padding-top: pxToRem(71);
-  padding-bottom: pxToRem(72);
+  @include max-mobile {
+    padding-top: pxToRem(71);
+    padding-bottom: pxToRem(72);
+  }
 
-  @include tablet {
+  @include minmax-tablet {
     padding-top: pxToRem(82);
     padding-bottom: pxToRem(95);
   }
@@ -20,8 +22,10 @@
   }
 
   &__title {
-    margin-bottom: pxToRem(5);
-    max-width: pxToRem(284);
+    @include max-mobile {
+      margin-bottom: pxToRem(5);
+      max-width: pxToRem(284);
+    }
 
     @include tablet {
       margin-bottom: pxToRem(35);
@@ -33,9 +37,9 @@
     word-wrap: break-word;
     width: pxToRem(210);
 
-    @include tablet {
+    /*@include tablet {
       max-width: pxToRem(211);
-    }
+    }*/
   }
 
   &__phases {
@@ -45,10 +49,13 @@
     justify-content: space-between;
     overflow-x: scroll;
     overflow-y: hidden;
-    padding-left: pxToRem(55);
-    gap: pxToRem(60);
 
-    @include tablet {
+    @include max-mobile {
+      padding-left: pxToRem(55);
+      gap: pxToRem(60);
+    }
+
+    @include minmax-tablet {
       padding-left: pxToRem(22);
       gap: 0;
     }
@@ -67,25 +74,24 @@
     position: relative;
     flex-wrap: wrap;
 
-    &:last-child {
-      padding-right: pxToRem(55);
-    }
-
     @include tablet {
       align-content: center;
       padding-right: pxToRem(50);
+    }
 
-      &:last-child {
+    &:last-child {
+      @include max-mobile {
+        padding-right: pxToRem(55);
+      }
+
+      @include tablet {
         padding-right: 0;
       }
-
-      @include desktop {
-        padding-right: pxToRem(46);
-      }
     }
+
     //1st dev phase
     &:nth-child(4n - 3) {
-      @include tablet {
+      @include minmax-tablet {
         margin-top: pxToRem(24);
       }
 
@@ -95,7 +101,7 @@
     }
     //2nd dev phase
     &:nth-child(4n - 2) {
-      @include tablet {
+      @include minmax-tablet {
         margin-top: pxToRem(68);
       }
 
@@ -105,13 +111,13 @@
     }
     //3rd dev phase
     &:nth-child(4n + 3) {
-      @include tablet {
+      @include minmax-tablet {
         margin-top: pxToRem(15);
       }
     }
     //4th dev phase
     &:nth-child(4n + 4) {
-      @include tablet {
+      @include minmax-tablet {
         margin-top: pxToRem(37);
       }
 
@@ -124,14 +130,20 @@
       z-index: -1;
       position: absolute;
       top: pxToRem(25);
-      left: pxToRem(35);
-      width: pxToRem(85);
-      height: pxToRem(85);
       background-color: var(--color-info-light);
       border-radius: 100%;
 
-      @include tablet {
+      @include max-mobile {
+        left: pxToRem(35);
+      }
+
+      @include minmax-tablet {
         left: pxToRem(33);
+      }
+
+      @include max-tablet {
+        width: pxToRem(85);
+        height: pxToRem(85);
       }
 
       @include desktop {
@@ -142,12 +154,15 @@
     }
 
     &-number {
-      font-size: pxToRem(50);
       font-weight: 900;
-      line-height: 145%;
       color: transparent;
-      margin-bottom: pxToRem(10);
       -webkit-text-stroke: pxToRem(1) var(--color-primary-main);
+
+      @include max-tablet {
+        font-size: pxToRem(50);
+        line-height: 145%;
+        margin-bottom: pxToRem(10);
+      }
 
       @include desktop {
         font-size: pxToRem(70);
@@ -161,9 +176,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: pxToRem(15);
-    padding-left: pxToRem(10);
-    padding-right: pxToRem(10);
+
+    @include max-mobile {
+      gap: pxToRem(15);
+      padding-left: pxToRem(10);
+      padding-right: pxToRem(10);
+    }
 
     @include tablet {
       gap: pxToRem(26);
