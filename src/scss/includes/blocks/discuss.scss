@@ -177,7 +177,7 @@
       &::placeholder {
         vertical-align: middle;
         color: var(--color-common-white);
-        opacity: 30%;
+        opacity: 50%;
 
         @include max-mobile {
           font-size: $typography-h5-font-size;
