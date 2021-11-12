@@ -175,7 +175,7 @@
 
       &::placeholder {
         color: var(--color-common-white);
-        opacity: 50%;
+        opacity: 80%;
 
         @include max-mobile {
           font-size: $typography-h5-font-size;
@@ -198,39 +198,6 @@
       position: relative;
       text-indent: pxToRem(31);
       font-size: $typography-h5-font-size;
-
-      .checkmark {
-        position: absolute;
-        left: pxToRem(2);
-        height: pxToRem(17);
-        width: pxToRem(17);
-        background-color: transparent;
-        border: pxToRem(1) solid var(--color-common-white);
-
-        @include dark-theme {
-          filter: invert(100%);
-        }
-
-        &::after {
-          content: "";
-          position: absolute;
-          display: none;
-          width: pxToRem(4);
-          height: pxToRem(8);
-        }
-      }
-
-      .check {
-        height: pxToRem(17);
-        opacity: 0;
-        position: absolute;
-        width: pxToRem(17);
-        left: 0;
-
-        &:checked ~ .checkmark:after {
-          display: block;
-        }
-      }
     }
 
     &-button {
@@ -254,6 +221,39 @@
         color: var(--color-grey-900);
       }
     }
+  }
+}
+
+.checkmark {
+  position: absolute;
+  left: pxToRem(2);
+  height: pxToRem(17);
+  width: pxToRem(17);
+  background-color: transparent;
+  border: pxToRem(1) solid var(--color-common-white);
+
+  @include dark-theme {
+    filter: invert(100%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    width: pxToRem(4);
+    height: pxToRem(8);
+  }
+}
+
+.check {
+  height: pxToRem(17);
+  opacity: 0;
+  position: absolute;
+  width: pxToRem(17);
+  left: 0;
+
+  &:checked ~ .checkmark:after {
+    display: block;
   }
 }
 
