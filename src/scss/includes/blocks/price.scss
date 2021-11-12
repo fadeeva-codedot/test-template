@@ -107,14 +107,14 @@
       content: "";
       position: absolute;
       top: 0;
+      border-left: pxToRem(9) solid var(--color-primary-main);
+      border-right: pxToRem(9) solid var(--color-primary-main);
+      border-bottom: pxToRem(9) solid var(--color-common-white);
 
       @include max-tablet {
         width: pxToRem(18);
         height: pxToRem(26);
         right: pxToRem(15);
-        border-left: pxToRem(9) solid var(--color-primary-main);
-        border-right: pxToRem(9) solid var(--color-primary-main);
-        border-bottom: pxToRem(9) solid var(--color-common-white);
       }
 
       @include desktop {
