@@ -168,14 +168,12 @@
       border-right: transparent;
       height: pxToRem(33);
       width: 100%;
-      background-color: transparent;
 
       @include dark-theme {
         filter: invert(100%);
       }
 
       &::placeholder {
-        vertical-align: middle;
         color: var(--color-common-white);
         opacity: 50%;
 

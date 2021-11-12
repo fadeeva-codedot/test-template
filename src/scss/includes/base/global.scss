@@ -358,12 +358,11 @@ textarea {
   &:focus {
     outline: none;
   }
-
-  &::placeholder {
+  /*  &::placeholder {
     color: var(--color-common-white);
     opacity: 30%;
     font-size: $typography-h5-font-size;
-  }
+  } */
 
   &.not-valid {
     border-color: var(--color-secondary-dark);
