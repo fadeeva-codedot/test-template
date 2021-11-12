@@ -220,7 +220,7 @@
     font-size: $typography-h5-font-size;
 
     @include light-theme {
-      opacity: 30%;
+      opacity: 50%;
     }
 
     @include dark-theme {
