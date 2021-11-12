@@ -21,6 +21,10 @@
     color: var(--color-grey-900);
   }
 
+  @include print {
+    color: var(--color-grey-900);
+  }
+
   &__title {
     @include max-mobile {
       margin-bottom: pxToRem(30);
@@ -98,6 +102,10 @@
         padding-right: pxToRem(21);
 
         @include dark-theme {
+          filter: invert(100%);
+        }
+
+        @include print {
           filter: invert(100%);
         }
       }

@@ -46,6 +46,10 @@
         width: pxToRem(65);
         height: auto;
       }
+
+      @include print {
+        filter: invert(0);
+      }
     }
   }
 

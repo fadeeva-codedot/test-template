@@ -7,6 +7,10 @@
     color: var(--color-grey-900);
   }
 
+  @include print {
+    color: $color-grey-900;
+  }
+
   &__wrapper {
     display: flex;
 
@@ -28,7 +32,7 @@
 
     @include desktop-extra {
       gap: pxToRem(47);
-      padding-left: pxToRem(0);
+      padding-left: 0;
       padding-right: pxToRem(150);
       flex-direction: row;
       max-width: pxToRem(1280);
@@ -88,7 +92,7 @@
 /*------------------------------------------------*/
 
 .form {
-  gap: 2.1875rem;
+  gap: pxToRem(35);
   display: flex;
   flex-direction: column;
 
@@ -169,8 +173,14 @@
       background-color: transparent;
       height: pxToRem(33);
       width: 100%;
+      caret-color: $color-common-white;
 
       @include dark-theme {
+        filter: invert(100%);
+        caret-color: $color-grey-900;
+      }
+
+      @include print {
         filter: invert(100%);
       }
 
@@ -234,6 +244,10 @@
   border: pxToRem(1) solid var(--color-common-white);
 
   @include dark-theme {
+    filter: invert(100%);
+  }
+
+  @include print {
     filter: invert(100%);
   }
 
