@@ -150,3 +150,18 @@
     }
   }
 }
+
+// hero picture
+@keyframes bouncing {
+  0% {
+    transform: translateY(-25px);
+  }
+
+  50% {
+    transform: translateY(50px);
+  }
+
+  100% {
+    transform: translateY(-25px);
+  }
+}
