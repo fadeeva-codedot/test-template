@@ -41,6 +41,10 @@
     @include desktop {
       margin-bottom: pxToRem(40);
     }
+
+    @include print-landscape {
+      margin-bottom: pxToRem(10);
+    }
   }
 
   &__description {
@@ -56,6 +60,10 @@
     @include desktop {
       max-width: pxToRem(950);
       margin-bottom: pxToRem(50);
+    }
+
+    @include print-landscape {
+      margin-bottom: pxToRem(10);
     }
   }
 
@@ -79,6 +87,10 @@
     @include desktop {
       grid-column-gap: pxToRem(68);
       grid-template-columns: pxToRem(282) pxToRem(282);
+    }
+
+    @include print-landscape {
+      row-gap: pxToRem(10);
     }
 
     &-item {

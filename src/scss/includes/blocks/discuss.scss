@@ -231,6 +231,10 @@
       @include dark-theme {
         color: var(--color-grey-900);
       }
+
+      @include print {
+        color: $color-grey-900;
+      }
     }
   }
 }

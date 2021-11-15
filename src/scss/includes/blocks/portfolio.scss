@@ -33,6 +33,11 @@
       grid-template-columns: pxToRem(613) pxToRem(473);
     }
 
+    @include print-landscape {
+      gap: pxToRem(55);
+      margin-bottom: pxToRem(20);
+    }
+
     &_example {
       width: 100%;
       min-height: pxToRem(235);

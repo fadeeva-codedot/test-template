@@ -208,6 +208,11 @@ body {
     @include dark-theme {
       background-color: var(--color-primary-blue);
     }
+
+    @include print-landscape {
+      padding-top: pxToRem(30);
+      padding-bottom: pxToRem(20);
+    }
   }
 
   &__footer {
@@ -232,6 +237,10 @@ body {
 
     @include dark-theme {
       background-color: var(--color-common-white);
+    }
+
+    @include print-landscape {
+      padding-top: pxToRem(100);
     }
   }
 
@@ -326,6 +335,10 @@ body {
     max-width: pxToRem(1280);
     margin-left: auto;
     margin-right: auto;
+  }
+
+  @include print-landscape {
+    margin-bottom: pxToRem(30);
   }
 }
 
@@ -445,7 +458,7 @@ p {
     color: var(--color-common-white);
 
     @include print {
-      color: $color-primary-main;
+      color: var(--color-primary-main);
     }
   }
 
@@ -456,6 +469,10 @@ p {
     &:hover {
       background-color: var(--color-secondary-dark);
       border-color: transparent;
+    }
+
+    @include print {
+      border-color: $color-grey-900;
     }
   }
 

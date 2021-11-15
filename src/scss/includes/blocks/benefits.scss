@@ -11,6 +11,10 @@
     padding-bottom: pxToRem(141);
   }
 
+  @include print-landscape {
+    padding-bottom: pxToRem(250);
+  }
+
   &__title {
     @include max-mobile {
       margin-bottom: pxToRem(39);
