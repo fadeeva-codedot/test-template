@@ -18,6 +18,10 @@
     padding-bottom: pxToRem(270);
   }
 
+  @include print-portrait {
+    padding-bottom: pxToRem(100);
+  }
+
   &-slider-wrapper {
     @include desktop-extra {
       padding-left: pxToRem(85);

@@ -45,6 +45,10 @@
     @include print-landscape {
       margin-bottom: pxToRem(10);
     }
+
+    @include print-portrait {
+      margin-bottom: pxToRem(15);
+    }
   }
 
   &__description {

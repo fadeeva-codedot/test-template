@@ -340,6 +340,10 @@ body {
   @include print-landscape {
     margin-bottom: pxToRem(30);
   }
+
+  @include print-portrait {
+    margin-bottom: pxToRem(50);
+  }
 }
 
 img {

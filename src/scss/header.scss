@@ -17,6 +17,10 @@
     padding-bottom: pxToRem(30);
   }
 
+  @include print-portrait {
+    padding-bottom: pxToRem(15);
+  }
+
   &__navbar {
     display: flex;
     justify-content: space-between;

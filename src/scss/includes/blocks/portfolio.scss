@@ -34,8 +34,11 @@
     }
 
     @include print-landscape {
-      gap: pxToRem(55);
       margin-bottom: pxToRem(20);
+    }
+
+    @include print-portrait {
+      margin-bottom: pxToRem(40);
     }
 
     &_example {
@@ -48,6 +51,10 @@
         @include desktop-extra {
           grid-column-start: 1;
           grid-column-end: 3;
+        }
+
+        @include print-portrait {
+          padding-bottom: pxToRem(120);
         }
       }
 
