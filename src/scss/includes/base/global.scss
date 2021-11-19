@@ -18,6 +18,33 @@ body {
   font-family: montserrat;
 }
 
+// fade-in animation
+/*
+.header {
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+.hero {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+}
+
+.info {
+  animation-name: fade;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+.services {
+  animation-name: fade;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+}
+*/
+
 /*---------------------------------------------------*/
 .page-wrapper {
   height: 100%;
@@ -491,6 +518,9 @@ p {
       bottom: 0;
       background-color: var(--color-secondary-main);
       border-color: transparent;
+      animation-name: fade;
+      animation-duration: 1.2s;
+      animation-timing-function: linear;
 
       @include dark-theme {
         color: var(--color-grey-900);
