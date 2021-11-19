@@ -68,13 +68,39 @@
       flex-direction: column;
       gap: pxToRem(25);
 
-      &-picture {
-        @include max-mobile {
-          margin-bottom: pxToRem(20);
+      &:first-child {
+        .benefit-picture {
+          animation-duration: 3.5s;
+          animation-iteration-count: infinite;
+          animation-name: rocket;
+          animation-timing-function: ease-in-out;
         }
+      }
 
-        @include tablet {
-          margin-bottom: pxToRem(25);
+      &:nth-child(2) {
+        .benefit-picture {
+          animation-duration: 1.7s;
+          animation-iteration-count: infinite;
+          animation-name: dog;
+          animation-timing-function: ease-in-out;
+        }
+      }
+
+      &:nth-child(3) {
+        .benefit-picture {
+          animation-duration: 3s;
+          animation-iteration-count: infinite;
+          animation-name: present;
+          animation-timing-function: ease-in-out;
+        }
+      }
+
+      &:last-child {
+        .benefit-picture {
+          animation-duration: 0.5s;
+          animation-iteration-count: infinite;
+          animation-name: pig;
+          animation-timing-function: ease-in-out;
         }
       }
     }
@@ -83,4 +109,14 @@
 
 .image-wrapper {
   height: pxToRem(54);
+}
+
+.benefit-picture {
+  @include max-mobile {
+    margin-bottom: pxToRem(20);
+  }
+
+  @include tablet {
+    margin-bottom: pxToRem(25);
+  }
 }

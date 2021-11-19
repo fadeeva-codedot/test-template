@@ -153,16 +153,13 @@
 
 // hero picture
 @keyframes bouncing {
-  0% {
+  0%,
+  100% {
     transform: translateY(-25px);
   }
 
   50% {
     transform: translateY(50px);
-  }
-
-  100% {
-    transform: translateY(-25px);
   }
 }
 
@@ -178,12 +175,61 @@
   }
 }
 
-/*@keyframes flag {
-  50% {
-    transform: scale(0.5 -1.5);
+@keyframes rocket {
+  0%,
+  100% {
+    transform: translateX(-15px) translateY(15px);
   }
 
-  100% {
-    transform: scale(-0.5 1.5);
+  50% {
+    transform: translateX(15px) translateY(-15px);
   }
-}*/
+}
+
+@keyframes dog {
+  0%,
+  100% {
+    transform: rotate(30deg) translateY(-20px) translateX(50px);
+  }
+
+  50% {
+    transform: rotate(-30deg) translateY(0px) translateX(0px);
+  }
+}
+
+@keyframes present {
+  0%,
+  100% {
+    transform: translateY(30px);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes pig {
+  0%,
+  100% {
+    transform: rotate(20deg);
+  }
+
+  50% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes circle {
+  0%,
+  100% {
+    transform: scale(100%);
+  }
+
+  50% {
+    transform: scale(-100%);
+  }
+}
