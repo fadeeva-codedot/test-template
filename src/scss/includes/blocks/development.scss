@@ -144,6 +144,10 @@
       top: pxToRem(25);
       background-color: var(--color-info-light);
       border-radius: 100%;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-name: circle;
+      animation-timing-function: ease-in-out;
 
       @include max-mobile {
         left: pxToRem(35);

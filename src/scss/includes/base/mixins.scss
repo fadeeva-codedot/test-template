@@ -104,8 +104,8 @@ If breakpoint is the biggest
   }
 }
 
-/* Custom
-If breakpoint is the smallest
+// Custom
+/* If breakpoint is the smallest
 (from 0 to breakpoint) */
 @mixin max-small-mobile {
   @media (max-width: $max-small-mobile) {
