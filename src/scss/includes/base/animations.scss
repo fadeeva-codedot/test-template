@@ -235,3 +235,32 @@
     transform: scale(-100%);
   }
 }
+
+// typing effect
+@keyframes typing-first {
+  0% {
+    width: 0;
+  }
+
+  30% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes typing-second {
+  0% {
+    width: 0;
+  }
+
+  60% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
