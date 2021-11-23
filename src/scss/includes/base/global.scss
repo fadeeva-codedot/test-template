@@ -432,7 +432,7 @@ h3 {
 a {
   cursor: pointer;
   text-decoration: none;
-  margin: 0px;
+  margin: 0;
   letter-spacing: $typography-letter-spacing;
   color: var(--color-grey-900);
 
@@ -567,8 +567,8 @@ p {
 
       &:after {
         background-color: var(--color-primary-main);
-        width: pxToRem(900);
-        height: pxToRem(900);
+        width: pxToRem(1200);
+        height: pxToRem(1200);
       }
 
       @include dark-theme {

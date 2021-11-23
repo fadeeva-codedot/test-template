@@ -199,6 +199,10 @@
 
       &:focus-visible {
         outline: none;
+
+        &::placeholder {
+          visibility: hidden;
+        }
       }
     }
 
