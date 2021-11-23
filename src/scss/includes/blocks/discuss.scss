@@ -222,10 +222,19 @@
       }
 
       &:after {
-        width: pxToRem(1200);
-        height: pxToRem(1200);
-        left: 60%;
-        bottom: 70%;
+        @include max-mobile {
+          width: pxToRem(1200);
+          height: pxToRem(1200);
+          left: 60%;
+          bottom: 70%;
+        }
+
+        @include tablet {
+          width: pxToRem(300);
+          height: pxToRem(300);
+          left: 60%;
+          bottom: 65%;
+        }
       }
 
       @include tablet {
