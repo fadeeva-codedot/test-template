@@ -455,12 +455,23 @@ p {
 }
 
 .button {
+  &-text {
+    z-index: 3;
+    position: relative;
+  }
+
+  &-border {
+    border: pxToRem(1) solid var(--color-primary-main);
+  }
+
   &-name {
     color: var(--color-primary-main);
     background-color: transparent;
-    border: 1px solid var(--color-primary-main);
     font-weight: 400;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 
     @include max-tablet {
       font-size: $typography-button-font-size;
@@ -477,16 +488,37 @@ p {
       line-height: pxToRem(16);
     }
 
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: pxToRem(300);
+      height: pxToRem(300);
+      left: 60%;
+      bottom: 65%;
+      z-index: 2;
+      background-color: var(--color-primary-main);
+      border-radius: 50%;
+      transition: transform 0.6s;
+    }
+
+    &:hover::after {
+      transform: translateX(-43%) translateY(45%);
+    }
+
     &:hover {
       cursor: pointer;
-      color: var(--color-common-white);
-      background-color: var(--color-primary-main);
     }
   }
 
   &-blue {
     background-color: var(--color-primary-main);
     color: var(--color-common-white);
+    border-color: transparent;
+
+    &:after {
+      background-color: var(--color-secondary-main);
+    }
 
     @include print {
       color: var(--color-primary-main);
@@ -497,9 +529,8 @@ p {
     background-color: var(--color-secondary-main);
     border-color: transparent;
 
-    &:hover {
-      background-color: var(--color-secondary-dark);
-      border-color: transparent;
+    &:after {
+      background-color: var(--color-primary-main);
     }
 
     @include print {
@@ -515,20 +546,19 @@ p {
       width: 100%;
       position: absolute;
       text-align: center;
+      border-color: transparent;
       bottom: 0;
       background-color: var(--color-secondary-main);
-      border-color: transparent;
       animation-name: fade;
       animation-duration: 1.2s;
       animation-timing-function: linear;
 
-      @include dark-theme {
-        color: var(--color-grey-900);
+      &:after {
+        background-color: var(--color-primary-main);
       }
 
-      &:hover {
-        background-color: var(--color-secondary-dark);
-        border-color: transparent;
+      @include dark-theme {
+        color: var(--color-grey-900);
       }
     }
   }

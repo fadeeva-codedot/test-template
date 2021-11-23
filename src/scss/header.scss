@@ -39,6 +39,8 @@
 
 // logo
 .logo {
+  z-index: 3;
+
   &__image {
     z-index: 2;
     position: relative;
@@ -61,6 +63,7 @@
   height: pxToRem(47);
   position: relative;
   top: pxToRem(7);
+  z-index: 3;
 
   @include tablet {
     display: none;
@@ -124,6 +127,7 @@
   height: 100vh;
   transform: translateX(0);
   top: 0;
+  z-index: 2;
   position: fixed;
 
   @include light-theme {
