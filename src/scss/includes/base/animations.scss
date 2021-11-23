@@ -264,3 +264,24 @@
     width: 100%;
   }
 }
+
+// change color of text in buttons
+@keyframes button-border {
+  20% {
+    filter: invert(0%);
+  }
+
+  100% {
+    filter: contrast(500%) invert(100%);
+  }
+}
+
+@keyframes button-colorful {
+  20% {
+    filter: invert(0%);
+  }
+
+  100% {
+    filter: contrast(500%) invert(100%);
+  }
+}

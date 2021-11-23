@@ -212,10 +212,20 @@
     }
 
     &-button {
+      z-index: 1;
+      border: none;
+
       @include max-mobile {
         width: 100%;
         font-size: $typography-h5-font-size;
         font-weight: $typography-h3-font-weight;
+      }
+
+      &:after {
+        width: pxToRem(1200);
+        height: pxToRem(1200);
+        left: 60%;
+        bottom: 70%;
       }
 
       @include tablet {
