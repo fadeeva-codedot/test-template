@@ -193,6 +193,7 @@
 
     &:last-of-type {
       @include minmax-tablet {
+        min-width: pxToRem(265);
       }
 
       @include desktop {
@@ -293,7 +294,14 @@ html[dir="rtl"] {
 .contact-item {
   animation-name: fade;
   animation-timing-function: linear;
-  max-height: pxToRem(33);
+
+  @include max-tablet {
+    max-height: pxToRem(33);
+  }
+
+  @include desktop {
+    max-height: pxToRem(40);
+  }
 
   &:first-child {
     animation-duration: 1s;
