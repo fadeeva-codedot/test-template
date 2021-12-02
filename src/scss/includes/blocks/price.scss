@@ -89,7 +89,7 @@
     padding: pxToRem(19) pxToRem(17) pxToRem(28) pxToRem(17);
   }
 
-  @include max-tablet {
+  @include minmax-tablet {
     padding: pxToRem(19) pxToRem(17) pxToRem(28) pxToRem(16);
   }
 

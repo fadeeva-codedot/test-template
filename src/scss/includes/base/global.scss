@@ -46,7 +46,7 @@ body {
 
     .icon__hamburger {
       @include max-mobile {
-        animation: menu-icon-reverse linear 0.4s forwards;
+        animation: icon__hamburger-reverse linear 0.4s forwards;
       }
 
       @include tablet {
@@ -78,7 +78,7 @@ body {
 
     .logo {
       @include max-mobile {
-        animation: logo linear 0.4s forwards;
+        animation: logo__image linear 0.4s forwards;
       }
 
       @include tablet {
@@ -104,7 +104,7 @@ body {
     }
 
     .icon__hamburger {
-      animation: menu-icon linear 0.4s forwards;
+      animation: icon__hamburger linear 0.4s forwards;
 
       &-element {
         animation: cross2 linear 0.4s forwards;
