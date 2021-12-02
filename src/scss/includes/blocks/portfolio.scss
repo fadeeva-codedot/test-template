@@ -59,6 +59,10 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+
+    @include print {
+      border: pxToRem(1) solid var(--color-grey-900);
+    }
   }
 }
 

@@ -38,6 +38,10 @@
       max-width: pxToRem(1280);
       margin: auto;
     }
+
+    @include print-portrait {
+      gap: pxToRem(25);
+    }
   }
 
   &-head {
