@@ -312,8 +312,7 @@
 }
 
 .checkmark:after {
-  left: pxToRem(6);
-  top: pxToRem(2);
+  left: pxToRem(5);
   width: pxToRem(5);
   height: pxToRem(10);
   border-bottom: 1px solid var(--color-common-white);

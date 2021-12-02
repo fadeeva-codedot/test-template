@@ -76,18 +76,6 @@
   min-height: pxToRem(424);
   min-width: pxToRem(244);
 
-  @include max-mobile {
-    &:active {
-      padding: pxToRem(17) pxToRem(15) pxToRem(26) pxToRem(15);
-    }
-  }
-
-  @include minmax-tablet {
-    &:active {
-      padding: pxToRem(17) pxToRem(13) pxToRem(24) pxToRem(15);
-    }
-  }
-
   @include tablet {
     border-left: pxToRem(1) solid var(--color-grey-200);
   }
@@ -98,10 +86,6 @@
 
   @include desktop {
     padding: pxToRem(34) pxToRem(33) pxToRem(44) pxToRem(33);
-
-    &:active {
-      padding: pxToRem(32) pxToRem(31) pxToRem(44) pxToRem(31);
-    }
   }
 
   @include print-landscape {
@@ -138,35 +122,9 @@
     }
   }
 
-  &:nth-child(n + 1) {
+  &:nth-child(2n) {
     @include print-portrait {
       border-left: pxToRem(1) solid var(--color-grey-200);
-    }
-  }
-
-  &:active {
-    border: pxToRem(2) solid var(--color-primary-main);
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      border-left: pxToRem(9) solid var(--color-primary-main);
-      border-right: pxToRem(9) solid var(--color-primary-main);
-      border-bottom: pxToRem(9) solid var(--color-common-white);
-
-      @include max-tablet {
-        width: pxToRem(18);
-        height: pxToRem(26);
-        right: pxToRem(15);
-      }
-
-      @include desktop {
-        width: pxToRem(28);
-        height: pxToRem(44);
-        border-width: pxToRem(14);
-        right: pxToRem(32);
-      }
     }
   }
 
@@ -412,14 +370,29 @@
   }
 }
 /*-----------------------------*/
+.border-around,
+.package:active {
+  border: pxToRem(1) solid var(--color-primary-main);
 
-html[dir="rtl"] {
-  .package {
-    &:active {
-      &::after {
-        left: pxToRem(15);
-        right: unset;
-      }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    border-left: pxToRem(9) solid var(--color-primary-main);
+    border-right: pxToRem(9) solid var(--color-primary-main);
+    border-bottom: pxToRem(9) solid var(--color-common-white);
+
+    @include max-tablet {
+      width: pxToRem(18);
+      height: pxToRem(26);
+      right: pxToRem(15);
+    }
+
+    @include desktop {
+      width: pxToRem(28);
+      height: pxToRem(44);
+      border-width: pxToRem(14);
+      right: pxToRem(32);
     }
   }
 }

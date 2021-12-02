@@ -75,11 +75,19 @@
     @include print-portrait {
       padding-bottom: pxToRem(120);
     }
+
+    @include print-landscape {
+      padding-bottom: pxToRem(50);
+    }
   }
 
   &:nth-child(3n + 2) {
     @include desktop-extra {
       grid-column: 1;
+    }
+
+    @include print-landscape {
+      padding-bottom: pxToRem(110);
     }
   }
 

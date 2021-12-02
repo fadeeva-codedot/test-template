@@ -27,6 +27,12 @@
     align-items: center;
     max-width: 100%;
 
+    @include max-mobile {
+      animation-name: fade;
+      animation-duration: 0.8s;
+      animation-timing-function: linear;
+    }
+
     @include minmax-tablet {
       gap: pxToRem(35);
     }
@@ -187,7 +193,6 @@
 
     &:last-of-type {
       @include minmax-tablet {
-        min-width: pxToRem(265);
       }
 
       @include desktop {
@@ -288,6 +293,7 @@ html[dir="rtl"] {
 .contact-item {
   animation-name: fade;
   animation-timing-function: linear;
+  max-height: pxToRem(33);
 
   &:first-child {
     animation-duration: 1s;

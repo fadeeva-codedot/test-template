@@ -20,6 +20,10 @@
   }
 
   &__title {
+    animation-name: fade;
+    animation-duration: 1.4s;
+    animation-timing-function: linear;
+
     @include max-mobile {
       max-width: pxToRem(247);
       margin-bottom: pxToRem(30);
@@ -48,6 +52,9 @@
 
   &__description {
     display: block;
+    animation-name: fade;
+    animation-duration: 1.6s;
+    animation-timing-function: linear;
 
     @include max-tablet {
       max-width: 100%;

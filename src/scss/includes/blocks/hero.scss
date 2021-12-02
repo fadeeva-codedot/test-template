@@ -20,6 +20,10 @@
   }
 
   &__title {
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+
     @include max-mobile {
       margin-bottom: pxToRem(27);
       max-width: pxToRem(300);
@@ -58,6 +62,9 @@
 
       &-description {
         line-height: pxToRem(24);
+        animation-name: fade;
+        animation-duration: 1s;
+        animation-timing-function: linear;
 
         @include max-mobile {
           font-size: $typography-subtitle2-font-size;
@@ -86,10 +93,17 @@
         display: flex;
         gap: pxToRem(20);
         flex-wrap: wrap;
+        animation-name: fade;
+        animation-duration: 1.2s;
+        animation-timing-function: linear;
       }
     }
 
     &__picture {
+      animation-name: fade;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+
       @include max-mobile {
         display: none;
       }
