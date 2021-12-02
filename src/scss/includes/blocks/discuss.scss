@@ -229,6 +229,7 @@
       position: relative;
       text-indent: pxToRem(31);
       font-size: $typography-h5-font-size;
+      cursor: pointer;
     }
 
     &-button {
@@ -333,5 +334,12 @@
   position: relative;
   display: flex;
   justify-content: center;
-  bottom: pxToRem(8);
+
+  @include max-mobile {
+    bottom: 0;
+  }
+
+  @include tablet {
+    bottom: pxToRem(8);
+  }
 }

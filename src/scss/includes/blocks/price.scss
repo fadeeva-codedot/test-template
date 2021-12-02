@@ -79,17 +79,22 @@
   border-bottom: pxToRem(1) solid var(--color-grey-200);
   min-height: pxToRem(424);
   min-width: pxToRem(244);
+  overflow: hidden;
 
   @include tablet {
     border-left: pxToRem(1) solid var(--color-grey-200);
   }
 
-  @include max-tablet {
+  @include max-mobile {
     padding: pxToRem(19) pxToRem(17) pxToRem(28) pxToRem(17);
   }
 
+  @include max-tablet {
+    padding: pxToRem(19) pxToRem(17) pxToRem(28) pxToRem(16);
+  }
+
   @include desktop {
-    padding: pxToRem(34) pxToRem(33) pxToRem(44) pxToRem(33);
+    padding: pxToRem(34) pxToRem(33) pxToRem(43) pxToRem(32);
   }
 
   @include print-landscape {
@@ -394,6 +399,7 @@
     border-left: pxToRem(9) solid var(--color-primary-main);
     border-right: pxToRem(9) solid var(--color-primary-main);
     border-bottom: pxToRem(9) solid var(--color-common-white);
+    animation: elastic 0.7s ease-out forwards;
 
     @include max-tablet {
       width: pxToRem(18);

@@ -295,7 +295,11 @@ html[dir="rtl"] {
   animation-name: fade;
   animation-timing-function: linear;
 
-  @include max-tablet {
+  @include max-mobile {
+    max-height: auto;
+  }
+
+  @include minmax-tablet {
     max-height: pxToRem(33);
   }
 

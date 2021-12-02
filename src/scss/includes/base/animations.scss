@@ -285,3 +285,14 @@
     filter: contrast(500%) invert(100%);
   }
 }
+
+// flag price
+@keyframes elastic {
+  50% {
+    transform: scale(1, 2.5);
+  }
+
+  100% {
+    transform: none;
+  }
+}
