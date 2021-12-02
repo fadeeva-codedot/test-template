@@ -123,4 +123,8 @@
   @include tablet {
     margin-bottom: pxToRem(25);
   }
+
+  @include dark-theme {
+    filter: grayscale(30%) brightness(90%) contrast(110%);
+  }
 }

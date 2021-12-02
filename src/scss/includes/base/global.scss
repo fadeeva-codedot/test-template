@@ -84,6 +84,10 @@ body {
       @include tablet {
         animation: none;
       }
+
+      @include dark-theme {
+        animation: none;
+      }
     }
 
     .icon__close-link {
@@ -360,10 +364,6 @@ body {
 
 img {
   vertical-align: middle;
-
-  @include dark-theme {
-    filter: grayscale(30%) brightness(90%) contrast(110%);
-  }
 }
 
 body {
