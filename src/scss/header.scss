@@ -154,9 +154,12 @@
 
   &__wrapper {
     position: relative;
-    height: calc(100vh - 63px);
-    top: pxToRem(63);
     overflow: auto;
+
+    @include max-mobile {
+      top: pxToRem(63);
+      height: calc(100vh - 63px);
+    }
 
     @include tablet {
       top: 0;
@@ -204,12 +207,6 @@
     &__item {
       display: block;
       font-weight: 400;
-      animation-name: fade;
-      animation-timing-function: linear;
-
-      &:first-of-type {
-        animation-duration: 0.6s;
-      }
 
       &:nth-of-type(2) {
         animation-duration: 0.7s;
@@ -296,7 +293,7 @@ html[dir="rtl"] {
   animation-timing-function: linear;
 
   @include max-mobile {
-    max-height: auto;
+    max-height: none;
   }
 
   @include minmax-tablet {
