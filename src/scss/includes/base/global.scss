@@ -5,6 +5,11 @@
   *::after {
     box-sizing: border-box;
   }
+
+  @include print {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 html {
@@ -182,6 +187,10 @@ body {
     @include light-theme {
       background-color: var(--color-primary-main);
     }
+
+    @include print-portrait {
+      padding-bottom: pxToRem(10);
+    }
   }
 
   &__primary-color {
@@ -240,6 +249,10 @@ body {
 
     @include print-landscape {
       padding-top: pxToRem(100);
+    }
+
+    @include print-portrait {
+      padding: 0;
     }
   }
 
