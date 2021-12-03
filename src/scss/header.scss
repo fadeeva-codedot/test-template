@@ -27,6 +27,12 @@
     align-items: center;
     max-width: 100%;
 
+    @include max-mobile {
+      animation-name: fade;
+      animation-duration: 0.8s;
+      animation-timing-function: linear;
+    }
+
     @include minmax-tablet {
       gap: pxToRem(35);
     }
@@ -39,9 +45,14 @@
 
 // logo
 .logo {
+  z-index: 3;
+
   &__image {
     z-index: 2;
     position: relative;
+    animation-name: fade;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
 
     @include desktop {
       width: pxToRem(65);
@@ -58,6 +69,7 @@
   height: pxToRem(47);
   position: relative;
   top: pxToRem(7);
+  z-index: 3;
 
   @include tablet {
     display: none;
@@ -121,6 +133,7 @@
   height: 100vh;
   transform: translateX(0);
   top: 0;
+  z-index: 2;
   position: fixed;
 
   @include light-theme {
@@ -141,9 +154,12 @@
 
   &__wrapper {
     position: relative;
-    height: calc(100vh - 63px);
-    top: pxToRem(63);
     overflow: auto;
+
+    @include max-mobile {
+      top: pxToRem(63);
+      height: calc(100vh - 63px);
+    }
 
     @include tablet {
       top: 0;
@@ -154,8 +170,6 @@
   }
 
   &__list {
-    overflow: hidden;
-
     @include max-mobile {
       padding-top: pxToRem(108);
       padding-bottom: pxToRem(108);
@@ -191,6 +205,26 @@
     &__item {
       display: block;
       font-weight: 400;
+
+      &:nth-of-type(1) {
+        animation-name: fade;
+        animation-duration: 0.5s;
+      }
+
+      &:nth-of-type(2) {
+        animation-name: fade;
+        animation-duration: 0.7s;
+      }
+
+      &:nth-of-type(3) {
+        animation-name: fade;
+        animation-duration: 0.8s;
+      }
+
+      &:nth-of-type(4) {
+        animation-name: fade;
+        animation-duration: 0.9s;
+      }
 
       &:last-of-type {
         &:first-child {
@@ -257,5 +291,30 @@ html[dir="rtl"] {
     &::after {
       margin-right: pxToRem(9);
     }
+  }
+}
+
+.contact-item {
+  animation-name: fade;
+  animation-timing-function: linear;
+
+  @include max-mobile {
+    max-height: none;
+  }
+
+  @include minmax-tablet {
+    max-height: pxToRem(33);
+  }
+
+  @include desktop {
+    max-height: pxToRem(40);
+  }
+
+  &:first-child {
+    animation-duration: 1s;
+  }
+
+  &:last-child {
+    animation-duration: 1.1s;
   }
 }

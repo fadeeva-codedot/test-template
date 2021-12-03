@@ -26,7 +26,7 @@
       padding-right: pxToRem(122);
     }
 
-    @include max-desktop {
+    @include desktop {
       flex-direction: column;
     }
 
@@ -37,6 +37,10 @@
       flex-direction: row;
       max-width: pxToRem(1280);
       margin: auto;
+    }
+
+    @include print-portrait {
+      gap: pxToRem(25);
     }
   }
 
@@ -68,6 +72,10 @@
 
       &-image {
         object-fit: contain;
+
+        @include dark-theme {
+          filter: grayscale(30%) brightness(90%) contrast(110%);
+        }
       }
     }
   }
@@ -175,6 +183,18 @@
       width: 100%;
       caret-color: $color-common-white;
 
+      &:focus ~ .underline {
+        width: 100%;
+        margin-left: -50%;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-out;
+      }
+
+      &:not(:focus) ~ .underline {
+        width: 0%;
+        transition-duration: 0.5s;
+      }
+
       @include dark-theme {
         filter: invert(100%);
         caret-color: $color-grey-900;
@@ -199,6 +219,10 @@
 
       &:focus-visible {
         outline: none;
+
+        &::placeholder {
+          visibility: hidden;
+        }
       }
     }
 
@@ -209,13 +233,33 @@
       position: relative;
       text-indent: pxToRem(31);
       font-size: $typography-h5-font-size;
+      cursor: pointer;
     }
 
     &-button {
+      z-index: 1;
+      border: none;
+
       @include max-mobile {
         width: 100%;
         font-size: $typography-h5-font-size;
         font-weight: $typography-h3-font-weight;
+      }
+
+      &:after {
+        @include max-mobile {
+          width: pxToRem(1200);
+          height: pxToRem(1200);
+          left: 60%;
+          bottom: 70%;
+        }
+
+        @include tablet {
+          width: pxToRem(300);
+          height: pxToRem(300);
+          left: 60%;
+          bottom: 65%;
+        }
       }
 
       @include tablet {
@@ -277,12 +321,29 @@
 }
 
 .checkmark:after {
-  left: pxToRem(6);
-  top: pxToRem(2);
+  left: pxToRem(5);
   width: pxToRem(5);
   height: pxToRem(10);
   border-bottom: 1px solid var(--color-common-white);
   border-right: 1px solid var(--color-common-white);
   border-width: 0 pxToRem(1) pxToRem(1) 0;
   transform: rotate(45deg);
+}
+
+.underline {
+  width: 0;
+  height: pxToRem(2);
+  left: 50%;
+  background: $color-info-light;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  @include max-mobile {
+    bottom: 0;
+  }
+
+  @include tablet {
+    bottom: pxToRem(8);
+  }
 }

@@ -15,6 +15,10 @@
     padding-bottom: pxToRem(250);
   }
 
+  @include print-portrait {
+    padding-bottom: pxToRem(30);
+  }
+
   &__title {
     text-align: center;
     line-height: 2;
@@ -66,7 +70,19 @@
   }
 
   &__button {
-    margin-bottom: 0;
+    display: block;
+
+    @include max-mobile {
+      margin-bottom: 0;
+    }
+
+    @include minmax-tablet {
+      margin-bottom: pxToRem(28);
+    }
+
+    @include desktop {
+      margin-bottom: pxToRem(41);
+    }
   }
 }
 
@@ -75,33 +91,22 @@
   border-bottom: pxToRem(1) solid var(--color-grey-200);
   min-height: pxToRem(424);
   min-width: pxToRem(244);
-
-  @include max-mobile {
-    &:active {
-      padding: pxToRem(17) pxToRem(15) pxToRem(26) pxToRem(15);
-    }
-  }
-
-  @include minmax-tablet {
-    &:active {
-      padding: pxToRem(17) pxToRem(13) pxToRem(24) pxToRem(15);
-    }
-  }
+  overflow: hidden;
 
   @include tablet {
     border-left: pxToRem(1) solid var(--color-grey-200);
   }
 
-  @include max-tablet {
+  @include max-mobile {
     padding: pxToRem(19) pxToRem(17) pxToRem(28) pxToRem(17);
   }
 
-  @include desktop {
-    padding: pxToRem(34) pxToRem(33) pxToRem(44) pxToRem(33);
+  @include tablet-max-desktop {
+    padding: pxToRem(19) pxToRem(17) pxToRem(28) pxToRem(16);
+  }
 
-    &:active {
-      padding: pxToRem(32) pxToRem(31) pxToRem(44) pxToRem(31);
-    }
+  @include desktop {
+    padding: pxToRem(34) pxToRem(33) pxToRem(43) pxToRem(32);
   }
 
   @include print-landscape {
@@ -109,7 +114,6 @@
   }
 
   &:last-child {
-    min-height: auto;
     min-height: pxToRem(324);
 
     @include max-mobile {
@@ -129,6 +133,8 @@
     @include print-portrait {
       grid-column-start: 1;
       grid-column-end: 3;
+      border-top: pxToRem(1) solid var(--color-grey-200);
+      margin-top: pxToRem(50);
     }
   }
 
@@ -138,35 +144,9 @@
     }
   }
 
-  &:nth-child(n + 1) {
+  &:nth-child(2n) {
     @include print-portrait {
       border-left: pxToRem(1) solid var(--color-grey-200);
-    }
-  }
-
-  &:active {
-    border: pxToRem(2) solid var(--color-primary-main);
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      border-left: pxToRem(9) solid var(--color-primary-main);
-      border-right: pxToRem(9) solid var(--color-primary-main);
-      border-bottom: pxToRem(9) solid var(--color-common-white);
-
-      @include max-tablet {
-        width: pxToRem(18);
-        height: pxToRem(26);
-        right: pxToRem(15);
-      }
-
-      @include desktop {
-        width: pxToRem(28);
-        height: pxToRem(44);
-        border-width: pxToRem(14);
-        right: pxToRem(32);
-      }
     }
   }
 
@@ -210,18 +190,6 @@
 
       @include desktop {
         gap: pxToRem(40);
-      }
-    }
-
-    .price__button {
-      display: block;
-
-      @include max-tablet {
-        margin-bottom: pxToRem(28);
-      }
-
-      @include desktop {
-        margin-bottom: pxToRem(41);
       }
     }
 
@@ -412,14 +380,38 @@
   }
 }
 /*-----------------------------*/
+.border-around,
+.package:active {
+  border: pxToRem(2) solid var(--color-primary-main);
 
-html[dir="rtl"] {
-  .package {
-    &:active {
-      &::after {
-        left: pxToRem(15);
-        right: unset;
-      }
+  @include max-tablet {
+    padding: pxToRem(17) pxToRem(15) pxToRem(26) pxToRem(15);
+  }
+
+  @include desktop {
+    padding: pxToRem(32) pxToRem(31) pxToRem(42) pxToRem(31);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    border-left: pxToRem(9) solid var(--color-primary-main);
+    border-right: pxToRem(9) solid var(--color-primary-main);
+    border-bottom: pxToRem(9) solid var(--color-common-white);
+    animation: elastic 0.7s ease-out forwards;
+
+    @include max-tablet {
+      width: pxToRem(18);
+      height: pxToRem(26);
+      right: pxToRem(15);
+    }
+
+    @include desktop {
+      width: pxToRem(28);
+      height: pxToRem(44);
+      border-width: pxToRem(14);
+      right: pxToRem(32);
     }
   }
 }

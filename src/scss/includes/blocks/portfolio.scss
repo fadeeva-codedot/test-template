@@ -46,28 +46,12 @@
       min-height: pxToRem(235);
       height: 100%;
       object-fit: cover;
+      cursor: pointer;
+      display: block;
+      transition: 1s;
 
-      &:nth-child(3n + 1) {
-        @include desktop-extra {
-          grid-column-start: 1;
-          grid-column-end: 3;
-        }
-
-        @include print-portrait {
-          padding-bottom: pxToRem(120);
-        }
-      }
-
-      &:nth-child(3n + 2) {
-        @include desktop-extra {
-          grid-column: 1;
-        }
-      }
-
-      &:nth-child(3n + 3) {
-        @include desktop-extra {
-          grid-column: 2;
-        }
+      &:hover {
+        transform: scale(1.2);
       }
     }
   }
@@ -76,5 +60,45 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+
+    @include print {
+      border: pxToRem(1) solid var(--color-grey-900);
+    }
+  }
+}
+
+.example-wrapper {
+  display: inline-block;
+  overflow: hidden;
+
+  &:nth-child(3n + 1) {
+    @include desktop-extra {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    @include print-portrait {
+      padding-bottom: pxToRem(120);
+    }
+
+    @include print-landscape {
+      padding-bottom: pxToRem(50);
+    }
+  }
+
+  &:nth-child(3n + 2) {
+    @include desktop-extra {
+      grid-column: 1;
+    }
+
+    @include print-landscape {
+      padding-bottom: pxToRem(110);
+    }
+  }
+
+  &:nth-child(3n + 3) {
+    @include desktop-extra {
+      grid-column: 2;
+    }
   }
 }

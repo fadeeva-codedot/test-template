@@ -150,3 +150,149 @@
     }
   }
 }
+
+// hero picture
+@keyframes bouncing {
+  0%,
+  100% {
+    transform: translateY(-25px);
+  }
+
+  50% {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    margin-top: 100%;
+  }
+
+  100% {
+    opacity: 1;
+    margin-top: 0%;
+  }
+}
+
+// benefits pictures
+@keyframes rocket {
+  0%,
+  100% {
+    transform: translateX(-5px) translateY(15px);
+  }
+
+  50% {
+    transform: translateX(15px) translateY(-15px);
+  }
+}
+
+@keyframes dog {
+  0%,
+  100% {
+    transform: rotate(30deg) translateY(-20px) translateX(50px);
+  }
+
+  50% {
+    transform: rotate(-30deg) translateY(0px) translateX(0px);
+  }
+}
+
+@keyframes present {
+  0%,
+  100% {
+    transform: translateY(30px);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes pig {
+  0%,
+  100% {
+    transform: rotate(20deg);
+  }
+
+  50% {
+    transform: rotate(-20deg);
+  }
+}
+
+// development phases circles
+@keyframes circle {
+  0%,
+  100% {
+    transform: scale(100%);
+  }
+
+  50% {
+    transform: scale(-100%);
+  }
+}
+
+// typing effect
+@keyframes typing-first {
+  0% {
+    width: 0;
+  }
+
+  30% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes typing-second {
+  0% {
+    width: 0;
+  }
+
+  60% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+// change color of text in buttons
+@keyframes button-border {
+  20% {
+    filter: invert(0%);
+  }
+
+  100% {
+    filter: contrast(500%) invert(100%);
+  }
+}
+
+@keyframes button-colorful {
+  20% {
+    filter: invert(0%);
+  }
+
+  100% {
+    filter: contrast(500%) invert(100%);
+  }
+}
+
+// flag price
+@keyframes elastic {
+  50% {
+    transform: scale(1, 2.5);
+  }
+
+  100% {
+    transform: none;
+  }
+}
