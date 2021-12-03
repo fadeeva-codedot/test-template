@@ -24,8 +24,6 @@ body {
 }
 /*---------------------------------------------------*/
 .page-wrapper {
-  height: 100%;
-
   // all actions connected with target
   &:not(:target) {
     overflow-x: hidden;
@@ -448,7 +446,7 @@ p {
   &-text-white {
     z-index: 3;
     position: relative;
-    color: var(--color-common-white);
+    color: var(--color-grey-900);
   }
 
   &-border {
@@ -525,6 +523,7 @@ p {
   &-red {
     background-color: var(--color-secondary-main);
     border-color: transparent;
+    color: $color-common-white;
 
     &:after {
       background-color: var(--color-primary-main);
