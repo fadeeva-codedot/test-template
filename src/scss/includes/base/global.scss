@@ -5,11 +5,6 @@
   *::after {
     box-sizing: border-box;
   }
-
-  @include print {
-    animation: none !important;
-    transition: none !important;
-  }
 }
 
 html {
@@ -26,19 +21,12 @@ body {
 .page-wrapper {
   // all actions connected with target
   &:not(:target) {
-    overflow-x: hidden;
-
     .menu {
       left: 0;
 
       @include max-mobile {
         transform: translateX(100%);
         transition: 0.4s linear;
-      }
-
-      @include tablet {
-        transition: none;
-        transform: none;
       }
     }
 
