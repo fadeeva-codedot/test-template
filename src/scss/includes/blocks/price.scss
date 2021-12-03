@@ -70,7 +70,19 @@
   }
 
   &__button {
-    margin-bottom: 0;
+    display: block;
+
+    @include max-mobile {
+      margin-bottom: 0;
+    }
+
+    @include minmax-tablet {
+      margin-bottom: pxToRem(28);
+    }
+
+    @include desktop {
+      margin-bottom: pxToRem(41);
+    }
   }
 }
 
@@ -89,7 +101,7 @@
     padding: pxToRem(19) pxToRem(17) pxToRem(28) pxToRem(17);
   }
 
-  @include minmax-tablet {
+  @include tablet-max-desktop {
     padding: pxToRem(19) pxToRem(17) pxToRem(28) pxToRem(16);
   }
 
@@ -178,18 +190,6 @@
 
       @include desktop {
         gap: pxToRem(40);
-      }
-    }
-
-    .price__button {
-      display: block;
-
-      @include max-tablet {
-        margin-bottom: pxToRem(28);
-      }
-
-      @include desktop {
-        margin-bottom: pxToRem(41);
       }
     }
 

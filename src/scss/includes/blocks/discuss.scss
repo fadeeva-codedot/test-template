@@ -26,7 +26,7 @@
       padding-right: pxToRem(122);
     }
 
-    @include max-desktop {
+    @include desktop {
       flex-direction: column;
     }
 
