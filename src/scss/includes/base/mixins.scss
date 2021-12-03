@@ -31,6 +31,25 @@
   }
 }
 
+// Versions for printing
+@mixin print-landscape {
+  @media print and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin print-portrait {
+  @media print and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin print {
+  @media print {
+    @content;
+  }
+}
+
 // Dark/light theme
 @mixin light-theme() {
   @media (prefers-color-scheme: light) {

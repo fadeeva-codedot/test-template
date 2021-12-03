@@ -11,9 +11,19 @@
     padding-bottom: pxToRem(55);
   }
 
+  @include print-landscape {
+    padding-bottom: pxToRem(40);
+  }
+
+  @include print-portrait {
+    padding-bottom: 0;
+  }
+
   &__title {
-    max-width: pxToRem(247);
-    margin-bottom: pxToRem(30);
+    @include max-mobile {
+      max-width: pxToRem(247);
+      margin-bottom: pxToRem(30);
+    }
 
     @include tablet {
       max-width: 100%;
@@ -25,6 +35,14 @@
 
     @include desktop {
       margin-bottom: pxToRem(40);
+    }
+
+    @include print-landscape {
+      margin-bottom: pxToRem(10);
+    }
+
+    @include print-portrait {
+      margin-bottom: pxToRem(15);
     }
   }
 

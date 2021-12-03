@@ -11,6 +11,10 @@
     padding-bottom: pxToRem(136);
   }
 
+  @include print-landscape {
+    padding-bottom: pxToRem(250);
+  }
+
   &__title {
     text-align: center;
     line-height: 2;
@@ -25,6 +29,10 @@
 
     @include desktop {
       margin-bottom: pxToRem(56);
+    }
+
+    @include print-landscape {
+      margin-bottom: pxToRem(25);
     }
   }
 
@@ -43,6 +51,17 @@
       border-bottom: none;
       border-left: none;
       min-width: 100%;
+    }
+
+    @include print-landscape {
+      grid-row-gap: pxToRem(270);
+      border-right: none;
+      border-top: none;
+    }
+
+    @include print-portrait {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 100%;
     }
   }
 
@@ -85,6 +104,10 @@
     }
   }
 
+  @include print-landscape {
+    border-top: pxToRem(1) solid var(--color-grey-200);
+  }
+
   &:last-child {
     min-height: auto;
     min-height: pxToRem(324);
@@ -97,6 +120,27 @@
       border-bottom: pxToRem(1) solid var(--color-grey-200);
       grid-column-start: 2;
       grid-column-end: 4;
+    }
+
+    @include print-landscape {
+      border-right: pxToRem(1) solid var(--color-grey-200);
+    }
+
+    @include print-portrait {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+
+  &:nth-child(3) {
+    @include print-landscape {
+      border-right: pxToRem(1) solid var(--color-grey-200);
+    }
+  }
+
+  &:nth-child(n + 1) {
+    @include print-portrait {
+      border-left: pxToRem(1) solid var(--color-grey-200);
     }
   }
 

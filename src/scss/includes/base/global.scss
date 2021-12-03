@@ -208,6 +208,11 @@ body {
     @include dark-theme {
       background-color: var(--color-primary-blue);
     }
+
+    @include print-landscape {
+      padding-top: pxToRem(30);
+      padding-bottom: pxToRem(20);
+    }
   }
 
   &__footer {
@@ -232,6 +237,10 @@ body {
 
     @include dark-theme {
       background-color: var(--color-common-white);
+    }
+
+    @include print-landscape {
+      padding-top: pxToRem(100);
     }
   }
 
@@ -327,6 +336,14 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+
+  @include print-landscape {
+    margin-bottom: pxToRem(30);
+  }
+
+  @include print-portrait {
+    margin-bottom: pxToRem(50);
+  }
 }
 
 img {
@@ -410,69 +427,79 @@ p {
   }
 }
 
-.button-name {
-  color: var(--color-primary-main);
-  background-color: transparent;
-  border: 1px solid var(--color-primary-main);
-  font-weight: 400;
-  text-align: center;
-
-  @include max-tablet {
-    font-size: $typography-button-font-size;
-    width: pxToRem(129);
-    padding-top: pxToRem(10);
-    padding-bottom: pxToRem(10);
-  }
-
-  @include desktop {
-    width: pxToRem(171);
-    padding-top: pxToRem(12);
-    padding-bottom: pxToRem(12);
-    font-size: $typography-subtitle2-font-size;
-    line-height: pxToRem(16);
-  }
-
-  &:hover {
-    cursor: pointer;
-    color: var(--color-common-white);
-    background-color: var(--color-primary-main);
-  }
-}
-
-.button-blue {
-  background-color: var(--color-primary-main);
-  color: var(--color-common-white);
-}
-
-.button-red {
-  background-color: var(--color-secondary-main);
-  border-color: transparent;
-
-  &:hover {
-    background-color: var(--color-secondary-dark);
-    border-color: transparent;
-  }
-}
-
-.button-menu {
-  @include max-mobile {
-    font-size: $typography-font-size;
-    padding-top: pxToRem(21);
-    padding-bottom: pxToRem(20);
-    width: 100%;
-    position: absolute;
+.button {
+  &-name {
+    color: var(--color-primary-main);
+    background-color: transparent;
+    border: 1px solid var(--color-primary-main);
+    font-weight: 400;
     text-align: center;
-    bottom: 0;
+
+    @include max-tablet {
+      font-size: $typography-button-font-size;
+      width: pxToRem(129);
+      padding-top: pxToRem(10);
+      padding-bottom: pxToRem(10);
+    }
+
+    @include desktop {
+      width: pxToRem(171);
+      padding-top: pxToRem(12);
+      padding-bottom: pxToRem(12);
+      font-size: $typography-subtitle2-font-size;
+      line-height: pxToRem(16);
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: var(--color-common-white);
+      background-color: var(--color-primary-main);
+    }
+  }
+
+  &-blue {
+    background-color: var(--color-primary-main);
+    color: var(--color-common-white);
+
+    @include print {
+      color: var(--color-primary-main);
+    }
+  }
+
+  &-red {
     background-color: var(--color-secondary-main);
     border-color: transparent;
-
-    @include dark-theme {
-      color: var(--color-grey-900);
-    }
 
     &:hover {
       background-color: var(--color-secondary-dark);
       border-color: transparent;
+    }
+
+    @include print {
+      border-color: $color-grey-900;
+    }
+  }
+
+  &-menu {
+    @include max-mobile {
+      font-size: $typography-font-size;
+      padding-top: pxToRem(21);
+      padding-bottom: pxToRem(20);
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      bottom: 0;
+      background-color: var(--color-secondary-main);
+      border-color: transparent;
+
+      @include dark-theme {
+        color: var(--color-grey-900);
+      }
+
+      &:hover {
+        background-color: var(--color-secondary-dark);
+        border-color: transparent;
+      }
     }
   }
 }

@@ -46,6 +46,10 @@
         width: pxToRem(65);
         height: auto;
       }
+
+      @include print {
+        filter: invert(0);
+      }
     }
   }
 
@@ -67,6 +71,10 @@
     @include desktop {
       flex-wrap: nowrap;
       gap: pxToRem(108);
+    }
+
+    @include print {
+      filter: invert(100%);
     }
 
     &-wrapper {
@@ -171,6 +179,10 @@
     order: 1;
   }
 
+  @include print {
+    filter: invert(100%);
+  }
+
   &-item {
     display: flex;
     justify-content: center;
@@ -224,6 +236,11 @@
     }
 
     @include dark-theme {
+      filter: invert(100%);
+      opacity: 100%;
+    }
+
+    @include print {
       filter: invert(100%);
       opacity: 100%;
     }

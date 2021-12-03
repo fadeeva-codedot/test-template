@@ -21,6 +21,10 @@
     color: var(--color-grey-900);
   }
 
+  @include print {
+    color: var(--color-grey-900);
+  }
+
   &__title {
     @include max-mobile {
       margin-bottom: pxToRem(30);
@@ -37,6 +41,14 @@
     @include desktop {
       margin-bottom: pxToRem(40);
     }
+
+    @include print-landscape {
+      margin-bottom: pxToRem(10);
+    }
+
+    @include print-portrait {
+      margin-bottom: pxToRem(15);
+    }
   }
 
   &__description {
@@ -52,6 +64,10 @@
     @include desktop {
       max-width: pxToRem(950);
       margin-bottom: pxToRem(50);
+    }
+
+    @include print-landscape {
+      margin-bottom: pxToRem(10);
     }
   }
 
@@ -77,6 +93,10 @@
       grid-template-columns: pxToRem(282) pxToRem(282);
     }
 
+    @include print-landscape {
+      row-gap: pxToRem(10);
+    }
+
     &-item {
       list-style-position: inside;
       list-style-type: none;
@@ -98,6 +118,10 @@
         padding-right: pxToRem(21);
 
         @include dark-theme {
+          filter: invert(100%);
+        }
+
+        @include print {
           filter: invert(100%);
         }
       }
